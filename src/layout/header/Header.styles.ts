@@ -6,10 +6,10 @@ interface IProps {
 export const HeaderWrapper = styled.div`
   width: 1920px;
   height: 110px;
-  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 `
 export const SensorpiaLogoWrapper = styled.div`
   margin-left: 150px;

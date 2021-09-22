@@ -8,6 +8,12 @@
     "AboutUs": "About Us",
     "ContactUs": "Contact Us",
     "Eng": "Eng",
-    "Kor": "Kor"
+    "Kor": "Kor",
+    "Slider": {
+      "Image1": "./MainSlider1.svg",
+      "Image2": "./MainSlider2.svg",
+      "Image3": "./MainSlider3.svg",
+      "Image4": "./MainSlider4.svg"
+    }
   }
 }

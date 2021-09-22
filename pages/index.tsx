@@ -1,9 +1,9 @@
-const Home = () => {
-  const data = require('./api/en.json')
+import MainComponent from '../src/english/main/Main.container'
 
+const Home = () => {
   return (
     <>
-      <div>{data.menu}</div>
+      <MainComponent />
     </>
   )
 }
