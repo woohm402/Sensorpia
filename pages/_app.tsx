@@ -7,17 +7,22 @@ import { createContext, useState } from 'react'
 export const GlobalContext = createContext({
   isOpen: false,
   setIsOpen: (_: any) => {},
+  language: '',
+  setLanguage: (_: any) => {},
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [language, setLanguage] = useState('en')
   const data = require('./api/en.json')
   return (
     <>
       <Head>
         <title>{data.title}</title>
       </Head>
-      <GlobalContext.Provider value={{ isOpen, setIsOpen }}>
+      <GlobalContext.Provider
+        value={{ isOpen, setIsOpen, language, setLanguage }}
+      >
         <LayOut>
           <Component {...pageProps} />
         </LayOut>

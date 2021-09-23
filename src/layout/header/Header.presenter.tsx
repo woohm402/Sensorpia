@@ -33,6 +33,7 @@ interface IProps {
   onMouseOverMenu: any
   onMouseOverDetailMenu: any
   detailMenu: any
+  onClickLogo: any
 }
 
 const HeaderUI = ({
@@ -43,13 +44,14 @@ const HeaderUI = ({
   onMouseOverMenu,
   onMouseOverDetailMenu,
   detailMenu,
+  onClickLogo,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   return (
     <>
       <HeaderWrapper>
         <SensorpiaLogoWrapper onMouseOver={onMouseOverMenu}>
-          <SensorPiaLogo src={data.main.logo} />
+          <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
         </SensorpiaLogoWrapper>
         <MenusWrapper>
           <MenuHome id="Home" onMouseOver={onMouseOverMenu} color={menu}>

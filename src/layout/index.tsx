@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
+import FooterComponent from './footer/Footer.container'
 import HeaderComponent from './header/Header.container'
 
 interface ILayOutProps {
@@ -22,6 +23,7 @@ const LayOut = ({ children }: ILayOutProps) => {
     >
       <HeaderComponent></HeaderComponent>
       <div onMouseOver={onMouseOverBody}>{children}</div>
+      <FooterComponent></FooterComponent>
     </div>
   )
 }

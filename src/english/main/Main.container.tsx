@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { GlobalContext } from '../../../pages/_app'
 import MainUI from './Main.presenter'
 
 const MainComponent = () => {
-  const data = require('../../../pages/api/en.json')
+  const { language } = useContext(GlobalContext)
+  const data = require(`../../../pages/api/${language}.json`)
   const [translate, setTranslate] = useState(0)
   const onClickSliderNext = () => {
     if (translate === -5760) {

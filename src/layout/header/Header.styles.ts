@@ -17,7 +17,9 @@ export const SensorpiaLogoWrapper = styled.div`
   width: 239px;
   height: 46px;
 `
-export const SensorPiaLogo = styled.img``
+export const SensorPiaLogo = styled.img`
+  cursor: pointer;
+`
 
 export const MenusWrapper = styled.div`
   margin-left: 495px;
@@ -99,7 +101,7 @@ export const NavBarWrapper = styled.div`
   background: rgba(255, 255, 255, 0.8);
   top: 110px;
   position: fixed;
-  z-index: 99;
+  z-index: 100;
 `
 
 export const NavBarMainMenusWrapper = styled.div`
