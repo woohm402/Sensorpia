@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 interface IProps {
-  color: any
+  color?: any
+  menuColor?: any
 }
 
 export const HeaderWrapper = styled.div`
@@ -91,4 +92,81 @@ export const LanguageKorean = styled.div`
   cursor: pointer;
   background: ${(props: IProps) =>
     props.color === 'kor' ? '#0070c0' : '#ffffff'};
+`
+export const NavBarWrapper = styled.div`
+  width: 1920px;
+  height: 311px;
+  background: rgba(255, 255, 255, 0.8);
+  top: 110px;
+  position: fixed;
+  z-index: 99;
+`
+
+export const NavBarMainMenusWrapper = styled.div`
+  left: 1007px;
+  top: 30px;
+  width: 573px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+`
+export const NavBarMainMenu = styled.span`
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #262626;
+`
+export const NavBarMainMenuDetailWrapper = styled.div`
+  position: relative;
+  left: 1007px;
+  top: 52px;
+  display: flex;
+  flex-direction: row;
+`
+export const ProductDetailsWrapper = styled.div`
+  max-width: 124px;
+  display: flex;
+  flex-direction: column;
+`
+export const ProductDetails = styled.span`
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
+`
+export const ApplicationsDetailsWrapper = styled.div`
+  margin-left: 26px;
+  max-width: 124px;
+  display: flex;
+  flex-direction: column;
+`
+export const ApplicationsDetails = styled.span`
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
+`
+
+export const AboutUsDetailsWrapper = styled.div`
+  margin-left: 80px;
+  max-width: 138px;
+  display: flex;
+  flex-direction: column;
+`
+export const AboutUsDetails = styled.span`
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `

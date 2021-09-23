@@ -1,4 +1,10 @@
+import { useContext } from 'react'
+import { GlobalContext } from '../../../pages/_app'
 import {
+  AboutUsDetails,
+  AboutUsDetailsWrapper,
+  ApplicationsDetails,
+  ApplicationsDetailsWrapper,
   HeaderWrapper,
   LanguageChangeWrapper,
   LanguageEnglish,
@@ -9,6 +15,12 @@ import {
   MenuHome,
   MenuProduct,
   MenusWrapper,
+  NavBarMainMenu,
+  NavBarMainMenuDetailWrapper,
+  NavBarMainMenusWrapper,
+  NavBarWrapper,
+  ProductDetails,
+  ProductDetailsWrapper,
   SensorPiaLogo,
   SensorpiaLogoWrapper,
 } from './Header.styles'
@@ -19,6 +31,8 @@ interface IProps {
   onClickLanguage: any
   menu: any
   onMouseOverMenu: any
+  onMouseOverDetailMenu: any
+  detailMenu: any
 }
 
 const HeaderUI = ({
@@ -27,11 +41,14 @@ const HeaderUI = ({
   onClickLanguage,
   menu,
   onMouseOverMenu,
+  onMouseOverDetailMenu,
+  detailMenu,
 }: IProps) => {
+  const { isOpen } = useContext(GlobalContext)
   return (
     <>
-      <HeaderWrapper id="Header" onMouseOver={onMouseOverMenu}>
-        <SensorpiaLogoWrapper>
+      <HeaderWrapper>
+        <SensorpiaLogoWrapper onMouseOver={onMouseOverMenu}>
           <SensorPiaLogo src={data.main.logo} />
         </SensorpiaLogoWrapper>
         <MenusWrapper>
@@ -68,6 +85,53 @@ const HeaderUI = ({
           </LanguageKorean>
         </LanguageChangeWrapper>
       </HeaderWrapper>
+      {isOpen && (
+        <NavBarWrapper>
+          <NavBarMainMenusWrapper>
+            {data.NavBar?.list.map((data: any) => (
+              <NavBarMainMenu key="">{data}</NavBarMainMenu>
+            ))}
+          </NavBarMainMenusWrapper>
+          <NavBarMainMenuDetailWrapper>
+            <ProductDetailsWrapper>
+              {data.NavBar.Products.map((data: any) => (
+                <ProductDetails
+                  key=""
+                  id={data}
+                  onMouseOver={onMouseOverDetailMenu}
+                  menuColor={detailMenu === data}
+                >
+                  {data}
+                </ProductDetails>
+              ))}
+            </ProductDetailsWrapper>
+            <ApplicationsDetailsWrapper>
+              {data.NavBar.Applications.map((data: any) => (
+                <ApplicationsDetails
+                  key=""
+                  id={data}
+                  onMouseOver={onMouseOverDetailMenu}
+                  menuColor={detailMenu === data}
+                >
+                  {data}
+                </ApplicationsDetails>
+              ))}
+            </ApplicationsDetailsWrapper>
+            <AboutUsDetailsWrapper>
+              {data.NavBar.AboutUs.map((data: any) => (
+                <AboutUsDetails
+                  key=""
+                  id={data}
+                  onMouseOver={onMouseOverDetailMenu}
+                  menuColor={detailMenu === data}
+                >
+                  {data}
+                </AboutUsDetails>
+              ))}
+            </AboutUsDetailsWrapper>
+          </NavBarMainMenuDetailWrapper>
+        </NavBarWrapper>
+      )}
     </>
   )
 }

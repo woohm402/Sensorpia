@@ -15,5 +15,15 @@
       "Image3": "./MainSlider3.svg",
       "Image4": "./MainSlider4.svg"
     }
+  },
+  "NavBar": {
+    "list": ["Products", "Applications", "About Us", "Contact Us"],
+    "Products": [
+      "3-axis Flux-gate magnetometer",
+      "Magnetic torquer",
+      "Magnetic Instrument"
+    ],
+    "Applications": ["Defense", "Satellite", "Measurement"],
+    "AboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
   }
 }

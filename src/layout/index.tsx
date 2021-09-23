@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { GlobalContext } from '../../pages/_app'
 import HeaderComponent from './header/Header.container'
 
 interface ILayOutProps {
@@ -5,6 +7,10 @@ interface ILayOutProps {
 }
 
 const LayOut = ({ children }: ILayOutProps) => {
+  const { setIsOpen } = useContext(GlobalContext)
+  const onMouseOverBody = () => {
+    setIsOpen(false)
+  }
   return (
     <div
       style={{
@@ -15,7 +21,7 @@ const LayOut = ({ children }: ILayOutProps) => {
       }}
     >
       <HeaderComponent></HeaderComponent>
-      <div>{children}</div>
+      <div onMouseOver={onMouseOverBody}>{children}</div>
     </div>
   )
 }
