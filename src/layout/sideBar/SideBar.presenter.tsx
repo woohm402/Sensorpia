@@ -18,7 +18,6 @@ const SideBarUI = ({ onClickMenu, menu }: IProps) => {
   const router = useRouter()
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
-  console.log(router.pathname)
   return (
     <SideBarWrapper>
       <SideBarTitleWrapper>
@@ -36,6 +35,7 @@ const SideBarUI = ({ onClickMenu, menu }: IProps) => {
                   key=""
                   id={value}
                   onClick={onClickMenu}
+                  //@ts-ignore
                   color={menu === value}
                 >
                   {value}
@@ -52,6 +52,8 @@ const SideBarUI = ({ onClickMenu, menu }: IProps) => {
                   key=""
                   id={value}
                   onClick={onClickMenu}
+                  //@ts-ignore
+                  color={menu === value}
                 >
                   {value}
                 </SideBarMenusInnerWrapper>
@@ -66,6 +68,8 @@ const SideBarUI = ({ onClickMenu, menu }: IProps) => {
                   key=""
                   id={value}
                   onClick={onClickMenu}
+                  //@ts-ignore
+                  color={menu === value}
                 >
                   {value}
                 </SideBarMenusInnerWrapper>
