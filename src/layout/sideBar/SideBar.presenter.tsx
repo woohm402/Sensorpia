@@ -11,9 +11,10 @@ import {
 
 interface IProps {
   onClickMenu: any
+  menu: any
 }
 
-const SideBarUI = ({ onClickMenu }: IProps) => {
+const SideBarUI = ({ onClickMenu, menu }: IProps) => {
   const router = useRouter()
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
@@ -35,6 +36,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                   key=""
                   id={value}
                   onClick={onClickMenu}
+                  color={menu === value}
                 >
                   {value}
                 </SideBarMenusInnerWrapper>

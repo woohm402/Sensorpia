@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
 
+interface IProps {
+  color?: any
+}
+
 export const SideBarWrapper = styled.div`
   width: 636px;
   height: 100vh;
@@ -27,7 +31,7 @@ export const SideBarMenusInnerWrapper = styled.div`
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: #9c9d9e;
+  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
 `
 
