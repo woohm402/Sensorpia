@@ -34,6 +34,8 @@ interface IProps {
   onMouseOverDetailMenu: any
   detailMenu: any
   onClickLogo: any
+  sideBar: any
+  onClickMenu: any
 }
 
 const HeaderUI = ({
@@ -45,35 +47,57 @@ const HeaderUI = ({
   onMouseOverDetailMenu,
   detailMenu,
   onClickLogo,
+  sideBar,
+  onClickMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   return (
     <>
-      <HeaderWrapper>
-        <SensorpiaLogoWrapper onMouseOver={onMouseOverMenu}>
+      <HeaderWrapper
+        //@ts-ignore
+        sideBar={sideBar}
+      >
+        <SensorpiaLogoWrapper>
           <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
         </SensorpiaLogoWrapper>
         <MenusWrapper>
-          <MenuHome id="Home" onMouseOver={onMouseOverMenu} color={menu}>
+          <MenuHome
+            id="Home"
+            onMouseOver={onMouseOverMenu}
+            color={menu}
+            onClick={onClickMenu}
+          >
             {data.main.Home}
           </MenuHome>
-          <MenuProduct id="Product" onMouseOver={onMouseOverMenu} color={menu}>
+          <MenuProduct
+            id="Product"
+            onMouseOver={onMouseOverMenu}
+            color={menu}
+            onClick={onClickMenu}
+          >
             {data.main.Product}
           </MenuProduct>
           <MenuApplication
             id="Application"
             onMouseOver={onMouseOverMenu}
             color={menu}
+            onClick={onClickMenu}
           >
             {data.main.Applications}
           </MenuApplication>
-          <MenuAboutUs id="AboutUs" onMouseOver={onMouseOverMenu} color={menu}>
+          <MenuAboutUs
+            id="AboutUs"
+            onMouseOver={onMouseOverMenu}
+            color={menu}
+            onClick={onClickMenu}
+          >
             {data.main.AboutUs}
           </MenuAboutUs>
           <MenuContactUs
             id="ContactUs"
             onMouseOver={onMouseOverMenu}
             color={menu}
+            onClick={onClickMenu}
           >
             {data.main.ContactUs}
           </MenuContactUs>

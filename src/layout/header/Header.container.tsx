@@ -1,16 +1,30 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import HeaderUI from './Header.presenter'
 
-const HeaderComponent = () => {
+interface IProps {
+  sideBar: any
+}
+
+const HeaderComponent = ({ sideBar }: IProps) => {
   const { language, setLanguage } = useContext(GlobalContext)
-  const [menu, setMenu] = useState(null)
+  const [menu, setMenu] = useState('')
   const [detailMenu, setDetailMenu] = useState(null)
   const data = require(`../../../pages/api/${language}.json`)
   const { setIsOpen } = useContext(GlobalContext)
   const router = useRouter()
-
+  useEffect(() => {
+    if (router.pathname === '/') {
+      setMenu('Home')
+    } else if (router.pathname === '/products') {
+      setMenu('Product')
+    } else if (router.pathname === '/aboutUs') {
+      setMenu('AboutUs')
+    } else if (router.pathname === '/application') {
+      setMenu('Application')
+    }
+  }, [router.pathname])
   const onClickLanguage = (event: any) => {
     setLanguage(event.target.id)
   }
@@ -27,6 +41,17 @@ const HeaderComponent = () => {
       setIsOpen(true)
     } else {
       setIsOpen(false)
+    }
+  }
+  const onClickMenu = (event: any) => {
+    if (event.target.id === 'Home') {
+      router.push('/')
+    } else if (event.target.id === 'Product') {
+      router.push('/products')
+    } else if (event.target.id === 'Application') {
+      router.push('/application')
+    } else if (event.target.id === 'AboutUs') {
+      router.push('/aboutUs')
     }
   }
 
@@ -48,6 +73,8 @@ const HeaderComponent = () => {
       onMouseOverDetailMenu={onMouseOverDetailMenu}
       detailMenu={detailMenu}
       onClickLogo={onClickLogo}
+      sideBar={sideBar}
+      onClickMenu={onClickMenu}
     ></HeaderUI>
   )
 }
