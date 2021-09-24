@@ -27,6 +27,16 @@
     "satelliteImageNames": { "SatelliteOne": "MS-15", "SatelliteTwo": "MS-22" },
     "defenseImageNames": { "DefenseOne": "MS-13", "DefenseTwo": "MS-27" }
   },
+  "sidebar": {
+    "name": ["Products", "Application", "About Us"],
+    "Products": [
+      "3-axis Flux-gate magnetometer",
+      "Magnetic torquer",
+      "Magnetic Instrument"
+    ],
+    "Application": ["Defense", "Satellite", "Measurement"],
+    "AboutUs": ["Sensorpia intro.& our customers", "Vision & History"]
+  },
   "NavBar": {
     "list": ["Products", "Applications", "About Us", "Contact Us"],
     "Products": [
