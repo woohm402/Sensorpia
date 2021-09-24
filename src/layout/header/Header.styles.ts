@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 interface IProps {
   color?: any
   menuColor?: any
+  sideBar?: any
 }
 
 export const HeaderWrapper = styled.div`
@@ -11,6 +12,9 @@ export const HeaderWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   position: relative;
+  box-shadow: ${(props: IProps) =>
+    props.sideBar && '0px 2px 15px rgba(0,0,0, 0.15)'};
+  z-index: 1;
 `
 export const SensorpiaLogoWrapper = styled.div`
   margin-left: 150px;
