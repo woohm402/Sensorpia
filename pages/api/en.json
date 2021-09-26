@@ -27,6 +27,52 @@
     "satelliteImageNames": { "SatelliteOne": "MS-15", "SatelliteTwo": "MS-22" },
     "defenseImageNames": { "DefenseOne": "MS-13", "DefenseTwo": "MS-27" }
   },
+  "products": {
+    "threeAxis": ["Normal", "Satellite", "Defense"],
+    "threeAxisDetails": {
+      "Normal": {
+        "Title": "Explanation",
+        "Details": "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
+      },
+      "Satellite": {
+        "Title": "Explanation",
+        "Details": [
+          "Measurement of earth magnetic field",
+          "Light mass and low power consumption designed for satellite.",
+          "Attitude sensing using 3-axis components of earth magnetic field"
+        ]
+      },
+      "Defense": {
+        "Title": "Explanation",
+        "Details": [
+          "Products are specially useful for under see water to measure magnetic field of warship",
+          "3-axis have high orthogonality each other and high linearity",
+          "Total field measurement overcome magnetometer attitude change."
+        ]
+      }
+    },
+    "magneticTorquer": ["Satellite"],
+    "magneticTorquerDetails": {
+      "Satellite": {
+        "Title": "Explanation",
+        "Details": [
+          "Torque generation using magnetic dipole moment and earth magnetic field to rotate satellite",
+          " Light mass and low power consumption designed for satellite."
+        ]
+      }
+    },
+    "magneticInstruments": {
+      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10"],
+      "Details": [
+        "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
+        "Measure dc hysteresis loop of soft magnetic material",
+        "Toroidal and single strip specimen are possible",
+        "Measure ac hysteresis loop of soft magnetic material",
+        "Core loss and magnetostriction measurement",
+        "Epstein and single strip specimen are possible"
+      ]
+    }
+  },
   "sidebar": {
     "name": ["Products", "Application", "About Us"],
     "Products": [

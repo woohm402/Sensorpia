@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const SliderMainWrapper = styled.div`
-  width: 1920px;
+  width: 100%;
   height: 770px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.4);

@@ -17,8 +17,6 @@ const LayOut = ({ children }: ILayOutProps) => {
   const router = useRouter()
   const link = ['/application', '/aboutUs', '/products']
   const sideBar = link.includes(router.pathname)
-  console.log(router.pathname)
-  console.log(sideBar)
   return (
     <>
       <div
@@ -26,19 +24,26 @@ const LayOut = ({ children }: ILayOutProps) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          width: '100vw',
         }}
       >
         <HeaderComponent sideBar={sideBar}></HeaderComponent>
-        {sideBar && (
-          <div
-            style={{ width: '100vw', height: '100vh' }}
-            onMouseOver={onMouseOverBody}
-          >
-            <SideBarComponent />
-          </div>
-        )}
-        <div onMouseOver={onMouseOverBody}>{children}</div>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          {sideBar ? (
+            <div
+              style={{
+                width: '100vw',
+                display: 'flex',
+                flexDirection: 'row',
+              }}
+              onMouseOver={onMouseOverBody}
+            >
+              <SideBarComponent />
+              <div onMouseOver={onMouseOverBody}>{children}</div>
+            </div>
+          ) : (
+            <div onMouseOver={onMouseOverBody}>{children}</div>
+          )}
+        </div>
         <FooterComponent></FooterComponent>
       </div>
     </>

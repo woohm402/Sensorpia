@@ -5,14 +5,13 @@ interface IProps {
 }
 
 export const SideBarWrapper = styled.div`
-  width: 636px;
-  height: 100vh;
+  max-width: 636px;
+  width: 100%;
+  height: 220vh;
   background: #f9f9f9;
-  position: relative;
   z-index: 0;
 `
 export const SideBarTitleWrapper = styled.div`
-  position: relative;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 26px;

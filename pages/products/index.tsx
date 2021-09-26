@@ -1,5 +1,7 @@
+import ProductComponent from '../../src/english/product/Product.container'
+
 const Product = () => {
-  return null
+  return <ProductComponent />
 }
 
 export default Product

@@ -11,13 +11,13 @@ import {
 
 interface IProps {
   onClickMenu: any
-  menu: any
 }
 
-const SideBarUI = ({ onClickMenu, menu }: IProps) => {
+const SideBarUI = ({ onClickMenu }: IProps) => {
   const router = useRouter()
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
+  const { menu } = useContext(GlobalContext)
   return (
     <SideBarWrapper>
       <SideBarTitleWrapper>
