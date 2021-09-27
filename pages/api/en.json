@@ -73,6 +73,28 @@
       ]
     }
   },
+  "applications": {
+    "defense": [
+      "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
+      "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
+    ],
+    "satellite": [
+      "Sensorpia produces magnetic torquer and 3-axis magnetometer, which are used to control the location and pose of satellites",
+      "Magnetic dipole moment of magnetic torquer depends on the size of satellite. Sensorpia company can produce various size depends on the requirement of customers",
+      "Analog and digital output of the 3-axis magnetometer are possible."
+    ],
+    "satelliteDetails": {
+      "title": "3-axis flux-gate magnetometer",
+      "details": [
+        "Measurement of earth magnetic field",
+        "Light mass and low power consumption designed for satellite",
+        "Attitude sensing using 3-axis components of earth magnetic field"
+      ]
+    },
+    "measurement": {
+      "detailsFixed": "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
+    }
+  },
   "sidebar": {
     "name": ["Products", "Application", "About Us"],
     "Products": [

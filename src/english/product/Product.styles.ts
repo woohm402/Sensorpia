@@ -18,6 +18,7 @@ export const ThreeAxisNormalButton = styled.button`
   cursor: pointer;
 `
 export const ThreeAxisSatelliteButton = styled.button`
+  cursor: pointer;
   width: 279px;
   height: 53px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};

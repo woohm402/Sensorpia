@@ -20,7 +20,13 @@ const ApplicationComponet = () => {
     }
     RandomImage()
   }, [router.pathname, setMenu])
-  return <ApplicationUI finalRandomImage={finalRandomImage} />
+  return (
+    <ApplicationUI
+      finalRandomImage={finalRandomImage}
+      menu={menu}
+      data={data}
+    />
+  )
 }
 
 export default ApplicationComponet
