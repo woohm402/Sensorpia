@@ -3,11 +3,18 @@ import styled from '@emotion/styled'
 interface IProps {
   color?: any
 }
+interface IPropsTwo {
+  menu?: any
+}
 
 export const SideBarWrapper = styled.div`
   max-width: 636px;
   width: 100%;
-  height: 220vh;
+  height: ${(props: IPropsTwo) =>
+    props.menu === 'Sensorpia intro.& our customers' ||
+    props.menu === 'Vision & History'
+      ? '270vh'
+      : '220vh'};
   background: #f9f9f9;
   z-index: 0;
 `

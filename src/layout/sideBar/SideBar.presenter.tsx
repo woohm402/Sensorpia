@@ -19,7 +19,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
   const data = require(`../../../pages/api/${language}.json`)
   const { menu } = useContext(GlobalContext)
   return (
-    <SideBarWrapper>
+    <SideBarWrapper menu={menu}>
       <SideBarTitleWrapper>
         {router.pathname === '/products'
           ? data.sidebar.name[0]

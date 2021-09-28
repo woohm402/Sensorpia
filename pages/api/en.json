@@ -95,6 +95,21 @@
       "detailsFixed": "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
     }
   },
+  "aboutUs": {
+    "sensorpiaIntro": {
+      "first": "SENSORPIA company was established in 2006. The company produce magnetic sensors and magnetic instruments which were developed through the technology accumulated more than 30 years experiences. Main products are 3-axis flux-gate magnetometer and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also possible. Testing service is also possible using magnetic testing equipment in Sensorpia co..",
+      "circleTexts": [
+        "Defense",
+        "Magnetic Sensors",
+        "Satellites",
+        "Measurement and Test",
+        "Magnetic Instruments"
+      ],
+      "second": "Magnetic sensors have been used for defense and satellites. Sensorpia Co. has been produced high-precision magnetic sensors for the various domestic customers since 2006.",
+      "third": "Magnetic measuring instruments are necessary to produce high performance of magnetic sensors. Sensorpia Co. has many kinds of self-developed measuring equipment and also possible to manufacturing the equipment for the request of customers.",
+      "ourCustomers": "Our customers"
+    }
+  },
   "sidebar": {
     "name": ["Products", "Application", "About Us"],
     "Products": [

@@ -1,5 +1,7 @@
+import AboutUsComponent from '../../src/english/aboutus/AboutUs.container'
+
 const aboutUs = () => {
-  return null
+  return <AboutUsComponent />
 }
 
 export default aboutUs
