@@ -52,6 +52,8 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       router.push('/application')
     } else if (event.target.id === 'AboutUs') {
       router.push('/aboutUs')
+    } else if (event.target.id === 'ContactUs') {
+      router.push('/contactUs')
     }
   }
 
