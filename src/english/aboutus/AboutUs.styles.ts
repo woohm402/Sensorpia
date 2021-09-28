@@ -210,3 +210,92 @@ export const SatracImageWrapper = styled.div`
   margin-left: 73px;
   background: url('./SatracImage.svg');
 `
+export const VisionAndHistoryTitleWrapper = styled.div`
+  margin-top: 64px;
+  margin-left: 150px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #0070c0;
+`
+export const VisionAndHistoryLineDivider = styled.div`
+  width: 984px;
+  height: 0px;
+  margin-top: 10px;
+  border: 1px solid #c9c9c9;
+  margin-left: 150px;
+`
+export const VisionAndHistoryImagesWrapper = styled.div`
+  display: flex;
+  margin-top: 75px;
+  margin-left: 150px;
+`
+
+export const VisionAndHistoryImageOne = styled.div`
+  width: 455px;
+  height: 455px;
+  border-radius: 50%;
+  background: url('./VisionAndHistoryImageOne.svg');
+`
+export const VisionAndHistoryImageTwo = styled.div`
+  width: 455px;
+  height: 455px;
+  margin-left: 74px;
+  border-radius: 50%;
+  background: url('./VisionAndHistoryImageTwo.svg');
+`
+
+export const VisionAndHistoryExplanationsWrapper = styled.div`
+  display: flex;
+  margin-top: 60px;
+  margin-left: 150px;
+`
+export const VisionAndHistoryFirstExplanation = styled.div`
+  max-width: 454px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: justify;
+  color: #262626;
+`
+export const VisionAndHistorySecondExplanation = styled.div`
+  margin-left: 74px;
+  max-width: 455px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: justify;
+  color: #262626;
+`
+export const VisionAndHistorySecondTitleWrapper = styled.div`
+  margin-top: 170px;
+  margin-left: 150px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #0070c0;
+`
+
+export const VisionAndHistoryYearsWrapper = styled.div`
+  margin-top: 75px;
+  margin-left: 150px;
+  display: flex;
+`
+export const VisionAndHistoryArrowWrapper = styled.div`
+  width: 30px;
+  height: 675px;
+  background: url('./VisionAndHistoryArrow.svg');
+`
+export const VisionAndHistoryYearExplanation = styled.div`
+  margin-left: 60px;
+  margin-bottom: 35px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #262626;
+`

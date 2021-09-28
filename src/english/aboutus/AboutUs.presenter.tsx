@@ -27,6 +27,18 @@ import {
   SecondTextWrapper,
   SiImageWrapper,
   ThirdTextWrapper,
+  VisionAndHistoryArrowWrapper,
+  VisionAndHistoryExplanationsWrapper,
+  VisionAndHistoryFirstExplanation,
+  VisionAndHistoryImageOne,
+  VisionAndHistoryImagesWrapper,
+  VisionAndHistoryImageTwo,
+  VisionAndHistoryLineDivider,
+  VisionAndHistorySecondExplanation,
+  VisionAndHistorySecondTitleWrapper,
+  VisionAndHistoryTitleWrapper,
+  VisionAndHistoryYearExplanation,
+  VisionAndHistoryYearsWrapper,
 } from './AboutUs.styles'
 
 interface IProps {
@@ -88,6 +100,40 @@ const AboutUsUI = ({ menu, data }: IProps) => {
             <SatracImageWrapper />
           </OurCustomersImageSecondLineWrapper>
         </AboutUsBigWrapper>
+      )}
+      {menu === 'Vision & History' && (
+        <>
+          <VisionAndHistoryTitleWrapper>
+            {data.aboutUs.visionAndHistory.title}
+          </VisionAndHistoryTitleWrapper>
+          <VisionAndHistoryLineDivider />
+          <VisionAndHistoryImagesWrapper>
+            <VisionAndHistoryImageOne />
+            <VisionAndHistoryImageTwo />
+          </VisionAndHistoryImagesWrapper>
+          <VisionAndHistoryExplanationsWrapper>
+            <VisionAndHistoryFirstExplanation>
+              {data.aboutUs.visionAndHistory.explanations.first}
+            </VisionAndHistoryFirstExplanation>
+            <VisionAndHistorySecondExplanation>
+              {data.aboutUs.visionAndHistory.explanations.second}
+            </VisionAndHistorySecondExplanation>
+          </VisionAndHistoryExplanationsWrapper>
+          <VisionAndHistorySecondTitleWrapper>
+            {data.aboutUs.visionAndHistory.secondTitle}
+          </VisionAndHistorySecondTitleWrapper>
+          <VisionAndHistoryLineDivider />
+          <VisionAndHistoryYearsWrapper>
+            <VisionAndHistoryArrowWrapper />
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {data.aboutUs.visionAndHistory.years.map((value: any) => (
+                <VisionAndHistoryYearExplanation key="">
+                  {`${value.year} ${value.content}`}
+                </VisionAndHistoryYearExplanation>
+              ))}
+            </div>
+          </VisionAndHistoryYearsWrapper>
+        </>
       )}
     </>
   )

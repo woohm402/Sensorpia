@@ -3,6 +3,7 @@ interface IProps {
   color?: any
   menuColor?: any
   sideBar?: any
+  router?: any
 }
 
 export const HeaderWrapper = styled.div`
@@ -13,7 +14,9 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   position: relative;
   box-shadow: ${(props: IProps) =>
-    props.sideBar && '0px 2px 15px rgba(0,0,0, 0.15)'};
+    props.sideBar ||
+    (props.router.pathname === '/contactUs' &&
+      '0px 2px 15px rgba(0,0,0, 0.15)')};
   z-index: 1;
 `
 export const SensorpiaLogoWrapper = styled.div`

@@ -1,13 +1,192 @@
 {
   "title": "Sensorpia",
+  "footer": {
+    "Address": "Address : 34054 대전광역시 유성구 유성대로1596번길 64, 2층(전민동, (주)텔레옵틱스사옥2동) / Yuseong-daero 1596-64, Yuseong-Gu, Daejeon City 34054, Korea Tel : +82-42-933-0877 / Fax : +82-42-933-0878 / E-mail : sensorpia@sensorpia.co.kr",
+    "Others": ["이용약관", "개인정보 처리방침"]
+  },
   "main": {
     "logo": "/sensorpiaLogo.svg",
-    "Home": "홈",
+    "Home": "Home",
     "Product": "Product",
     "Applications": "Applications",
     "AboutUs": "About Us",
     "ContactUs": "Contact Us",
     "Eng": "Eng",
-    "Kor": "Kor"
+    "Kor": "Kor",
+    "Slider": {
+      "Image1": "./MainSlider1.svg",
+      "Image2": "./MainSlider2.svg",
+      "Image3": "./MainSlider3.svg",
+      "Image4": "./MainSlider4.svg"
+    },
+    "title": "Main Products line",
+    "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
+    "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
+    "mainProductThreeName": "Magnetic torquer for satellite",
+    "specificationButton": "Specification",
+    "satelliteImageNames": { "SatelliteOne": "MS-15", "SatelliteTwo": "MS-22" },
+    "defenseImageNames": { "DefenseOne": "MS-13", "DefenseTwo": "MS-27" }
+  },
+  "products": {
+    "threeAxis": ["Normal", "Satellite", "Defense"],
+    "threeAxisDetails": {
+      "Normal": {
+        "Title": "Explanation",
+        "Details": "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
+      },
+      "Satellite": {
+        "Title": "Explanation",
+        "Details": [
+          "Measurement of earth magnetic field",
+          "Light mass and low power consumption designed for satellite.",
+          "Attitude sensing using 3-axis components of earth magnetic field"
+        ]
+      },
+      "Defense": {
+        "Title": "Explanation",
+        "Details": [
+          "Products are specially useful for under see water to measure magnetic field of warship",
+          "3-axis have high orthogonality each other and high linearity",
+          "Total field measurement overcome magnetometer attitude change."
+        ]
+      }
+    },
+    "magneticTorquer": ["Satellite"],
+    "magneticTorquerDetails": {
+      "Satellite": {
+        "Title": "Explanation",
+        "Details": [
+          "Torque generation using magnetic dipole moment and earth magnetic field to rotate satellite",
+          " Light mass and low power consumption designed for satellite."
+        ]
+      }
+    },
+    "magneticInstruments": {
+      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10"],
+      "Details": [
+        "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
+        "Measure dc hysteresis loop of soft magnetic material",
+        "Toroidal and single strip specimen are possible",
+        "Measure ac hysteresis loop of soft magnetic material",
+        "Core loss and magnetostriction measurement",
+        "Epstein and single strip specimen are possible"
+      ]
+    }
+  },
+  "applications": {
+    "defense": [
+      "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
+      "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
+    ],
+    "satellite": [
+      "Sensorpia produces magnetic torquer and 3-axis magnetometer, which are used to control the location and pose of satellites",
+      "Magnetic dipole moment of magnetic torquer depends on the size of satellite. Sensorpia company can produce various size depends on the requirement of customers",
+      "Analog and digital output of the 3-axis magnetometer are possible."
+    ],
+    "satelliteDetails": {
+      "title": "3-axis flux-gate magnetometer",
+      "details": [
+        "Measurement of earth magnetic field",
+        "Light mass and low power consumption designed for satellite",
+        "Attitude sensing using 3-axis components of earth magnetic field"
+      ]
+    },
+    "measurement": {
+      "detailsFixed": "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
+    }
+  },
+  "aboutUs": {
+    "sensorpiaIntro": {
+      "first": "SENSORPIA company was established in 2006. The company produce magnetic sensors and magnetic instruments which were developed through the technology accumulated more than 30 years experiences. Main products are 3-axis flux-gate magnetometer and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also possible. Testing service is also possible using magnetic testing equipment in Sensorpia co..",
+      "circleTexts": [
+        "Defense",
+        "Magnetic Sensors",
+        "Satellites",
+        "Measurement and Test",
+        "Magnetic Instruments"
+      ],
+      "second": "Magnetic sensors have been used for defense and satellites. Sensorpia Co. has been produced high-precision magnetic sensors for the various domestic customers since 2006.",
+      "third": "Magnetic measuring instruments are necessary to produce high performance of magnetic sensors. Sensorpia Co. has many kinds of self-developed measuring equipment and also possible to manufacturing the equipment for the request of customers.",
+      "ourCustomers": "Our customers"
+    },
+    "visionAndHistory": {
+      "title": "Vision",
+      "explanations": {
+        "first": "Unmanned and data network technologies are one of key technology in 4th generation Industry. Sensors make very import roll in unmanned and data network. Magnetic sensors also important for sensing earth magnetic field and magnetic field generated from steel objects such as cars and military moving machines",
+        "second": "Magnetic sensors and instruments production has high value added, and Low energy consumption, and no hazardous materials production."
+      },
+      "secondTitle": "History",
+      "years": [
+        {
+          "year": "2020",
+          "content": "Production of magnetic proximity sensor for heavy torpedo (LIGnex1)"
+        },
+        {
+          "year": "2018 ~ 2019",
+          "content": "TAM for Moon and SNIPE satellite (KARI and KASI)"
+        },
+        {
+          "year": "2018 ~",
+          "content": "TAM and MTA CAS500-1, 2, 4 for satellite (KARI and KAI)"
+        },
+        {
+          "year": "2017 ~ 2018",
+          "content": "3-axis Flux-gate Magnetometer for Harbor surveillance (LIGnex1)"
+        },
+        {
+          "year": "2015 ~ 2019",
+          "content": "Magnetic Sensor for ABM (Hanhwa)"
+        },
+        {
+          "year": "2014",
+          "content": "Development of 3-axis Flux-gate Magnetometer for SLMM (LIGnex1)"
+        },
+        {
+          "year": "2011 ~ 2013",
+          "content": "3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
+        },
+        {
+          "year": "2008~",
+          "content": "Magnetic instruments made for many customer (Posco and KDT)"
+        },
+        {
+          "year": "2006 ~",
+          "content": "Magnetic torquer and TAM for satellite (Satrac-I, KAIST)"
+        },
+        { "year": "2006", "content": "Builded Company" }
+      ]
+    }
+  },
+  "contactUs": {
+    "title": "Contact us",
+    "details": [
+      { "content": "Mail   sensorpia@sensorpia@co.kr" },
+      { "content": "Tel   82-42-933-0877" },
+      { "content": "Fax   +82-42-933-0878" }
+    ]
+  },
+  "sidebar": {
+    "name": ["Products", "Application", "About Us"],
+    "Products": [
+      "3-axis Flux-gate magnetometer",
+      "Magnetic torquer",
+      "Magnetic Instrument"
+    ],
+    "Application": ["Defense", "Satellite", "Measurement"],
+    "AboutUs": ["Sensorpia intro.& our customers", "Vision & History"]
+  },
+  "NavBar": {
+    "list": ["Products", "Applications", "About Us", "Careers", "Contact Us"],
+    "Products": [
+      "3-axis Flux-gate magnetometer",
+      "Magnetic torquer",
+      "Magnetic Instrument"
+    ],
+    "Applications": ["Defense", "Satellite", "Measurement"],
+    "AboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
+  },
+  "SliderText": {
+    "SliderMainText": "Magnetic Sensors and Instruments",
+    "SliderSubText": "For your Innovative Research and Development"
   }
 }

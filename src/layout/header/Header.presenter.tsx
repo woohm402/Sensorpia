@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router'
 import { useContext } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import {
@@ -51,11 +52,13 @@ const HeaderUI = ({
   onClickMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
+  const router = useRouter()
   return (
     <>
       <HeaderWrapper
         //@ts-ignore
         sideBar={sideBar}
+        router={router}
       >
         <SensorpiaLogoWrapper>
           <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
