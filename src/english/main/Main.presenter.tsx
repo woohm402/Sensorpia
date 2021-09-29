@@ -47,18 +47,22 @@ import {
   ApplicationsDetails,
   AboutUsDetailsWrapper,
   AboutUsDetails,
+  CareersDetailsWrapper,
+  CareersDetails,
 } from './Main.styles'
 interface IProps {
   data: any
   onClickSliderNext: any
   translate: any
   onClickSliderPrevious: any
+  language: any
 }
 const MainUI = ({
   data,
   onClickSliderNext,
   translate,
   onClickSliderPrevious,
+  language,
 }: IProps) => {
   return (
     <>
@@ -146,12 +150,12 @@ const MainUI = ({
         </SpecificationButton>
       </TorquerButtonWrapper>
       <NavBarDetailsRepeatWrapper>
-        <NavBarMainMenusWrapper>
+        <NavBarMainMenusWrapper language={language}>
           {data.NavBar?.list.map((data: any) => (
             <NavBarMainMenu key="">{data}</NavBarMainMenu>
           ))}
         </NavBarMainMenusWrapper>
-        <NavBarMainMenuDetailWrapper>
+        <NavBarMainMenuDetailWrapper language={language}>
           <ProductDetailsWrapper>
             {data.NavBar.Products.map((data: any) => (
               <ProductDetails key="" id={data}>
@@ -159,7 +163,7 @@ const MainUI = ({
               </ProductDetails>
             ))}
           </ProductDetailsWrapper>
-          <ApplicationsDetailsWrapper>
+          <ApplicationsDetailsWrapper language={language}>
             {data.NavBar.Applications.map((data: any) => (
               <ApplicationsDetails key="" id={data}>
                 {data}
@@ -173,6 +177,13 @@ const MainUI = ({
               </AboutUsDetails>
             ))}
           </AboutUsDetailsWrapper>
+          <CareersDetailsWrapper>
+            {data.NavBar.Careers.map((data: any) => (
+              <CareersDetails key="" id={data}>
+                {data}
+              </CareersDetails>
+            ))}
+          </CareersDetailsWrapper>
         </NavBarMainMenuDetailWrapper>
       </NavBarDetailsRepeatWrapper>
     </>

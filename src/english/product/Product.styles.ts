@@ -33,6 +33,7 @@ export const ThreeAxisSatelliteButton = styled.button`
 `
 
 export const ThreeAxisDefenseButton = styled.button`
+  cursor: pointer;
   width: 279px;
   height: 53px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
@@ -218,21 +219,55 @@ export const DefenseImageWrapperTwo = styled.div`
   flex-direction: column;
 `
 export const DefenseImageMSTwentySeven = styled.div`
+  position: relative;
   width: 399px;
   height: 280px;
   background: url('./DefenseImageMS-27.svg');
 `
+export const DefenseImageMSTwentySevenText = styled.span`
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 38px;
+  color: #262626;
+  top: 234px;
+  left: 306px;
+`
+
 export const DefenseImageMSThirteen = styled.div`
+  position: relative;
   margin-top: 113px;
   width: 399px;
   height: 280px;
   background: url('./DefenseImageMS-13.svg');
 `
+export const DefenseImageMSThirteenText = styled.span`
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 38px;
+  color: #262626;
+  top: 234px;
+  left: 306px;
+`
 export const DefenseImageMSSeven = styled.div`
+  position: relative;
   margin-top: 113px;
   width: 399px;
   height: 280px;
   background: url('./DefenseImageMS-07.svg');
+`
+export const DefenseImageMSSevenText = styled.span`
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 38px;
+  color: #262626;
+  top: 234px;
+  left: 306px;
 `
 export const MagneticTorquerSatelliteButton = styled.button`
   width: 279px;

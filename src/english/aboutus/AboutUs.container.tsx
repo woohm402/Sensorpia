@@ -9,9 +9,13 @@ const AboutUsComponent = () => {
   const router = useRouter()
   useEffect(() => {
     if (router.pathname === '/aboutUs') {
-      setMenu('Sensorpia intro.& our customers')
+      if (language === 'en') {
+        setMenu('Sensorpia intro.& our customers')
+      } else if (language === 'kor') {
+        setMenu('회사소개 & 주요 고객사')
+      }
     }
-  }, [router.pathname, setMenu])
+  }, [router.pathname, setMenu, language])
   return <AboutUsUI menu={menu} data={data} />
 }
 

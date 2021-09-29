@@ -12,7 +12,9 @@ export const SideBarWrapper = styled.div`
   width: 100%;
   height: ${(props: IPropsTwo) =>
     props.menu === 'Sensorpia intro.& our customers' ||
-    props.menu === 'Vision & History'
+    props.menu === 'Vision & History' ||
+    props.menu === '회사소개 & 주요 고객사' ||
+    props.menu === '비전 & 회사 이력'
       ? '270vh'
       : '220vh'};
   background: #f9f9f9;

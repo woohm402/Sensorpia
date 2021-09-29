@@ -25,6 +25,8 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
           ? data.sidebar.name[0]
           : router.pathname === '/application'
           ? data.sidebar.name[1]
+          : router.pathname === '/careers' && language === 'kor'
+          ? data.sidebar.name[3]
           : data.sidebar.name[2]}
       </SideBarTitleWrapper>
       <SideBarMenusWrapper>
@@ -57,7 +59,24 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                 >
                   {value}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Products.length - 1 !== index && (
+                {data.sidebar.Application.length - 1 !== index && (
+                  <SideBarMenusLineDivider />
+                )}
+              </>
+            ))
+          : router.pathname === '/careers' && language === 'kor'
+          ? data.sidebar.Careers.map((value: any, index: any) => (
+              <>
+                <SideBarMenusInnerWrapper
+                  key=""
+                  id={value}
+                  onClick={onClickMenu}
+                  //@ts-ignore
+                  color={menu === value}
+                >
+                  {value}
+                </SideBarMenusInnerWrapper>
+                {data.sidebar.Careers.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
@@ -73,7 +92,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                 >
                   {value}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Products.length - 1 !== index && (
+                {data.sidebar.AboutUs.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>

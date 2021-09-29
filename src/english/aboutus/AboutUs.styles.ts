@@ -4,7 +4,6 @@ export const AboutUsBigWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-
 export const AboutUsImageOneWrapper = styled.div`
   width: 1286px;
   height: 686px;

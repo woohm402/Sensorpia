@@ -10,7 +10,11 @@ const ApplicationComponet = () => {
   const router = useRouter()
   useEffect(() => {
     if (router.pathname === '/application') {
-      setMenu('Defense')
+      if (language === 'en') {
+        setMenu('Defense')
+      } else if (language === 'kor') {
+        setMenu('국방')
+      }
     }
     function RandomImage() {
       const Images = ['./DefenseRandomOne.svg', './DefenseRandomTwo.svg']
@@ -19,7 +23,7 @@ const ApplicationComponet = () => {
       setFinalRandomImage(RandomImage)
     }
     RandomImage()
-  }, [router.pathname, setMenu])
+  }, [router.pathname, setMenu, language])
   return (
     <ApplicationUI
       finalRandomImage={finalRandomImage}

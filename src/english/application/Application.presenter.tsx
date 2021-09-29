@@ -33,7 +33,7 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
   console.log('final', finalRandomImage)
   return (
     <>
-      {menu === 'Defense' && (
+      {(menu === 'Defense' || menu === '국방') && (
         <>
           <DefenseImageRandomWrapper
             finalRandomImage={finalRandomImage}
@@ -43,7 +43,7 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
           ))}
         </>
       )}
-      {menu === 'Satellite' && (
+      {(menu === 'Satellite' || menu === '인공 위성') && (
         <>
           <SatelliteImageWrapperOne></SatelliteImageWrapperOne>
           {data.applications.satellite.map((data: any) => (
@@ -66,7 +66,7 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
           </ApplicationMagnetometerWrapper>
         </>
       )}
-      {menu === 'Measurement' && (
+      {(menu === 'Measurement' || menu === '측정 장비') && (
         <>
           <MagneticInstrumentImageOneWrapper />
           <MagneticInstrumentImageOneDetail>

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 interface IProps {
-  translate: any
+  translate?: any
+  language?: any
 }
 export const SliderMainWrapper = styled.div`
   position: relative;
@@ -328,7 +329,7 @@ export const NavBarDetailsRepeatWrapper = styled.div`
 export const NavBarMainMenusWrapper = styled.div`
   top: 47px;
   margin: 0 auto;
-  width: 919px;
+  width: ${(props: IProps) => (props.language === 'kor' ? '1007px' : '919px')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -343,7 +344,7 @@ export const NavBarMainMenu = styled.span`
 `
 export const NavBarMainMenuDetailWrapper = styled.div`
   position: relative;
-  width: 919px;
+  width: ${(props: IProps) => (props.language === 'kor' ? '1007px' : '919px')};
   margin: 0 auto;
   top: 80px;
   display: flex;
@@ -364,7 +365,8 @@ export const ProductDetails = styled.span`
   color: #6d6d6d;
 `
 export const ApplicationsDetailsWrapper = styled.div`
-  margin-left: 140px;
+  margin-left: ${(props: IProps) =>
+    props.language === 'kor' ? '98px' : '140px'};
   max-width: 124px;
   display: flex;
   flex-direction: column;
@@ -386,6 +388,21 @@ export const AboutUsDetailsWrapper = styled.div`
   flex-direction: column;
 `
 export const AboutUsDetails = styled.span`
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6d6d6d;
+`
+export const CareersDetailsWrapper = styled.div`
+  margin-left: 89px;
+  max-width: 71px;
+  display: flex;
+  flex-direction: column;
+`
+export const CareersDetails = styled.span`
   margin-bottom: 25px;
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;

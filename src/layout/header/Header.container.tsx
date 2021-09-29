@@ -36,7 +36,8 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       event.target.id === 'Product' ||
       event.target.id === 'Application' ||
       event.target.id === 'AboutUs' ||
-      event.target.id === 'ContactUs'
+      event.target.id === 'ContactUs' ||
+      event.target.id === 'Careers'
     ) {
       setIsOpen(true)
     } else {
@@ -54,6 +55,8 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       router.push('/aboutUs')
     } else if (event.target.id === 'ContactUs') {
       router.push('/contactUs')
+    } else if (event.target.id === 'Careers') {
+      router.push('/careers')
     }
   }
 

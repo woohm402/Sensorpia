@@ -15,7 +15,7 @@ const LayOut = ({ children }: ILayOutProps) => {
     setIsOpen(false)
   }
   const router = useRouter()
-  const link = ['/application', '/aboutUs', '/products']
+  const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)
   return (
     <>

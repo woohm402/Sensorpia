@@ -4,6 +4,7 @@ interface IProps {
   menuColor?: any
   sideBar?: any
   router?: any
+  language?: any
 }
 
 export const HeaderWrapper = styled.div`
@@ -14,9 +15,8 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   position: relative;
   box-shadow: ${(props: IProps) =>
-    props.sideBar ||
-    (props.router.pathname === '/contactUs' &&
-      '0px 2px 15px rgba(0,0,0, 0.15)')};
+    (props.sideBar || props.router.pathname === '/contactUs') &&
+    '0px 2px 15px rgba(0,0,0, 0.15)'};
   z-index: 1;
 `
 export const SensorpiaLogoWrapper = styled.div`
@@ -29,8 +29,9 @@ export const SensorPiaLogo = styled.img`
 `
 
 export const MenusWrapper = styled.div`
-  margin-left: 495px;
-  width: 696px;
+  margin-left: ${(props: IProps) =>
+    props.language === 'kor' ? '357px' : '495px'};
+  width: ${(props: IProps) => (props.language === 'kor' ? '834px' : '696px')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,6 +62,11 @@ export const MenuAboutUs = styled.span`
 export const MenuContactUs = styled.span`
   color: ${(props: IProps) =>
     props.color === 'ContactUs' ? '#0070c0' : '#9c9d9e'};
+  cursor: pointer;
+`
+export const MenuCareers = styled.span`
+  color: ${(props: IProps) =>
+    props.color === 'Careers' ? '#0070c0' : '#9c9d9e'};
   cursor: pointer;
 `
 
@@ -112,9 +118,9 @@ export const NavBarWrapper = styled.div`
 `
 
 export const NavBarMainMenusWrapper = styled.div`
-  left: 1007px;
+  left: ${(props: IProps) => (props.language === 'kor' ? '869px' : '1007px')};
   top: 30px;
-  width: 573px;
+  width: ${(props: IProps) => (props.language === 'kor' ? '711px' : '573px')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,7 +135,7 @@ export const NavBarMainMenu = styled.span`
 `
 export const NavBarMainMenuDetailWrapper = styled.div`
   position: relative;
-  left: 1007px;
+  left: ${(props: IProps) => (props.language === 'kor' ? '869px' : '1007px')};
   top: 52px;
   display: flex;
   flex-direction: row;
@@ -149,8 +155,10 @@ export const ProductDetails = styled.span`
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `
 export const ApplicationsDetailsWrapper = styled.div`
-  margin-left: 26px;
-  max-width: 124px;
+  margin-left: ${(props: IProps) =>
+    props.language === 'kor' ? '24px' : '26px'};
+  max-width: ${(props: IProps) =>
+    props.language === 'kor' ? '67px' : '124px'};
   display: flex;
   flex-direction: column;
 `
@@ -165,12 +173,29 @@ export const ApplicationsDetails = styled.span`
 `
 
 export const AboutUsDetailsWrapper = styled.div`
-  margin-left: 80px;
-  max-width: 138px;
+  margin-left: ${(props: IProps) =>
+    props.language === 'kor' ? '122px' : '80px'};
+  max-width: ${(props: IProps) =>
+    props.language === 'kor' ? '85px' : '138px'};
   display: flex;
   flex-direction: column;
 `
 export const AboutUsDetails = styled.span`
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
+`
+export const CareersDetailsWrapper = styled.div`
+  margin-left: 68px;
+  max-width: 63px;
+  display: flex;
+  flex-direction: column;
+`
+export const CareersDetails = styled.span`
   margin-bottom: 25px;
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;

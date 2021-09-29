@@ -48,7 +48,8 @@ interface IProps {
 const AboutUsUI = ({ menu, data }: IProps) => {
   return (
     <>
-      {menu === 'Sensorpia intro.& our customers' && (
+      {(menu === 'Sensorpia intro.& our customers' ||
+        menu === '회사소개 & 주요 고객사') && (
         <AboutUsBigWrapper>
           <AboutUsImageOneWrapper />
           <AboutUsFirstTextWrapper>
@@ -101,7 +102,7 @@ const AboutUsUI = ({ menu, data }: IProps) => {
           </OurCustomersImageSecondLineWrapper>
         </AboutUsBigWrapper>
       )}
-      {menu === 'Vision & History' && (
+      {(menu === 'Vision & History' || menu === '비전 & 회사 이력') && (
         <>
           <VisionAndHistoryTitleWrapper>
             {data.aboutUs.visionAndHistory.title}

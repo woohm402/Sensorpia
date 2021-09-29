@@ -7,7 +7,7 @@
   "main": {
     "logo": "/sensorpiaLogo.svg",
     "Home": "Home",
-    "Product": "Product",
+    "Product": "Products",
     "Applications": "Applications",
     "AboutUs": "About Us",
     "ContactUs": "Contact Us",
@@ -48,7 +48,12 @@
           "Products are specially useful for under see water to measure magnetic field of warship",
           "3-axis have high orthogonality each other and high linearity",
           "Total field measurement overcome magnetometer attitude change."
-        ]
+        ],
+        "ImageTexts": {
+          "TwentySeven": "MS-27",
+          "Thirteen": "MS-13",
+          "Seven": "MS-07"
+        }
       }
     },
     "magneticTorquer": ["Satellite"],

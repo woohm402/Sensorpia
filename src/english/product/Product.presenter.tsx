@@ -50,6 +50,9 @@ import {
   MagneticInstrumentACMagneticTitle,
   MagneticInstrumentACMagneticDetails,
   MagneticInstrumentACMagneticImageWrapper,
+  DefenseImageMSTwentySevenText,
+  DefenseImageMSThirteenText,
+  DefenseImageMSSevenText,
 } from './Product.styles'
 
 const ProductUI = () => {
@@ -177,9 +180,27 @@ const ProductUI = () => {
                   )}
                 </DefenseExplanationWrapper>
                 <DefenseImageWrapperTwo>
-                  <DefenseImageMSTwentySeven></DefenseImageMSTwentySeven>
-                  <DefenseImageMSThirteen></DefenseImageMSThirteen>
-                  <DefenseImageMSSeven></DefenseImageMSSeven>
+                  <DefenseImageMSTwentySeven>
+                    <DefenseImageMSTwentySevenText>
+                      {
+                        data.products.threeAxisDetails.Defense.ImageTexts
+                          .TwentySeven
+                      }
+                    </DefenseImageMSTwentySevenText>
+                  </DefenseImageMSTwentySeven>
+                  <DefenseImageMSThirteen>
+                    <DefenseImageMSThirteenText>
+                      {
+                        data.products.threeAxisDetails.Defense.ImageTexts
+                          .Thirteen
+                      }
+                    </DefenseImageMSThirteenText>
+                  </DefenseImageMSThirteen>
+                  <DefenseImageMSSeven>
+                    <DefenseImageMSSevenText>
+                      {data.products.threeAxisDetails.Defense.ImageTexts.Seven}
+                    </DefenseImageMSSevenText>
+                  </DefenseImageMSSeven>
                 </DefenseImageWrapperTwo>
               </DefenseContentWrapper>
             </>

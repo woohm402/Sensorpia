@@ -6,12 +6,15 @@ import {
   AboutUsDetailsWrapper,
   ApplicationsDetails,
   ApplicationsDetailsWrapper,
+  CareersDetails,
+  CareersDetailsWrapper,
   HeaderWrapper,
   LanguageChangeWrapper,
   LanguageEnglish,
   LanguageKorean,
   MenuAboutUs,
   MenuApplication,
+  MenuCareers,
   MenuContactUs,
   MenuHome,
   MenuProduct,
@@ -52,6 +55,7 @@ const HeaderUI = ({
   onClickMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
+  console.log(language)
   const router = useRouter()
   return (
     <>
@@ -63,7 +67,7 @@ const HeaderUI = ({
         <SensorpiaLogoWrapper>
           <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
         </SensorpiaLogoWrapper>
-        <MenusWrapper>
+        <MenusWrapper language={language}>
           <MenuHome
             id="Home"
             onMouseOver={onMouseOverMenu}
@@ -96,6 +100,16 @@ const HeaderUI = ({
           >
             {data.main.AboutUs}
           </MenuAboutUs>
+          {language === 'kor' && (
+            <MenuCareers
+              id="Careers"
+              onMouseOver={onMouseOverMenu}
+              color={menu}
+              onClick={onClickMenu}
+            >
+              {data.main.Careers}
+            </MenuCareers>
+          )}
           <MenuContactUs
             id="ContactUs"
             onMouseOver={onMouseOverMenu}
@@ -116,12 +130,12 @@ const HeaderUI = ({
       </HeaderWrapper>
       {isOpen && (
         <NavBarWrapper>
-          <NavBarMainMenusWrapper>
+          <NavBarMainMenusWrapper language={language}>
             {data.NavBar?.list.map((data: any) => (
               <NavBarMainMenu key="">{data}</NavBarMainMenu>
             ))}
           </NavBarMainMenusWrapper>
-          <NavBarMainMenuDetailWrapper>
+          <NavBarMainMenuDetailWrapper language={language}>
             <ProductDetailsWrapper>
               {data.NavBar.Products.map((data: any) => (
                 <ProductDetails
@@ -134,7 +148,7 @@ const HeaderUI = ({
                 </ProductDetails>
               ))}
             </ProductDetailsWrapper>
-            <ApplicationsDetailsWrapper>
+            <ApplicationsDetailsWrapper language={language}>
               {data.NavBar.Applications.map((data: any) => (
                 <ApplicationsDetails
                   key=""
@@ -146,7 +160,7 @@ const HeaderUI = ({
                 </ApplicationsDetails>
               ))}
             </ApplicationsDetailsWrapper>
-            <AboutUsDetailsWrapper>
+            <AboutUsDetailsWrapper language={language}>
               {data.NavBar.AboutUs.map((data: any) => (
                 <AboutUsDetails
                   key=""
@@ -158,6 +172,20 @@ const HeaderUI = ({
                 </AboutUsDetails>
               ))}
             </AboutUsDetailsWrapper>
+            {language === 'kor' && (
+              <CareersDetailsWrapper>
+                {data.NavBar.Careers.map((data: any) => (
+                  <CareersDetails
+                    key=""
+                    id={data}
+                    onMouseOver={onMouseOverDetailMenu}
+                    menuColor={detailMenu === data}
+                  >
+                    {data}
+                  </CareersDetails>
+                ))}
+              </CareersDetailsWrapper>
+            )}
           </NavBarMainMenuDetailWrapper>
         </NavBarWrapper>
       )}

@@ -7,10 +7,11 @@
   "main": {
     "logo": "/sensorpiaLogo.svg",
     "Home": "Home",
-    "Product": "Product",
+    "Product": "Products",
     "Applications": "Applications",
     "AboutUs": "About Us",
     "ContactUs": "Contact Us",
+    "Careers": "Careers",
     "Eng": "Eng",
     "Kor": "Kor",
     "Slider": {
@@ -19,7 +20,7 @@
       "Image3": "./MainSlider3.svg",
       "Image4": "./MainSlider4.svg"
     },
-    "title": "Main Products line",
+    "title": "주요 제품 라인",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
     "mainProductThreeName": "Magnetic torquer for satellite",
@@ -31,73 +32,78 @@
     "threeAxis": ["Normal", "Satellite", "Defense"],
     "threeAxisDetails": {
       "Normal": {
-        "Title": "Explanation",
-        "Details": "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
+        "Title": "제품 설명",
+        "Details": "지구가 큰 자석이고, 많은 구조물이 강철로 제작되어 있기 때문에 자기장을 측정하는 기술은 매우 광범위하게 사용되고 있다. 그 예로 지질자원탐사 및 지하 매설 물 탐사로 사용되며, 인공위성 및 국방분야에도 중요하게 활용되고 있다."
       },
       "Satellite": {
         "Title": "Explanation",
         "Details": [
-          "Measurement of earth magnetic field",
-          "Light mass and low power consumption designed for satellite.",
-          "Attitude sensing using 3-axis components of earth magnetic field"
+          "지구자기장을 측정하는 제품입니다.",
+          "경량화 및 저전력으로 구동되는 제품이며, 인공위성에 사용.",
+          "지구자기장의 3축 성분을 측정하여 자세를 감지."
         ]
       },
       "Defense": {
         "Title": "Explanation",
         "Details": [
-          "Products are specially useful for under see water to measure magnetic field of warship",
-          "3-axis have high orthogonality each other and high linearity",
-          "Total field measurement overcome magnetometer attitude change."
-        ]
+          "해저에 함정의 자기장 측정용으로 사용되게 개발된 자력계",
+          " 3축에 대한 직교성 및 정확도가 높은 제품입니다.",
+          "자기장의 크기를 측정할 수 있어서 자력계의 자세 변화에 관계없이 목표물의 자기장 측정이 가능"
+        ],
+        "ImageTexts": {
+          "TwentySeven": "MS-27",
+          "Thirteen": "MS-13",
+          "Seven": "MS-07"
+        }
       }
     },
     "magneticTorquer": ["Satellite"],
     "magneticTorquerDetails": {
       "Satellite": {
-        "Title": "Explanation",
+        "Title": "제품 설명",
         "Details": [
-          "Torque generation using magnetic dipole moment and earth magnetic field to rotate satellite",
-          " Light mass and low power consumption designed for satellite."
+          "인공위성의 자세를 지구자기장을 이용 회전시키는데 사용됨",
+          "경량화 및 저전력으로 구동되는 제품이며, 인공위성에 사용"
         ]
       }
     },
     "magneticInstruments": {
       "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10"],
       "Details": [
-        "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
-        "Measure dc hysteresis loop of soft magnetic material",
-        "Toroidal and single strip specimen are possible",
-        "Measure ac hysteresis loop of soft magnetic material",
-        "Core loss and magnetostriction measurement",
-        "Epstein and single strip specimen are possible"
+        "AC 및 DC hysteresis 곡선, 철손 및 자기변형을 측정하는 자성재료 측정 장비",
+        "연자성 재료의 DC hysteresis 곡선 측정",
+        "원형 및 단일 strip 시편 측정 가능",
+        "연자성 재료의 AC hysteresis 곡선 측정",
+        "철손 및 자기 변형 측정 가능",
+        "Epstein 및 단일 시편 측정 가능"
       ]
     }
   },
   "applications": {
     "defense": [
-      "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
-      "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
+      "수중에서 고 분해능의 자기센서를 이용하여, 표적을 찾아내는 역할을 한다.",
+      "공중, 지상 및 해수에 표적의 위치를 비정상적인 자기장 분포로부터 찾아 내기 위해서 고감도의 자력계를 사용한다."
     ],
     "satellite": [
-      "Sensorpia produces magnetic torquer and 3-axis magnetometer, which are used to control the location and pose of satellites",
-      "Magnetic dipole moment of magnetic torquer depends on the size of satellite. Sensorpia company can produce various size depends on the requirement of customers",
-      "Analog and digital output of the 3-axis magnetometer are possible."
+      "Sensorpia는 인공위성의 자세 제어에 사용되는magetic toquer 와 3-axis magnetometer를 생산하고 있다.",
+      "Magnetic torquer의 자기모멘트는 위성의 크기에 따라 다르기 때문에 다양한 크기로 제작이 가능하며, 고객의 요구사항에 맞는 크기의 제작이 가능하다.",
+      "3-axis magnetometer 의 경우 아날로그 출력 및 digital serial 통신 모두 가능하다."
     ],
     "satelliteDetails": {
       "title": "3-axis flux-gate magnetometer",
       "details": [
-        "Measurement of earth magnetic field",
-        "Light mass and low power consumption designed for satellite",
-        "Attitude sensing using 3-axis components of earth magnetic field"
+        "지구자기장을 측정하는 제품입니다.",
+        "경량화 및 저전력으로 구동되는 제품이며, 인공위성에 사용.",
+        "지구자기장의 3축 성분을 측정하여 자세를 감지."
       ]
     },
     "measurement": {
-      "detailsFixed": "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
+      "detailsFixed": "센서피아는 DC B-H loop 측정 장비와 core loss 측정 장비를 제작하여 판매하고 있다. 또한, 가지고 있는 자기 측정 장비를 이용해서 자기 특성 분석을 해주고 있다."
     }
   },
   "aboutUs": {
     "sensorpiaIntro": {
-      "first": "SENSORPIA company was established in 2006. The company produce magnetic sensors and magnetic instruments which were developed through the technology accumulated more than 30 years experiences. Main products are 3-axis flux-gate magnetometer and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also possible. Testing service is also possible using magnetic testing equipment in Sensorpia co..",
+      "first": "(주)센서피아는 2006년에 설립된 벤처 회사이며, 자기 센서 및 자성측정 장치를 제작하고 있습니다. 30년 이상의 축적된 이론 및 기술을 바탕으로 제작을 하고 있습니다. 주요 제품의 경우 국방과 인공위성에 들어가는 자기 센서를 만들고 있으며, 3축 flux-gate magnetometer, magnetic torquer를 생산하고 있습니다. 또한 고객의 요구 사항에 따라 주문 제작이 가능합니다. 자성 측정 장치의 경우 DC B-H loop 및 core loss 측정 장치를 만들고 있고, 자사에 자성 측정 장치가 있기 때문에 분석 의뢰 또한 가능합니다.",
       "circleTexts": [
         "Defense",
         "Magnetic Sensors",
@@ -105,15 +111,15 @@
         "Measurement and Test",
         "Magnetic Instruments"
       ],
-      "second": "Magnetic sensors have been used for defense and satellites. Sensorpia Co. has been produced high-precision magnetic sensors for the various domestic customers since 2006.",
-      "third": "Magnetic measuring instruments are necessary to produce high performance of magnetic sensors. Sensorpia Co. has many kinds of self-developed measuring equipment and also possible to manufacturing the equipment for the request of customers.",
-      "ourCustomers": "Our customers"
+      "second": "국방과 인공위성에 자기센서가 이용되고 있으며, Sensorpia는 고정밀 자기센서를 2006년부터 시작해 현재 국내 여러 고객사에게 납품을 하고 있습니다.",
+      "third": "자기센서의 개발 제작을 위해 Sensorpia는 자기 측정 장비를 다수 보유 하고 있으며, 고객 요청에 따라 장비의 제작도 가능합니다.",
+      "ourCustomers": "주요 고객사"
     },
     "visionAndHistory": {
       "title": "Vision",
       "explanations": {
-        "first": "Unmanned and data network technologies are one of key technology in 4th generation Industry. Sensors make very import roll in unmanned and data network. Magnetic sensors also important for sensing earth magnetic field and magnetic field generated from steel objects such as cars and military moving machines",
-        "second": "Magnetic sensors and instruments production has high value added, and Low energy consumption, and no hazardous materials production."
+        "first": "4차 산업에서 무인화 및 데이터화에 따른  다양한 종류의 sensor들이 중요시 되고 있다. 그 중 magnetic sensor의 경우 방위각을 측정하거나 강자성체인 강철로 된 물체를 탐지하는데 사용되고 있다. 특히 Sensorpia 가 보유하고 있는 3-축 자력계의 직각도 보정기술은 자력계의 자세에 무관하게 대상 물체를 탐지할 수 있는 센서입니다.",
+        "second": "센서 및 계측기 관련 사업은 고부가가치를 가지며, 에너지 절감, 낮은 에너지 소비 및 유해 물질이나, 산업 폐기물 등이 거의 발생시키지 않는 사업입니다."
       },
       "secondTitle": "History",
       "years": [
@@ -157,6 +163,33 @@
       ]
     }
   },
+  "careers": {
+    "first": {
+      "title": "인재상",
+      "circles": [
+        { "title": "정직", "content": "모든 업무에 있어서 거짓이 없는 사람" },
+        {
+          "title": "긍정",
+          "content": "부정적인 사고를 가지고 있지 않은 긍정적인 사람"
+        },
+        {
+          "title": "조화",
+          "content": "다른 여러 사람과 업무의 소통이 잘되는 사람"
+        }
+      ]
+    },
+    "second": {
+      "title": "인사 제도",
+      "subTitle": "수평적 관계를 위한 직급의 간결화",
+      "circles": ["직원", "팀장", "사장"],
+      "secondTitle": "인사 원칙",
+      "principle": [
+        "업무 성과와 능력 평가를 통한 공정한 보상",
+        "개인의 창의적 사고 존중",
+        "인성과 능력 중시"
+      ]
+    }
+  },
   "contactUs": {
     "title": "Contact us",
     "details": [
@@ -166,14 +199,15 @@
     ]
   },
   "sidebar": {
-    "name": ["Products", "Application", "About Us"],
+    "name": ["Products", "Application", "About Us", "Careers"],
     "Products": [
       "3-axis Flux-gate magnetometer",
       "Magnetic torquer",
       "Magnetic Instrument"
     ],
-    "Application": ["Defense", "Satellite", "Measurement"],
-    "AboutUs": ["Sensorpia intro.& our customers", "Vision & History"]
+    "Application": ["국방", "인공 위성", "측정 장비"],
+    "AboutUs": ["회사소개 & 주요 고객사", "비전 & 회사 이력"],
+    "Careers": ["인재상", "인사 제도"]
   },
   "NavBar": {
     "list": ["Products", "Applications", "About Us", "Careers", "Contact Us"],
@@ -182,8 +216,9 @@
       "Magnetic torquer",
       "Magnetic Instrument"
     ],
-    "Applications": ["Defense", "Satellite", "Measurement"],
-    "AboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
+    "Applications": ["국방", "인공 위성", "측정 장비"],
+    "AboutUs": ["회사 소개 & 주요 고객사", "비전 & 회사 이력"],
+    "Careers": ["인재상", "인사 제도"]
   },
   "SliderText": {
     "SliderMainText": "Magnetic Sensors and Instruments",

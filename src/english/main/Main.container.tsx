@@ -24,6 +24,7 @@ const MainComponent = () => {
       onClickSliderNext={onClickSliderNext}
       translate={translate}
       onClickSliderPrevious={onClickSliderPrevious}
+      language={language}
     ></MainUI>
   )
 }
