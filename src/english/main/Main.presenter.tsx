@@ -177,13 +177,15 @@ const MainUI = ({
               </AboutUsDetails>
             ))}
           </AboutUsDetailsWrapper>
-          <CareersDetailsWrapper>
-            {data.NavBar.Careers.map((data: any) => (
-              <CareersDetails key="" id={data}>
-                {data}
-              </CareersDetails>
-            ))}
-          </CareersDetailsWrapper>
+          {language === 'kor' && (
+            <CareersDetailsWrapper>
+              {data.NavBar.Careers.map((data: any) => (
+                <CareersDetails key="" id={data}>
+                  {data}
+                </CareersDetails>
+              ))}
+            </CareersDetailsWrapper>
+          )}
         </NavBarMainMenuDetailWrapper>
       </NavBarDetailsRepeatWrapper>
     </>
