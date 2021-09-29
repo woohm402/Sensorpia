@@ -19,7 +19,18 @@ export const SideBarWrapper = styled.div`
       : '220vh'};
   background: #f9f9f9;
   z-index: 0;
+  position: relative;
 `
+export const ScrollArrowImageWrapper = styled.div`
+  width: 90px;
+  height: 83px;
+  top: 2209px;
+  left: 150px;
+  background: url('./ScrollArrow.svg');
+  position: absolute;
+  cursor: pointer;
+`
+
 export const SideBarTitleWrapper = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;

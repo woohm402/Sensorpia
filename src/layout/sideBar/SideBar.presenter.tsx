@@ -2,6 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import { useContext } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import {
+  ScrollArrowImageWrapper,
   SideBarMenusInnerWrapper,
   SideBarMenusLineDivider,
   SideBarMenusWrapper,
@@ -18,6 +19,9 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const { menu } = useContext(GlobalContext)
+  const onClickScrollArrow = () => {
+    window.scrollTo(0, 0)
+  }
   return (
     <SideBarWrapper menu={menu}>
       <SideBarTitleWrapper>
@@ -98,6 +102,11 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
               </>
             ))}
       </SideBarMenusWrapper>
+      {router.pathname === '/aboutUs' && (
+        <ScrollArrowImageWrapper
+          onClick={onClickScrollArrow}
+        ></ScrollArrowImageWrapper>
+      )}
     </SideBarWrapper>
   )
 }
