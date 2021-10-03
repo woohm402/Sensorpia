@@ -55,7 +55,6 @@ const HeaderUI = ({
   onClickMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
-  console.log(language)
   const router = useRouter()
   return (
     <>

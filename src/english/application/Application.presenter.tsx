@@ -30,7 +30,6 @@ interface IProps {
   data: any
 }
 const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
-  console.log('final', finalRandomImage)
   return (
     <>
       {(menu === 'Defense' || menu === '국방') && (
