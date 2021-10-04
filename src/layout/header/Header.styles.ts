@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const HeaderWrapper = styled.div`
-  width: 1920px;
+  width: 100vw;
   height: 110px;
   display: flex;
   flex-direction: row;
@@ -109,7 +109,7 @@ export const LanguageKorean = styled.div`
     props.color === 'kor' ? '#0070c0' : '#ffffff'};
 `
 export const NavBarWrapper = styled.div`
-  width: 1920px;
+  width: 100vw;
   height: 311px;
   background: rgba(255, 255, 255, 0.8);
   top: 110px;

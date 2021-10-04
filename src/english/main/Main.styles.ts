@@ -5,9 +5,11 @@ interface IProps {
 }
 export const SliderMainWrapper = styled.div`
   position: relative;
-  width: 1920px;
+  width: 100vw;
   height: 770px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 `
 export const SliderTextWrapper = styled.div`
   position: absolute;
