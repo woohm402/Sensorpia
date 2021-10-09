@@ -1,95 +1,106 @@
 import styled from '@emotion/styled'
+import { useContext } from 'react'
+import { GlobalContext } from '../../../pages/_app'
 interface IProps {
   translate?: any
   language?: any
+  data?: any
 }
 export const SliderMainWrapper = styled.div`
   position: relative;
-  width: 100vw;
-  height: 770px;
+  width: 1100px;
+  height: 441px;
   overflow: hidden;
   display: flex;
   justify-content: center;
 `
 export const SliderTextWrapper = styled.div`
   position: absolute;
-  top: 60px;
-  left: 140px;
-  width: 414px;
+  top: 30px;
+  left: 70px;
+  max-width: 250px;
   z-index: 99;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 44px;
-  line-height: 60px;
+  font-size: 26px;
+  line-height: 35px;
   color: #ffffff;
 `
 export const SliderSubTextWrapper = styled.div`
   position: absolute;
-  top: 187px;
-  left: 140px;
-  width: 559px;
+  top: 107px;
+  left: 70px;
+  max-width: 400px;
   z-index: 99;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #ffffff;
 `
 export const SliderDraggableWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1920px;
+  width: 1100px;
   height: 770px;
   overflow: hidden;
   position: relative;
 `
 
 export const SliderImage = styled.div`
-  width: 1920px;
-  height: 770px;
+  width: 1100px;
+  height: 441px;
   object-fit: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('./MainSlider1.svg');
+  ${(
+    props: any
+  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${props.data}) `}
 `
 
 export const SliderImageTwo = styled.div`
-  width: 1920px;
-  height: 770px;
+  width: 1100px;
+  height: 441px;
   object-fit: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('./MainSlider2.svg');
+  ${(
+    props: any
+  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${props.data}) `}
 `
 export const SliderImageThree = styled.div`
-  width: 1920px;
-  height: 770px;
+  width: 1100px;
+  height: 441px;
   object-fit: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('./MainSlider3.svg');
+  ${(
+    props: any
+  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${props.data}) `}
 `
 export const SliderImageFour = styled.div`
-  width: 1920px;
-  height: 770px;
+  width: 1100px;
+  height: 441px;
   object-fit: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('./MainSlider4.svg');
+  ${(
+    props: any
+  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${props.data}) `}
 `
 
 export const SliderPreviousButton = styled.div`
   cursor: pointer;
-  top: 356px;
-  left: 50px;
-  width: 20px;
-  height: 58px;
-  background: url('./SliderPrevious.svg');
+  top: 206px;
+  left: 30px;
+  width: 10px;
+  height: 30px;
   position: absolute;
+  ${(props: any) => `background:url(${props.data})`};
 `
 export const SliderNextButton = styled.div`
-  top: 356px;
-  left: 1850px;
+  top: 206px;
+  left: 1060px;
   cursor: pointer;
-  width: 20px;
-  height: 58px;
-  background: url('./SliderPrevious.svg');
+  width: 10px;
+  height: 30px;
+  ${(props: any) => `background:url(${props.data})`};
   position: absolute;
   transform: rotate(180deg);
 `
@@ -98,7 +109,7 @@ export const SliderInnerImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 7680px;
-  height: 770px;
+  height: 441px;
   overflow: hidden;
   position: relative;
   ${(props: IProps) => `transform: translateX(${props.translate}px);`};
@@ -113,208 +124,227 @@ export const SliderMidWrapper = styled.div`
   user-select: none;
 `
 export const MainTitleWrapper = styled.div`
-  min-width: 417px;
-  margin: 80px auto 0px auto;
+  max-width: 1100px;
+  margin-top: 35px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 50px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
   text-align: center;
 `
 
+export const MainTitle = styled.span``
+
+export const MainOuterWrapper = styled.div`
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  width: 1100px;
+`
+
 export const MainLineWrapper = styled.div`
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1370px;
+  width: 850px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
 export const MainFirstLineDivider = styled.div`
-  width: 637px;
+  width: 394px;
   height: 0px;
-  border: 3px solid #9c9d9e;
+  border: 2px solid #9c9d9e;
 `
 export const MainSecondLineDivider = styled.div`
-  width: 637px;
+  width: 394px;
   height: 0px;
-  border: 3px solid #9c9d9e;
+  border: 2px solid #9c9d9e;
 `
+export const MainProductsOuterWrapper = styled.div`
+  margin-top: 15px;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+`
+
 export const MainProductsNameWrapper = styled.div`
-  margin-top: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1125px;
+  width: 667px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
 
 export const MainProductOneWrapper = styled.div`
-  max-width: 392px;
+  max-width: 211px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 38px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   color: #262626;
 `
 
 export const MainProductTwoWrapper = styled.div`
-  max-width: 392px;
+  max-width: 211px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 38px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   color: #262626;
 `
+export const MainOuterImagesWrapper = styled.div`
+  margin-top: 45px;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+`
 export const MainImagesWrapper = styled.div`
-  width: 1370px;
+  margin-top: 45px;
+  width: 850px;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 45px auto 0px auto;
 `
 export const SatelliteWrapper = styled.div`
-  width: 637px;
+  width: 394px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
 export const SatelliteImageOne = styled.div`
   position: relative;
-  width: 311px;
-  height: 430px;
-  background: url('./SatelliteOne.svg');
+  width: 192px;
+  height: 266px;
+  ${(props: any) => `background: url(${props.data})`}
 `
 export const SatelliteImageOneText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 382px;
-  left: 218px;
+  top: 237px;
+  left: 142px;
 `
 
 export const SatelliteImageTwo = styled.div`
   position: relative;
-  width: 311px;
-  height: 430px;
-  background: url('./SatelliteTwo.svg');
-  object-fit: cover;
+  width: 192px;
+  height: 266px;
+  ${(props: any) => `background: url(${props.data})`}
 `
 export const SatelliteImageTwoText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 350px;
-  left: 218px;
+  top: 217px;
+  left: 142px;
 `
 export const DefenseWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 637px;
+  width: 394px;
 `
 
 export const DefenseImageOne = styled.div`
   position: relative;
-  width: 345px;
-  height: 430px;
-  background: url('./DefenseOne.svg');
+  width: 213px;
+  height: 266px;
+  ${(props: any) => `background: url(${props.data})`};
 `
 export const DefenseImageOneText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 382px;
-  left: 252px;
+  top: 237px;
+  left: 163px;
 `
 
 export const DefenseImageTwo = styled.div`
   position: relative;
-  width: 277px;
-  height: 430px;
-  background: url('./DefenseTwo.svg');
-  background-size: cover;
+  width: 171px;
+  height: 266px;
+  ${(props: any) => `background: url(${props.data})`};
 `
 export const DefenseImageTwoText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 382px;
-  left: 184px;
+  top: 237px;
+  left: 121px;
 `
 export const SpecificationButtonsWrapper = styled.div`
-  margin: 45px auto 0px auto;
-  width: 1355px;
+  margin-top: 15px;
+  width: 1100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+`
+export const SpecificiationOuterSatelliteButtonsWrapper = styled.div`
+  margin-left: 145px;
 `
 export const SpecificationSatelliteButtonsWrapper = styled.div`
-  width: 605px;
+  width: 354px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
 
 export const SpecificationButton = styled.button`
-  width: 279px;
+  width: 152px;
+  height: 30px;
   background: #f4f7ff;
-  border: 2px solid #0070c0;
+  border: 1px solid #0070c0;
   box-sizing: border-box;
   border-radius: 30px;
   color: #0070c0;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   cursor: pointer;
 `
 export const SpecificationDefenseButtonsWrapper = styled.div`
-  width: 605px;
+  width: 354px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: 113px;
 `
 export const MainThirdLineDivider = styled.div`
-  margin: 100px auto 0px auto;
-  width: 637px;
+  margin: 65px auto 0px auto;
+  width: 394px;
   height: 0px;
-  border: 3px solid #9c9d9e;
+  border: 2px solid #9c9d9e;
 `
 
 export const MainThirdProductWrapper = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   color: #262626;
-  min-width: 373px;
-  margin: 35px auto 0px auto;
+  min-width: 201px;
+  margin: 15px auto 0px auto;
 `
 
 export const MainThirdProductImageWrapper = styled.div`
-  margin: 45px auto 0px auto;
-  width: 533px;
-  height: 430px;
-  background-image: url('./MagneticTorquer.svg');
+  margin: 20px auto 0px auto;
+  width: 393px;
+  height: 290px;
+  ${(props: any) => `background:url(${props.data})`};
 `
 export const TorquerButtonWrapper = styled.div`
   display: flex;
@@ -322,7 +352,7 @@ export const TorquerButtonWrapper = styled.div`
   justify-content: center;
 `
 export const NavBarDetailsRepeatWrapper = styled.div`
-  margin-top: 167px;
+  margin-top: 95px;
   width: 100%;
   height: 364px;
   background: #f9f9f9;
@@ -340,8 +370,8 @@ export const NavBarMainMenusWrapper = styled.div`
 export const NavBarMainMenu = styled.span`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
 `
 export const NavBarMainMenuDetailWrapper = styled.div`
@@ -353,49 +383,49 @@ export const NavBarMainMenuDetailWrapper = styled.div`
   flex-direction: row;
 `
 export const ProductDetailsWrapper = styled.div`
-  max-width: 124px;
+  max-width: 101px;
   display: flex;
   flex-direction: column;
 `
 export const ProductDetails = styled.span`
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 19px;
   color: #6d6d6d;
 `
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '98px' : '140px'};
+    props.language === 'kor' ? '98px' : '165px'};
   max-width: 124px;
   display: flex;
   flex-direction: column;
 `
 export const ApplicationsDetails = styled.span`
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 19px;
   color: #6d6d6d;
 `
 
 export const AboutUsDetailsWrapper = styled.div`
-  margin-left: 198px;
+  margin-left: 210px;
   max-width: 138px;
   display: flex;
   flex-direction: column;
 `
 export const AboutUsDetails = styled.span`
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 19px;
   color: #6d6d6d;
 `
 export const CareersDetailsWrapper = styled.div`

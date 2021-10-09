@@ -7,15 +7,15 @@ const MainComponent = () => {
   const data = require(`../../../pages/api/${language}.json`)
   const [translate, setTranslate] = useState(0)
   const onClickSliderNext = () => {
-    if (translate === -5760) {
+    if (translate === -3300) {
       setTranslate(0)
     } else {
-      setTranslate((prev) => prev - 1920)
+      setTranslate((prev) => prev - 1100)
     }
   }
   const onClickSliderPrevious = () => {
     if (translate === 0) return
-    setTranslate((prev) => prev + 1920)
+    setTranslate((prev) => prev + 1100)
   }
 
   return (

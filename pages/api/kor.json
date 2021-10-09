@@ -5,7 +5,7 @@
     "Others": ["이용약관", "개인정보 처리방침"]
   },
   "main": {
-    "logo": "/sensorpiaLogo.svg",
+    "logo": "/sensorpiaLogoFinal.svg",
     "Home": "Home",
     "Product": "Products",
     "Applications": "Applications",
@@ -15,11 +15,16 @@
     "Eng": "Eng",
     "Kor": "Kor",
     "Slider": {
-      "Image1": "./MainSlider1.svg",
-      "Image2": "./MainSlider2.svg",
-      "Image3": "./MainSlider3.svg",
-      "Image4": "./MainSlider4.svg"
+      "Image1": "./MainSliderFinal1.svg",
+      "Image2": "./MainSliderFinal2.svg",
+      "Image3": "./MainSliderFinal3.svg",
+      "Image4": "./MainSliderFinal4.svg",
+      "Previous": "./SliderPreviousFinal.svg",
+      "Next": "./SliderNextFinal.svg"
     },
+    "satellite": ["./SatelliteOneFinal.svg", "./SatelliteTwoFinal.svg"],
+    "defense": ["./DefenseOneFinal.svg", "./DefenseTwoFinal.svg"],
+    "magneticToruqer": ["./MagneticTorquerFinal.svg"],
     "title": "주요 제품 라인",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",

@@ -1,11 +1,11 @@
 {
   "title": "Sensorpia",
   "footer": {
-    "Address": "Address : 34054 대전광역시 유성구 유성대로1596번길 64, 2층(전민동, (주)텔레옵틱스사옥2동) / Yuseong-daero 1596-64, Yuseong-Gu, Daejeon City 34054, Korea Tel : +82-42-933-0877 / Fax : +82-42-933-0878 / E-mail : sensorpia@sensorpia.co.kr",
+    "Address": "r",
     "Others": ["이용약관", "개인정보 처리방침"]
   },
   "main": {
-    "logo": "/sensorpiaLogo.svg",
+    "logo": "/sensorpiaLogoFinal.svg",
     "Home": "Home",
     "Product": "Products",
     "Applications": "Applications",
@@ -14,11 +14,16 @@
     "Eng": "Eng",
     "Kor": "Kor",
     "Slider": {
-      "Image1": "./MainSlider1.svg",
-      "Image2": "./MainSlider2.svg",
-      "Image3": "./MainSlider3.svg",
-      "Image4": "./MainSlider4.svg"
+      "Image1": "./MainSliderFinal1.svg",
+      "Image2": "./MainSliderFinal2.svg",
+      "Image3": "./MainSliderFinal3.svg",
+      "Image4": "./MainSliderFinal4.svg",
+      "Previous": "./SliderPreviousFinal.svg",
+      "Next": "./SliderNextFinal.svg"
     },
+    "satellite": ["./SatelliteOneFinal.svg", "./SatelliteTwoFinal.svg"],
+    "defense": ["./DefenseOneFinal.svg", "./DefenseTwoFinal.svg"],
+    "magneticTorquer": ["./MagneticTorquerFinal.svg"],
     "title": "Main Products line",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",

@@ -27,11 +27,11 @@ const LayOut = ({ children }: ILayOutProps) => {
         }}
       >
         <HeaderComponent sideBar={sideBar}></HeaderComponent>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', width: '1100px' }}>
           {sideBar ? (
             <div
               style={{
-                width: '100vw',
+                width: '1100px',
                 display: 'flex',
                 flexDirection: 'row',
               }}

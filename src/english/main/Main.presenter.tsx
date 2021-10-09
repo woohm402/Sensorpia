@@ -49,6 +49,11 @@ import {
   AboutUsDetails,
   CareersDetailsWrapper,
   CareersDetails,
+  MainTitle,
+  MainOuterWrapper,
+  MainProductsOuterWrapper,
+  MainOuterImagesWrapper,
+  SpecificiationOuterSatelliteButtonsWrapper,
 } from './Main.styles'
 interface IProps {
   data: any
@@ -74,63 +79,105 @@ const MainUI = ({
         <SliderDraggableWrapper>
           <SliderMidWrapper>
             <SliderInnerImageWrapper translate={translate}>
-              <SliderImage />
-              <SliderImageTwo />
-              <SliderImageThree />
-              <SliderImageFour />
+              <SliderImage
+                //@ts-ignore
+                data={data.main.Slider.Image1}
+              />
+              <SliderImageTwo
+                //@ts-ignore
+                data={data.main.Slider.Image2}
+              />
+              <SliderImageThree
+                //@ts-ignore
+                data={data.main.Slider.Image3}
+              />
+              <SliderImageFour
+                //@ts-ignore
+                data={data.main.Slider.Image4}
+              />
             </SliderInnerImageWrapper>
           </SliderMidWrapper>
-          <SliderPreviousButton onClick={onClickSliderPrevious} />
-          <SliderNextButton onClick={onClickSliderNext} />
+          <SliderPreviousButton
+            onClick={onClickSliderPrevious}
+            //@ts-ignore
+            data={data.main.Slider.Previous}
+          />
+          <SliderNextButton
+            onClick={onClickSliderNext}
+            //@ts-ignore
+            data={data.main.Slider.Previous}
+          />
         </SliderDraggableWrapper>
       </SliderMainWrapper>
-      <MainTitleWrapper>{data.main.title}</MainTitleWrapper>
-      <MainLineWrapper>
-        <MainFirstLineDivider />
-        <MainSecondLineDivider />
-      </MainLineWrapper>
-      <MainProductsNameWrapper>
-        <MainProductOneWrapper>
-          {data.main.mainProductOneName}
-        </MainProductOneWrapper>
-        <MainProductTwoWrapper>
-          {data.main.mainProductTwoName}
-        </MainProductTwoWrapper>
-      </MainProductsNameWrapper>
-      <MainImagesWrapper>
-        <SatelliteWrapper>
-          <SatelliteImageOne>
-            <SatelliteImageOneText>
-              {data.main.satelliteImageNames.SatelliteOne}
-            </SatelliteImageOneText>
-          </SatelliteImageOne>
-          <SatelliteImageTwo>
-            <SatelliteImageTwoText>
-              {data.main.satelliteImageNames.SatelliteTwo}
-            </SatelliteImageTwoText>
-          </SatelliteImageTwo>
-        </SatelliteWrapper>
-        <DefenseWrapper>
-          <DefenseImageOne>
-            <DefenseImageOneText>
-              {data.main.defenseImageNames.DefenseOne}
-            </DefenseImageOneText>
-          </DefenseImageOne>
-          <DefenseImageTwo>
-            <DefenseImageTwoText>
-              {data.main.defenseImageNames.DefenseTwo}
-            </DefenseImageTwoText>
-          </DefenseImageTwo>
-        </DefenseWrapper>
-      </MainImagesWrapper>
+      <MainTitleWrapper>
+        <MainTitle>{data.main.title}</MainTitle>
+      </MainTitleWrapper>
+      <MainOuterWrapper>
+        <MainLineWrapper>
+          <MainFirstLineDivider />
+          <MainSecondLineDivider />
+        </MainLineWrapper>
+      </MainOuterWrapper>
+      <MainProductsOuterWrapper>
+        <MainProductsNameWrapper>
+          <MainProductOneWrapper>
+            {data.main.mainProductOneName}
+          </MainProductOneWrapper>
+          <MainProductTwoWrapper>
+            {data.main.mainProductTwoName}
+          </MainProductTwoWrapper>
+        </MainProductsNameWrapper>
+      </MainProductsOuterWrapper>
+      <MainOuterImagesWrapper>
+        <MainImagesWrapper>
+          <SatelliteWrapper>
+            <SatelliteImageOne
+              //@ts-ignore
+              data={data.main.satellite[0]}
+            >
+              <SatelliteImageOneText>
+                {data.main.satelliteImageNames.SatelliteOne}
+              </SatelliteImageOneText>
+            </SatelliteImageOne>
+            <SatelliteImageTwo
+              //@ts-ignore
+              data={data.main.satellite[1]}
+            >
+              <SatelliteImageTwoText>
+                {data.main.satelliteImageNames.SatelliteTwo}
+              </SatelliteImageTwoText>
+            </SatelliteImageTwo>
+          </SatelliteWrapper>
+          <DefenseWrapper>
+            <DefenseImageOne
+              //@ts-ignore
+              data={data.main.defense[0]}
+            >
+              <DefenseImageOneText>
+                {data.main.defenseImageNames.DefenseOne}
+              </DefenseImageOneText>
+            </DefenseImageOne>
+            <DefenseImageTwo
+              //@ts-ignore
+              data={data.main.defense[1]}
+            >
+              <DefenseImageTwoText>
+                {data.main.defenseImageNames.DefenseTwo}
+              </DefenseImageTwoText>
+            </DefenseImageTwo>
+          </DefenseWrapper>
+        </MainImagesWrapper>
+      </MainOuterImagesWrapper>
       <SpecificationButtonsWrapper>
-        <SpecificationSatelliteButtonsWrapper>
-          {new Array(2).fill(1).map((_: any) => (
-            <SpecificationButton key="">
-              {data.main.specificationButton}
-            </SpecificationButton>
-          ))}
-        </SpecificationSatelliteButtonsWrapper>
+        <SpecificiationOuterSatelliteButtonsWrapper>
+          <SpecificationSatelliteButtonsWrapper>
+            {new Array(2).fill(1).map((_: any) => (
+              <SpecificationButton key="">
+                {data.main.specificationButton}
+              </SpecificationButton>
+            ))}
+          </SpecificationSatelliteButtonsWrapper>
+        </SpecificiationOuterSatelliteButtonsWrapper>
         <SpecificationDefenseButtonsWrapper>
           {new Array(2).fill(1).map((_: any) => (
             <SpecificationButton key="">
@@ -143,7 +190,10 @@ const MainUI = ({
       <MainThirdProductWrapper>
         {data.main.mainProductThreeName}
       </MainThirdProductWrapper>
-      <MainThirdProductImageWrapper />
+      <MainThirdProductImageWrapper
+        //@ts-expect-error
+        data={data.main.magneticTorquer}
+      />
       <TorquerButtonWrapper>
         <SpecificationButton>
           {data.main.specificationButton}

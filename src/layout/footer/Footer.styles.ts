@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const FooterWrapper = styled.div`
-  width: 100vw;
+  width: 1100px;
   height: 188px;
   background: #b9b9ba;
   position: relative;
@@ -18,7 +18,7 @@ export const FooterAddressDetailWrapper = styled.div`
   position: absolute;
   top: 50px;
   left: 457px;
-  width: 1313px;
+  width: 200px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 14px;

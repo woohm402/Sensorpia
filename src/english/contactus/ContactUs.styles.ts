@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 
 export const ContactUsBigWrapper = styled.div`
-  width: 100vw;
+  width: 1100px;
   height: 100%;
   padding-top: 60px;
   padding-left: 150px;
 `
 
 export const ContactUsTitle = styled.div`
-  width: 100vw;
+  width: 1100px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 26px;
