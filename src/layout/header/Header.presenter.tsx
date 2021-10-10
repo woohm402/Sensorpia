@@ -59,12 +59,12 @@ const HeaderUI = ({
   const router = useRouter()
   return (
     <>
-      <HeaderBigWrapper>
-        <HeaderWrapper
-          //@ts-ignore
-          sideBar={sideBar}
-          router={router}
-        >
+      <HeaderBigWrapper
+        //@ts-ignore
+        sideBar={sideBar}
+        router={router}
+      >
+        <HeaderWrapper>
           <SensorpiaLogoWrapper>
             <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
           </SensorpiaLogoWrapper>

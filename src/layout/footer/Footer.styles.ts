@@ -1,55 +1,59 @@
 import styled from '@emotion/styled'
 
+interface IProps {
+  data: any
+}
+
 export const FooterWrapper = styled.div`
   width: 1100px;
-  height: 188px;
+  height: 109px;
   background: #b9b9ba;
   position: relative;
 `
 export const FooterLogoWrapper = styled.div`
   position: absolute;
-  width: 239px;
-  height: 46px;
-  top: 71px;
-  left: 150px;
-  background: url('./sensorpiaLogo.svg');
+  width: 137px;
+  height: 26px;
+  top: 41px;
+  left: 70px;
+  ${({ data }: IProps) => `background: url(${data})`};
 `
 export const FooterAddressDetailWrapper = styled.div`
   position: absolute;
-  top: 50px;
-  left: 457px;
-  width: 200px;
+  top: 28px;
+  left: 228px;
+  max-width: 802px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 11px;
+  line-height: 16px;
   color: #262626;
 `
 export const FooterOthersOne = styled.div`
   position: absolute;
-  top: 111px;
-  left: 457px;
+  top: 65px;
+  left: 227px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 11px;
+  line-height: 16px;
   color: #0070c0;
 `
 export const FooterDivider = styled.div`
   width: 0px;
-  height: 16px;
+  height: 9.17px;
   position: absolute;
-  top: 118px;
-  left: 520px;
+  top: 69.01px;
+  left: 278.07px;
   border: 1px solid #0070c0;
 `
 export const FooterOtherTwo = styled.div`
   position: absolute;
-  top: 111px;
-  left: 534px;
+  top: 65px;
+  left: 288.18px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 11px;
+  line-height: 16px;
   color: #0070c0;
 `

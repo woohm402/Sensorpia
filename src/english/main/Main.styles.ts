@@ -354,7 +354,7 @@ export const TorquerButtonWrapper = styled.div`
 export const NavBarDetailsRepeatWrapper = styled.div`
   margin-top: 95px;
   width: 100%;
-  height: 364px;
+  height: 340px;
   background: #f9f9f9;
 `
 

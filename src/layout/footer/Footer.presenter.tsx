@@ -12,7 +12,10 @@ interface IProps {
 const FooterUI = ({ data }: IProps) => {
   return (
     <FooterWrapper>
-      <FooterLogoWrapper />
+      <FooterLogoWrapper
+        //@ts-ignore
+        data={data.main.logo}
+      />
       <FooterAddressDetailWrapper>
         {data.footer.Address}
       </FooterAddressDetailWrapper>
