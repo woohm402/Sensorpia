@@ -17,7 +17,7 @@ export const SideBarWrapper = styled.div`
     props.menu === '회사소개 & 주요 고객사' ||
     props.menu === '비전 & 회사 이력'
       ? '165vh'
-      : '120vh'};
+      : '130vh'};
   background: #f9f9f9;
   z-index: 0;
   position: static;
