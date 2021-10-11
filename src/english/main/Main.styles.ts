@@ -51,10 +51,7 @@ export const SliderImage = styled.div`
   width: 1100px;
   height: 441px;
   object-fit: cover;
-  ${(
-    props: any
-  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${props.data}) `}
+  ${(props: any) => `background-image: url(${props.data})`}
 `
 
 export const SliderImageTwo = styled.div`
@@ -242,7 +239,7 @@ export const SatelliteImageTwoText = styled.span`
   font-size: 13px;
   line-height: 19px;
   color: #262626;
-  top: 217px;
+  top: 237px;
   left: 142px;
 `
 export const DefenseWrapper = styled.div`
@@ -254,7 +251,7 @@ export const DefenseWrapper = styled.div`
 
 export const DefenseImageOne = styled.div`
   position: relative;
-  width: 213px;
+  width: 192px;
   height: 266px;
   ${(props: any) => `background: url(${props.data})`};
 `
@@ -266,12 +263,12 @@ export const DefenseImageOneText = styled.span`
   line-height: 19px;
   color: #262626;
   top: 237px;
-  left: 163px;
+  left: 150px;
 `
 
 export const DefenseImageTwo = styled.div`
   position: relative;
-  width: 171px;
+  width: 192px;
   height: 266px;
   ${(props: any) => `background: url(${props.data})`};
 `
@@ -283,7 +280,7 @@ export const DefenseImageTwoText = styled.span`
   line-height: 19px;
   color: #262626;
   top: 237px;
-  left: 121px;
+  left: 142px;
 `
 export const SpecificationButtonsWrapper = styled.div`
   margin-top: 15px;
@@ -343,13 +340,14 @@ export const MainThirdProductWrapper = styled.div`
 export const MainThirdProductImageWrapper = styled.div`
   margin: 20px auto 0px auto;
   width: 393px;
-  height: 290px;
+  height: 318px;
   ${(props: any) => `background:url(${props.data})`};
 `
 export const TorquerButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 15px;
 `
 export const NavBarDetailsRepeatWrapper = styled.div`
   margin-top: 95px;
@@ -361,7 +359,7 @@ export const NavBarDetailsRepeatWrapper = styled.div`
 export const NavBarMainMenusWrapper = styled.div`
   top: 47px;
   margin: 0 auto;
-  width: ${(props: IProps) => (props.language === 'kor' ? '1007px' : '919px')};
+  width: 595px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -376,7 +374,7 @@ export const NavBarMainMenu = styled.span`
 `
 export const NavBarMainMenuDetailWrapper = styled.div`
   position: relative;
-  width: ${(props: IProps) => (props.language === 'kor' ? '1007px' : '919px')};
+  width: 595px;
   margin: 0 auto;
   top: 80px;
   display: flex;
@@ -398,8 +396,8 @@ export const ProductDetails = styled.span`
 `
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '98px' : '165px'};
-  max-width: 124px;
+    props.language === 'kor' ? '20px' : '60px'};
+  min-width: 120px;
   display: flex;
   flex-direction: column;
 `
@@ -414,8 +412,10 @@ export const ApplicationsDetails = styled.span`
 `
 
 export const AboutUsDetailsWrapper = styled.div`
-  margin-left: 210px;
-  max-width: 138px;
+  margin-left: ${(props: IProps) =>
+    props.language === 'kor' ? '35px' : '70px'};
+  max-width: ${(props: IProps) =>
+    props.language === 'kor' ? '76px' : '120px'};
   display: flex;
   flex-direction: column;
 `
@@ -429,7 +429,7 @@ export const AboutUsDetails = styled.span`
   color: #6d6d6d;
 `
 export const CareersDetailsWrapper = styled.div`
-  margin-left: 89px;
+  margin-left: 49px;
   max-width: 71px;
   display: flex;
   flex-direction: column;

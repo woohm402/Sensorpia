@@ -2,57 +2,65 @@ import styled from '@emotion/styled'
 interface IProps {
   color?: any
 }
+interface IPropsTwo {
+  data: any
+}
+
 export const ThreeAxisNormalButton = styled.button`
-  width: 279px;
-  height: 53px;
+  width: 200px;
+  height: 30px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 2px solid #9c9d9e;
+  border: 1px solid #9c9d9e;
   box-sizing: border-box;
   border-radius: 30px;
-  margin-top: 60px;
-  margin-left: 149px;
+  margin-top: 35px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
 `
 export const ThreeAxisSatelliteButton = styled.button`
-  cursor: pointer;
-  width: 279px;
-  height: 53px;
+  width: 200px;
+  height: 30px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 2px solid #9c9d9e;
+  border: 1px solid #9c9d9e;
   box-sizing: border-box;
   border-radius: 30px;
-  margin-left: 74px;
+  margin-top: 35px;
+  margin-left: 51px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
+  cursor: pointer;
 `
 
 export const ThreeAxisDefenseButton = styled.button`
-  cursor: pointer;
-  width: 279px;
-  height: 53px;
+  width: 200px;
+  height: 30px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 2px solid #9c9d9e;
+  border: 1px solid #9c9d9e;
   box-sizing: border-box;
   border-radius: 30px;
-  margin-left: 74px;
+  margin-top: 35px;
+  margin-left: 51px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
+  cursor: pointer;
 `
 export const NormalImageWrapper = styled.div`
-  width: 984px;
-  height: 518px;
-  margin-left: 150px;
-  margin-top: 60px;
-  top: 273px;
-  background: url('./NormalImage.svg');
+  width: 702px;
+  height: 369px;
+  margin-left: 70px;
+  margin-top: 35px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const ContentWrapper = styled.div`
   display: flex;
@@ -60,135 +68,133 @@ export const ContentWrapper = styled.div`
 `
 
 export const ExplanationWrapper = styled.div`
-  margin-top: 50px;
-  margin-left: 150px;
+  margin-top: 30px;
+  margin-left: 70px;
   display: flex;
   flex-direction: column;
-  max-width: 454px;
+  max-width: 370px;
 `
 export const NormalImageWrapperTwo = styled.div`
-  width: 427px;
-  height: 337px;
-  margin-top: 55px;
-  margin-left: 103px;
-  background: url('./NormalImage2MS-17.svg');
+  width: 268px;
+  height: 212px;
+  margin-top: 30px;
+  margin-left: 64px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
   position: relative;
 `
 export const NormalImageWrapperTwoText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 260px;
-  left: 334px;
+  top: 183px;
+  left: 218px;
 `
 export const ExplanationTitle = styled.div`
-  max-width: 142px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
 `
 export const ExplanationDetail = styled.li`
   margin-top: 15px;
-  max-width: 454px;
+  width: 370px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
 `
 export const SatelliteImageWrapper = styled.div`
-  width: 984px;
-  height: 518px;
-  background: url('./SatelliteImage.svg');
-  margin-top: 50px;
-  margin-left: 150px;
+  width: 702px;
+  height: 370px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  margin-top: 35px;
+  margin-left: 70px;
 `
 
 export const SatelliteContentWrapper = styled.div`
-  margin-top: 50px;
-  margin-left: 150px;
+  margin-top: 29px;
+  margin-left: 70px;
   display: flex;
   flex-direction: row;
 `
 export const SatelliteExplanationWrapper = styled.div`
-  max-width: 436px;
+  max-width: 338px;
   display: flex;
   flex-direction: column;
 `
 export const SatelliteExplanationTitle = styled.div`
-  max-width: 142px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
 `
 export const SatelliteExplanationDetail = styled.li`
   margin-top: 15px;
-  max-width: 436px;
+  width: 338px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
 `
 export const SatelliteImageWrapperTwo = styled.div`
-  margin-left: 121px;
+  margin-left: 96px;
   display: flex;
   flex-direction: column;
 `
 
 export const SatelliteImageMSFifteen = styled.div`
-  width: 427px;
-  height: 270px;
-  background: url('./SatelliteImageTwoMS-15.svg');
+  width: 268px;
+  height: 212px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
   position: relative;
 `
 export const SatelliteImageMSFifteenText = styled.span`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 222px;
-  left: 334px;
+  top: 183px;
+  left: 218px;
   position: absolute;
 `
 
 export const SatelliteImageMSTwentyTwo = styled.div`
-  margin-top: 113px;
-  width: 427px;
-  height: 270px;
-  background: url('./SatelliteImageTwoMS-22.svg');
+  margin-top: 60px;
+  width: 268px;
+  height: 170px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
   position: relative;
 `
 export const SatelliteImageMSTwentyTwoText = styled.span`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 222px;
-  left: 334px;
+  top: 141px;
+  left: 218px;
   position: absolute;
 `
 export const DefenseImageWrapper = styled.div`
-  margin-top: 50px;
-  margin-left: 150px;
-  width: 984px;
-  height: 518px;
-  background: url('./DefenseImage.svg');
+  margin-top: 35px;
+  margin-left: 70px;
+  width: 702px;
+  height: 370px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const DefenseContentWrapper = styled.div`
-  margin-top: 50px;
-  margin-left: 150px;
+  margin-top: 29px;
+  margin-left: 70px;
   display: flex;
   flex-direction: row;
 `
@@ -197,103 +203,103 @@ export const DefenseExplanationWrapper = styled.div`
   flex-direction: column;
 `
 export const DefenseExplanationTitle = styled.div`
-  max-width: 142px;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
   margin-bottom: 15px;
 `
 export const DefenseExplanationDetail = styled.li`
-  max-width: 389px;
+  width: 376px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
 `
 export const DefenseImageWrapperTwo = styled.div`
-  margin-left: 196px;
+  margin-left: 58px;
   display: flex;
   flex-direction: column;
 `
 export const DefenseImageMSTwentySeven = styled.div`
   position: relative;
-  width: 399px;
-  height: 280px;
-  background: url('./DefenseImageMS-27.svg');
+  width: 268px;
+  height: 212px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const DefenseImageMSTwentySevenText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 234px;
-  left: 306px;
+  top: 183px;
+  left: 218px;
 `
 
 export const DefenseImageMSThirteen = styled.div`
   position: relative;
-  margin-top: 113px;
-  width: 399px;
-  height: 280px;
-  background: url('./DefenseImageMS-13.svg');
+  margin-top: 60px;
+  width: 268px;
+  height: 185px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const DefenseImageMSThirteenText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 234px;
-  left: 306px;
+  top: 156px;
+  left: 218px;
 `
 export const DefenseImageMSSeven = styled.div`
   position: relative;
-  margin-top: 113px;
-  width: 399px;
-  height: 280px;
-  background: url('./DefenseImageMS-07.svg');
+  margin-top: 60px;
+  width: 268px;
+  height: 177px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const DefenseImageMSSevenText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
-  top: 234px;
-  left: 306px;
+  top: 148px;
+  left: 218px;
 `
 export const MagneticTorquerSatelliteButton = styled.button`
-  width: 279px;
-  height: 53px;
+  width: 200px;
+  height: 30px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 2px solid #9c9d9e;
+  border: 1px solid #9c9d9e;
   box-sizing: border-box;
   border-radius: 30px;
-  margin-top: 60px;
-  margin-left: 149px;
+  margin-top: 35px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
 `
 export const MagneticTorquerSatelliteImageWrapper = styled.div`
-  margin-left: 150px;
-  margin-top: 50px;
-  width: 984px;
-  height: 518px;
-  background: url('./MagneticTorquerSatellite.svg');
+  margin-left: 70px;
+  margin-top: 35px;
+  width: 702px;
+  height: 370px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const MagneticTorquerContentWrapper = styled.div`
-  margin-left: 150px;
-  margin-top: 50px;
+  margin-left: 70px;
+  margin-top: 29px;
   display: flex;
   flex-direction: row;
 `
@@ -302,49 +308,49 @@ export const MagneticTorquerExplanationWrapper = styled.div`
   flex-direction: column;
 `
 export const MagneticTorquerTitle = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
 `
 export const MagneticTorquerDetails = styled.li`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
-  max-width: 422px;
+  width: 370px;
+  margin-bottom: 10px;
 `
 export const MagneticTorquerSatelliteNoName = styled.div`
-  width: 376px;
-  height: 322px;
-  margin-left: 186px;
-  background: url('./MagneticTorquerSatelliteImageTwoNoName.svg');
+  width: 268px;
+  height: 212px;
+  margin-left: 64px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const MagneticInstrumentImageOneWrapper = styled.div`
-  width: 984px;
-  height: 518px;
-  margin-top: 163px;
-  margin-left: 150px;
-  background: url('./MagneticInstrumentsOne.svg');
+  width: 702px;
+  height: 370px;
+  margin-top: 35px;
+  margin-left: 70px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 export const MagneticInstrumentImageOneDetail = styled.li`
-  margin-top: 50px;
-  margin-left: 150px;
-  max-width: 984px;
+  margin-top: 30px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
 `
 export const MagneticInstrumentDCBHWrapper = styled.div`
-  margin-top: 35px;
-  margin-left: 150px;
+  margin-top: 27px;
+  margin-left: 70px;
   display: flex;
   align-items: center;
 `
@@ -355,31 +361,31 @@ export const MagneticInstumentDCBHExplanationWrapper = styled.div`
 export const MagneticInstrumentDCBHTitle = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
   margin-bottom: 15px;
 `
 export const MagneticInstrumentDetails = styled.li`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
-  max-width: 411px;
+  width: 237px;
 `
 export const MagneticInstrumentDCBHImageWrapper = styled.div`
-  margin-left: 119px;
-  width: 454px;
-  height: 301px;
-  background: url('./MagneticInstrumentsTwo.svg');
+  margin-left: 181px;
+  width: 284px;
+  height: 188px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `
 
 export const MagneticInstrumentACMagneticWrapper = styled.div`
   display: flex;
-  margin-top: 138px;
-  margin-left: 149px;
+  margin-top: 70px;
+  margin-left: 70px;
   align-items: center;
 `
 export const MagneticInstrumentACMagneticExplanationWrapper = styled.div`
@@ -389,23 +395,23 @@ export const MagneticInstrumentACMagneticExplanationWrapper = styled.div`
 export const MagneticInstrumentACMagneticTitle = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 `
 export const MagneticInstrumentACMagneticDetails = styled.li`
-  max-width: 411px;
+  width: 236px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #636363;
 `
 export const MagneticInstrumentACMagneticImageWrapper = styled.div`
-  margin-left: 49px;
-  width: 525px;
-  height: 263px;
-  background: url('./ACMagneticImageOne.svg');
+  margin-left: 143px;
+  width: 323px;
+  height: 162px;
+  ${({ data }: IPropsTwo) => `background:url(${data})`};
 `

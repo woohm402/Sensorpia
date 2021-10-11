@@ -5,7 +5,7 @@
     "Others": ["이용약관", "개인정보 처리방침"]
   },
   "main": {
-    "logo": "/sensorpiaLogoFinal.svg",
+    "logo": "/sensorpiaLogoFinal.png",
     "Home": "Home",
     "Product": "Products",
     "Applications": "Applications",
@@ -15,16 +15,15 @@
     "Eng": "Eng",
     "Kor": "Kor",
     "Slider": {
-      "Image1": "./MainSliderFinal1.svg",
-      "Image2": "./MainSliderFinal2.svg",
-      "Image3": "./MainSliderFinal3.svg",
-      "Image4": "./MainSliderFinal4.svg",
-      "Previous": "./SliderPreviousFinal.svg",
-      "Next": "./SliderNextFinal.svg"
+      "Image1": "./mainSliderFinal1.png",
+      "Image2": "./mainSliderFinal2.png",
+      "Image3": "./mainSliderFinal3.svg",
+      "Image4": "./mainSliderFinal4.svg",
+      "Previous": "./sliderPreviousFinal.svg"
     },
-    "satellite": ["./SatelliteOneFinal.svg", "./SatelliteTwoFinal.svg"],
-    "defense": ["./DefenseOneFinal.svg", "./DefenseTwoFinal.svg"],
-    "magneticToruqer": ["./MagneticTorquerFinal.svg"],
+    "satellite": ["./satelliteOneFinal.png", "./satelliteTwoFinal.png"],
+    "defense": ["./defenseOneFinal.png", "./defenseTwoFinal.png"],
+    "magneticTorquer": ["./magneticTorquerFinal.png"],
     "title": "주요 제품 라인",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
@@ -35,6 +34,22 @@
   },
   "products": {
     "threeAxis": ["Normal", "Satellite", "Defense"],
+    "images": [
+      "./normalImageFinal.png",
+      "./normalImageTwoFinal.png",
+      "./satelliteImageFinal.png",
+      "./satelliteImageTwoFinal.png",
+      "./satelliteImageThreeFinal.png",
+      "./defenseImageFinal.png",
+      "./defenseImageTwoFinal.png",
+      "./defenseImageThreeFinal.png",
+      "./defenseImageFourFinal.png",
+      "./satelliteTorquerImageFinal.png",
+      "./satelliteTorquerImageTwoFinal.png",
+      "./magneticInstrumentsFinal.png",
+      "./magneticInstrumentsTwoFinal.png",
+      "./magneticInstrumentsThreeFinal.png"
+    ],
     "threeAxisDetails": {
       "Normal": {
         "Title": "제품 설명",
@@ -73,7 +88,7 @@
       }
     },
     "magneticInstruments": {
-      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10"],
+      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10)"],
       "Details": [
         "AC 및 DC hysteresis 곡선, 철손 및 자기변형을 측정하는 자성재료 측정 장비",
         "연자성 재료의 DC hysteresis 곡선 측정",
@@ -85,6 +100,12 @@
     }
   },
   "applications": {
+    "randomImages": [
+      "./applicationDefenseRandomOne.png",
+      "./applicationDefenseRandomTwo.png",
+      "./applicationSatelliteImageFinal.png",
+      "./applicationSatelliteImageTwoFinal.png"
+    ],
     "defense": [
       "수중에서 고 분해능의 자기센서를 이용하여, 표적을 찾아내는 역할을 한다.",
       "공중, 지상 및 해수에 표적의 위치를 비정상적인 자기장 분포로부터 찾아 내기 위해서 고감도의 자력계를 사용한다."
@@ -107,6 +128,23 @@
     }
   },
   "aboutUs": {
+    "images": [
+      "./aboutUsImageOne.png",
+      "./aboutUsArrow.png",
+      "./visionImageOne.png",
+      "./visionImageTwo.png",
+      "./visionArrow.svg"
+    ],
+    "clientImages": [
+      "./ligImage.png",
+      "./hanhwaImage.png",
+      "./kaiImage.png",
+      "./kariImage.png",
+      "./kasiImage.png",
+      "./siImage.png",
+      "./poscoImage.png",
+      "./satracImage.png"
+    ],
     "sensorpiaIntro": {
       "first": "(주)센서피아는 2006년에 설립된 벤처 회사이며, 자기 센서 및 자성측정 장치를 제작하고 있습니다. 30년 이상의 축적된 이론 및 기술을 바탕으로 제작을 하고 있습니다. 주요 제품의 경우 국방과 인공위성에 들어가는 자기 센서를 만들고 있으며, 3축 flux-gate magnetometer, magnetic torquer를 생산하고 있습니다. 또한 고객의 요구 사항에 따라 주문 제작이 가능합니다. 자성 측정 장치의 경우 DC B-H loop 및 core loss 측정 장치를 만들고 있고, 자사에 자성 측정 장치가 있기 때문에 분석 의뢰 또한 가능합니다.",
       "circleTexts": [
@@ -193,7 +231,8 @@
         "개인의 창의적 사고 존중",
         "인성과 능력 중시"
       ]
-    }
+    },
+    "images": ["./careerArrow.svg"]
   },
   "contactUs": {
     "title": "Contact us",

@@ -1,3 +1,4 @@
+import { ProductDetails } from '../../layout/header/Header.styles'
 import {
   MagneticInstrumentACMagneticDetails,
   MagneticInstrumentACMagneticExplanationWrapper,
@@ -44,14 +45,18 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
       )}
       {(menu === 'Satellite' || menu === '인공 위성') && (
         <>
-          <SatelliteImageWrapperOne></SatelliteImageWrapperOne>
+          <SatelliteImageWrapperOne
+            data={data.applications.randomImages[2]}
+          ></SatelliteImageWrapperOne>
           {data.applications.satellite.map((data: any) => (
             <SatelliteExplanationDetails key="">
               {data}
             </SatelliteExplanationDetails>
           ))}
           <ApplicationMagnetometerWrapper>
-            <ApplicationMagnetometerImageWrapper></ApplicationMagnetometerImageWrapper>
+            <ApplicationMagnetometerImageWrapper
+              data={data.applications.randomImages[3]}
+            ></ApplicationMagnetometerImageWrapper>
             <ApplicationMagnetometerContentWrapper>
               <ApplicationMagnetometerTitle>
                 {data.applications.satelliteDetails.title}
@@ -67,7 +72,7 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
       )}
       {(menu === 'Measurement' || menu === '측정 장비') && (
         <>
-          <MagneticInstrumentImageOneWrapper />
+          <MagneticInstrumentImageOneWrapper data={data.products.images[11]} />
           <MagneticInstrumentImageOneDetail>
             {data.applications.measurement.detailsFixed}
           </MagneticInstrumentImageOneDetail>
@@ -83,7 +88,9 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
                 {data.products.magneticInstruments.Details[2]}
               </MagneticInstrumentDetails>
             </MagneticInstumentDCBHExplanationWrapper>
-            <MagneticInstrumentDCBHImageWrapper></MagneticInstrumentDCBHImageWrapper>
+            <MagneticInstrumentDCBHImageWrapper
+              data={data.products.images[12]}
+            ></MagneticInstrumentDCBHImageWrapper>
           </MagneticInstrumentDCBHWrapper>
           <MagneticInstrumentACMagneticWrapper>
             <MagneticInstrumentACMagneticExplanationWrapper>
@@ -100,7 +107,9 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
                 {data.products.magneticInstruments.Details[5]}
               </MagneticInstrumentACMagneticDetails>
             </MagneticInstrumentACMagneticExplanationWrapper>
-            <MagneticInstrumentACMagneticImageWrapper />
+            <MagneticInstrumentACMagneticImageWrapper
+              data={data.products.images[13]}
+            />
           </MagneticInstrumentACMagneticWrapper>
         </>
       )}

@@ -1,34 +1,38 @@
 import styled from '@emotion/styled'
 
+interface IProps {
+  data: any
+}
+
 export const TalentsWrapper = styled.div`
-  max-width: 984px;
-  margin-top: 64px;
-  margin-left: 150px;
+  max-width: 701px;
+  margin-top: 35px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #0070c0;
 `
 export const TalentTitle = styled.span``
 
 export const TalentLineDivider = styled.div`
-  width: 984px;
+  width: 701px;
   height: 0px;
   border: 1px solid #c9c9c9;
   margin-top: 10px;
 `
 export const BigCircleWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 29px;
   display: flex;
   flex-direction: row;
   align-items: center;
 `
 export const Circle = styled.div`
-  width: 233px;
-  height: 233px;
+  width: 151px;
+  height: 151px;
   border-radius: 50%;
-  border: 5px solid #0070c0;
+  border: 2px solid #0070c0;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -36,97 +40,97 @@ export const Circle = styled.div`
   align-items: center;
 `
 export const CircleText = styled.div`
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 18px;
+  line-height: 27px;
   text-align: center;
 `
 export const CircleDetailText = styled.div`
-  margin-left: 120px;
+  margin-left: 50px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
 `
 export const HrTitle = styled.span``
 
 export const HrLineDivider = styled.div`
-  width: 984px;
+  width: 701px;
   height: 0px;
   border: 1px solid #c9c9c9;
-  margin-top: 10px;
+  margin-top: 11px;
 `
 
 export const SubTitleWrapper = styled.div`
   margin: 60px auto 0 auto;
-  border: 3px solid #0070c0;
+  border: 2px solid #0070c0;
   box-sizing: border-box;
   border-radius: 47px;
-  width: 552px;
-  height: 94px;
+  width: 286px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 15px;
+  line-height: 22px;
 `
 export const HrCirclesWrapper = styled.div`
   display: flex;
-  margin-top: 70px;
+  margin-top: 40px;
   align-items: center;
 `
 
 export const HrCircleFirst = styled.div`
-  width: 233px;
-  height: 233px;
+  width: 166px;
+  height: 166px;
   border-radius: 50%;
   background: rgba(0, 112, 192, 0.1);
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 export const CareersArrow = styled.div`
   margin-left: 30px;
-  width: 81px;
-  height: 18px;
-  background: url('./CareersArrow.svg');
+  width: 60px;
+  height: 12px;
+  ${(props: IProps) => `background:url(${props.data})`}
 `
 export const HrCircleSecond = styled.div`
-  margin-left: 30px;
-  width: 233px;
-  height: 233px;
+  margin-left: 22px;
+  width: 166px;
+  height: 166px;
   border-radius: 50%;
   background: rgba(0, 112, 192, 0.1);
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 export const HrCircleThird = styled.div`
-  margin-left: 30px;
-  width: 233px;
-  height: 233px;
+  margin-left: 22px;
+  width: 166px;
+  height: 166px;
   border-radius: 50%;
   background: rgba(0, 112, 192, 0.1);
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 export const HrPrincipleTitle = styled.div`
-  margin-top: 140px;
+  margin-top: 102px;
 `
 export const HrPrincipleDetailsBigWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 30px;
 `
 
 export const HrPrincipleDetailsWrapper = styled.li`
-  max-width: 455px;
+  max-width: 247px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
 `

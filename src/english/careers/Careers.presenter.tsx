@@ -50,9 +50,9 @@ const CareersUI = ({ data, menu, language }: IProps) => {
           <SubTitleWrapper>{data.careers.second.subTitle}</SubTitleWrapper>
           <HrCirclesWrapper>
             <HrCircleFirst>{data.careers.second.circles[0]}</HrCircleFirst>
-            <CareersArrow />
+            <CareersArrow data={data.careers.images[0]} />
             <HrCircleSecond>{data.careers.second.circles[1]}</HrCircleSecond>
-            <CareersArrow />
+            <CareersArrow data={data.careers.images[0]} />
             <HrCircleThird>{data.careers.second.circles[2]}</HrCircleThird>
           </HrCirclesWrapper>
           <HrPrincipleTitle>{data.careers.second.secondTitle}</HrPrincipleTitle>

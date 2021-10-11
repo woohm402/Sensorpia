@@ -200,12 +200,12 @@ const MainUI = ({
         </SpecificationButton>
       </TorquerButtonWrapper>
       <NavBarDetailsRepeatWrapper>
-        <NavBarMainMenusWrapper language={language}>
+        <NavBarMainMenusWrapper>
           {data.NavBar?.list.map((data: any) => (
             <NavBarMainMenu key="">{data}</NavBarMainMenu>
           ))}
         </NavBarMainMenusWrapper>
-        <NavBarMainMenuDetailWrapper language={language}>
+        <NavBarMainMenuDetailWrapper>
           <ProductDetailsWrapper>
             {data.NavBar.Products.map((data: any) => (
               <ProductDetails key="" id={data}>
@@ -220,7 +220,7 @@ const MainUI = ({
               </ApplicationsDetails>
             ))}
           </ApplicationsDetailsWrapper>
-          <AboutUsDetailsWrapper>
+          <AboutUsDetailsWrapper language={language}>
             {data.NavBar.AboutUs.map((data: any) => (
               <AboutUsDetails key="" id={data}>
                 {data}

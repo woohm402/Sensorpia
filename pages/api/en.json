@@ -5,7 +5,7 @@
     "Others": ["이용약관", "개인정보 처리방침"]
   },
   "main": {
-    "logo": "/sensorpiaLogoFinal.svg",
+    "logo": "/sensorpiaLogoFinal.png",
     "Home": "Home",
     "Product": "Products",
     "Applications": "Applications",
@@ -14,16 +14,15 @@
     "Eng": "Eng",
     "Kor": "Kor",
     "Slider": {
-      "Image1": "./MainSliderFinal1.svg",
-      "Image2": "./MainSliderFinal2.svg",
-      "Image3": "./MainSliderFinal3.svg",
-      "Image4": "./MainSliderFinal4.svg",
-      "Previous": "./SliderPreviousFinal.svg",
-      "Next": "./SliderNextFinal.svg"
+      "Image1": "./mainSliderFinal1.png",
+      "Image2": "./mainSliderFinal2.png",
+      "Image3": "./mainSliderFinal3.png",
+      "Image4": "./mainSliderFinal4.png",
+      "Previous": "./sliderPreviousFinal.svg"
     },
-    "satellite": ["./SatelliteOneFinal.svg", "./SatelliteTwoFinal.svg"],
-    "defense": ["./DefenseOneFinal.svg", "./DefenseTwoFinal.svg"],
-    "magneticTorquer": ["./MagneticTorquerFinal.svg"],
+    "satellite": ["./satelliteOneFinal.png", "./satelliteTwoFinal.png"],
+    "defense": ["./defenseOneFinal.png", "./defenseTwoFinal.png"],
+    "magneticTorquer": ["./magneticTorquerFinal.png"],
     "title": "Main Products line",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
@@ -34,6 +33,22 @@
   },
   "products": {
     "threeAxis": ["Normal", "Satellite", "Defense"],
+    "images": [
+      "./normalImageFinal.png",
+      "./normalImageTwoFinal.png",
+      "./satelliteImageFinal.png",
+      "./satelliteImageTwoFinal.png",
+      "./satelliteImageThreeFinal.png",
+      "./defenseImageFinal.png",
+      "./defenseImageTwoFinal.png",
+      "./defenseImageThreeFinal.png",
+      "./defenseImageFourFinal.png",
+      "./satelliteTorquerImageFinal.png",
+      "./satelliteTorquerImageTwoFinal.png",
+      "./magneticInstrumentsFinal.png",
+      "./magneticInstrumentsTwoFinal.png",
+      "./magneticInstrumentsThreeFinal.png"
+    ],
     "threeAxisDetails": {
       "Normal": {
         "Title": "Explanation",
@@ -72,7 +87,7 @@
       }
     },
     "magneticInstruments": {
-      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10"],
+      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10)"],
       "Details": [
         "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
         "Measure dc hysteresis loop of soft magnetic material",
@@ -84,6 +99,13 @@
     }
   },
   "applications": {
+    "randomImages": [
+      "./applicationDefenseRandomOne.png",
+      "./applicationDefenseRandomTwo.png",
+      "./applicationSatelliteImageFinal.png",
+      "./applicationSatelliteImageTwoFinal.png"
+    ],
+
     "defense": [
       "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
       "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
@@ -106,6 +128,23 @@
     }
   },
   "aboutUs": {
+    "images": [
+      "./aboutUsImageOne.png",
+      "./aboutUsArrow.png",
+      "./visionImageOne.png",
+      "./visionImageTwo.png",
+      "./visionArrow.svg"
+    ],
+    "clientImages": [
+      "./ligImage.png",
+      "./hanhwaImage.png",
+      "./kaiImage.png",
+      "./kariImage.png",
+      "./kasiImage.png",
+      "./siImage.png",
+      "./poscoImage.png",
+      "./satracImage.png"
+    ],
     "sensorpiaIntro": {
       "first": "SENSORPIA company was established in 2006. The company produce magnetic sensors and magnetic instruments which were developed through the technology accumulated more than 30 years experiences. Main products are 3-axis flux-gate magnetometer and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also possible. Testing service is also possible using magnetic testing equipment in Sensorpia co..",
       "circleTexts": [
@@ -165,7 +204,8 @@
         },
         { "year": "2006", "content": "Builded Company" }
       ]
-    }
+    },
+    "arrow": "./ScrollArrowFinal.svg"
   },
   "contactUs": {
     "title": "Contact us",

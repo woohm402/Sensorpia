@@ -17,13 +17,16 @@ const ApplicationComponet = () => {
       }
     }
     function RandomImage() {
-      const Images = ['./DefenseRandomOne.svg', './DefenseRandomTwo.svg']
+      const Images = [
+        data.applications.randomImages[0],
+        data.applications.randomImages[1],
+      ]
       const RandomImageOne = Math.floor(Math.random() * Images.length)
       const RandomImage = Images[RandomImageOne]
       setFinalRandomImage(RandomImage)
     }
     RandomImage()
-  }, [router.pathname, setMenu, language])
+  }, [router.pathname, setMenu, language, data.applications.randomImages])
   return (
     <ApplicationUI
       finalRandomImage={finalRandomImage}

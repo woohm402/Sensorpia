@@ -6,27 +6,28 @@ interface IProps {
 interface IPropsTwo {
   menu?: any
 }
-
+interface IPropsThree {
+  data: any
+}
 export const SideBarWrapper = styled.div`
-  max-width: 636px;
-  width: 100%;
+  min-width: 258px;
   height: ${(props: IPropsTwo) =>
     props.menu === 'Sensorpia intro.& our customers' ||
     props.menu === 'Vision & History' ||
     props.menu === '회사소개 & 주요 고객사' ||
     props.menu === '비전 & 회사 이력'
-      ? '270vh'
-      : '220vh'};
+      ? '165vh'
+      : '120vh'};
   background: #f9f9f9;
   z-index: 0;
-  position: relative;
+  position: static;
 `
 export const ScrollArrowImageWrapper = styled.div`
-  width: 90px;
-  height: 83px;
-  top: 2209px;
-  left: 150px;
-  background: url('./ScrollArrow.svg');
+  width: 50px;
+  height: 50px;
+  top: 1367px;
+  left: 70px;
+  ${(props: IPropsThree) => `background:url(${props.data})`};
   position: absolute;
   cursor: pointer;
 `
@@ -34,30 +35,32 @@ export const ScrollArrowImageWrapper = styled.div`
 export const SideBarTitleWrapper = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 15px;
+  line-height: 22px;
   color: #262626;
-  padding-top: 60px;
-  margin-left: 150px;
+  padding-top: 36px;
+  margin-left: 70px;
 `
 export const SideBarMenusWrapper = styled.div`
-  margin-top: 60px;
-  margin-left: 150px;
+  margin-top: 40px;
+  margin-left: 70px;
+  margin-right: 33px;
+  width: 143px;
 `
 
 export const SideBarMenusInnerWrapper = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
 `
 
 export const SideBarMenusLineDivider = styled.div`
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: 382px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 155px;
   height: 0px;
   border: 1px solid #c9c9c9;
 `

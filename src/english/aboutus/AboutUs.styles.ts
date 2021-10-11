@@ -1,149 +1,154 @@
 import styled from '@emotion/styled'
 
+interface IProps {
+  data: any
+}
+
 export const AboutUsBigWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
 export const AboutUsImageOneWrapper = styled.div`
-  width: 1286px;
-  height: 686px;
-  background: url('./AboutUsImageOne.svg');
+  width: 842px;
+  height: 449px;
+  ${(props: IProps) => `background:url(${props.data})`}
 `
 export const AboutUsFirstTextWrapper = styled.div`
-  max-width: 984px;
-  margin: 50px auto 0px auto;
+  max-width: 702px;
+  margin: 30px 70px 0px 70px;
   text-align: justify;
 `
 
 export const AboutUsFirstText = styled.span`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 25px;
   color: #262626;
 `
 export const CircleWrapper = styled.div`
   position: relative;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   text-align: center;
   color: #262626;
   width: 984px;
-  height: 382px;
+  height: 256px;
 `
 export const OrangeCircle = styled.div`
   position: absolute;
-  top: 80px;
-  left: 150px;
-  border-radius: 151px;
+  top: 40px;
+  left: 70px;
+  border-radius: 50%;
   background: rgba(190, 94, 94, 0.1);
-  width: 302px;
-  height: 302px;
-  border: 3px solid #be5e5e;
+  width: 216px;
+  height: 216px;
+  border: 2px solid #be5e5e;
   box-sizing: border-box;
 `
 export const BlueCirlce = styled.div`
   position: absolute;
-  top: 80px;
-  left: 302px;
+  top: 40px;
+  left: 179px;
   background: rgba(94, 104, 190, 0.1);
-  border: 3px solid #5e68be;
-  width: 302px;
-  height: 302px;
-  border-radius: 151px;
+  border: 2px solid #5e68be;
+  width: 216px;
+  height: 216px;
+  border-radius: 50%;
 `
 export const DefenseText = styled.div`
   position: absolute;
-  top: 213px;
-  left: 180px;
+  top: 137px;
+  left: 95px;
 `
 export const MagneticSensorsText = styled.div`
   position: absolute;
-  top: 195px;
-  left: 325px;
+  top: 126px;
+  left: 179px;
   max-width: 109px;
   word-break: normal;
 `
 export const SatelliteText = styled.div`
   position: absolute;
-  top: 213px;
-  left: 471px;
+  top: 137px;
+  left: 304px;
   max-width: 111px;
   word-break: normal;
 `
 export const MeasurementAndTestText = styled.div`
   position: absolute;
-  top: 167px;
-  left: 636px;
+  top: 103px;
+  left: 423px;
   max-width: 163px;
   word-break: normal;
 `
 export const AboutUsArrowImageWrapper = styled.div`
-  width: 187px;
+  width: 134px;
   height: 18px;
   position: absolute;
-  top: 264px;
-  left: 626px;
-  background: url('./AboutUsArrow.svg');
+  top: 193px;
+  left: 440px;
+  ${(props: IProps) => `background:url(${props.data})`};
+  background-repeat: no-repeat;
 `
 export const GreenCircle = styled.div`
   position: absolute;
-  top: 80px;
-  left: 832px;
+  top: 40px;
+  left: 596px;
   background: rgba(124, 189, 138, 0.1);
-  border: 3px solid #7cbd8a;
+  border: 2px solid #7cbd8a;
   box-sizing: border-box;
-  width: 302px;
-  height: 302px;
-  border-radius: 151px;
+  width: 216px;
+  height: 216px;
+  border-radius: 50%;
 `
 export const MagneticInstrumentsText = styled.div`
   position: absolute;
   max-width: 144px;
-  top: 195px;
-  left: 911px;
+  top: 126px;
+  left: 629px;
 `
 export const SecondTextWrapper = styled.div`
-  margin-top: 80px;
-  margin-left: 150px;
-  max-width: 984px;
+  margin-top: 40px;
+  margin-left: 70px;
+  max-width: 702px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #262626;
 `
 export const ThirdTextWrapper = styled.div`
-  margin-top: 50px;
-  margin-left: 150px;
-  max-width: 984px;
+  margin-top: 40px;
+  margin-left: 70px;
+  max-width: 702px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #262626;
 `
 export const OurCustomersTitleWrapper = styled.div`
-  margin-top: 140px;
-  margin-left: 150px;
+  margin-top: 65px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #0070c0;
 `
 export const OurCustomersDivider = styled.div`
-  width: 984px;
+  width: 701px;
   height: 0px;
-  margin: 10px auto 0px auto;
+  margin: 10px 71px 0px 70px;
   border: 1px solid #c9c9c9;
 `
 export const OurCustomersImageFirstLineWrapper = styled.div`
-  margin-top: 80px;
+  margin-top: 65px;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -151,32 +156,32 @@ export const OurCustomersImageFirstLineWrapper = styled.div`
   align-items: center;
 `
 export const LIGImageWrapper = styled.div`
-  width: 150px;
-  height: 71px;
-  margin-left: 193px;
-  background: url('./LigImage.svg');
+  width: 107px;
+  height: 51px;
+  margin-left: 101px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const HanhwaImageWrapper = styled.div`
-  width: 200px;
-  height: 55px;
-  margin-left: 88px;
-  background: url('./HanhwaImage.svg');
+  width: 143px;
+  height: 39px;
+  margin-left: 63px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const KaiImageWrapper = styled.div`
-  width: 250px;
-  height: 50px;
-  margin-left: 70px;
-  background: url('./KaiImage.svg');
+  width: 179px;
+  height: 36px;
+  margin-left: 49px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const KariImageWrapper = styled.div`
-  width: 108px;
-  height: 108px;
-  margin-left: 75px;
-  background: url('./KariImage.svg');
+  width: 77px;
+  height: 77px;
+  margin-left: 53px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const OurCustomersImageSecondLineWrapper = styled.div`
-  margin-top: 53px;
-  margin-bottom: 149px;
+  margin-top: 30px;
+  margin-bottom: 116px;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -185,116 +190,117 @@ export const OurCustomersImageSecondLineWrapper = styled.div`
 `
 
 export const KasiImageWrapper = styled.div`
-  width: 248px;
-  height: 73px;
-  margin-left: 149px;
-  background: url('./KasiImage.svg');
+  width: 177px;
+  height: 52px;
+  margin-left: 70px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const SiImageWrapper = styled.div`
-  width: 134px;
-  height: 105px;
-  margin-left: 45px;
-  background: url('./SiImage.svg');
+  width: 95px;
+  height: 75px;
+  margin-left: 32px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const PoscoImageWrapper = styled.div`
-  width: 164px;
-  height: 44px;
-  margin-left: 60px;
-  background: url('./PoscoImage.svg');
+  width: 117px;
+  height: 31px;
+  margin-left: 43px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 
 export const SatracImageWrapper = styled.div`
-  width: 261px;
-  height: 105px;
-  margin-left: 73px;
-  background: url('./SatracImage.svg');
+  width: 186px;
+  height: 75px;
+  margin-left: 52px;
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const VisionAndHistoryTitleWrapper = styled.div`
-  margin-top: 64px;
-  margin-left: 150px;
+  margin-top: 35px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 22px;
   color: #0070c0;
 `
 export const VisionAndHistoryLineDivider = styled.div`
-  width: 984px;
+  width: 701px;
   height: 0px;
-  margin-top: 10px;
+  margin-top: 11px;
   border: 1px solid #c9c9c9;
-  margin-left: 150px;
+  margin-left: 70px;
 `
 export const VisionAndHistoryImagesWrapper = styled.div`
   display: flex;
-  margin-top: 75px;
-  margin-left: 150px;
+  margin-top: 52px;
+  margin-left: 70px;
 `
 
 export const VisionAndHistoryImageOne = styled.div`
-  width: 455px;
-  height: 455px;
+  width: 325px;
+  height: 329px;
   border-radius: 50%;
-  background: url('./VisionAndHistoryImageOne.svg');
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 export const VisionAndHistoryImageTwo = styled.div`
-  width: 455px;
-  height: 455px;
-  margin-left: 74px;
+  width: 325px;
+  height: 329px;
+  margin-left: 48px;
   border-radius: 50%;
-  background: url('./VisionAndHistoryImageTwo.svg');
+  ${(props: IProps) => `background:url(${props.data})`};
 `
 
 export const VisionAndHistoryExplanationsWrapper = styled.div`
   display: flex;
-  margin-top: 60px;
-  margin-left: 150px;
+  margin-top: 40px;
+  margin-left: 70px;
 `
 export const VisionAndHistoryFirstExplanation = styled.div`
-  max-width: 454px;
+  max-width: 325px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #262626;
 `
 export const VisionAndHistorySecondExplanation = styled.div`
-  margin-left: 74px;
-  max-width: 455px;
+  margin-left: 49px;
+  max-width: 325px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   text-align: justify;
   color: #262626;
 `
 export const VisionAndHistorySecondTitleWrapper = styled.div`
-  margin-top: 170px;
-  margin-left: 150px;
+  margin-top: 100px;
+  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 15px;
+  line-height: 22px;
   color: #0070c0;
 `
 
 export const VisionAndHistoryYearsWrapper = styled.div`
-  margin-top: 75px;
-  margin-left: 150px;
+  margin-top: 31px;
+  margin-left: 70px;
   display: flex;
 `
 export const VisionAndHistoryArrowWrapper = styled.div`
   width: 30px;
-  height: 675px;
-  background: url('./VisionAndHistoryArrow.svg');
+  height: 470px;
+  ${(props: IProps) => `background:url(${props.data})`};
+  background-repeat: no-repeat;
 `
 export const VisionAndHistoryYearExplanation = styled.div`
-  margin-left: 60px;
-  margin-bottom: 35px;
+  margin-left: 42px;
+  margin-bottom: 30px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 13px;
+  line-height: 19px;
   color: #262626;
 `

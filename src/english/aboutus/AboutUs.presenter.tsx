@@ -51,7 +51,7 @@ const AboutUsUI = ({ menu, data }: IProps) => {
       {(menu === 'Sensorpia intro.& our customers' ||
         menu === '회사소개 & 주요 고객사') && (
         <AboutUsBigWrapper>
-          <AboutUsImageOneWrapper />
+          <AboutUsImageOneWrapper data={data.aboutUs.images[0]} />
           <AboutUsFirstTextWrapper>
             <AboutUsFirstText>
               {data.aboutUs.sensorpiaIntro.first}
@@ -72,7 +72,7 @@ const AboutUsUI = ({ menu, data }: IProps) => {
             <MeasurementAndTestText>
               {data.aboutUs.sensorpiaIntro.circleTexts[3]}
             </MeasurementAndTestText>
-            <AboutUsArrowImageWrapper />
+            <AboutUsArrowImageWrapper data={data.aboutUs.images[1]} />
             <GreenCircle />
             <MagneticInstrumentsText>
               {data.aboutUs.sensorpiaIntro.circleTexts[4]}
@@ -89,16 +89,16 @@ const AboutUsUI = ({ menu, data }: IProps) => {
           </OurCustomersTitleWrapper>
           <OurCustomersDivider />
           <OurCustomersImageFirstLineWrapper>
-            <LIGImageWrapper />
-            <HanhwaImageWrapper />
-            <KaiImageWrapper />
-            <KariImageWrapper />
+            <LIGImageWrapper data={data.aboutUs.clientImages[0]} />
+            <HanhwaImageWrapper data={data.aboutUs.clientImages[1]} />
+            <KaiImageWrapper data={data.aboutUs.clientImages[2]} />
+            <KariImageWrapper data={data.aboutUs.clientImages[3]} />
           </OurCustomersImageFirstLineWrapper>
           <OurCustomersImageSecondLineWrapper>
-            <KasiImageWrapper />
-            <SiImageWrapper />
-            <PoscoImageWrapper />
-            <SatracImageWrapper />
+            <KasiImageWrapper data={data.aboutUs.clientImages[4]} />
+            <SiImageWrapper data={data.aboutUs.clientImages[5]} />
+            <PoscoImageWrapper data={data.aboutUs.clientImages[6]} />
+            <SatracImageWrapper data={data.aboutUs.clientImages[7]} />
           </OurCustomersImageSecondLineWrapper>
         </AboutUsBigWrapper>
       )}
@@ -109,8 +109,8 @@ const AboutUsUI = ({ menu, data }: IProps) => {
           </VisionAndHistoryTitleWrapper>
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryImagesWrapper>
-            <VisionAndHistoryImageOne />
-            <VisionAndHistoryImageTwo />
+            <VisionAndHistoryImageOne data={data.aboutUs.images[2]} />
+            <VisionAndHistoryImageTwo data={data.aboutUs.images[3]} />
           </VisionAndHistoryImagesWrapper>
           <VisionAndHistoryExplanationsWrapper>
             <VisionAndHistoryFirstExplanation>
@@ -125,7 +125,7 @@ const AboutUsUI = ({ menu, data }: IProps) => {
           </VisionAndHistorySecondTitleWrapper>
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryYearsWrapper>
-            <VisionAndHistoryArrowWrapper />
+            <VisionAndHistoryArrowWrapper data={data.aboutUs.images[4]} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               {data.aboutUs.visionAndHistory.years.map((value: any) => (
                 <VisionAndHistoryYearExplanation key="">

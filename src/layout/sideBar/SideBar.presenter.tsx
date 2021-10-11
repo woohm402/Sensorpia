@@ -105,6 +105,8 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
       {router.pathname === '/aboutUs' && (
         <ScrollArrowImageWrapper
           onClick={onClickScrollArrow}
+          //@ts-ignore
+          data={data.aboutUs.arrow}
         ></ScrollArrowImageWrapper>
       )}
     </SideBarWrapper>

@@ -87,7 +87,7 @@ const ProductUI = () => {
     setProductDetailMenu(event.target.id)
   }
   return (
-    <div style={{ height: '200vh', position: 'relative' }}>
+    <div style={{ position: 'relative' }}>
       {menu === '3-axis Flux-gate magnetometer' && (
         <>
           <ThreeAxisNormalButton
@@ -116,7 +116,10 @@ const ProductUI = () => {
           </ThreeAxisDefenseButton>
           {productDetailMenu === data.products.threeAxis[0] && (
             <>
-              <NormalImageWrapper />
+              <NormalImageWrapper
+                //@ts-ignore
+                data={data.products.images[0]}
+              />
               <ContentWrapper>
                 <ExplanationWrapper>
                   <ExplanationTitle>
@@ -126,7 +129,10 @@ const ProductUI = () => {
                     {data.products.threeAxisDetails.Normal.Details}
                   </ExplanationDetail>
                 </ExplanationWrapper>
-                <NormalImageWrapperTwo>
+                <NormalImageWrapperTwo
+                  //@ts-ignore
+                  data={data.products.images[1]}
+                >
                   <NormalImageWrapperTwoText>MS-17</NormalImageWrapperTwoText>
                 </NormalImageWrapperTwo>
               </ContentWrapper>
@@ -134,7 +140,10 @@ const ProductUI = () => {
           )}
           {productDetailMenu === data.products.threeAxis[1] && (
             <>
-              <SatelliteImageWrapper />
+              <SatelliteImageWrapper
+                //@ts-ignore
+                data={data.products.images[2]}
+              />
               <SatelliteContentWrapper>
                 <SatelliteExplanationWrapper>
                   <SatelliteExplanationTitle>
@@ -149,12 +158,18 @@ const ProductUI = () => {
                   )}
                 </SatelliteExplanationWrapper>
                 <SatelliteImageWrapperTwo>
-                  <SatelliteImageMSFifteen>
+                  <SatelliteImageMSFifteen
+                    //@ts-ignore
+                    data={data.products.images[3]}
+                  >
                     <SatelliteImageMSFifteenText>
                       MS-15
                     </SatelliteImageMSFifteenText>
                   </SatelliteImageMSFifteen>
-                  <SatelliteImageMSTwentyTwo>
+                  <SatelliteImageMSTwentyTwo
+                    //@ts-ignore
+                    data={data.products.images[4]}
+                  >
                     <SatelliteImageMSTwentyTwoText>
                       MS-22
                     </SatelliteImageMSTwentyTwoText>
@@ -165,7 +180,10 @@ const ProductUI = () => {
           )}
           {productDetailMenu === data.products.threeAxis[2] && (
             <>
-              <DefenseImageWrapper />
+              <DefenseImageWrapper
+                //@ts-ignore
+                data={data.products.images[5]}
+              />
               <DefenseContentWrapper>
                 <DefenseExplanationWrapper>
                   <DefenseExplanationTitle>
@@ -180,7 +198,7 @@ const ProductUI = () => {
                   )}
                 </DefenseExplanationWrapper>
                 <DefenseImageWrapperTwo>
-                  <DefenseImageMSTwentySeven>
+                  <DefenseImageMSTwentySeven data={data.products.images[6]}>
                     <DefenseImageMSTwentySevenText>
                       {
                         data.products.threeAxisDetails.Defense.ImageTexts
@@ -188,7 +206,7 @@ const ProductUI = () => {
                       }
                     </DefenseImageMSTwentySevenText>
                   </DefenseImageMSTwentySeven>
-                  <DefenseImageMSThirteen>
+                  <DefenseImageMSThirteen data={data.products.images[7]}>
                     <DefenseImageMSThirteenText>
                       {
                         data.products.threeAxisDetails.Defense.ImageTexts
@@ -196,7 +214,7 @@ const ProductUI = () => {
                       }
                     </DefenseImageMSThirteenText>
                   </DefenseImageMSThirteen>
-                  <DefenseImageMSSeven>
+                  <DefenseImageMSSeven data={data.products.images[8]}>
                     <DefenseImageMSSevenText>
                       {data.products.threeAxisDetails.Defense.ImageTexts.Seven}
                     </DefenseImageMSSevenText>
@@ -216,7 +234,9 @@ const ProductUI = () => {
           >
             {data.products.magneticTorquer[0]}
           </MagneticTorquerSatelliteButton>
-          <MagneticTorquerSatelliteImageWrapper />
+          <MagneticTorquerSatelliteImageWrapper
+            data={data.products.images[9]}
+          />
           <MagneticTorquerContentWrapper>
             <MagneticTorquerExplanationWrapper>
               <MagneticTorquerTitle>
@@ -228,13 +248,15 @@ const ProductUI = () => {
                 )
               )}
             </MagneticTorquerExplanationWrapper>
-            <MagneticTorquerSatelliteNoName></MagneticTorquerSatelliteNoName>
+            <MagneticTorquerSatelliteNoName
+              data={data.products.images[10]}
+            ></MagneticTorquerSatelliteNoName>
           </MagneticTorquerContentWrapper>
         </>
       )}
       {menu === 'Magnetic Instrument' && (
         <>
-          <MagneticInstrumentImageOneWrapper />
+          <MagneticInstrumentImageOneWrapper data={data.products.images[11]} />
           <MagneticInstrumentImageOneDetail>
             {data.products.magneticInstruments.Details[0]}
           </MagneticInstrumentImageOneDetail>
@@ -250,7 +272,9 @@ const ProductUI = () => {
                 {data.products.magneticInstruments.Details[2]}
               </MagneticInstrumentDetails>
             </MagneticInstumentDCBHExplanationWrapper>
-            <MagneticInstrumentDCBHImageWrapper></MagneticInstrumentDCBHImageWrapper>
+            <MagneticInstrumentDCBHImageWrapper
+              data={data.products.images[12]}
+            ></MagneticInstrumentDCBHImageWrapper>
           </MagneticInstrumentDCBHWrapper>
           <MagneticInstrumentACMagneticWrapper>
             <MagneticInstrumentACMagneticExplanationWrapper>
@@ -267,7 +291,9 @@ const ProductUI = () => {
                 {data.products.magneticInstruments.Details[5]}
               </MagneticInstrumentACMagneticDetails>
             </MagneticInstrumentACMagneticExplanationWrapper>
-            <MagneticInstrumentACMagneticImageWrapper />
+            <MagneticInstrumentACMagneticImageWrapper
+              data={data.products.images[13]}
+            />
           </MagneticInstrumentACMagneticWrapper>
         </>
       )}
