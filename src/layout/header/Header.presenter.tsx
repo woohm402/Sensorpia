@@ -13,12 +13,8 @@ import {
   LanguageChangeWrapper,
   LanguageEnglish,
   LanguageKorean,
-  MenuAboutUs,
-  MenuApplication,
-  MenuCareers,
-  MenuContactUs,
   MenuHome,
-  MenuProduct,
+  MenuItem,
   MenusWrapper,
   NavBarMainMenu,
   NavBarMainMenuDetailWrapper,
@@ -70,65 +66,65 @@ const HeaderUI = ({
           </SensorpiaLogoWrapper>
           <MenusWrapper>
             <MenuHome
-              id="Home"
+              id='Home'
               onMouseOver={onMouseOverMenu}
               color={menu}
               onClick={onClickMenu}
             >
               {data.main.Home}
             </MenuHome>
-            <MenuProduct
-              id="Product"
+            <MenuItem
+              id='Product'
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'Product'}
               onClick={onClickMenu}
             >
               {data.main.Product}
-            </MenuProduct>
-            <MenuApplication
-              id="Application"
+            </MenuItem>
+            <MenuItem
+              id='Application'
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'Application'}
               onClick={onClickMenu}
             >
               {data.main.Applications}
-            </MenuApplication>
-            <MenuAboutUs
-              id="AboutUs"
+            </MenuItem>
+            <MenuItem
+              id='AboutUs'
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'AboutUs'}
               onClick={onClickMenu}
             >
               {data.main.AboutUs}
-            </MenuAboutUs>
+            </MenuItem>
             {language === 'kor' && (
-              <MenuCareers
-                id="Careers"
+              <MenuItem
+                id='Careers'
                 onMouseOver={onMouseOverMenu}
-                color={menu}
+                selected={menu === 'Careers'}
                 onClick={onClickMenu}
               >
                 {data.main.Careers}
-              </MenuCareers>
+              </MenuItem>
             )}
-            <MenuContactUs
-              id="ContactUs"
+            <MenuItem
+              id='ContactUs'
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'ContactUs'}
               onClick={onClickMenu}
             >
               {data.main.ContactUs}
-            </MenuContactUs>
+            </MenuItem>
             <LanguageChangeWrapper>
               <LanguageEnglish
-                id="en"
+                id='en'
                 onClick={onClickLanguage}
                 color={language}
               >
                 {data.main.Eng}
               </LanguageEnglish>
               <LanguageKorean
-                id="kor"
+                id='kor'
                 onClick={onClickLanguage}
                 color={language}
               >
@@ -141,14 +137,14 @@ const HeaderUI = ({
           <NavBarWrapper>
             <NavBarMainMenusWrapper language={language}>
               {data.NavBar?.list.map((data: any) => (
-                <NavBarMainMenu key="">{data}</NavBarMainMenu>
+                <NavBarMainMenu key=''>{data}</NavBarMainMenu>
               ))}
             </NavBarMainMenusWrapper>
             <NavBarMainMenuDetailWrapper language={language}>
               <ProductDetailsWrapper>
                 {data.NavBar.Products.map((data: any) => (
                   <ProductDetails
-                    key=""
+                    key=''
                     id={data}
                     onMouseOver={onMouseOverDetailMenu}
                     menuColor={detailMenu === data}
@@ -160,7 +156,7 @@ const HeaderUI = ({
               <ApplicationsDetailsWrapper language={language}>
                 {data.NavBar.Applications.map((data: any) => (
                   <ApplicationsDetails
-                    key=""
+                    key=''
                     id={data}
                     onMouseOver={onMouseOverDetailMenu}
                     menuColor={detailMenu === data}
@@ -172,7 +168,7 @@ const HeaderUI = ({
               <AboutUsDetailsWrapper language={language}>
                 {data.NavBar.AboutUs.map((data: any) => (
                   <AboutUsDetails
-                    key=""
+                    key=''
                     id={data}
                     onMouseOver={onMouseOverDetailMenu}
                     menuColor={detailMenu === data}
@@ -185,7 +181,7 @@ const HeaderUI = ({
                 <CareersDetailsWrapper>
                   {data.NavBar.Careers.map((data: any) => (
                     <CareersDetails
-                      key=""
+                      key=''
                       id={data}
                       onMouseOver={onMouseOverDetailMenu}
                       menuColor={detailMenu === data}

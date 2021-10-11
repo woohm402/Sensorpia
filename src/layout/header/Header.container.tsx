@@ -47,23 +47,20 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const onClickMenu = (event: any) => {
     if (event.target.id === 'Home') {
       router.push('/')
-      setIsOpen(false)
     } else if (event.target.id === 'Product') {
       router.push('/products')
-      setIsOpen(false)
     } else if (event.target.id === 'Application') {
       router.push('/application')
-      setIsOpen(false)
     } else if (event.target.id === 'AboutUs') {
       router.push('/aboutUs')
-      setIsOpen(false)
     } else if (event.target.id === 'ContactUs') {
       router.push('/contactUs')
-      setIsOpen(false)
     } else if (event.target.id === 'Careers') {
       router.push('/careers')
-      setIsOpen(false)
+    } else {
+      return
     }
+    setIsOpen(false)
   }
 
   const onMouseOverDetailMenu = (event: any) => {
@@ -86,7 +83,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       onClickLogo={onClickLogo}
       sideBar={sideBar}
       onClickMenu={onClickMenu}
-    ></HeaderUI>
+    />
   )
 }
 

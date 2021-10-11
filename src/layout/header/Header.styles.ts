@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+
 interface IProps {
   color?: any
   menuColor?: any
@@ -12,8 +13,8 @@ export const HeaderBigWrapper = styled.div`
   height: 87px;
   display: flex;
   box-shadow: ${(props: IProps) =>
-    (props.sideBar || props.router.pathname === '/contactUs') &&
-    '0px 2px 15px rgba(0,0,0, 0.15)'};
+          (props.sideBar || props.router.pathname === '/contactUs') &&
+          '0px 2px 15px rgba(0,0,0, 0.15)'};
   z-index: 1;
 `
 
@@ -48,34 +49,10 @@ export const MenuHome = styled.span`
   cursor: pointer;
   color: ${(props: IProps) => (props.color === 'Home' ? '#0070c0' : '#9c9d9e')};
 `
-export const MenuProduct = styled.span`
+
+export const MenuItem = styled.span`
   margin-right: 35px;
-  color: ${(props: IProps) =>
-    props.color === 'Product' ? '#0070c0' : '#9c9d9e'};
-  cursor: pointer;
-`
-export const MenuApplication = styled.span`
-  margin-right: 35px;
-  cursor: pointer;
-  color: ${(props: IProps) =>
-    props.color === 'Application' ? '#0070c0' : '#9c9d9e'};
-`
-export const MenuAboutUs = styled.span`
-  margin-right: 35px;
-  color: ${(props: IProps) =>
-    props.color === 'AboutUs' ? '#0070c0' : '#9c9d9e'};
-  cursor: pointer;
-`
-export const MenuContactUs = styled.span`
-  color: ${(props: IProps) =>
-    props.color === 'ContactUs' ? '#0070c0' : '#9c9d9e'};
-  cursor: pointer;
-  margin-right: 35px;
-`
-export const MenuCareers = styled.span`
-  margin-right: 35px;
-  color: ${(props: IProps) =>
-    props.color === 'Careers' ? '#0070c0' : '#9c9d9e'};
+  color: ${(props: { selected: boolean }) => props.selected ? '#0070c0' : '#9c9d9e'};
   cursor: pointer;
 `
 
@@ -99,7 +76,7 @@ export const LanguageEnglish = styled.div`
   color: ${(props: IProps) => (props.color === 'en' ? '#ffffff' : '#9c9d9e')};
   cursor: pointer;
   background: ${(props: IProps) =>
-    props.color === 'en' ? '#0070c0' : '#ffffff'};
+          props.color === 'en' ? '#0070c0' : '#ffffff'};
 `
 export const LanguageKorean = styled.div`
   width: 58px;
@@ -114,7 +91,7 @@ export const LanguageKorean = styled.div`
   color: ${(props: IProps) => (props.color === 'kor' ? '#ffffff' : '#9c9d9e')};
   cursor: pointer;
   background: ${(props: IProps) =>
-    props.color === 'kor' ? '#0070c0' : '#ffffff'};
+          props.color === 'kor' ? '#0070c0' : '#ffffff'};
 `
 export const NavBarWrapper = styled.div`
   width: 1100px;
@@ -164,7 +141,7 @@ export const ProductDetails = styled.span`
 `
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '11px' : '2px'};
+          props.language === 'kor' ? '11px' : '2px'};
   max-width: ${(props: IProps) => (props.language === 'kor' ? '54px' : '81px')};
   display: flex;
   flex-direction: column;
@@ -181,9 +158,9 @@ export const ApplicationsDetails = styled.span`
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '122px' : '49px'};
+          props.language === 'kor' ? '122px' : '49px'};
   max-width: ${(props: IProps) =>
-    props.language === 'kor' ? '85px' : '110px'};
+          props.language === 'kor' ? '85px' : '110px'};
   display: flex;
   flex-direction: column;
 `
