@@ -8,24 +8,25 @@ interface IProps {
 }
 
 export const HeaderBigWrapper = styled.div`
-  width: 1100px;
+  width: 100vw;
   height: 87px;
   display: flex;
   box-shadow: ${(props: IProps) =>
     (props.sideBar || props.router.pathname === '/contactUs') &&
     '0px 2px 15px rgba(0,0,0, 0.15)'};
   z-index: 1;
+  position: relative;
 `
 
 export const HeaderWrapper = styled.div`
-  width: 960px;
-  margin: 0 70px;
+  width: 1100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;
   margin: 0 auto;
+  padding: 0 70px;
 `
 export const SensorpiaLogoWrapper = styled.div`
   width: 139px;
@@ -116,13 +117,19 @@ export const LanguageKorean = styled.div`
   background: ${(props: IProps) =>
     props.color === 'kor' ? '#0070c0' : '#ffffff'};
 `
+export const NavBarBigWrapper = styled.div`
+  width: 100vw;
+  height: 231px;
+  position: absolute;
+  z-index: 100;
+  top: 87px;
+`
+
 export const NavBarWrapper = styled.div`
   width: 1100px;
   height: 231px;
   background: rgba(255, 255, 255, 0.8);
-  top: 87px;
-  position: absolute;
-  z-index: 100;
+  margin: 0 auto;
 `
 
 export const NavBarMainMenusWrapper = styled.div`

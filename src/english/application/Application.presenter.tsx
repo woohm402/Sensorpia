@@ -1,4 +1,3 @@
-import { ProductDetails } from '../../layout/header/Header.styles'
 import {
   MagneticInstrumentACMagneticDetails,
   MagneticInstrumentACMagneticExplanationWrapper,

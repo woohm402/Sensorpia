@@ -4,11 +4,16 @@ interface IProps {
   data: any
 }
 
+export const FooterBigWrapper = styled.div`
+  width: 100vw;
+  background: #b9b9ba;
+  height: 109px;
+`
+
 export const FooterWrapper = styled.div`
   width: 1100px;
-  height: 109px;
-  background: #b9b9ba;
   position: relative;
+  margin: 0 auto;
 `
 export const FooterLogoWrapper = styled.div`
   position: absolute;

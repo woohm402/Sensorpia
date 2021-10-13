@@ -54,6 +54,7 @@ import {
   MainProductsOuterWrapper,
   MainOuterImagesWrapper,
   SpecificiationOuterSatelliteButtonsWrapper,
+  NavBarOuterWrapper,
 } from './Main.styles'
 interface IProps {
   data: any
@@ -199,45 +200,47 @@ const MainUI = ({
           {data.main.specificationButton}
         </SpecificationButton>
       </TorquerButtonWrapper>
-      <NavBarDetailsRepeatWrapper>
-        <NavBarMainMenusWrapper>
-          {data.NavBar?.list.map((data: any) => (
-            <NavBarMainMenu key="">{data}</NavBarMainMenu>
-          ))}
-        </NavBarMainMenusWrapper>
-        <NavBarMainMenuDetailWrapper>
-          <ProductDetailsWrapper>
-            {data.NavBar.Products.map((data: any) => (
-              <ProductDetails key="" id={data}>
-                {data}
-              </ProductDetails>
+      <NavBarOuterWrapper>
+        <NavBarDetailsRepeatWrapper>
+          <NavBarMainMenusWrapper>
+            {data.NavBar?.list.map((data: any) => (
+              <NavBarMainMenu key="">{data}</NavBarMainMenu>
             ))}
-          </ProductDetailsWrapper>
-          <ApplicationsDetailsWrapper language={language}>
-            {data.NavBar.Applications.map((data: any) => (
-              <ApplicationsDetails key="" id={data}>
-                {data}
-              </ApplicationsDetails>
-            ))}
-          </ApplicationsDetailsWrapper>
-          <AboutUsDetailsWrapper language={language}>
-            {data.NavBar.AboutUs.map((data: any) => (
-              <AboutUsDetails key="" id={data}>
-                {data}
-              </AboutUsDetails>
-            ))}
-          </AboutUsDetailsWrapper>
-          {language === 'kor' && (
-            <CareersDetailsWrapper>
-              {data.NavBar.Careers.map((data: any) => (
-                <CareersDetails key="" id={data}>
+          </NavBarMainMenusWrapper>
+          <NavBarMainMenuDetailWrapper>
+            <ProductDetailsWrapper>
+              {data.NavBar.Products.map((data: any) => (
+                <ProductDetails key="" id={data}>
                   {data}
-                </CareersDetails>
+                </ProductDetails>
               ))}
-            </CareersDetailsWrapper>
-          )}
-        </NavBarMainMenuDetailWrapper>
-      </NavBarDetailsRepeatWrapper>
+            </ProductDetailsWrapper>
+            <ApplicationsDetailsWrapper language={language}>
+              {data.NavBar.Applications.map((data: any) => (
+                <ApplicationsDetails key="" id={data}>
+                  {data}
+                </ApplicationsDetails>
+              ))}
+            </ApplicationsDetailsWrapper>
+            <AboutUsDetailsWrapper language={language}>
+              {data.NavBar.AboutUs.map((data: any) => (
+                <AboutUsDetails key="" id={data}>
+                  {data}
+                </AboutUsDetails>
+              ))}
+            </AboutUsDetailsWrapper>
+            {language === 'kor' && (
+              <CareersDetailsWrapper>
+                {data.NavBar.Careers.map((data: any) => (
+                  <CareersDetails key="" id={data}>
+                    {data}
+                  </CareersDetails>
+                ))}
+              </CareersDetailsWrapper>
+            )}
+          </NavBarMainMenuDetailWrapper>
+        </NavBarDetailsRepeatWrapper>
+      </NavBarOuterWrapper>
     </>
   )
 }

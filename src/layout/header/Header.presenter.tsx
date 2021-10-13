@@ -28,6 +28,7 @@ import {
   ProductDetailsWrapper,
   SensorPiaLogo,
   SensorpiaLogoWrapper,
+  NavBarBigWrapper,
 } from './Header.styles'
 
 interface IProps {
@@ -138,65 +139,67 @@ const HeaderUI = ({
           </MenusWrapper>
         </HeaderWrapper>
         {isOpen && (
-          <NavBarWrapper>
-            <NavBarMainMenusWrapper language={language}>
-              {data.NavBar?.list.map((data: any) => (
-                <NavBarMainMenu key="">{data}</NavBarMainMenu>
-              ))}
-            </NavBarMainMenusWrapper>
-            <NavBarMainMenuDetailWrapper language={language}>
-              <ProductDetailsWrapper>
-                {data.NavBar.Products.map((data: any) => (
-                  <ProductDetails
-                    key=""
-                    id={data}
-                    onMouseOver={onMouseOverDetailMenu}
-                    menuColor={detailMenu === data}
-                  >
-                    {data}
-                  </ProductDetails>
+          <NavBarBigWrapper>
+            <NavBarWrapper>
+              <NavBarMainMenusWrapper language={language}>
+                {data.NavBar?.list.map((data: any) => (
+                  <NavBarMainMenu key="">{data}</NavBarMainMenu>
                 ))}
-              </ProductDetailsWrapper>
-              <ApplicationsDetailsWrapper language={language}>
-                {data.NavBar.Applications.map((data: any) => (
-                  <ApplicationsDetails
-                    key=""
-                    id={data}
-                    onMouseOver={onMouseOverDetailMenu}
-                    menuColor={detailMenu === data}
-                  >
-                    {data}
-                  </ApplicationsDetails>
-                ))}
-              </ApplicationsDetailsWrapper>
-              <AboutUsDetailsWrapper language={language}>
-                {data.NavBar.AboutUs.map((data: any) => (
-                  <AboutUsDetails
-                    key=""
-                    id={data}
-                    onMouseOver={onMouseOverDetailMenu}
-                    menuColor={detailMenu === data}
-                  >
-                    {data}
-                  </AboutUsDetails>
-                ))}
-              </AboutUsDetailsWrapper>
-              {language === 'kor' && (
-                <CareersDetailsWrapper>
-                  {data.NavBar.Careers.map((data: any) => (
-                    <CareersDetails
+              </NavBarMainMenusWrapper>
+              <NavBarMainMenuDetailWrapper language={language}>
+                <ProductDetailsWrapper>
+                  {data.NavBar.Products.map((data: any) => (
+                    <ProductDetails
                       key=""
                       id={data}
                       onMouseOver={onMouseOverDetailMenu}
                       menuColor={detailMenu === data}
                     >
                       {data}
-                    </CareersDetails>
+                    </ProductDetails>
                   ))}
-                </CareersDetailsWrapper>
-              )}
-            </NavBarMainMenuDetailWrapper>
-          </NavBarWrapper>
+                </ProductDetailsWrapper>
+                <ApplicationsDetailsWrapper language={language}>
+                  {data.NavBar.Applications.map((data: any) => (
+                    <ApplicationsDetails
+                      key=""
+                      id={data}
+                      onMouseOver={onMouseOverDetailMenu}
+                      menuColor={detailMenu === data}
+                    >
+                      {data}
+                    </ApplicationsDetails>
+                  ))}
+                </ApplicationsDetailsWrapper>
+                <AboutUsDetailsWrapper language={language}>
+                  {data.NavBar.AboutUs.map((data: any) => (
+                    <AboutUsDetails
+                      key=""
+                      id={data}
+                      onMouseOver={onMouseOverDetailMenu}
+                      menuColor={detailMenu === data}
+                    >
+                      {data}
+                    </AboutUsDetails>
+                  ))}
+                </AboutUsDetailsWrapper>
+                {language === 'kor' && (
+                  <CareersDetailsWrapper>
+                    {data.NavBar.Careers.map((data: any) => (
+                      <CareersDetails
+                        key=""
+                        id={data}
+                        onMouseOver={onMouseOverDetailMenu}
+                        menuColor={detailMenu === data}
+                      >
+                        {data}
+                      </CareersDetails>
+                    ))}
+                  </CareersDetailsWrapper>
+                )}
+              </NavBarMainMenuDetailWrapper>
+            </NavBarWrapper>
+          </NavBarBigWrapper>
         )}
       </HeaderBigWrapper>
     </>

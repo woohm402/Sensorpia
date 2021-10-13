@@ -27,23 +27,21 @@ const LayOut = ({ children }: ILayOutProps) => {
         }}
       >
         <HeaderComponent sideBar={sideBar}></HeaderComponent>
-        <div style={{ display: 'flex', flexDirection: 'row', width: '1100px' }}>
-          {sideBar ? (
-            <div
-              style={{
-                width: '1100px',
-                display: 'flex',
-                flexDirection: 'row',
-              }}
-              onMouseOver={onMouseOverBody}
-            >
-              <SideBarComponent />
-              <div onMouseOver={onMouseOverBody}>{children}</div>
-            </div>
-          ) : (
+        {sideBar ? (
+          <div
+            style={{
+              width: '1100px',
+              display: 'flex',
+              flexDirection: 'row',
+            }}
+            onMouseOver={onMouseOverBody}
+          >
+            <SideBarComponent />
             <div onMouseOver={onMouseOverBody}>{children}</div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div onMouseOver={onMouseOverBody}>{children}</div>
+        )}
         <FooterComponent></FooterComponent>
       </div>
     </>

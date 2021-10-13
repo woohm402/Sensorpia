@@ -6,6 +6,7 @@ interface IProps {
   language?: any
   data?: any
 }
+
 export const SliderMainWrapper = styled.div`
   position: relative;
   width: 1100px;
@@ -13,6 +14,7 @@ export const SliderMainWrapper = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 `
 export const SliderTextWrapper = styled.div`
   position: absolute;
@@ -122,7 +124,7 @@ export const SliderMidWrapper = styled.div`
 `
 export const MainTitleWrapper = styled.div`
   max-width: 1100px;
-  margin-top: 35px;
+  margin: 35px auto 0px auto;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -135,7 +137,7 @@ export const MainTitle = styled.span``
 
 export const MainOuterWrapper = styled.div`
   display: flex;
-  margin-top: 35px;
+  margin: 35px auto 0px auto;
   justify-content: center;
   width: 1100px;
 `
@@ -157,7 +159,7 @@ export const MainSecondLineDivider = styled.div`
   border: 2px solid #9c9d9e;
 `
 export const MainProductsOuterWrapper = styled.div`
-  margin-top: 15px;
+  margin: 15px auto 0px auto;
   width: 1100px;
   display: flex;
   justify-content: center;
@@ -190,7 +192,7 @@ export const MainProductTwoWrapper = styled.div`
   color: #262626;
 `
 export const MainOuterImagesWrapper = styled.div`
-  margin-top: 45px;
+  margin: 45px auto 0px auto;
   width: 1100px;
   display: flex;
   justify-content: center;
@@ -283,7 +285,7 @@ export const DefenseImageTwoText = styled.span`
   left: 142px;
 `
 export const SpecificationButtonsWrapper = styled.div`
-  margin-top: 15px;
+  margin: 15px auto 0px auto;
   width: 1100px;
   display: flex;
   flex-direction: row;
@@ -349,11 +351,17 @@ export const TorquerButtonWrapper = styled.div`
   justify-content: center;
   margin-top: 15px;
 `
-export const NavBarDetailsRepeatWrapper = styled.div`
-  margin-top: 95px;
-  width: 100%;
+export const NavBarOuterWrapper = styled.div`
+  width: 100vw;
   height: 340px;
   background: #f9f9f9;
+  margin-top: 95px;
+`
+
+export const NavBarDetailsRepeatWrapper = styled.div`
+  width: 1100px;
+  height: 340px;
+  margin: 0 auto;
 `
 
 export const NavBarMainMenusWrapper = styled.div`
