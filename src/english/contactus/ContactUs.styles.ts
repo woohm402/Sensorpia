@@ -26,7 +26,4 @@ export const ContactUsDetails = styled.div`
 `
 export const ContactUsMapWrapper = styled.div`
   margin: 30px 0px 60px 0px;
-  width: 960px;
-  height: 415px;
-  background-color: gray;
 `

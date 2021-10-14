@@ -49,7 +49,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       router.push('/')
       setIsOpen(false)
     } else if (event.target.id === 'Product') {
-      router.push('/products')
+      router.push({ pathname: '/products', query: { item: 0 } })
       setIsOpen(false)
     } else if (event.target.id === 'Application') {
       router.push('/application')
