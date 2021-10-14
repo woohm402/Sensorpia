@@ -14,6 +14,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const data = require(`../../../pages/api/${language}.json`)
   const { setIsOpen } = useContext(GlobalContext)
   const router = useRouter()
+  console.log(router.query)
   useEffect(() => {
     if (router.pathname === '/') {
       setMenu('Home')
@@ -49,7 +50,10 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       router.push('/')
       setIsOpen(false)
     } else if (event.target.id === 'Product') {
-      router.push({ pathname: '/products', query: { item: 0 } })
+      router.push({
+        pathname: '/products',
+        query: { item: 0, keyword: 'normal' },
+      })
       setIsOpen(false)
     } else if (event.target.id === 'Application') {
       router.push('/application')

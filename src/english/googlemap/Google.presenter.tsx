@@ -1,10 +1,4 @@
-import {
-  GoogleMap,
-  useJsApiLoader,
-  Marker,
-  LoadScript,
-  useLoadScript,
-} from '@react-google-maps/api'
+import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 const GoogleUI = () => {
   const center = {
     lat: 36.40139873458682,
@@ -23,7 +17,7 @@ const GoogleUI = () => {
 
   return isLoaded ? (
     <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
-      <Marker position={center}></Marker>
+      <Marker position={center} />
     </GoogleMap>
   ) : (
     <></>

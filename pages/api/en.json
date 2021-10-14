@@ -31,73 +31,105 @@
     "satelliteImageNames": { "SatelliteOne": "MS-15", "SatelliteTwo": "MS-22" },
     "defenseImageNames": { "DefenseOne": "MS-13", "DefenseTwo": "MS-27" }
   },
-  "products": {
-    "threeAxis": ["Normal", "Satellite", "Defense"],
-    "images": [
-      "./normalImageFinal.png",
-      "./normalImageTwoFinal.png",
-      "./satelliteImageFinal.png",
-      "./satelliteImageTwoFinal.png",
-      "./satelliteImageThreeFinal.png",
-      "./defenseImageFinal.png",
-      "./defenseImageTwoFinal.png",
-      "./defenseImageThreeFinal.png",
-      "./defenseImageFourFinal.png",
-      "./satelliteTorquerImageFinal.png",
-      "./satelliteTorquerImageTwoFinal.png",
-      "./magneticInstrumentsFinal.png",
-      "./magneticInstrumentsTwoFinal.png",
-      "./magneticInstrumentsThreeFinal.png"
-    ],
-    "threeAxisDetails": {
-      "Normal": {
-        "Title": "Explanation",
-        "Details": "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
-      },
-      "Satellite": {
-        "Title": "Explanation",
-        "Details": [
-          "Measurement of earth magnetic field",
-          "Light mass and low power consumption designed for satellite.",
-          "Attitude sensing using 3-axis components of earth magnetic field"
-        ]
-      },
-      "Defense": {
-        "Title": "Explanation",
-        "Details": [
-          "Products are specially useful for under see water to measure magnetic field of warship",
-          "3-axis have high orthogonality each other and high linearity",
-          "Total field measurement overcome magnetometer attitude change."
-        ],
-        "ImageTexts": {
-          "TwentySeven": "MS-27",
-          "Thirteen": "MS-13",
-          "Seven": "MS-07"
-        }
-      }
-    },
-    "magneticTorquer": ["Satellite"],
-    "magneticTorquerDetails": {
-      "Satellite": {
-        "Title": "Explanation",
-        "Details": [
-          "Torque generation using magnetic dipole moment and earth magnetic field to rotate satellite",
-          " Light mass and low power consumption designed for satellite."
+  "products": [
+    {
+      "name": "3-axis flux-gate magnetometer",
+      "layout": "ProductBasicPage",
+      "data": {
+        "subSections": [
+          {
+            "name": "Normal",
+            "mainImage": "./normalImageFinal.png",
+            "subImagesAndTexts": [
+              { "image": "./normalImageTwoFinal.png", "text": "MS-17" }
+            ],
+            "textExplanationTitle": "Explanation",
+            "textExplanationDetails": [
+              "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
+            ]
+          },
+          {
+            "name": "Satellite",
+            "mainImage": "./satelliteImageFinal.png",
+            "subImagesAndTexts": [
+              { "image": "./satelliteImageTwoFinal.png", "text": "MS-15" },
+              { "image": "./normalImageThreeFinal.png", "text": "MS-22" }
+            ],
+            "textExplanationTitle": "Explanation",
+            "textExplanationDetails": [
+              "Measurement of earth magnetic field",
+              "Light mass and low power consumption designed for satellite.",
+              "Attitude sensing using 3-axis components of earth magnetic field"
+            ]
+          },
+          {
+            "name": "Defense",
+            "mainImage": "./defenseImageFinal.png",
+            "subImagesAndTexts": [
+              { "image": "./defenseImageTwoFinal.png", "text": "MS-27" },
+              { "image": "./defenseImageThreeFinal.png", "text": "MS-13" },
+              { "image": "./defenseImageFourFinal.png", "text": "MS-27" }
+            ],
+            "textExplanationTitle": "Explanation",
+            "textExplanationDetails": [
+              "Products are specially useful for under see water to measure magnetic field of warship",
+              "3-axis have high orthogonality each other and high linearity",
+              "Total field measurement overcome magnetometer attitude change."
+            ]
+          }
         ]
       }
     },
-    "magneticInstruments": {
-      "Titles": ["DC B-H LOOP TRACER (MI-36)", "AC magnetic Tester (MI-10)"],
-      "Details": [
-        "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
-        "Measure dc hysteresis loop of soft magnetic material",
-        "Toroidal and single strip specimen are possible",
-        "Measure ac hysteresis loop of soft magnetic material",
-        "Core loss and magnetostriction measurement",
-        "Epstein and single strip specimen are possible"
-      ]
+    {
+      "name": "Magnetic Torquer",
+      "layout": "ProductSecondPage",
+      "data": {
+        "subSections": [
+          {
+            "name": "Satellite",
+            "mainImage": "./satelliteTorquerImageFinal.png",
+            "subImageAndTexts": [
+              { "image": "./satelliteTorquerImageTwoFinal.png", "text": null }
+            ],
+            "textExplanationTitle": "Explanation",
+            "textExplanationDetails": [
+              "Measurement of earth magnetic field",
+              "Light mass and low power consumption designed for satellite.",
+              "Attitude sensing using 3-axis components of earth magnetic field"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Magnetic instruments",
+      "layout": "ProductThirdPage",
+      "data": {
+        "subSections": [
+          {
+            "name": null,
+            "mainImage": "./magneticInstrumentsFinal.png",
+            "subImageAndTexts": [
+              { "image": "./magneticInstrumentsTwoFinal.png", "text": null },
+              { "image": "./magneticInstrumentsThreeFinal.png", "text": null }
+            ],
+            "textExplanationTitle": [
+              "DC B-H LOOP TRACER (MI-36)",
+              "AC magnetic Tester (MI-10)"
+            ],
+            "textExplanationDetails": [
+              "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
+              "Measure dc hysteresis loop of soft magnetic material",
+              "Toroidal and single strip specimen are possible",
+              "Measure ac hysteresis loop of soft magnetic material",
+              "Core loss and magnetostriction measurement",
+              "Epstein and single strip specimen are possible"
+            ]
+          }
+        ]
+      }
     }
-  },
+  ],
   "applications": {
     "randomImages": [
       "./applicationDefenseRandomOne.png",
