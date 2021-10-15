@@ -53,7 +53,7 @@
             "mainImage": "./satelliteImageFinal.png",
             "subImagesAndTexts": [
               { "image": "./satelliteImageTwoFinal.png", "text": "MS-15" },
-              { "image": "./normalImageThreeFinal.png", "text": "MS-22" }
+              { "image": "./satelliteImageThreeFinal.png", "text": "MS-22" }
             ],
             "textExplanationTitle": "Explanation",
             "textExplanationDetails": [

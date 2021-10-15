@@ -89,7 +89,7 @@ const ProductUI = () => {
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
               ]?.subImagesAndTexts.map((data: any) => (
-                <SubImageWrappers key="" url={data.image}></SubImageWrappers>
+                <SubImageWrappers key="" src={data.image}></SubImageWrappers>
               ))}
             </SubImageOuterWrappers>
           </ContentWrapper>
