@@ -1,3 +1,4 @@
+import { DefenseWrapper } from '../main/Main.styles'
 import {
   MagneticInstrumentACMagneticDetails,
   MagneticInstrumentACMagneticExplanationWrapper,
@@ -26,23 +27,32 @@ import {
 
 interface IProps {
   finalRandomImage: any
-  menu: any
+  pageIndex: any
   data: any
 }
-const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
+const ApplicationUI = ({ finalRandomImage, pageIndex, data }: IProps) => {
+  const applicationBasic = 'applicationBasicPage'
+  const applicationMeasurement = 'applicationMeasurementPage'
+  console.log(pageIndex)
   return (
     <>
-      {(menu === 'Defense' || menu === '국방') && (
+      {data.applications[pageIndex]?.layout === applicationBasic && (
         <>
-          <DefenseImageRandomWrapper
-            finalRandomImage={finalRandomImage}
-          ></DefenseImageRandomWrapper>
-          {data.applications.defense.map((data: any) => (
+          {pageIndex === 0 ? (
+            <DefenseImageRandomWrapper
+              finalRandomImage={finalRandomImage}
+            ></DefenseImageRandomWrapper>
+          ) : (
+            data.applications[pageIndex]?.data.mainImage.map((data: any) => (
+              <DefenseImageRandomWrapper key="" finalRandomImage={data} />
+            ))
+          )}
+          {data.applications[pageIndex]?.data.mainTexts?.map((data: any) => (
             <DefenseExplanationDetails key="">{data}</DefenseExplanationDetails>
           ))}
         </>
       )}
-      {(menu === 'Satellite' || menu === '인공 위성') && (
+      {/* {(menu === 'Satellite' || menu === '인공 위성') && (
         <>
           <SatelliteImageWrapperOne
             data={data.applications.randomImages[2]}
@@ -111,7 +121,7 @@ const ApplicationUI = ({ finalRandomImage, menu, data }: IProps) => {
             />
           </MagneticInstrumentACMagneticWrapper>
         </>
-      )}
+      )} */}
     </>
   )
 }

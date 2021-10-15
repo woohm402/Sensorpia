@@ -19,6 +19,8 @@ const SideBarComponent = () => {
             data.products[Number(event.target.id)].data.subSections[0].name,
         },
       })
+    } else if (router.pathname === '/application') {
+      router.push({ pathname: path, query: { item: Number(event.target.id) } })
     } else {
       setMenu(event.target.id)
     }

@@ -44,14 +44,25 @@ export const SubImageOuterWrappers = styled.div`
   display: flex;
   flex-direction: column;
 `
+export const SubImageMidWrappers = styled.div`
+  position: relative;
+  margin-left: 64px;
+  margin-bottom: 60px;
+`
 
 export const SubImageWrappers = styled.img`
   width: 268px;
   object-fit: cover;
-  margin-left: 64px;
-  position: relative;
-  margin-bottom: 60px;
-  background-repeat: no-repeat;
+`
+
+export const SubImageTexts = styled.div`
+  top: 89%;
+  left: 82%;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  position: absolute;
 `
 
 export const ExplanationTitle = styled.div`

@@ -1,40 +1,22 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import {
   ContentWrapper,
-  DefenseContentWrapper,
-  DefenseExplanationDetail,
-  DefenseExplanationTitle,
-  DefenseExplanationWrapper,
-  DefenseImageMSSeven,
-  DefenseImageMSThirteen,
-  DefenseImageMSTwentySeven,
-  DefenseImageWrapper,
-  DefenseImageWrapperTwo,
   ExplanationDetail,
   ExplanationTitle,
   ExplanationWrapper,
-  MagneticInstrumentDCBHTitle,
-  MagneticInstrumentDCBHWrapper,
-  MagneticInstrumentDetails,
-  MagneticInstrumentImageOneDetail,
-  MagneticInstrumentImageOneWrapper,
-  MagneticInstumentDCBHExplanationWrapper,
-  MagneticInstrumentDCBHImageWrapper,
-  MagneticInstrumentACMagneticWrapper,
-  MagneticInstrumentACMagneticExplanationWrapper,
-  MagneticInstrumentACMagneticTitle,
-  MagneticInstrumentACMagneticDetails,
-  MagneticInstrumentACMagneticImageWrapper,
   ThreeAxisButtons,
   ImageWrapper,
   SubImageWrappers,
   SubImageOuterWrappers,
+  SubImageTexts,
+  SubImageMidWrappers,
 } from './Product.styles'
+import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter'
 
 const ProductUI = () => {
-  const { menu, setMenu, language } = useContext(GlobalContext)
+  const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const router = useRouter()
   const basicPage = 'productBasicPage'
@@ -89,7 +71,10 @@ const ProductUI = () => {
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
               ]?.subImagesAndTexts.map((data: any) => (
-                <SubImageWrappers key="" src={data.image}></SubImageWrappers>
+                <SubImageMidWrappers key="">
+                  <SubImageWrappers src={data.image}></SubImageWrappers>
+                  <SubImageTexts>{data.text}</SubImageTexts>
+                </SubImageMidWrappers>
               ))}
             </SubImageOuterWrappers>
           </ContentWrapper>
@@ -97,77 +82,7 @@ const ProductUI = () => {
       )}
       {data.products[pageIndex]?.layout === magneticPage && (
         <>
-          <MagneticInstrumentImageOneWrapper
-            url={data.products[pageIndex]?.data.subSections[0]?.mainImage}
-          />
-          <MagneticInstrumentImageOneDetail>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[0]
-            }
-          </MagneticInstrumentImageOneDetail>
-          <MagneticInstrumentDCBHWrapper>
-            <MagneticInstumentDCBHExplanationWrapper>
-              <MagneticInstrumentDCBHTitle>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationTitle[0]
-                }
-              </MagneticInstrumentDCBHTitle>
-              <MagneticInstrumentDetails>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationDetails[1]
-                }
-              </MagneticInstrumentDetails>
-              <MagneticInstrumentDetails>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationDetails[2]
-                }
-              </MagneticInstrumentDetails>
-            </MagneticInstumentDCBHExplanationWrapper>
-            <MagneticInstrumentDCBHImageWrapper
-              url={
-                data.products[pageIndex]?.data.subSections[0]
-                  ?.subImagesAndTexts[0].image
-              }
-            ></MagneticInstrumentDCBHImageWrapper>
-          </MagneticInstrumentDCBHWrapper>
-          <MagneticInstrumentACMagneticWrapper>
-            <MagneticInstrumentACMagneticExplanationWrapper>
-              <MagneticInstrumentACMagneticTitle>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationTitle[1]
-                }
-              </MagneticInstrumentACMagneticTitle>
-              <MagneticInstrumentACMagneticDetails>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationDetails[3]
-                }
-              </MagneticInstrumentACMagneticDetails>
-              <MagneticInstrumentACMagneticDetails>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationDetails[4]
-                }
-              </MagneticInstrumentACMagneticDetails>
-              <MagneticInstrumentACMagneticDetails>
-                {
-                  data.products[pageIndex]?.data.subSections[0]
-                    ?.textExplanationDetails[5]
-                }
-              </MagneticInstrumentACMagneticDetails>
-            </MagneticInstrumentACMagneticExplanationWrapper>
-            <MagneticInstrumentACMagneticImageWrapper
-              url={
-                data.products[pageIndex]?.data.subSections[0]
-                  ?.subImagesAndTexts[1].image
-              }
-            />
-          </MagneticInstrumentACMagneticWrapper>
+          <MagneticInstrumentsPage />
         </>
       )}
     </div>

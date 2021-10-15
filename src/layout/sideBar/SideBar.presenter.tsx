@@ -53,18 +53,18 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
               </>
             ))
           : router.pathname === '/application'
-          ? data.sidebar.Application.map((value: any, index: any) => (
+          ? data.applications.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Application.length - 1 !== index && (
+                {data.applications.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
