@@ -37,6 +37,8 @@ const ProductUI = () => {
   const { menu, setMenu, language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const router = useRouter()
+  const basicPage = 'productBasicPage'
+  const magneticPage = 'productMagneticInstrumentsPage'
   const path = router.pathname
   const pageIndex = Number(router.query.item)
   const buttonName = router.query.keyword
@@ -51,7 +53,7 @@ const ProductUI = () => {
   }
   return (
     <div style={{ position: 'relative', marginLeft: '70px' }}>
-      {pageIndex !== 2 && (
+      {data.products[pageIndex]?.layout === basicPage && (
         <>
           {data.products[pageIndex]?.data.subSections.map((data: any) => (
             <ThreeAxisButtons
@@ -93,7 +95,7 @@ const ProductUI = () => {
           </ContentWrapper>
         </>
       )}
-      {pageIndex === 2 && (
+      {data.products[pageIndex]?.layout === magneticPage && (
         <>
           <MagneticInstrumentImageOneWrapper
             url={data.products[pageIndex]?.data.subSections[0]?.mainImage}

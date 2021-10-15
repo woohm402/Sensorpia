@@ -103,7 +103,7 @@
     },
     {
       "name": "Magnetic instruments",
-      "layout": "ProductMagneticInstrumentsPage",
+      "layout": "productMagneticInstrumentsPage",
       "data": {
         "subSections": [
           {
