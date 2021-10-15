@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 interface IProps {
   finalRandomImage?: any
-  data?: any
+  url?: any
 }
 
 export const DefenseImageRandomWrapper = styled.div`
@@ -27,7 +27,7 @@ export const SatelliteImageWrapperOne = styled.div`
   margin-left: 70px;
   width: 700px;
   height: 434px;
-  background: ${(props: IProps) => `url(${props.data})`};
+  background: ${(props: IProps) => `url(${props.url})`};
 `
 export const SatelliteExplanationDetails = styled.li`
   margin-left: 70px;
@@ -44,10 +44,9 @@ export const ApplicationMagnetometerWrapper = styled.div`
   margin-left: 70px;
   align-items: center;
 `
-export const ApplicationMagnetometerImageWrapper = styled.div`
+export const ApplicationMagnetometerImageWrapper = styled.img`
   width: 269px;
-  height: 184.46px;
-  background: ${(props: IProps) => `url(${props.data})`};
+  object-fit: cover;
 `
 export const ApplicationMagnetometerContentWrapper = styled.div`
   display: flex;

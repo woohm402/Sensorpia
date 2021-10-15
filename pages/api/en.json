@@ -150,20 +150,22 @@
       "layout": "applicationBasicPage",
       "data": {
         "mainImage": ["./applicationSatelliteImageFinal.png"],
-        "subImage": "./applicationSatelliteImageTwoFinal.png",
+        "subImageAndDetails": [
+          {
+            "image": "./applicationSatelliteImageTwoFinal.png",
+            "title": "3-axis flux-gate magnetometer",
+            "details": [
+              "Measurement of earth magnetic field",
+              "Light mass and low power consumption designed for satellite",
+              "Attitude sensing using 3-axis components of earth magnetic field"
+            ]
+          }
+        ],
         "mainTexts": [
           "Sensorpia produces magnetic torquer and 3-axis magnetometer, which are used to control the location and pose of satellites",
           "Magnetic dipole moment of magnetic torquer depends on the size of satellite. Sensorpia company can produce various size depends on the requirement of customers",
           "Analog and digital output of the 3-axis magnetometer are possible."
-        ],
-        "subTitlesAndDetails": {
-          "title": "3-axis flux-gate magnetometer",
-          "details": [
-            "Measurement of earth magnetic field",
-            "Light mass and low power consumption designed for satellite",
-            "Attitude sensing using 3-axis components of earth magnetic field"
-          ]
-        }
+        ]
       }
     },
     {
@@ -171,13 +173,9 @@
       "layout": "applicationMeasurementPage",
       "data": {
         "mainImage": ["./measurementImageFinal.png"],
-        "subImage": [
-          "./measurementImageFinalTwo.png",
-          "./measurementImageFinalThree.png"
-        ],
-        "mainTexts": "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have.",
-        "subTitlesAndDetails": [
+        "subImageAndDetails": [
           {
+            "image": "./measurementImageFinalTwo.png",
             "title": "DC B-H LOOP TRACER (MI-36)",
             "details": [
               "Measure dc hysteresis loop of soft magnetic material",
@@ -185,6 +183,7 @@
             ]
           },
           {
+            "image": "./measurementImageFinalThree.png",
             "title": "AC magnetic Tester (MI-10)",
             "details": [
               "Measure ac hysteresis loop of soft magnetic material",
@@ -192,6 +191,9 @@
               "Epstein and single strip specimen are possible"
             ]
           }
+        ],
+        "mainTexts": [
+          "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
         ]
       }
     }

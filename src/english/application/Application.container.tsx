@@ -22,7 +22,6 @@ const ApplicationComponet = () => {
       }
     }
     RandomImage()
-    console.log(finalRandomImage)
   }, [pageIndex, data.applications])
   return (
     <ApplicationUI
