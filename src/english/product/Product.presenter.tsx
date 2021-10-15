@@ -20,29 +20,6 @@ import {
   MagneticInstrumentDetails,
   MagneticInstrumentImageOneDetail,
   MagneticInstrumentImageOneWrapper,
-  MagneticTorquerContentWrapper,
-  MagneticTorquerDetails,
-  MagneticTorquerExplanationWrapper,
-  MagneticTorquerSatelliteButton,
-  MagneticTorquerSatelliteImageWrapper,
-  MagneticTorquerSatelliteNoName,
-  MagneticTorquerTitle,
-  NormalImageWrapper,
-  NormalImageWrapperTwo,
-  NormalImageWrapperTwoText,
-  SatelliteContentWrapper,
-  SatelliteExplanationDetail,
-  SatelliteExplanationTitle,
-  SatelliteExplanationWrapper,
-  SatelliteImageMSFifteen,
-  SatelliteImageMSFifteenText,
-  SatelliteImageMSTwentyTwo,
-  SatelliteImageMSTwentyTwoText,
-  SatelliteImageWrapper,
-  SatelliteImageWrapperTwo,
-  ThreeAxisDefenseButton,
-  ThreeAxisNormalButton,
-  ThreeAxisSatelliteButton,
   MagneticInstumentDCBHExplanationWrapper,
   MagneticInstrumentDCBHImageWrapper,
   MagneticInstrumentACMagneticWrapper,
@@ -50,249 +27,143 @@ import {
   MagneticInstrumentACMagneticTitle,
   MagneticInstrumentACMagneticDetails,
   MagneticInstrumentACMagneticImageWrapper,
-  DefenseImageMSTwentySevenText,
-  DefenseImageMSThirteenText,
-  DefenseImageMSSevenText,
+  ThreeAxisButtons,
+  ImageWrapper,
+  SubImageWrappers,
+  SubImageOuterWrappers,
 } from './Product.styles'
 
 const ProductUI = () => {
   const { menu, setMenu, language } = useContext(GlobalContext)
-  const [productDetailMenu, setProductDetailMenu] = useState('')
   const data = require(`../../../pages/api/${language}.json`)
   const router = useRouter()
-  useEffect(() => {
-    if (router.pathname === '/products') {
-      if (menu === '' || menu === '3-axis Flux-gate magnetometer') {
-        setMenu('3-axis Flux-gate magnetometer')
-        setProductDetailMenu(data.products.threeAxis[0])
-      } else if (menu === 'Magnetic torquer') {
-        setProductDetailMenu(data.products.magneticTorquer[0])
-      } else if (
-        menu !== '3-axis Flux-gate magnetometer' &&
-        menu !== 'Magnetic torquer' &&
-        menu !== 'Magnetic Instrument'
-      ) {
-        setMenu('3-axis Flux-gate magnetometer')
-        setProductDetailMenu(data.products.threeAxis[0])
-      }
-    }
-  }, [
-    router.pathname,
-    setMenu,
-    data.products.threeAxis,
-    menu,
-    data.products.magneticTorquer,
-  ])
+  const path = router.pathname
+  const pageIndex = Number(router.query.item)
+  const buttonName = router.query.keyword
+  const buttonIndex = data.products[pageIndex]?.data.subSections.findIndex(
+    (data: any) => data.name === buttonName
+  )
   const onClickProductDetails = (event: any) => {
-    setProductDetailMenu(event.target.id)
+    router.push({
+      pathname: path,
+      query: { item: router.query.item, keyword: event.target.id },
+    })
   }
   return (
-    <div style={{ position: 'relative' }}>
-      {menu === '3-axis Flux-gate magnetometer' && (
+    <div style={{ position: 'relative', marginLeft: '70px' }}>
+      {pageIndex !== 2 && (
         <>
-          <ThreeAxisNormalButton
-            id={data.products.threeAxis[0]}
-            //@ts-ignore
-            color={productDetailMenu === data.products.threeAxis[0]}
-            onClick={onClickProductDetails}
-          >
-            {data.products.threeAxis[0]}
-          </ThreeAxisNormalButton>
-          <ThreeAxisSatelliteButton
-            id={data.products.threeAxis[1]}
-            //@ts-ignore
-            color={productDetailMenu === data.products.threeAxis[1]}
-            onClick={onClickProductDetails}
-          >
-            {data.products.threeAxis[1]}
-          </ThreeAxisSatelliteButton>
-          <ThreeAxisDefenseButton
-            id={data.products.threeAxis[2]}
-            //@ts-ignore
-            color={productDetailMenu === data.products.threeAxis[2]}
-            onClick={onClickProductDetails}
-          >
-            {data.products.threeAxis[2]}
-          </ThreeAxisDefenseButton>
-          {productDetailMenu === data.products.threeAxis[0] && (
-            <>
-              <NormalImageWrapper
-                //@ts-ignore
-                data={data.products.images[0]}
-              />
-              <ContentWrapper>
-                <ExplanationWrapper>
-                  <ExplanationTitle>
-                    {data.products.threeAxisDetails.Normal.Title}
-                  </ExplanationTitle>
-                  <ExplanationDetail>
-                    {data.products.threeAxisDetails.Normal.Details}
-                  </ExplanationDetail>
-                </ExplanationWrapper>
-                <NormalImageWrapperTwo
-                  //@ts-ignore
-                  data={data.products.images[1]}
-                >
-                  <NormalImageWrapperTwoText>MS-17</NormalImageWrapperTwoText>
-                </NormalImageWrapperTwo>
-              </ContentWrapper>
-            </>
-          )}
-          {productDetailMenu === data.products.threeAxis[1] && (
-            <>
-              <SatelliteImageWrapper
-                //@ts-ignore
-                data={data.products.images[2]}
-              />
-              <SatelliteContentWrapper>
-                <SatelliteExplanationWrapper>
-                  <SatelliteExplanationTitle>
-                    {data.products.threeAxisDetails.Satellite.Title}
-                  </SatelliteExplanationTitle>
-                  {data.products.threeAxisDetails.Satellite.Details.map(
-                    (data: any) => (
-                      <SatelliteExplanationDetail key="">
-                        {data}
-                      </SatelliteExplanationDetail>
-                    )
-                  )}
-                </SatelliteExplanationWrapper>
-                <SatelliteImageWrapperTwo>
-                  <SatelliteImageMSFifteen
-                    //@ts-ignore
-                    data={data.products.images[3]}
-                  >
-                    <SatelliteImageMSFifteenText>
-                      MS-15
-                    </SatelliteImageMSFifteenText>
-                  </SatelliteImageMSFifteen>
-                  <SatelliteImageMSTwentyTwo
-                    //@ts-ignore
-                    data={data.products.images[4]}
-                  >
-                    <SatelliteImageMSTwentyTwoText>
-                      MS-22
-                    </SatelliteImageMSTwentyTwoText>
-                  </SatelliteImageMSTwentyTwo>
-                </SatelliteImageWrapperTwo>
-              </SatelliteContentWrapper>
-            </>
-          )}
-          {productDetailMenu === data.products.threeAxis[2] && (
-            <>
-              <DefenseImageWrapper
-                //@ts-ignore
-                data={data.products.images[5]}
-              />
-              <DefenseContentWrapper>
-                <DefenseExplanationWrapper>
-                  <DefenseExplanationTitle>
-                    {data.products.threeAxisDetails.Defense.Title}
-                  </DefenseExplanationTitle>
-                  {data.products.threeAxisDetails.Defense.Details.map(
-                    (data: any) => (
-                      <DefenseExplanationDetail key="">
-                        {data}
-                      </DefenseExplanationDetail>
-                    )
-                  )}
-                </DefenseExplanationWrapper>
-                <DefenseImageWrapperTwo>
-                  <DefenseImageMSTwentySeven data={data.products.images[6]}>
-                    <DefenseImageMSTwentySevenText>
-                      {
-                        data.products.threeAxisDetails.Defense.ImageTexts
-                          .TwentySeven
-                      }
-                    </DefenseImageMSTwentySevenText>
-                  </DefenseImageMSTwentySeven>
-                  <DefenseImageMSThirteen data={data.products.images[7]}>
-                    <DefenseImageMSThirteenText>
-                      {
-                        data.products.threeAxisDetails.Defense.ImageTexts
-                          .Thirteen
-                      }
-                    </DefenseImageMSThirteenText>
-                  </DefenseImageMSThirteen>
-                  <DefenseImageMSSeven data={data.products.images[8]}>
-                    <DefenseImageMSSevenText>
-                      {data.products.threeAxisDetails.Defense.ImageTexts.Seven}
-                    </DefenseImageMSSevenText>
-                  </DefenseImageMSSeven>
-                </DefenseImageWrapperTwo>
-              </DefenseContentWrapper>
-            </>
-          )}
-        </>
-      )}
-      {menu === 'Magnetic torquer' && (
-        <>
-          <MagneticTorquerSatelliteButton
-            onClick={onClickProductDetails}
-            //@ts-ignore
-            color={productDetailMenu === data.products.magneticTorquer[0]}
-          >
-            {data.products.magneticTorquer[0]}
-          </MagneticTorquerSatelliteButton>
-          <MagneticTorquerSatelliteImageWrapper
-            data={data.products.images[9]}
+          {data.products[pageIndex]?.data.subSections.map((data: any) => (
+            <ThreeAxisButtons
+              key=""
+              onClick={onClickProductDetails}
+              id={data.name}
+              //@ts-ignore
+              color={data.name === buttonName}
+            >
+              {data.name}
+            </ThreeAxisButtons>
+          ))}
+          <ImageWrapper
+            url={
+              data.products[pageIndex]?.data.subSections[buttonIndex]?.mainImage
+            }
           />
-          <MagneticTorquerContentWrapper>
-            <MagneticTorquerExplanationWrapper>
-              <MagneticTorquerTitle>
-                {data.products.magneticTorquerDetails.Satellite.Title}
-              </MagneticTorquerTitle>
-              {data.products.magneticTorquerDetails.Satellite.Details.map(
-                (data: any) => (
-                  <MagneticTorquerDetails key="">{data}</MagneticTorquerDetails>
-                )
-              )}
-            </MagneticTorquerExplanationWrapper>
-            <MagneticTorquerSatelliteNoName
-              data={data.products.images[10]}
-            ></MagneticTorquerSatelliteNoName>
-          </MagneticTorquerContentWrapper>
+          <ContentWrapper>
+            <ExplanationWrapper>
+              <ExplanationTitle>
+                {
+                  data.products[pageIndex]?.data.subSections[buttonIndex]
+                    ?.textExplanationTitle
+                }
+              </ExplanationTitle>
+              {data.products[pageIndex]?.data.subSections[
+                buttonIndex
+              ]?.textExplanationDetails.map((data: any) => (
+                <ExplanationDetail key="">{data}</ExplanationDetail>
+              ))}
+            </ExplanationWrapper>
+            <SubImageOuterWrappers>
+              {data.products[pageIndex]?.data.subSections[
+                buttonIndex
+              ]?.subImagesAndTexts.map((data: any) => (
+                <SubImageWrappers key="" url={data.image}></SubImageWrappers>
+              ))}
+            </SubImageOuterWrappers>
+          </ContentWrapper>
         </>
       )}
-      {menu === 'Magnetic Instrument' && (
+      {pageIndex === 2 && (
         <>
-          <MagneticInstrumentImageOneWrapper data={data.products.images[11]} />
+          <MagneticInstrumentImageOneWrapper
+            url={data.products[pageIndex]?.data.subSections[0]?.mainImage}
+          />
           <MagneticInstrumentImageOneDetail>
-            {data.products.magneticInstruments.Details[0]}
+            {
+              data.products[pageIndex]?.data.subSections[0]
+                ?.textExplanationDetails[0]
+            }
           </MagneticInstrumentImageOneDetail>
           <MagneticInstrumentDCBHWrapper>
             <MagneticInstumentDCBHExplanationWrapper>
               <MagneticInstrumentDCBHTitle>
-                {data.products.magneticInstruments.Titles[0]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationTitle[0]
+                }
               </MagneticInstrumentDCBHTitle>
               <MagneticInstrumentDetails>
-                {data.products.magneticInstruments.Details[1]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationDetails[1]
+                }
               </MagneticInstrumentDetails>
               <MagneticInstrumentDetails>
-                {data.products.magneticInstruments.Details[2]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationDetails[2]
+                }
               </MagneticInstrumentDetails>
             </MagneticInstumentDCBHExplanationWrapper>
             <MagneticInstrumentDCBHImageWrapper
-              data={data.products.images[12]}
+              url={
+                data.products[pageIndex]?.data.subSections[0]
+                  ?.subImagesAndTexts[0].image
+              }
             ></MagneticInstrumentDCBHImageWrapper>
           </MagneticInstrumentDCBHWrapper>
           <MagneticInstrumentACMagneticWrapper>
             <MagneticInstrumentACMagneticExplanationWrapper>
               <MagneticInstrumentACMagneticTitle>
-                {data.products.magneticInstruments.Titles[1]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationTitle[1]
+                }
               </MagneticInstrumentACMagneticTitle>
               <MagneticInstrumentACMagneticDetails>
-                {data.products.magneticInstruments.Details[3]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationDetails[3]
+                }
               </MagneticInstrumentACMagneticDetails>
               <MagneticInstrumentACMagneticDetails>
-                {data.products.magneticInstruments.Details[4]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationDetails[4]
+                }
               </MagneticInstrumentACMagneticDetails>
               <MagneticInstrumentACMagneticDetails>
-                {data.products.magneticInstruments.Details[5]}
+                {
+                  data.products[pageIndex]?.data.subSections[0]
+                    ?.textExplanationDetails[5]
+                }
               </MagneticInstrumentACMagneticDetails>
             </MagneticInstrumentACMagneticExplanationWrapper>
             <MagneticInstrumentACMagneticImageWrapper
-              data={data.products.images[13]}
+              url={
+                data.products[pageIndex]?.data.subSections[0]
+                  ?.subImagesAndTexts[1].image
+              }
             />
           </MagneticInstrumentACMagneticWrapper>
         </>

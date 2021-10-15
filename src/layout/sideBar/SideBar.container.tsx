@@ -6,9 +6,22 @@ import SideBarUI from './SideBar.presenter'
 const SideBarComponent = () => {
   const { setMenu } = useContext(GlobalContext)
   const router = useRouter()
-  console.log('sideBar', router.query)
+  const path = router.pathname
+  const { language } = useContext(GlobalContext)
+  const data = require(`../../../pages/api/${language}.json`)
   const onClickMenu = (event: any) => {
-    setMenu(event.target.id)
+    if (router.pathname === '/products') {
+      router.push({
+        pathname: path,
+        query: {
+          item: Number(event.target.id),
+          keyword:
+            data.products[Number(event.target.id)].data.subSections[0].name,
+        },
+      })
+    } else {
+      setMenu(event.target.id)
+    }
   }
   return <SideBarUI onClickMenu={onClickMenu} />
 }

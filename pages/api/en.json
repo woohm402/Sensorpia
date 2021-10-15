@@ -34,7 +34,7 @@
   "products": [
     {
       "name": "3-axis flux-gate magnetometer",
-      "layout": "ProductBasicPage",
+      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
@@ -82,13 +82,13 @@
     },
     {
       "name": "Magnetic Torquer",
-      "layout": "ProductSecondPage",
+      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
             "name": "Satellite",
             "mainImage": "./satelliteTorquerImageFinal.png",
-            "subImageAndTexts": [
+            "subImagesAndTexts": [
               { "image": "./satelliteTorquerImageTwoFinal.png", "text": null }
             ],
             "textExplanationTitle": "Explanation",
@@ -103,13 +103,13 @@
     },
     {
       "name": "Magnetic instruments",
-      "layout": "ProductThirdPage",
+      "layout": "ProductMagneticInstrumentsPage",
       "data": {
         "subSections": [
           {
             "name": null,
             "mainImage": "./magneticInstrumentsFinal.png",
-            "subImageAndTexts": [
+            "subImagesAndTexts": [
               { "image": "./magneticInstrumentsTwoFinal.png", "text": null },
               { "image": "./magneticInstrumentsThreeFinal.png", "text": null }
             ],

@@ -3,10 +3,10 @@ interface IProps {
   color?: any
 }
 interface IPropsTwo {
-  data: any
+  url: any
 }
 
-export const ThreeAxisNormalButton = styled.button`
+export const ThreeAxisButtons = styled.button`
   width: 200px;
   height: 30px;
   background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
@@ -14,23 +14,7 @@ export const ThreeAxisNormalButton = styled.button`
   box-sizing: border-box;
   border-radius: 30px;
   margin-top: 35px;
-  margin-left: 70px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
-  cursor: pointer;
-`
-export const ThreeAxisSatelliteButton = styled.button`
-  width: 200px;
-  height: 30px;
-  background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 1px solid #9c9d9e;
-  box-sizing: border-box;
-  border-radius: 30px;
-  margin-top: 35px;
-  margin-left: 51px;
+  margin-right: 51px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -39,48 +23,36 @@ export const ThreeAxisSatelliteButton = styled.button`
   cursor: pointer;
 `
 
-export const ThreeAxisDefenseButton = styled.button`
-  width: 200px;
-  height: 30px;
-  background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 1px solid #9c9d9e;
-  box-sizing: border-box;
-  border-radius: 30px;
-  margin-top: 35px;
-  margin-left: 51px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
-  cursor: pointer;
-`
-export const NormalImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   width: 702px;
   height: 369px;
-  margin-left: 70px;
   margin-top: 35px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 `
 
 export const ExplanationWrapper = styled.div`
-  margin-top: 30px;
-  margin-left: 70px;
   display: flex;
   flex-direction: column;
   max-width: 370px;
 `
-export const NormalImageWrapperTwo = styled.div`
+export const SubImageOuterWrappers = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const SubImageWrappers = styled.div`
   width: 268px;
-  height: 212px;
-  margin-top: 30px;
+  height: 190px;
   margin-left: 64px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
   position: relative;
+  margin-bottom: 60px;
+  background-repeat: no-repeat;
 `
 export const NormalImageWrapperTwoText = styled.span`
   position: absolute;
@@ -98,9 +70,9 @@ export const ExplanationTitle = styled.div`
   font-size: 15px;
   line-height: 22px;
   color: #262626;
+  margin-bottom: 20px;
 `
 export const ExplanationDetail = styled.li`
-  margin-top: 15px;
   width: 370px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -112,7 +84,7 @@ export const ExplanationDetail = styled.li`
 export const SatelliteImageWrapper = styled.div`
   width: 702px;
   height: 370px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
   margin-top: 35px;
   margin-left: 70px;
 `
@@ -154,7 +126,7 @@ export const SatelliteImageWrapperTwo = styled.div`
 export const SatelliteImageMSFifteen = styled.div`
   width: 268px;
   height: 212px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
   position: relative;
 `
 export const SatelliteImageMSFifteenText = styled.span`
@@ -172,7 +144,7 @@ export const SatelliteImageMSTwentyTwo = styled.div`
   margin-top: 60px;
   width: 268px;
   height: 170px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
   position: relative;
 `
 export const SatelliteImageMSTwentyTwoText = styled.span`
@@ -190,7 +162,7 @@ export const DefenseImageWrapper = styled.div`
   margin-left: 70px;
   width: 702px;
   height: 370px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const DefenseContentWrapper = styled.div`
   margin-top: 29px;
@@ -227,7 +199,7 @@ export const DefenseImageMSTwentySeven = styled.div`
   position: relative;
   width: 268px;
   height: 212px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const DefenseImageMSTwentySevenText = styled.span`
   position: absolute;
@@ -245,7 +217,7 @@ export const DefenseImageMSThirteen = styled.div`
   margin-top: 60px;
   width: 268px;
   height: 185px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const DefenseImageMSThirteenText = styled.span`
   position: absolute;
@@ -262,7 +234,7 @@ export const DefenseImageMSSeven = styled.div`
   margin-top: 60px;
   width: 268px;
   height: 177px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const DefenseImageMSSevenText = styled.span`
   position: absolute;
@@ -295,7 +267,7 @@ export const MagneticTorquerSatelliteImageWrapper = styled.div`
   margin-top: 35px;
   width: 702px;
   height: 370px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const MagneticTorquerContentWrapper = styled.div`
   margin-left: 70px;
@@ -329,14 +301,14 @@ export const MagneticTorquerSatelliteNoName = styled.div`
   width: 268px;
   height: 212px;
   margin-left: 64px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const MagneticInstrumentImageOneWrapper = styled.div`
   width: 702px;
   height: 370px;
   margin-top: 35px;
   margin-left: 70px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 export const MagneticInstrumentImageOneDetail = styled.li`
   margin-top: 30px;
@@ -379,7 +351,7 @@ export const MagneticInstrumentDCBHImageWrapper = styled.div`
   margin-left: 181px;
   width: 284px;
   height: 188px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
 
 export const MagneticInstrumentACMagneticWrapper = styled.div`
@@ -413,5 +385,5 @@ export const MagneticInstrumentACMagneticImageWrapper = styled.div`
   margin-left: 143px;
   width: 323px;
   height: 162px;
-  ${({ data }: IPropsTwo) => `background:url(${data})`};
+  ${({ url }: IPropsTwo) => `background:url(${url})`};
 `

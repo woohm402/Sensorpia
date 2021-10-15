@@ -52,7 +52,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
     } else if (event.target.id === 'Product') {
       router.push({
         pathname: '/products',
-        query: { item: 0, keyword: 'normal' },
+        query: { item: 0, keyword: 'Normal' },
       })
       setIsOpen(false)
     } else if (event.target.id === 'Application') {

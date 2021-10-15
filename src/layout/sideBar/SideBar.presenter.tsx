@@ -16,6 +16,7 @@ interface IProps {
 
 const SideBarUI = ({ onClickMenu }: IProps) => {
   const router = useRouter()
+  const pageIndex = Number(router.query.item)
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const { menu } = useContext(GlobalContext)
@@ -35,18 +36,18 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
       </SideBarTitleWrapper>
       <SideBarMenusWrapper>
         {router.pathname === '/products'
-          ? data.sidebar.Products.map((value: any, index: any) => (
+          ? data.products.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex == index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Products.length - 1 !== index && (
+                {data.products.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
