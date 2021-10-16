@@ -213,11 +213,6 @@ const MainUI = ({
         //@ts-expect-error
         data={data.main.magneticTorquer}
       />
-      <TorquerButtonWrapper>
-        <SpecificationButton>
-          {data.main.specificationButton}
-        </SpecificationButton>
-      </TorquerButtonWrapper>
       <NavBarOuterWrapper>
         <NavBarDetailsRepeatWrapper>
           <NavBarMainMenusWrapper>
