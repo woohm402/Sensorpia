@@ -26,16 +26,15 @@ import {
 } from './Application.styles'
 
 interface IProps {
-  finalRandomImage: any
   pageIndex: any
   data: any
 }
-const ApplicationUI = ({ finalRandomImage, pageIndex, data }: IProps) => {
+const ApplicationUI = ({ pageIndex, data }: IProps) => {
   return (
     <>
       {pageIndex === 0 ? (
         <DefenseImageRandomWrapper
-          finalRandomImage={finalRandomImage}
+          finalRandomImage={data.applications[pageIndex]?.data.mainImage[0]}
         ></DefenseImageRandomWrapper>
       ) : (
         data.applications[pageIndex]?.data.mainImage.map((data: any) => (

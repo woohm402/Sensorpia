@@ -135,10 +135,7 @@
       "name": "Defense",
       "layout": "applicationBasicPage",
       "data": {
-        "mainImage": [
-          "./applicationDefenseRandomOne.png",
-          "./applicationDefenseRandomTwo.png"
-        ],
+        "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
           "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
           "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."

@@ -135,10 +135,7 @@
       "name": "국방",
       "layout": "applicationBasicPage",
       "data": {
-        "mainImage": [
-          "./applicationDefenseRandomOne.png",
-          "./applicationDefenseRandomTwo.png"
-        ],
+        "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
           "수중에서 고 분해능의 자기센서를 이용하여, 표적을 찾아내는 역할을 한다.",
           "공중, 지상 및 해수에 표적의 위치를 비정상적인 자기장 분포로부터 찾아 내기 위해서 고감도의 자력계를 사용한다."
