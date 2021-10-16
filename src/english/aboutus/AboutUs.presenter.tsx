@@ -42,92 +42,117 @@ import {
 } from './AboutUs.styles'
 
 interface IProps {
-  menu: any
   data: any
+  pageIndex: any
+  introPage: any
+  visionPage: any
 }
-const AboutUsUI = ({ menu, data }: IProps) => {
+const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
   return (
     <>
-      {(menu === 'Sensorpia intro.& our customers' ||
-        menu === '회사소개 & 주요 고객사') && (
+      {data.aboutUs[pageIndex]?.layout === introPage && (
         <AboutUsBigWrapper>
-          <AboutUsImageOneWrapper data={data.aboutUs.images[0]} />
+          <AboutUsImageOneWrapper
+            url={data.aboutUs[pageIndex]?.data.mainImage}
+          />
           <AboutUsFirstTextWrapper>
-            <AboutUsFirstText>
-              {data.aboutUs.sensorpiaIntro.first}
-            </AboutUsFirstText>
+            {data.aboutUs[pageIndex].data.circleAboveTexts.map((data: any) => (
+              <AboutUsFirstText key="">{data}</AboutUsFirstText>
+            ))}
           </AboutUsFirstTextWrapper>
           <CircleWrapper>
             <OrangeCircle />
             <BlueCirlce />
             <DefenseText>
-              {data.aboutUs.sensorpiaIntro.circleTexts[0]}
+              {data.aboutUs[pageIndex].data.circleTexts[0]}
             </DefenseText>
             <MagneticSensorsText>
-              {data.aboutUs.sensorpiaIntro.circleTexts[1]}
+              {data.aboutUs[pageIndex].data.circleTexts[1]}
             </MagneticSensorsText>
             <SatelliteText>
-              {data.aboutUs.sensorpiaIntro.circleTexts[2]}
+              {data.aboutUs[pageIndex].data.circleTexts[2]}
             </SatelliteText>
             <MeasurementAndTestText>
-              {data.aboutUs.sensorpiaIntro.circleTexts[3]}
+              {data.aboutUs[pageIndex].data.circleTexts[3]}
             </MeasurementAndTestText>
-            <AboutUsArrowImageWrapper data={data.aboutUs.images[1]} />
+            <AboutUsArrowImageWrapper url={data.aboutUs[pageIndex].arrow} />
             <GreenCircle />
             <MagneticInstrumentsText>
-              {data.aboutUs.sensorpiaIntro.circleTexts[4]}
+              {data.aboutUs[pageIndex].data.circleTexts[4]}
             </MagneticInstrumentsText>
           </CircleWrapper>
           <SecondTextWrapper>
-            {data.aboutUs.sensorpiaIntro.second}
+            {data.aboutUs[pageIndex].data.circleBelowTexts[0]}
           </SecondTextWrapper>
           <ThirdTextWrapper>
-            {data.aboutUs.sensorpiaIntro.third}
+            {data.aboutUs[pageIndex].data.circleBelowTexts[1]}
           </ThirdTextWrapper>
           <OurCustomersTitleWrapper>
-            {data.aboutUs.sensorpiaIntro.ourCustomers}
+            {data.aboutUs[pageIndex].data.subTitle}
           </OurCustomersTitleWrapper>
           <OurCustomersDivider />
           <OurCustomersImageFirstLineWrapper>
-            <LIGImageWrapper data={data.aboutUs.clientImages[0]} />
-            <HanhwaImageWrapper data={data.aboutUs.clientImages[1]} />
-            <KaiImageWrapper data={data.aboutUs.clientImages[2]} />
-            <KariImageWrapper data={data.aboutUs.clientImages[3]} />
+            <LIGImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[0]}
+            />
+            <HanhwaImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[1]}
+            />
+            <KaiImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[2]}
+            />
+            <KariImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[3]}
+            />
           </OurCustomersImageFirstLineWrapper>
           <OurCustomersImageSecondLineWrapper>
-            <KasiImageWrapper data={data.aboutUs.clientImages[4]} />
-            <SiImageWrapper data={data.aboutUs.clientImages[5]} />
-            <PoscoImageWrapper data={data.aboutUs.clientImages[6]} />
-            <SatracImageWrapper data={data.aboutUs.clientImages[7]} />
+            <KasiImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[4]}
+            />
+            <SiImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[5]}
+            />
+            <PoscoImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[6]}
+            />
+            <SatracImageWrapper
+              url={data.aboutUs[pageIndex].data.subClientImages[7]}
+            />
           </OurCustomersImageSecondLineWrapper>
         </AboutUsBigWrapper>
       )}
-      {(menu === 'Vision & History' || menu === '비전 & 회사 이력') && (
+      {data.aboutUs[pageIndex]?.layout === visionPage && (
         <>
           <VisionAndHistoryTitleWrapper>
-            {data.aboutUs.visionAndHistory.title}
+            {data.aboutUs[pageIndex].data.mainTitle}
           </VisionAndHistoryTitleWrapper>
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryImagesWrapper>
-            <VisionAndHistoryImageOne data={data.aboutUs.images[2]} />
-            <VisionAndHistoryImageTwo data={data.aboutUs.images[3]} />
+            <VisionAndHistoryImageOne
+              url={data.aboutUs[pageIndex].data.mainImages[0]}
+            />
+            <VisionAndHistoryImageTwo
+              url={data.aboutUs[pageIndex].data.mainImages[1]}
+            />
           </VisionAndHistoryImagesWrapper>
           <VisionAndHistoryExplanationsWrapper>
             <VisionAndHistoryFirstExplanation>
-              {data.aboutUs.visionAndHistory.explanations.first}
+              {data.aboutUs[pageIndex].data.explanations[0]}
             </VisionAndHistoryFirstExplanation>
             <VisionAndHistorySecondExplanation>
-              {data.aboutUs.visionAndHistory.explanations.second}
+              {data.aboutUs[pageIndex].data.explanations[1]}
             </VisionAndHistorySecondExplanation>
           </VisionAndHistoryExplanationsWrapper>
           <VisionAndHistorySecondTitleWrapper>
-            {data.aboutUs.visionAndHistory.secondTitle}
+            {data.aboutUs[pageIndex].data.subTitle}
           </VisionAndHistorySecondTitleWrapper>
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryYearsWrapper>
-            <VisionAndHistoryArrowWrapper data={data.aboutUs.images[4]} />
+            <VisionAndHistoryArrowWrapper
+              url={data.aboutUs[pageIndex]?.arrow}
+            />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {data.aboutUs.visionAndHistory.years.map((value: any) => (
+              {data.aboutUs[pageIndex].data.years?.map((value: any) => (
                 <VisionAndHistoryYearExplanation key="">
                   {`${value.year} ${value.content}`}
                 </VisionAndHistoryYearExplanation>

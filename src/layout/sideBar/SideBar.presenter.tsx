@@ -24,7 +24,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
     window.scrollTo(0, 0)
   }
   return (
-    <SideBarWrapper menu={menu}>
+    <SideBarWrapper routerPath={router.pathname}>
       <SideBarTitleWrapper>
         {router.pathname === '/products'
           ? data.sidebar.name[0]
@@ -86,18 +86,18 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                 )}
               </>
             ))
-          : data.sidebar.AboutUs.map((value: any, index: any) => (
+          : data.aboutUs.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.AboutUs.length - 1 !== index && (
+                {data.aboutUs.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
@@ -107,7 +107,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
         <ScrollArrowImageWrapper
           onClick={onClickScrollArrow}
           //@ts-ignore
-          data={data.aboutUs.arrow}
+          data={data.aboutUs[pageIndex]?.commonArrow}
         ></ScrollArrowImageWrapper>
       )}
     </SideBarWrapper>

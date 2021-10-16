@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 interface IProps {
-  data: any
+  url: any
 }
 
 export const AboutUsBigWrapper = styled.div`
@@ -11,7 +11,7 @@ export const AboutUsBigWrapper = styled.div`
 export const AboutUsImageOneWrapper = styled.div`
   width: 842px;
   height: 449px;
-  ${(props: IProps) => `background:url(${props.data})`}
+  ${(props: IProps) => `background:url(${props.url})`}
 `
 export const AboutUsFirstTextWrapper = styled.div`
   max-width: 702px;
@@ -90,7 +90,7 @@ export const AboutUsArrowImageWrapper = styled.div`
   position: absolute;
   top: 193px;
   left: 440px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
   background-repeat: no-repeat;
 `
 export const GreenCircle = styled.div`
@@ -159,25 +159,25 @@ export const LIGImageWrapper = styled.div`
   width: 107px;
   height: 51px;
   margin-left: 101px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const HanhwaImageWrapper = styled.div`
   width: 143px;
   height: 39px;
   margin-left: 63px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const KaiImageWrapper = styled.div`
   width: 179px;
   height: 36px;
   margin-left: 49px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const KariImageWrapper = styled.div`
   width: 77px;
   height: 77px;
   margin-left: 53px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const OurCustomersImageSecondLineWrapper = styled.div`
   margin-top: 30px;
@@ -193,26 +193,26 @@ export const KasiImageWrapper = styled.div`
   width: 177px;
   height: 52px;
   margin-left: 70px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const SiImageWrapper = styled.div`
   width: 95px;
   height: 75px;
   margin-left: 32px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const PoscoImageWrapper = styled.div`
   width: 117px;
   height: 31px;
   margin-left: 43px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 
 export const SatracImageWrapper = styled.div`
   width: 186px;
   height: 75px;
   margin-left: 52px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const VisionAndHistoryTitleWrapper = styled.div`
   margin-top: 35px;
@@ -240,14 +240,14 @@ export const VisionAndHistoryImageOne = styled.div`
   width: 325px;
   height: 329px;
   border-radius: 50%;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 export const VisionAndHistoryImageTwo = styled.div`
   width: 325px;
   height: 329px;
   margin-left: 48px;
   border-radius: 50%;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
 `
 
 export const VisionAndHistoryExplanationsWrapper = styled.div`
@@ -292,7 +292,7 @@ export const VisionAndHistoryYearsWrapper = styled.div`
 export const VisionAndHistoryArrowWrapper = styled.div`
   width: 30px;
   height: 470px;
-  ${(props: IProps) => `background:url(${props.data})`};
+  ${(props: IProps) => `background:url(${props.url})`};
   background-repeat: no-repeat;
 `
 export const VisionAndHistoryYearExplanation = styled.div`

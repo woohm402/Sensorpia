@@ -4,7 +4,7 @@ interface IProps {
   color?: any
 }
 interface IPropsTwo {
-  menu?: any
+  routerPath: any
 }
 interface IPropsThree {
   data: any
@@ -12,20 +12,15 @@ interface IPropsThree {
 export const SideBarWrapper = styled.div`
   min-width: 258px;
   height: ${(props: IPropsTwo) =>
-    props.menu === 'Sensorpia intro.& our customers' ||
-    props.menu === 'Vision & History' ||
-    props.menu === '회사소개 & 주요 고객사' ||
-    props.menu === '비전 & 회사 이력'
-      ? '165vh'
-      : '130vh'};
+    props.routerPath === '/aboutUs' ? '165vh' : '130vh'};
   background: #f9f9f9;
   z-index: 0;
-  position: static;
+  position: relative;
 `
 export const ScrollArrowImageWrapper = styled.div`
   width: 50px;
   height: 50px;
-  top: 1367px;
+  top: 95%;
   left: 70px;
   ${(props: IPropsThree) => `background:url(${props.data})`};
   position: absolute;
