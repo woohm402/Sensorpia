@@ -1,18 +1,3 @@
-import { DefenseWrapper } from '../main/Main.styles'
-import {
-  MagneticInstrumentACMagneticDetails,
-  MagneticInstrumentACMagneticExplanationWrapper,
-  MagneticInstrumentACMagneticImageWrapper,
-  MagneticInstrumentACMagneticTitle,
-  MagneticInstrumentACMagneticWrapper,
-  MagneticInstrumentDCBHImageWrapper,
-  MagneticInstrumentDCBHTitle,
-  MagneticInstrumentDCBHWrapper,
-  MagneticInstrumentDetails,
-  MagneticInstrumentImageOneDetail,
-  MagneticInstrumentImageOneWrapper,
-  MagneticInstumentDCBHExplanationWrapper,
-} from '../product/Product.styles'
 import {
   ApplicationMagnetometerContentWrapper,
   ApplicationMagnetometerDetails,
@@ -21,8 +6,6 @@ import {
   ApplicationMagnetometerWrapper,
   DefenseExplanationDetails,
   DefenseImageRandomWrapper,
-  SatelliteExplanationDetails,
-  SatelliteImageWrapperOne,
 } from './Application.styles'
 
 interface IProps {
