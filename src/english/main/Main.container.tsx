@@ -1,14 +1,33 @@
 import { Router, useRouter } from 'next/dist/client/router'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import MainUI from './Main.presenter'
+const timer = {}
 
 const MainComponent = () => {
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const [translate, setTranslate] = useState(0)
   const router = useRouter()
+  const setIntervalFunction = () => {}
+  useEffect(() => {
+    //@ts-ignore
+    timer.temp = setInterval(function () {
+      if (translate === -3300) {
+        setTranslate(0)
+        //@ts-ignore
+        clearInterval(timer.temp)
+      } else {
+        setTranslate((prev) => prev - 1100)
+        //@ts-ignore
+        clearInterval(timer.temp)
+      }
+    }, 5000)
+  }, [translate])
+
   const onClickSliderNext = () => {
+    //@ts-ignore
+    clearInterval(timer.temp)
     if (translate === -3300) {
       setTranslate(0)
     } else {
@@ -16,6 +35,8 @@ const MainComponent = () => {
     }
   }
   const onClickSliderPrevious = () => {
+    //@ts-ignore
+    clearInterval(timer.temp)
     if (translate === 0) return
     setTranslate((prev) => prev + 1100)
   }
