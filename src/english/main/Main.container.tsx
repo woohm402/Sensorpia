@@ -13,7 +13,7 @@ const MainComponent = () => {
   useEffect(() => {
     //@ts-ignore
     timer.temp = setInterval(function () {
-      if (translate === -3300) {
+      if (translate === -2200) {
         setTranslate(0)
         //@ts-ignore
         clearInterval(timer.temp)
@@ -28,7 +28,7 @@ const MainComponent = () => {
   const onClickSliderNext = () => {
     //@ts-ignore
     clearInterval(timer.temp)
-    if (translate === -3300) {
+    if (translate === -2200) {
       setTranslate(0)
     } else {
       setTranslate((prev) => prev - 1100)
