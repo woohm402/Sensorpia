@@ -213,7 +213,7 @@ export const CareersDetails = styled.span`
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `

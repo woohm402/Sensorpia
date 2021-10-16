@@ -42,6 +42,9 @@ interface IProps {
   onClickLogo: any
   sideBar: any
   onClickMenu: any
+  onClickApplicationDetailMenu: any
+  onClickProductDetailMenu: any
+  onClickAboutUsDetailMenu: any
 }
 
 const HeaderUI = ({
@@ -55,6 +58,9 @@ const HeaderUI = ({
   onClickLogo,
   sideBar,
   onClickMenu,
+  onClickApplicationDetailMenu,
+  onClickProductDetailMenu,
+  onClickAboutUsDetailMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   const router = useRouter()
@@ -149,10 +155,11 @@ const HeaderUI = ({
             </NavBarMainMenusWrapper>
             <NavBarMainMenuDetailWrapper language={language}>
               <ProductDetailsWrapper>
-                {data.navBar.products.map((data: any) => (
+                {data.navBar.products.map((data: any, index: any) => (
                   <ProductDetails
                     key=""
                     id={data}
+                    onClick={onClickProductDetailMenu}
                     onMouseOver={onMouseOverDetailMenu}
                     menuColor={detailMenu === data}
                   >
@@ -166,6 +173,7 @@ const HeaderUI = ({
                     key=""
                     id={data}
                     onMouseOver={onMouseOverDetailMenu}
+                    onClick={onClickApplicationDetailMenu}
                     menuColor={detailMenu === data}
                   >
                     {data}
@@ -177,6 +185,7 @@ const HeaderUI = ({
                   <AboutUsDetails
                     key=""
                     id={data}
+                    onClick={onClickAboutUsDetailMenu}
                     onMouseOver={onMouseOverDetailMenu}
                     menuColor={detailMenu === data}
                   >
@@ -186,7 +195,7 @@ const HeaderUI = ({
               </AboutUsDetailsWrapper>
               {language === 'kor' && (
                 <CareersDetailsWrapper>
-                  {data.navBar.Careers.map((data: any) => (
+                  {data.navBar.careers.map((data: any) => (
                     <CareersDetails
                       key=""
                       id={data}

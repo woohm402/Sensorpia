@@ -23,6 +23,8 @@ const SideBarComponent = () => {
       router.push({ pathname: path, query: { item: Number(event.target.id) } })
     } else if (router.pathname === '/aboutUs') {
       router.push({ pathname: path, query: { item: Number(event.target.id) } })
+    } else if (router.pathname === '/careers') {
+      router.push({ pathname: path, query: { item: Number(event.target.id) } })
     }
   }
   return <SideBarUI onClickMenu={onClickMenu} />

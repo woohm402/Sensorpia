@@ -65,7 +65,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       setIsOpen(false)
       setDetailMenu(null)
     } else if (event.target.id === 'Careers') {
-      router.push('/careers')
+      router.push({ pathname: '/careers', query: { item: 0 } })
       setIsOpen(false)
       setDetailMenu(null)
     }
@@ -74,7 +74,44 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const onMouseOverDetailMenu = (event: any) => {
     setDetailMenu(event.target.id)
   }
-
+  const onClickApplicationDetailMenu = (event: any) => {
+    if (event.target.id === 'Defense') {
+      router.push({ pathname: '/application', query: { item: 0 } })
+    } else if (event.target.id === 'Satellite') {
+      router.push({ pathname: '/application', query: { item: 1 } })
+    } else {
+      router.push({ pathname: '/application', query: { item: 2 } })
+    }
+  }
+  const onClickProductDetailMenu = (event: any) => {
+    if (event.target.id === '3-axis Flux-gate magnetometer') {
+      router.push({
+        pathname: '/products',
+        query: { item: 0, keyword: 'Normal' },
+      })
+    } else if (event.target.id === 'Magnetic torquer') {
+      router.push({
+        pathname: '/products',
+        query: { item: 1, keyword: 'Satellite' },
+      })
+    } else {
+      router.push({ pathname: '/products', query: { item: 2, keyword: null } })
+    }
+  }
+  const onClickAboutUsDetailMenu = (event: any) => {
+    if (event.target.id === 'Sensorpia intro.& OurCustomers') {
+      router.push({
+        pathname: '/aboutUs',
+        query: { item: 0 },
+      })
+    } else if (event.target.id === 'Vision & History') {
+      router.push({
+        pathname: '/aboutUs',
+        query: { item: 1 },
+      })
+    }
+  }
+  const onClickCareersDetailMenu = (event: any) => {}
   const onClickLogo = () => {
     router.push('/')
   }
@@ -91,6 +128,9 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       onClickLogo={onClickLogo}
       sideBar={sideBar}
       onClickMenu={onClickMenu}
+      onClickApplicationDetailMenu={onClickApplicationDetailMenu}
+      onClickProductDetailMenu={onClickProductDetailMenu}
+      onClickAboutUsDetailMenu={onClickAboutUsDetailMenu}
     ></HeaderUI>
   )
 }

@@ -62,6 +62,10 @@ interface IProps {
   translate: any
   onClickSliderPrevious: any
   language: any
+  onClickProductDetails: any
+  onClickApplicationDetails: any
+  onClickAboutUsDetails: any
+  onClickCareersDetails: any
 }
 const MainUI = ({
   data,
@@ -69,6 +73,10 @@ const MainUI = ({
   translate,
   onClickSliderPrevious,
   language,
+  onClickProductDetails,
+  onClickApplicationDetails,
+  onClickAboutUsDetails,
+  onClickCareersDetails,
 }: IProps) => {
   return (
     <>
@@ -209,30 +217,46 @@ const MainUI = ({
           </NavBarMainMenusWrapper>
           <NavBarMainMenuDetailWrapper>
             <ProductDetailsWrapper>
-              {data.navBar?.products.map((data: any) => (
-                <ProductDetails key="" id={data}>
+              {data.navBar?.products.map((data: any, index: any) => (
+                <ProductDetails
+                  key=""
+                  id={index}
+                  onClick={onClickProductDetails}
+                >
                   {data}
                 </ProductDetails>
               ))}
             </ProductDetailsWrapper>
             <ApplicationsDetailsWrapper language={language}>
-              {data.navBar?.applications.map((data: any) => (
-                <ApplicationsDetails key="" id={data}>
+              {data.navBar?.applications.map((data: any, index: any) => (
+                <ApplicationsDetails
+                  key=""
+                  id={index}
+                  onClick={onClickApplicationDetails}
+                >
                   {data}
                 </ApplicationsDetails>
               ))}
             </ApplicationsDetailsWrapper>
             <AboutUsDetailsWrapper language={language}>
-              {data.navBar?.aboutUs.map((data: any) => (
-                <AboutUsDetails key="" id={data}>
+              {data.navBar?.aboutUs.map((data: any, index: any) => (
+                <AboutUsDetails
+                  key=""
+                  id={index}
+                  onClick={onClickAboutUsDetails}
+                >
                   {data}
                 </AboutUsDetails>
               ))}
             </AboutUsDetailsWrapper>
             {language === 'kor' && (
               <CareersDetailsWrapper>
-                {data.navBar?.Careers.map((data: any) => (
-                  <CareersDetails key="" id={data}>
+                {data.navBar?.careers.map((data: any, index: any) => (
+                  <CareersDetails
+                    key=""
+                    id={index}
+                    onClick={onClickCareersDetails}
+                  >
                     {data}
                   </CareersDetails>
                 ))}

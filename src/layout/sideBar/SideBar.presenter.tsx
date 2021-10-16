@@ -70,18 +70,18 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
               </>
             ))
           : router.pathname === '/careers' && language === 'kor'
-          ? data.sidebar.Careers.map((value: any, index: any) => (
+          ? data.careers?.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Careers.length - 1 !== index && (
+                {data.careers.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
