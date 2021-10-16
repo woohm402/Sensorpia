@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
+import Link from 'next/link'
 interface IProps {
   translate?: any
   language?: any
@@ -299,6 +298,8 @@ export const SpecificationSatelliteButtonsWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
+
+export const SpecificationButtonHref = styled.a``
 
 export const SpecificationButton = styled.button`
   width: 152px;

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   SliderDraggableWrapper,
   SliderImage,
@@ -55,6 +56,7 @@ import {
   MainOuterImagesWrapper,
   SpecificiationOuterSatelliteButtonsWrapper,
   NavBarOuterWrapper,
+  SpecificationButtonHref,
 } from './Main.styles'
 interface IProps {
   data: any
@@ -78,6 +80,8 @@ const MainUI = ({
   onClickAboutUsDetails,
   onClickCareersDetails,
 }: IProps) => {
+  const mainPageSatelliteDownload = ['./MS-15.pdf', './MS-22.pdf']
+  const mainPageDefenseDownload = ['./MS-13.pdf', './MS-27.pdf']
   return (
     <>
       <SliderMainWrapper>
@@ -180,18 +184,24 @@ const MainUI = ({
       <SpecificationButtonsWrapper>
         <SpecificiationOuterSatelliteButtonsWrapper>
           <SpecificationSatelliteButtonsWrapper>
-            {new Array(2).fill(1).map((_: any) => (
-              <SpecificationButton key="">
-                {data.main.specificationButton}
-              </SpecificationButton>
+            {mainPageSatelliteDownload.map((value: string) => (
+              <SpecificationButtonHref href={value} download={value} key="">
+                <SpecificationButton
+                //@ts-ignore
+                >
+                  {data.main.specificationButton}
+                </SpecificationButton>
+              </SpecificationButtonHref>
             ))}
           </SpecificationSatelliteButtonsWrapper>
         </SpecificiationOuterSatelliteButtonsWrapper>
         <SpecificationDefenseButtonsWrapper>
-          {new Array(2).fill(1).map((_: any) => (
-            <SpecificationButton key="">
-              {data.main.specificationButton}
-            </SpecificationButton>
+          {mainPageDefenseDownload.map((value: any) => (
+            <SpecificationButtonHref href={value} download={value} key="">
+              <SpecificationButton type="submit">
+                {data.main.specificationButton}
+              </SpecificationButton>
+            </SpecificationButtonHref>
           ))}
         </SpecificationDefenseButtonsWrapper>
       </SpecificationButtonsWrapper>
