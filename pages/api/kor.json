@@ -42,7 +42,11 @@
             "name": "Normal",
             "mainImage": "./normalImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./normalImageTwoFinal.png", "text": "MS-17" }
+              {
+                "image": "./normalImageTwoFinal.png",
+                "text": "MS-17",
+                "pdf": "./MS-17.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -53,8 +57,16 @@
             "name": "Satellite",
             "mainImage": "./satelliteImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./satelliteImageTwoFinal.png", "text": "MS-15" },
-              { "image": "./satelliteImageThreeFinal.png", "text": "MS-22" }
+              {
+                "image": "./satelliteImageTwoFinal.png",
+                "text": "MS-15",
+                "pdf": "./MS-15.pdf"
+              },
+              {
+                "image": "./satelliteImageThreeFinal.png",
+                "text": "MS-22",
+                "pdf": "./MS-22.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -67,9 +79,21 @@
             "name": "Defense",
             "mainImage": "./defenseImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./defenseImageTwoFinal.png", "text": "MS-27" },
-              { "image": "./defenseImageThreeFinal.png", "text": "MS-13" },
-              { "image": "./defenseImageFourFinal.png", "text": "MS-27" }
+              {
+                "image": "./defenseImageTwoFinal.png",
+                "text": "MS-27",
+                "pdf": "./MS-27.pdf"
+              },
+              {
+                "image": "./defenseImageThreeFinal.png",
+                "text": "MS-13",
+                "pdf": "./MS-13.pdf"
+              },
+              {
+                "image": "./defenseImageFourFinal.png",
+                "text": "MS-27",
+                "pdf": "./MS-27.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -90,7 +114,11 @@
             "name": "Satellite",
             "mainImage": "./satelliteTorquerImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./satelliteTorquerImageTwoFinal.png", "text": null }
+              {
+                "image": "./satelliteTorquerImageTwoFinal.png",
+                "text": null,
+                "pdf": null
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [

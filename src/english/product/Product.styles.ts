@@ -40,14 +40,10 @@ export const ExplanationWrapper = styled.div`
   flex-direction: column;
   max-width: 370px;
 `
-export const SubImageOuterWrappers = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+export const SubImageOuterWrappers = styled.div``
 export const SubImageMidWrappers = styled.div`
   position: relative;
-  margin-left: 64px;
-  margin-bottom: 60px;
+  padding-left: 64px;
 `
 
 export const SubImageWrappers = styled.img`
@@ -166,3 +162,25 @@ export const MagneticInstrumentACMagneticImageWrapper = styled.div`
   height: 162px;
   ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
+export const SpecificationButton = styled.button`
+  width: 152px;
+  height: 30px;
+  background: #f4f7ff;
+  border: 1px solid #0070c0;
+  box-sizing: border-box;
+  border-radius: 30px;
+  color: #0070c0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`
+export const SubImageMidTwoWrappers = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`
+export const SpecificationButtonWrapperHref = styled.a``

@@ -12,6 +12,9 @@ import {
   SubImageOuterWrappers,
   SubImageTexts,
   SubImageMidWrappers,
+  SpecificationButton,
+  SubImageMidTwoWrappers,
+  SpecificationButtonWrapperHref,
 } from './Product.styles'
 import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter'
 
@@ -70,11 +73,21 @@ const ProductUI = () => {
             <SubImageOuterWrappers>
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
-              ]?.subImagesAndTexts.map((data: any) => (
-                <SubImageMidWrappers key="">
-                  <SubImageWrappers src={data.image}></SubImageWrappers>
-                  <SubImageTexts>{data.text}</SubImageTexts>
-                </SubImageMidWrappers>
+              ]?.subImagesAndTexts.map((value: any) => (
+                <SubImageMidTwoWrappers key="">
+                  <SubImageMidWrappers>
+                    <SubImageWrappers src={value.image}></SubImageWrappers>
+                    <SubImageTexts>{value.text}</SubImageTexts>
+                  </SubImageMidWrappers>
+                  <SpecificationButtonWrapperHref
+                    href={value.pdf}
+                    download={value.pdf}
+                  >
+                    <SpecificationButton>
+                      {data.main.specificationButton}
+                    </SpecificationButton>
+                  </SpecificationButtonWrapperHref>
+                </SubImageMidTwoWrappers>
               ))}
             </SubImageOuterWrappers>
           </ContentWrapper>
