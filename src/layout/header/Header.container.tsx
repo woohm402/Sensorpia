@@ -75,11 +75,17 @@ const HeaderComponent = ({ sideBar }: IProps) => {
     setDetailMenu(event.target.id)
   }
   const onClickApplicationDetailMenu = (event: any) => {
-    if (event.target.id === 'Defense') {
+    if (event.target.id === 'Defense' || event.target.id === '국방') {
       router.push({ pathname: '/application', query: { item: 0 } })
-    } else if (event.target.id === 'Satellite') {
+    } else if (
+      event.target.id === 'Satellite' ||
+      event.target.id === '인공 위성'
+    ) {
       router.push({ pathname: '/application', query: { item: 1 } })
-    } else {
+    } else if (
+      event.target.id === 'Measurement' ||
+      event.target.id === '측정 장비'
+    ) {
       router.push({ pathname: '/application', query: { item: 2 } })
     }
   }
@@ -99,19 +105,31 @@ const HeaderComponent = ({ sideBar }: IProps) => {
     }
   }
   const onClickAboutUsDetailMenu = (event: any) => {
-    if (event.target.id === 'Sensorpia intro.& OurCustomers') {
+    if (
+      event.target.id === 'Sensorpia intro.& OurCustomers' ||
+      event.target.id === '회사 소개& 주요 고객사'
+    ) {
       router.push({
         pathname: '/aboutUs',
         query: { item: 0 },
       })
-    } else if (event.target.id === 'Vision & History') {
+    } else if (
+      event.target.id === 'Vision & History' ||
+      event.target.id === '비전 & 회사 이력'
+    ) {
       router.push({
         pathname: '/aboutUs',
         query: { item: 1 },
       })
     }
   }
-  const onClickCareersDetailMenu = (event: any) => {}
+  const onClickCareersDetailMenu = (event: any) => {
+    if (event.target.id === '인재상') {
+      router.push({ pathname: '/careers', query: { item: 0 } })
+    } else if (event.target.id === '인사 제도') {
+      router.push({ pathname: '/careers', query: { item: 1 } })
+    }
+  }
   const onClickLogo = () => {
     router.push('/')
   }
@@ -131,6 +149,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       onClickApplicationDetailMenu={onClickApplicationDetailMenu}
       onClickProductDetailMenu={onClickProductDetailMenu}
       onClickAboutUsDetailMenu={onClickAboutUsDetailMenu}
+      onClickCareersDetailMenu={onClickCareersDetailMenu}
     ></HeaderUI>
   )
 }

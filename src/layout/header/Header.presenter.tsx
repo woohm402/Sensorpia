@@ -46,6 +46,7 @@ interface IProps {
   onClickApplicationDetailMenu: any
   onClickProductDetailMenu: any
   onClickAboutUsDetailMenu: any
+  onClickCareersDetailMenu: any
 }
 
 const HeaderUI = ({
@@ -62,6 +63,7 @@ const HeaderUI = ({
   onClickApplicationDetailMenu,
   onClickProductDetailMenu,
   onClickAboutUsDetailMenu,
+  onClickCareersDetailMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   const router = useRouter()
@@ -205,6 +207,7 @@ const HeaderUI = ({
                       id={data}
                       onMouseOver={onMouseOverDetailMenu}
                       menuColor={detailMenu === data}
+                      onClick={onClickCareersDetailMenu}
                     >
                       {data}
                     </CareersDetails>
