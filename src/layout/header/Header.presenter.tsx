@@ -29,6 +29,7 @@ import {
   SensorPiaLogo,
   SensorpiaLogoWrapper,
   NavBarBigWrapper,
+  SensorpiaTempLogoWrapper,
 } from './Header.styles'
 
 interface IProps {
@@ -72,8 +73,11 @@ const HeaderUI = ({
         router={router}
       >
         <HeaderWrapper>
+          <SensorpiaTempLogoWrapper
+            onClick={onClickLogo}
+          ></SensorpiaTempLogoWrapper>
           <SensorpiaLogoWrapper>
-            <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
+            <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>
           <MenusWrapper>
             <MenuHome

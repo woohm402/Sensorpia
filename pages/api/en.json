@@ -5,7 +5,7 @@
     "Others": ["이용약관", "개인정보 처리방침"]
   },
   "main": {
-    "logo": "/sensorpiaLogoFinal.png",
+    "logo": "./sensorFinal.svg",
     "Home": "Home",
     "Product": "Products",
     "Applications": "Applications",
