@@ -8,9 +8,10 @@ const MainComponent = () => {
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const [translate, setTranslate] = useState(0)
+  const [tempRouter, setTempRouter] = useState('')
   const router = useRouter()
-  const setIntervalFunction = () => {}
   useEffect(() => {
+    setTempRouter(router.pathname)
     //@ts-ignore
     timer.temp = setInterval(function () {
       if (translate === -2200) {
@@ -23,7 +24,7 @@ const MainComponent = () => {
         clearInterval(timer.temp)
       }
     }, 5000)
-  }, [translate])
+  }, [translate, router.pathname, tempRouter])
 
   const onClickSliderNext = () => {
     //@ts-ignore
