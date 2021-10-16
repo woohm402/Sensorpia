@@ -4,15 +4,9 @@ import { GlobalContext } from '../../../pages/_app'
 import CareersUI from './Careers.presenter'
 
 const CareersComponent = () => {
-  const { menu, setMenu, language } = useContext(GlobalContext)
+  const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
-  const router = useRouter()
-  useEffect(() => {
-    if (router.pathname === '/careers') {
-      setMenu('인재상')
-    }
-  }, [router.pathname, setMenu])
-  return <CareersUI data={data} menu={menu} language={language} />
+  return <CareersUI data={data} language={language} />
 }
 
 export default CareersComponent

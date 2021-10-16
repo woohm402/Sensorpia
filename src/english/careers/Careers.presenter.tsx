@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router'
 import { CircleWrapper } from '../aboutus/AboutUs.styles'
 import {
   BigCircleWrapper,
@@ -22,50 +23,64 @@ import {
 
 interface IProps {
   data: any
-  menu: any
   language: any
 }
 
-const CareersUI = ({ data, menu, language }: IProps) => {
+const CareersUI = ({ data, language }: IProps) => {
+  const router = useRouter()
+  const pageIndex = Number(router.query.item)
+  console.log('pageIndex', pageIndex)
   return (
     <>
-      {menu === '인재상' && language === 'kor' && (
-        <TalentsWrapper>
-          <TalentTitle>{data.careers.first.title}</TalentTitle>
-          <TalentLineDivider />
-          {data.careers.first.circles.map((data: any) => (
-            <BigCircleWrapper key="">
-              <Circle>
-                <CircleText>{data.title}</CircleText>
-              </Circle>
-              <CircleDetailText>{data.content}</CircleDetailText>
-            </BigCircleWrapper>
-          ))}
-        </TalentsWrapper>
-      )}
-      {menu === '인사 제도' && language === 'kor' && (
-        <TalentsWrapper>
-          <HrTitle>{data.careers.second.title}</HrTitle>
-          <HrLineDivider />
-          <SubTitleWrapper>{data.careers.second.subTitle}</SubTitleWrapper>
-          <HrCirclesWrapper>
-            <HrCircleFirst>{data.careers.second.circles[0]}</HrCircleFirst>
-            <CareersArrow data={data.careers.images[0]} />
-            <HrCircleSecond>{data.careers.second.circles[1]}</HrCircleSecond>
-            <CareersArrow data={data.careers.images[0]} />
-            <HrCircleThird>{data.careers.second.circles[2]}</HrCircleThird>
-          </HrCirclesWrapper>
-          <HrPrincipleTitle>{data.careers.second.secondTitle}</HrPrincipleTitle>
-          <HrLineDivider />
-          <HrPrincipleDetailsBigWrapper>
-            {data.careers.second.principle.map((data: any) => (
-              <HrPrincipleDetailsWrapper key="">
-                {data}
-              </HrPrincipleDetailsWrapper>
+      {language === 'kor' &&
+        data.careers[pageIndex]?.layout === '인재상페이지' && (
+          <TalentsWrapper>
+            <TalentTitle>{data.careers[pageIndex]?.name}</TalentTitle>
+            <TalentLineDivider />
+            {data.careers[pageIndex]?.circles.map((data: any) => (
+              <BigCircleWrapper key="">
+                <Circle>
+                  <CircleText>{data.title}</CircleText>
+                </Circle>
+                <CircleDetailText>{data.content}</CircleDetailText>
+              </BigCircleWrapper>
             ))}
-          </HrPrincipleDetailsBigWrapper>
-        </TalentsWrapper>
-      )}
+          </TalentsWrapper>
+        )}
+      {language === 'kor' &&
+        data.careers[pageIndex]?.layout === '인사제도페이지' && (
+          <TalentsWrapper>
+            <HrTitle>{data.careers[pageIndex].name}</HrTitle>
+            <HrLineDivider />
+            <SubTitleWrapper>
+              {data.careers[pageIndex].subTitle}
+            </SubTitleWrapper>
+            <HrCirclesWrapper>
+              <HrCircleFirst>
+                {data.careers[pageIndex].circles[0]}
+              </HrCircleFirst>
+              <CareersArrow data={data.careers[pageIndex].images[0]} />
+              <HrCircleSecond>
+                {data.careers[pageIndex].circles[1]}
+              </HrCircleSecond>
+              <CareersArrow data={data.careers[pageIndex].images[0]} />
+              <HrCircleThird>
+                {data.careers[pageIndex].circles[2]}
+              </HrCircleThird>
+            </HrCirclesWrapper>
+            <HrPrincipleTitle>
+              {data.careers[pageIndex].secondTitle}
+            </HrPrincipleTitle>
+            <HrLineDivider />
+            <HrPrincipleDetailsBigWrapper>
+              {data.careers[pageIndex].principle.map((data: any) => (
+                <HrPrincipleDetailsWrapper key="">
+                  {data}
+                </HrPrincipleDetailsWrapper>
+              ))}
+            </HrPrincipleDetailsBigWrapper>
+          </TalentsWrapper>
+        )}
     </>
   )
 }

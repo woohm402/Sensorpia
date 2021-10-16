@@ -1,3 +1,4 @@
+import GoogleMapsComponent from '../googlemap/Google.container'
 import {
   ContactUsTitle,
   ContactUsBigWrapper,
@@ -16,7 +17,9 @@ const ContactUsUI = ({ data }: IProps) => {
         {data.contactUs.details.map((data: any) => (
           <ContactUsDetails key="">{data.content}</ContactUsDetails>
         ))}
-        <ContactUsMapWrapper />
+        <ContactUsMapWrapper>
+          <GoogleMapsComponent />
+        </ContactUsMapWrapper>
       </ContactUsBigWrapper>
     </>
   )

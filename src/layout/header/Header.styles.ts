@@ -170,8 +170,7 @@ export const ProductDetails = styled.span`
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `
 export const ApplicationsDetailsWrapper = styled.div`
-  margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '11px' : '2px'};
+  margin-left: ${(props: IProps) => (props.language === 'kor' ? '2px' : '2px')};
   max-width: ${(props: IProps) => (props.language === 'kor' ? '54px' : '81px')};
   display: flex;
   flex-direction: column;
@@ -188,7 +187,7 @@ export const ApplicationsDetails = styled.span`
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '122px' : '49px'};
+    props.language === 'kor' ? '80px' : '49px'};
   max-width: ${(props: IProps) =>
     props.language === 'kor' ? '85px' : '110px'};
   display: flex;
@@ -204,7 +203,7 @@ export const AboutUsDetails = styled.span`
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `
 export const CareersDetailsWrapper = styled.div`
-  margin-left: 68px;
+  margin-left: 20px;
   max-width: 63px;
   display: flex;
   flex-direction: column;
@@ -214,7 +213,7 @@ export const CareersDetails = styled.span`
   cursor: pointer;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 19px;
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `

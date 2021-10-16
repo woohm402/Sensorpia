@@ -16,6 +16,7 @@ interface IProps {
 
 const SideBarUI = ({ onClickMenu }: IProps) => {
   const router = useRouter()
+  const pageIndex = Number(router.query.item)
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const { menu } = useContext(GlobalContext)
@@ -23,7 +24,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
     window.scrollTo(0, 0)
   }
   return (
-    <SideBarWrapper menu={menu}>
+    <SideBarWrapper routerPath={router.pathname}>
       <SideBarTitleWrapper>
         {router.pathname === '/products'
           ? data.sidebar.name[0]
@@ -35,68 +36,68 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
       </SideBarTitleWrapper>
       <SideBarMenusWrapper>
         {router.pathname === '/products'
-          ? data.sidebar.Products.map((value: any, index: any) => (
+          ? data.products.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex == index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Products.length - 1 !== index && (
+                {data.products.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
             ))
           : router.pathname === '/application'
-          ? data.sidebar.Application.map((value: any, index: any) => (
+          ? data.applications.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Application.length - 1 !== index && (
+                {data.applications.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
             ))
           : router.pathname === '/careers' && language === 'kor'
-          ? data.sidebar.Careers.map((value: any, index: any) => (
+          ? data.careers?.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.Careers.length - 1 !== index && (
+                {data.careers.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
             ))
-          : data.sidebar.AboutUs.map((value: any, index: any) => (
+          : data.aboutUs.map((value: any, index: any) => (
               <>
                 <SideBarMenusInnerWrapper
                   key=""
-                  id={value}
+                  id={index}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={menu === value}
+                  color={pageIndex === index}
                 >
-                  {value}
+                  {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.sidebar.AboutUs.length - 1 !== index && (
+                {data.aboutUs.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
               </>
@@ -106,7 +107,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
         <ScrollArrowImageWrapper
           onClick={onClickScrollArrow}
           //@ts-ignore
-          data={data.aboutUs.arrow}
+          data={data.aboutUs[pageIndex]?.commonArrow}
         ></ScrollArrowImageWrapper>
       )}
     </SideBarWrapper>

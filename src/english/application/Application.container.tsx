@@ -8,30 +8,26 @@ const ApplicationComponet = () => {
   const [finalRandomImage, setFinalRandomImage] = useState('')
   const data = require(`../../../pages/api/${language}.json`)
   const router = useRouter()
+  const pageIndex = Number(router.query.item)
   useEffect(() => {
-    if (router.pathname === '/application') {
-      if (language === 'en') {
-        setMenu('Defense')
-      } else if (language === 'kor') {
-        setMenu('국방')
+    function RandomImage() {
+      if (pageIndex === 0) {
+        const Images = [
+          data.applications[0].data.mainImage[0],
+          data.applications[0].data.mainImage[1],
+        ]
+        const RandomImageOne = Math.floor(Math.random() * Images.length)
+        const RandomImage = Images[RandomImageOne]
+        setFinalRandomImage(RandomImage)
       }
     }
-    function RandomImage() {
-      const Images = [
-        data.applications.randomImages[0],
-        data.applications.randomImages[1],
-      ]
-      const RandomImageOne = Math.floor(Math.random() * Images.length)
-      const RandomImage = Images[RandomImageOne]
-      setFinalRandomImage(RandomImage)
-    }
     RandomImage()
-  }, [router.pathname, setMenu, language, data.applications.randomImages])
+  }, [pageIndex, data.applications])
   return (
     <ApplicationUI
       finalRandomImage={finalRandomImage}
-      menu={menu}
       data={data}
+      pageIndex={pageIndex}
     />
   )
 }
