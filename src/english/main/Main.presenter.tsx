@@ -203,27 +203,27 @@ const MainUI = ({
       <NavBarOuterWrapper>
         <NavBarDetailsRepeatWrapper>
           <NavBarMainMenusWrapper>
-            {data.NavBar?.list.map((data: any) => (
+            {data.navBar?.list.map((data: any) => (
               <NavBarMainMenu key="">{data}</NavBarMainMenu>
             ))}
           </NavBarMainMenusWrapper>
           <NavBarMainMenuDetailWrapper>
             <ProductDetailsWrapper>
-              {data.NavBar.Products.map((data: any) => (
+              {data.navBar?.products.map((data: any) => (
                 <ProductDetails key="" id={data}>
                   {data}
                 </ProductDetails>
               ))}
             </ProductDetailsWrapper>
             <ApplicationsDetailsWrapper language={language}>
-              {data.NavBar.Applications.map((data: any) => (
+              {data.navBar?.applications.map((data: any) => (
                 <ApplicationsDetails key="" id={data}>
                   {data}
                 </ApplicationsDetails>
               ))}
             </ApplicationsDetailsWrapper>
             <AboutUsDetailsWrapper language={language}>
-              {data.NavBar.AboutUs.map((data: any) => (
+              {data.navBar?.aboutUs.map((data: any) => (
                 <AboutUsDetails key="" id={data}>
                   {data}
                 </AboutUsDetails>
@@ -231,7 +231,7 @@ const MainUI = ({
             </AboutUsDetailsWrapper>
             {language === 'kor' && (
               <CareersDetailsWrapper>
-                {data.NavBar.Careers.map((data: any) => (
+                {data.navBar?.Careers.map((data: any) => (
                   <CareersDetails key="" id={data}>
                     {data}
                   </CareersDetails>

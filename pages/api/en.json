@@ -306,15 +306,15 @@
     "Application": ["Defense", "Satellite", "Measurement"],
     "AboutUs": ["Sensorpia intro.& our customers", "Vision & History"]
   },
-  "NavBar": {
+  "navBar": {
     "list": ["Products", "Applications", "About Us", "Contact Us"],
-    "Products": [
+    "products": [
       "3-axis Flux-gate magnetometer",
       "Magnetic torquer",
       "Magnetic Instrument"
     ],
-    "Applications": ["Defense", "Satellite", "Measurement"],
-    "AboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
+    "applications": ["Defense", "Satellite", "Measurement"],
+    "aboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
   },
   "SliderText": {
     "SliderMainText": "Magnetic Sensors and Instruments",

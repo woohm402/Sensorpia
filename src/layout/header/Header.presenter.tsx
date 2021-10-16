@@ -143,13 +143,13 @@ const HeaderUI = ({
         <NavBarBigWrapper>
           <NavBarWrapper>
             <NavBarMainMenusWrapper language={language}>
-              {data.NavBar?.list.map((data: any) => (
+              {data.navBar?.list.map((data: any) => (
                 <NavBarMainMenu key="">{data}</NavBarMainMenu>
               ))}
             </NavBarMainMenusWrapper>
             <NavBarMainMenuDetailWrapper language={language}>
               <ProductDetailsWrapper>
-                {data.NavBar.Products.map((data: any) => (
+                {data.navBar.products.map((data: any) => (
                   <ProductDetails
                     key=""
                     id={data}
@@ -161,7 +161,7 @@ const HeaderUI = ({
                 ))}
               </ProductDetailsWrapper>
               <ApplicationsDetailsWrapper language={language}>
-                {data.NavBar.Applications.map((data: any) => (
+                {data.navBar.applications.map((data: any) => (
                   <ApplicationsDetails
                     key=""
                     id={data}
@@ -173,7 +173,7 @@ const HeaderUI = ({
                 ))}
               </ApplicationsDetailsWrapper>
               <AboutUsDetailsWrapper language={language}>
-                {data.NavBar.AboutUs.map((data: any) => (
+                {data.navBar.aboutUs.map((data: any) => (
                   <AboutUsDetails
                     key=""
                     id={data}
@@ -186,7 +186,7 @@ const HeaderUI = ({
               </AboutUsDetailsWrapper>
               {language === 'kor' && (
                 <CareersDetailsWrapper>
-                  {data.NavBar.Careers.map((data: any) => (
+                  {data.navBar.Careers.map((data: any) => (
                     <CareersDetails
                       key=""
                       id={data}

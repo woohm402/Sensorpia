@@ -2,6 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import HeaderUI from './Header.presenter'
+import { ProductDetails } from './Header.styles'
 
 interface IProps {
   sideBar: any
@@ -12,23 +13,17 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const [menu, setMenu] = useState('')
   const [detailMenu, setDetailMenu] = useState(null)
   const data = require(`../../../pages/api/${language}.json`)
-  const { setIsOpen } = useContext(GlobalContext)
+  const { isOpen, setIsOpen } = useContext(GlobalContext)
   const router = useRouter()
   useEffect(() => {
-    if (router.pathname === '/') {
-      setMenu('Home')
-    } else if (router.pathname === '/products') {
-      setMenu('Product')
-    } else if (router.pathname === '/aboutUs') {
-      setMenu('AboutUs')
-    } else if (router.pathname === '/application') {
-      setMenu('Application')
+    if (isOpen === false) {
+      setDetailMenu(null)
+      setMenu('')
     }
-  }, [router.pathname])
+  }, [router.pathname, isOpen, menu])
   const onClickLanguage = (event: any) => {
     setLanguage(event.target.id)
   }
-
   const onMouseOverMenu = (event: any) => {
     setMenu(event.target.id)
     if (
@@ -44,28 +39,35 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       setIsOpen(false)
     }
   }
+
   const onClickMenu = (event: any) => {
     if (event.target.id === 'Home') {
       router.push('/')
       setIsOpen(false)
+      setDetailMenu(null)
     } else if (event.target.id === 'Product') {
       router.push({
         pathname: '/products',
         query: { item: 0, keyword: 'Normal' },
       })
       setIsOpen(false)
+      setDetailMenu(null)
     } else if (event.target.id === 'Application') {
       router.push({ pathname: '/application', query: { item: 0 } })
       setIsOpen(false)
+      setDetailMenu(null)
     } else if (event.target.id === 'AboutUs') {
       router.push({ pathname: '/aboutUs', query: { item: 0 } })
       setIsOpen(false)
+      setDetailMenu(null)
     } else if (event.target.id === 'ContactUs') {
       router.push('/contactUs')
       setIsOpen(false)
+      setDetailMenu(null)
     } else if (event.target.id === 'Careers') {
       router.push('/careers')
       setIsOpen(false)
+      setDetailMenu(null)
     }
   }
 
