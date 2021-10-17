@@ -5,6 +5,7 @@ interface IProps {
   sideBar?: any
   router?: any
   language?: any
+  data?: any
 }
 
 export const HeaderBigWrapper = styled.div`
@@ -28,12 +29,22 @@ export const HeaderWrapper = styled.div`
   margin: 0 auto;
   padding: 0 70px;
 `
+export const SensorpiaTempLogoWrapper = styled.div`
+  position: absolute;
+  width: 139px;
+  height: 27px;
+  cursor: pointer;
+  top: 30px;
+`
+
 export const SensorpiaLogoWrapper = styled.div`
   width: 139px;
   height: 27px;
-`
-export const SensorPiaLogo = styled.img`
   cursor: pointer;
+`
+export const SensorPiaLogo = styled.embed`
+  width: 139px;
+  height: 27px;
 `
 
 export const MenusWrapper = styled.div`

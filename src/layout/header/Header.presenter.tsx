@@ -29,6 +29,7 @@ import {
   SensorPiaLogo,
   SensorpiaLogoWrapper,
   NavBarBigWrapper,
+  SensorpiaTempLogoWrapper,
 } from './Header.styles'
 
 interface IProps {
@@ -45,6 +46,7 @@ interface IProps {
   onClickApplicationDetailMenu: any
   onClickProductDetailMenu: any
   onClickAboutUsDetailMenu: any
+  onClickCareersDetailMenu: any
 }
 
 const HeaderUI = ({
@@ -61,6 +63,7 @@ const HeaderUI = ({
   onClickApplicationDetailMenu,
   onClickProductDetailMenu,
   onClickAboutUsDetailMenu,
+  onClickCareersDetailMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   const router = useRouter()
@@ -72,8 +75,11 @@ const HeaderUI = ({
         router={router}
       >
         <HeaderWrapper>
+          <SensorpiaTempLogoWrapper
+            onClick={onClickLogo}
+          ></SensorpiaTempLogoWrapper>
           <SensorpiaLogoWrapper>
-            <SensorPiaLogo src={data.main.logo} onClick={onClickLogo} />
+            <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>
           <MenusWrapper>
             <MenuHome
@@ -201,6 +207,7 @@ const HeaderUI = ({
                       id={data}
                       onMouseOver={onMouseOverDetailMenu}
                       menuColor={detailMenu === data}
+                      onClick={onClickCareersDetailMenu}
                     >
                       {data}
                     </CareersDetails>
