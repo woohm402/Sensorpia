@@ -19,7 +19,7 @@
       "Image2": "./mainSliderFinal2.png",
       "Image3": "./mainSliderFinal3.png",
       "Image4": "./mainSliderFinal4.png",
-      "Previous": "./sliderPreviousFinal.svg"
+      "Previous": "./sliderPreviousFinal.png"
     },
     "satellite": ["./satelliteOneFinal.png", "./satelliteTwoFinal.png"],
     "defense": ["./defenseOneFinal.png", "./defenseTwoFinal.png"],
@@ -42,7 +42,11 @@
             "name": "Normal",
             "mainImage": "./normalImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./normalImageTwoFinal.png", "text": "MS-17" }
+              {
+                "image": "./normalImageTwoFinal.png",
+                "text": "MS-17",
+                "pdf": "./MS-17.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -53,8 +57,16 @@
             "name": "Satellite",
             "mainImage": "./satelliteImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./satelliteImageTwoFinal.png", "text": "MS-15" },
-              { "image": "./satelliteImageThreeFinal.png", "text": "MS-22" }
+              {
+                "image": "./satelliteImageTwoFinal.png",
+                "text": "MS-15",
+                "pdf": "./MS-15.pdf"
+              },
+              {
+                "image": "./satelliteImageThreeFinal.png",
+                "text": "MS-22",
+                "pdf": "./MS-22.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -67,9 +79,21 @@
             "name": "Defense",
             "mainImage": "./defenseImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./defenseImageTwoFinal.png", "text": "MS-27" },
-              { "image": "./defenseImageThreeFinal.png", "text": "MS-13" },
-              { "image": "./defenseImageFourFinal.png", "text": "MS-27" }
+              {
+                "image": "./defenseImageTwoFinal.png",
+                "text": "MS-27",
+                "pdf": "./MS-27.pdf"
+              },
+              {
+                "image": "./defenseImageThreeFinal.png",
+                "text": "MS-13",
+                "pdf": "./MS-13.pdf"
+              },
+              {
+                "image": "./defenseImageFourFinal.png",
+                "text": "MS-27",
+                "pdf": "./MS-27.pdf"
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -90,7 +114,11 @@
             "name": "Satellite",
             "mainImage": "./satelliteTorquerImageFinal.png",
             "subImagesAndTexts": [
-              { "image": "./satelliteTorquerImageTwoFinal.png", "text": null }
+              {
+                "image": "./satelliteTorquerImageTwoFinal.png",
+                "text": null,
+                "pdf": null
+              }
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
@@ -135,10 +163,7 @@
       "name": "국방",
       "layout": "applicationBasicPage",
       "data": {
-        "mainImage": [
-          "./applicationDefenseRandomOne.png",
-          "./applicationDefenseRandomTwo.png"
-        ],
+        "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
           "수중에서 고 분해능의 자기센서를 이용하여, 표적을 찾아내는 역할을 한다.",
           "공중, 지상 및 해수에 표적의 위치를 비정상적인 자기장 분포로부터 찾아 내기 위해서 고감도의 자력계를 사용한다."

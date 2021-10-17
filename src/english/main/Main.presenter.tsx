@@ -92,10 +92,6 @@ const MainUI = ({
         <SliderDraggableWrapper>
           <SliderMidWrapper>
             <SliderInnerImageWrapper translate={translate}>
-              <SliderImage
-                //@ts-ignore
-                data={data.main.Slider.Image1}
-              />
               <SliderImageTwo
                 //@ts-ignore
                 data={data.main.Slider.Image2}

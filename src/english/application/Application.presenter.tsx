@@ -1,18 +1,3 @@
-import { DefenseWrapper } from '../main/Main.styles'
-import {
-  MagneticInstrumentACMagneticDetails,
-  MagneticInstrumentACMagneticExplanationWrapper,
-  MagneticInstrumentACMagneticImageWrapper,
-  MagneticInstrumentACMagneticTitle,
-  MagneticInstrumentACMagneticWrapper,
-  MagneticInstrumentDCBHImageWrapper,
-  MagneticInstrumentDCBHTitle,
-  MagneticInstrumentDCBHWrapper,
-  MagneticInstrumentDetails,
-  MagneticInstrumentImageOneDetail,
-  MagneticInstrumentImageOneWrapper,
-  MagneticInstumentDCBHExplanationWrapper,
-} from '../product/Product.styles'
 import {
   ApplicationMagnetometerContentWrapper,
   ApplicationMagnetometerDetails,
@@ -21,21 +6,18 @@ import {
   ApplicationMagnetometerWrapper,
   DefenseExplanationDetails,
   DefenseImageRandomWrapper,
-  SatelliteExplanationDetails,
-  SatelliteImageWrapperOne,
 } from './Application.styles'
 
 interface IProps {
-  finalRandomImage: any
   pageIndex: any
   data: any
 }
-const ApplicationUI = ({ finalRandomImage, pageIndex, data }: IProps) => {
+const ApplicationUI = ({ pageIndex, data }: IProps) => {
   return (
     <>
       {pageIndex === 0 ? (
         <DefenseImageRandomWrapper
-          finalRandomImage={finalRandomImage}
+          finalRandomImage={data.applications[pageIndex]?.data.mainImage[0]}
         ></DefenseImageRandomWrapper>
       ) : (
         data.applications[pageIndex]?.data.mainImage.map((data: any) => (
