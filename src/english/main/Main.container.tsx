@@ -14,16 +14,15 @@ const MainComponent = () => {
     setTempRouter(router.pathname)
     //@ts-ignore
     timer.temp = setInterval(function () {
-      if (translate === -2200) {
-        setTranslate(0)
-        //@ts-ignore
-        clearInterval(timer.temp)
-      } else {
-        setTranslate((prev) => prev - 1100)
-        //@ts-ignore
-        clearInterval(timer.temp)
-      }
+      setTranslate((prev) => prev - 1100)
+      //@ts-ignore
+      clearInterval(timer.temp)
     }, 5000)
+    if (translate === -3300) {
+      setTranslate(0)
+      //@ts-ignore
+      clearInterval(timer.temp)
+    }
   }, [translate, router.pathname, tempRouter])
 
   const onClickSliderNext = () => {

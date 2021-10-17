@@ -2,7 +2,6 @@ import { useRouter } from 'next/dist/client/router'
 import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import HeaderUI from './Header.presenter'
-import { ProductDetails } from './Header.styles'
 
 interface IProps {
   sideBar: any
