@@ -10,15 +10,16 @@ const MainComponent = () => {
   const [translate, setTranslate] = useState(0)
   const [tempRouter, setTempRouter] = useState('')
   const router = useRouter()
+  const sliderMovement = 1100
   useEffect(() => {
     setTempRouter(router.pathname)
     //@ts-ignore
     timer.temp = setInterval(function () {
-      setTranslate((prev) => prev - 1100)
+      setTranslate((prev) => prev - sliderMovement)
       //@ts-ignore
       clearInterval(timer.temp)
     }, 5000)
-    if (translate === -3300) {
+    if (translate === -(sliderMovement * 3)) {
       setTranslate(0)
       //@ts-ignore
       clearInterval(timer.temp)
@@ -28,17 +29,17 @@ const MainComponent = () => {
   const onClickSliderNext = () => {
     //@ts-ignore
     clearInterval(timer.temp)
-    if (translate === -2200) {
+    if (translate === -(sliderMovement * 2)) {
       setTranslate(0)
     } else {
-      setTranslate((prev) => prev - 1100)
+      setTranslate((prev) => prev - sliderMovement)
     }
   }
   const onClickSliderPrevious = () => {
     //@ts-ignore
     clearInterval(timer.temp)
     if (translate === 0) return
-    setTranslate((prev) => prev + 1100)
+    setTranslate((prev) => prev + sliderMovement)
   }
   const onClickProductDetails = (event: any) => {
     if (Number(event.target.id) === 0) {
