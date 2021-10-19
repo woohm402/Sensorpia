@@ -80,8 +80,6 @@ const MainUI = ({
   onClickAboutUsDetails,
   onClickCareersDetails,
 }: IProps) => {
-  const mainPageSatelliteDownload = ['./MS-15.pdf', './MS-22.pdf']
-  const mainPageDefenseDownload = ['./MS-13.pdf', './MS-27.pdf']
   return (
     <>
       <SliderMainWrapper>
@@ -180,7 +178,7 @@ const MainUI = ({
       <SpecificationButtonsWrapper>
         <SpecificiationOuterSatelliteButtonsWrapper>
           <SpecificationSatelliteButtonsWrapper>
-            {mainPageSatelliteDownload.map((value: string) => (
+            {data.main.satelliteImageNames.download.map((value: string) => (
               <SpecificationButtonHref href={value} download={value} key="">
                 <SpecificationButton
                 //@ts-ignore
@@ -192,7 +190,7 @@ const MainUI = ({
           </SpecificationSatelliteButtonsWrapper>
         </SpecificiationOuterSatelliteButtonsWrapper>
         <SpecificationDefenseButtonsWrapper>
-          {mainPageDefenseDownload.map((value: any) => (
+          {data.main.defenseImageNames.download.map((value: any) => (
             <SpecificationButtonHref href={value} download={value} key="">
               <SpecificationButton type="submit">
                 {data.main.specificationButton}

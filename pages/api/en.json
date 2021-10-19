@@ -28,8 +28,16 @@
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
     "mainProductThreeName": "Magnetic torquer for satellite",
     "specificationButton": "Specification",
-    "satelliteImageNames": { "SatelliteOne": "MS-15", "SatelliteTwo": "MS-22" },
-    "defenseImageNames": { "DefenseOne": "MS-13", "DefenseTwo": "MS-27" }
+    "satelliteImageNames": {
+      "SatelliteOne": "MS-15",
+      "SatelliteTwo": "MS-22",
+      "download": ["./MS-15.pdf", "./MS-22.pdf"]
+    },
+    "defenseImageNames": {
+      "DefenseOne": "MS-13",
+      "DefenseTwo": "MS-27",
+      "download": ["./MS-13.pdf", "./MS-27.pdf"]
+    }
   },
   "products": [
     {
