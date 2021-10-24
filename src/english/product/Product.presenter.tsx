@@ -40,17 +40,6 @@ const ProductUI = () => {
     <div style={{ position: 'relative', marginLeft: '70px' }}>
       {data.products[pageIndex]?.layout === basicPage && (
         <>
-          {data.products[pageIndex]?.data.subSections.map((data: any) => (
-            <ThreeAxisButtons
-              key=""
-              onClick={onClickProductDetails}
-              id={data.name}
-              //@ts-ignore
-              color={data.name === buttonName}
-            >
-              {data.name}
-            </ThreeAxisButtons>
-          ))}
           <ImageWrapper
             url={
               data.products[pageIndex]?.data.subSections[buttonIndex]?.mainImage

@@ -6,6 +6,10 @@ import {
   SideBarMenusInnerWrapper,
   SideBarMenusLineDivider,
   SideBarMenusWrapper,
+  SideBarProductsIndividualIcon,
+  SideBarProductsIndividualText,
+  SideBarProductsIndividualWrapper,
+  SideBarProductsSubMenusWrapper,
   SideBarTitleWrapper,
   SideBarWrapper,
 } from './SideBar.styles'
@@ -17,11 +21,20 @@ interface IProps {
 const SideBarUI = ({ onClickMenu }: IProps) => {
   const router = useRouter()
   const pageIndex = Number(router.query.item)
+  const path = router.pathname
+  const buttonName = router.query.keyword
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
-  const { menu } = useContext(GlobalContext)
   const onClickScrollArrow = () => {
     window.scrollTo(0, 0)
+  }
+  const onClickProductDetailsTwo = (event: any) => {
+    router.push({
+      pathname: path,
+      query: { item: router.query.item, keyword: event.target.id },
+    })
+    console.log(path, event.target.id)
+    console.log('event', event.target.id)
   }
   return (
     <SideBarWrapper routerPath={router.pathname}>
@@ -47,6 +60,25 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
+                {value.name === '3-axis flux-gate magnetometer' && (
+                  <SideBarProductsSubMenusWrapper>
+                    {value.data.subSections.map((data: any) => (
+                      <SideBarProductsIndividualWrapper key="">
+                        <SideBarProductsIndividualIcon>
+                          -
+                        </SideBarProductsIndividualIcon>
+                        <SideBarProductsIndividualText
+                          id={data.name}
+                          onClick={onClickProductDetailsTwo}
+                          //@ts-ignore
+                          color={data.name === buttonName}
+                        >
+                          {data.name}
+                        </SideBarProductsIndividualText>
+                      </SideBarProductsIndividualWrapper>
+                    ))}
+                  </SideBarProductsSubMenusWrapper>
+                )}
                 {data.products.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}

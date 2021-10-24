@@ -59,3 +59,28 @@ export const SideBarMenusLineDivider = styled.div`
   height: 0px;
   border: 1px solid #c9c9c9;
 `
+
+export const SideBarProductsSubMenusWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const SideBarProductsIndividualWrapper = styled.div`
+  margin-top: 15px;
+  margin-left: 11px;
+  display: flex;
+  cursor: pointer;
+`
+export const SideBarProductsIndividualIcon = styled.div`
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+`
+export const SideBarProductsIndividualText = styled.div`
+  margin-left: 5px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
+`
