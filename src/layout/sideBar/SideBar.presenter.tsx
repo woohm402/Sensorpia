@@ -1,5 +1,5 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import {
   ScrollArrowImageWrapper,
@@ -16,13 +16,13 @@ import {
 
 interface IProps {
   onClickMenu: any
+  buttonName: any
 }
 
-const SideBarUI = ({ onClickMenu }: IProps) => {
+const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const router = useRouter()
   const pageIndex = Number(router.query.item)
   const path = router.pathname
-  const buttonName = router.query.keyword
   const { language } = useContext(GlobalContext)
   const data = require(`../../../pages/api/${language}.json`)
   const onClickScrollArrow = () => {
@@ -33,9 +33,10 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
       pathname: path,
       query: { item: router.query.item, keyword: event.target.id },
     })
-    console.log(path, event.target.id)
-    console.log('event', event.target.id)
   }
+  useEffect(() => {
+    console.log('a')
+  }, [router.pathname, buttonName, pageIndex, router.query.item])
   return (
     <SideBarWrapper routerPath={router.pathname}>
       <SideBarTitleWrapper>
@@ -69,7 +70,7 @@ const SideBarUI = ({ onClickMenu }: IProps) => {
                         </SideBarProductsIndividualIcon>
                         <SideBarProductsIndividualText
                           id={data.name}
-                          onClick={onClickProductDetailsTwo}
+                          onClick={onClickMenu}
                           //@ts-ignore
                           color={data.name === buttonName}
                         >
