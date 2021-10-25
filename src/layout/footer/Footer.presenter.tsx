@@ -17,7 +17,7 @@ const FooterUI = ({ data }: IProps) => {
         <FooterWrapper>
           <FooterLogoWrapper
             //@ts-ignore
-            data={data.main.logo}
+            src={data.main.logo}
           />
           <FooterAddressDetailWrapper>
             {data.footer.Address}

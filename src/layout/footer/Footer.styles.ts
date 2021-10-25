@@ -15,13 +15,12 @@ export const FooterWrapper = styled.div`
   position: relative;
   margin: 0 auto;
 `
-export const FooterLogoWrapper = styled.div`
+export const FooterLogoWrapper = styled.img`
   position: absolute;
   width: 137px;
   height: 26px;
   top: 41px;
   left: 70px;
-  ${({ data }: IProps) => `background: url(${data})`};
 `
 export const FooterAddressDetailWrapper = styled.div`
   position: absolute;
