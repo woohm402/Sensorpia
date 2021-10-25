@@ -144,9 +144,9 @@ export const NavBarWrapper = styled.div`
 `
 
 export const NavBarMainMenusWrapper = styled.div`
-  left: ${(props: IProps) => (props.language === 'kor' ? '378px' : '462px')};
+  left: ${(props: IProps) => (props.language === 'kor' ? '375px' : '462px')};
   top: 25px;
-  width: ${(props: IProps) => (props.language === 'kor' ? '510px' : '418px')};
+  width: ${(props: IProps) => (props.language === 'kor' ? '500px' : '418px')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -161,7 +161,7 @@ export const NavBarMainMenu = styled.span`
 `
 export const NavBarMainMenuDetailWrapper = styled.div`
   position: relative;
-  left: ${(props: IProps) => (props.language === 'kor' ? '378px' : '462px')};
+  left: ${(props: IProps) => (props.language === 'kor' ? '375px' : '462px')};
   top: 37px;
   display: flex;
   flex-direction: row;
@@ -181,7 +181,7 @@ export const ProductDetails = styled.span`
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `
 export const ApplicationsDetailsWrapper = styled.div`
-  margin-left: ${(props: IProps) => (props.language === 'kor' ? '2px' : '2px')};
+  margin-left: ${(props: IProps) => (props.language === 'kor' ? '0px' : '2px')};
   max-width: ${(props: IProps) => (props.language === 'kor' ? '54px' : '81px')};
   display: flex;
   flex-direction: column;
@@ -198,7 +198,7 @@ export const ApplicationsDetails = styled.span`
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '80px' : '49px'};
+    props.language === 'kor' ? '77px' : '49px'};
   max-width: ${(props: IProps) =>
     props.language === 'kor' ? '85px' : '110px'};
   display: flex;
@@ -214,7 +214,7 @@ export const AboutUsDetails = styled.span`
   color: ${(props: IProps) => (props.menuColor ? '#0070c0' : '#6d6d6d')};
 `
 export const CareersDetailsWrapper = styled.div`
-  margin-left: 20px;
+  margin-left: 19px;
   max-width: 63px;
   display: flex;
   flex-direction: column;

@@ -50,12 +50,12 @@ const MainComponent = () => {
     } else if (Number(event.target.id) === 1) {
       router.push({
         pathname: '/products',
-        query: { item: Number(event.target.id), keyword: 'Satellite' },
+        query: { item: Number(event.target.id), keyword: 'torquer' },
       })
     } else if (Number(event.target.id) === 2) {
       router.push({
         pathname: '/products',
-        query: { item: Number(event.target.id), keyword: 'Defense' },
+        query: { item: Number(event.target.id), keyword: null },
       })
     }
   }

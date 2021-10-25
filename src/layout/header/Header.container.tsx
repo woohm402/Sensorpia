@@ -97,7 +97,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
     } else if (event.target.id === 'Magnetic torquer') {
       router.push({
         pathname: '/products',
-        query: { item: 1, keyword: 'Satellite' },
+        query: { item: 1, keyword: 'torquer' },
       })
     } else {
       router.push({ pathname: '/products', query: { item: 2, keyword: null } })
