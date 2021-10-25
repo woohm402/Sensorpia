@@ -77,7 +77,7 @@ const HeaderUI = ({
         <HeaderWrapper>
           <SensorpiaTempLogoWrapper
             onClick={onClickLogo}
-          ></SensorpiaTempLogoWrapper>
+          />
           <SensorpiaLogoWrapper>
             <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>

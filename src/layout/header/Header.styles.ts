@@ -38,13 +38,13 @@ export const SensorpiaTempLogoWrapper = styled.div`
 `
 
 export const SensorpiaLogoWrapper = styled.div`
-  width: 139px;
-  height: 27px;
-  cursor: pointer;
+  width: 156px;
+  height: 31px;
 `
-export const SensorPiaLogo = styled.embed`
-  width: 139px;
-  height: 27px;
+export const SensorPiaLogo = styled.img`
+  width: 156px;
+  height: 31px;
+  cursor: pointer;
 `
 
 export const MenusWrapper = styled.div`
