@@ -18,7 +18,7 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
       {pageIndex === 0 ? (
         <DefenseImageRandomWrapper
           finalRandomImage={data.applications[pageIndex]?.data.mainImage[0]}
-        ></DefenseImageRandomWrapper>
+        />
       ) : (
         data.applications[pageIndex]?.data.mainImage.map((data: any) => (
           <DefenseImageRandomWrapper key="" finalRandomImage={data} />
