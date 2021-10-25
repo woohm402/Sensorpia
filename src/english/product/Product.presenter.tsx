@@ -65,7 +65,7 @@ const ProductUI = () => {
               ]?.subImagesAndTexts.map((value: any) => (
                 <SubImageMidTwoWrappers key="">
                   <SubImageMidWrappers>
-                    <SubImageWrappers src={value.image}></SubImageWrappers>
+                    <SubImageWrappers src={value.image} />
                     <SubImageTexts>{value.text}</SubImageTexts>
                   </SubImageMidWrappers>
                   <SpecificationButtonWrapperHref

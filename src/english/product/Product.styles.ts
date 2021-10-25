@@ -177,10 +177,11 @@ export const SpecificationButton = styled.button`
   cursor: pointer;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: 64px;
 `
 export const SubImageMidTwoWrappers = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 `
 export const SpecificationButtonWrapperHref = styled.a``
