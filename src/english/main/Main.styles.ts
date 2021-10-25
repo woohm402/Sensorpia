@@ -190,13 +190,13 @@ export const MainProductTwoWrapper = styled.div`
   color: #262626;
 `
 export const MainOuterImagesWrapper = styled.div`
-  margin: 45px auto 0px auto;
+  margin: 0px auto 0px auto;
   width: 1100px;
   display: flex;
   justify-content: center;
 `
 export const MainImagesWrapper = styled.div`
-  margin-top: 45px;
+  margin-top: 20px;
   width: 850px;
   overflow: hidden;
   display: flex;
@@ -209,6 +209,25 @@ export const SatelliteWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
+export const SatelliteSubWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+export const DefenseSubWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const SatelliteImageWrapper = styled.div`
+  position: relative;
+`
+
+export const DefenseImageWrapper = styled.div`
+  position: relative;
+`
+
 export const SatelliteImageOne = styled.div`
   position: relative;
   width: 192px;
@@ -263,7 +282,7 @@ export const DefenseImageOneText = styled.span`
   line-height: 19px;
   color: #262626;
   top: 237px;
-  left: 150px;
+  left: 142px;
 `
 
 export const DefenseImageTwo = styled.div`
@@ -301,6 +320,7 @@ export const SpecificationSatelliteButtonsWrapper = styled.div`
 export const SpecificationButtonHref = styled.a``
 
 export const SpecificationButton = styled.button`
+  margin-top: 15px;
   width: 152px;
   height: 30px;
   background: #f4f7ff;

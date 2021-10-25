@@ -75,9 +75,7 @@ const HeaderUI = ({
         router={router}
       >
         <HeaderWrapper>
-          <SensorpiaTempLogoWrapper
-            onClick={onClickLogo}
-          />
+          <SensorpiaTempLogoWrapper onClick={onClickLogo} />
           <SensorpiaLogoWrapper>
             <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>
@@ -85,7 +83,7 @@ const HeaderUI = ({
             <MenuHome
               id="Home"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              menu={menu}
               onClick={onClickMenu}
             >
               {data.main.Home}
@@ -93,7 +91,7 @@ const HeaderUI = ({
             <MenuProduct
               id="Product"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              menu={menu}
               onClick={onClickMenu}
             >
               {data.main.Product}
@@ -101,7 +99,7 @@ const HeaderUI = ({
             <MenuApplication
               id="Application"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              menu={menu}
               onClick={onClickMenu}
             >
               {data.main.Applications}
@@ -109,7 +107,7 @@ const HeaderUI = ({
             <MenuAboutUs
               id="AboutUs"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              menu={menu}
               onClick={onClickMenu}
             >
               {data.main.AboutUs}
@@ -118,7 +116,7 @@ const HeaderUI = ({
               <MenuCareers
                 id="Careers"
                 onMouseOver={onMouseOverMenu}
-                color={menu}
+                menu={menu}
                 onClick={onClickMenu}
               >
                 {data.main.Careers}
@@ -127,7 +125,7 @@ const HeaderUI = ({
             <MenuContactUs
               id="ContactUs"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              menu={menu}
               onClick={onClickMenu}
             >
               {data.main.ContactUs}
@@ -136,14 +134,14 @@ const HeaderUI = ({
               <LanguageEnglish
                 id="en"
                 onClick={onClickLanguage}
-                color={language}
+                language={language}
               >
                 {data.main.Eng}
               </LanguageEnglish>
               <LanguageKorean
                 id="kor"
                 onClick={onClickLanguage}
-                color={language}
+                language={language}
               >
                 {data.main.Kor}
               </LanguageKorean>
