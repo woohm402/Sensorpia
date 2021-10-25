@@ -77,6 +77,10 @@ export const ExplanationDetail = styled.li`
   line-height: 19px;
   text-align: justify;
   color: #636363;
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
 `
 export const MagneticInstrumentImageOneWrapper = styled.div`
   width: 702px;
