@@ -41,7 +41,6 @@ const SideBarComponent = () => {
       router.push({ pathname: path, query: { item: Number(event.target.id) } })
     }
   }
-  useEffect(() => {}, [buttonName])
   return <SideBarUI onClickMenu={onClickMenu} buttonName={buttonName} />
 }
 
