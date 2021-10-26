@@ -30,6 +30,7 @@ import {
   SensorpiaLogoWrapper,
   NavBarBigWrapper,
   SensorpiaTempLogoWrapper,
+  MenuItem,
 } from './Header.styles'
 
 interface IProps {
@@ -82,56 +83,56 @@ const HeaderUI = ({
             <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>
           <MenusWrapper>
-            <MenuHome
+            <MenuItem
               id="Home"
               onMouseOver={onMouseOverMenu}
-              menu={menu}
+              selected={menu === 'Home'}
               onClick={onClickMenu}
             >
               {data.main.Home}
-            </MenuHome>
-            <MenuProduct
+            </MenuItem>
+            <MenuItem
               id="Product"
               onMouseOver={onMouseOverMenu}
-              menu={menu}
+              selected={menu === 'Product'}
               onClick={onClickMenu}
             >
               {data.main.Product}
-            </MenuProduct>
-            <MenuApplication
+            </MenuItem>
+            <MenuItem
               id="Application"
               onMouseOver={onMouseOverMenu}
-              menu={menu}
+              selected={menu === 'Application'}
               onClick={onClickMenu}
             >
               {data.main.Applications}
-            </MenuApplication>
-            <MenuAboutUs
+            </MenuItem>
+            <MenuItem
               id="AboutUs"
               onMouseOver={onMouseOverMenu}
-              menu={menu}
+              selected={menu === 'AboutUs'}
               onClick={onClickMenu}
             >
               {data.main.AboutUs}
-            </MenuAboutUs>
+            </MenuItem>
             {language === 'kor' && (
-              <MenuCareers
+              <MenuItem
                 id="Careers"
                 onMouseOver={onMouseOverMenu}
-                menu={menu}
+                selected={menu === 'Careers'}
                 onClick={onClickMenu}
               >
                 {data.main.Careers}
-              </MenuCareers>
+              </MenuItem>
             )}
-            <MenuContactUs
+            <MenuItem
               id="ContactUs"
               onMouseOver={onMouseOverMenu}
-              menu={menu}
+              selected={menu === 'ContactUs'}
               onClick={onClickMenu}
             >
               {data.main.ContactUs}
-            </MenuContactUs>
+            </MenuItem>
             <LanguageChangeWrapper>
               <LanguageEnglish
                 id="en"

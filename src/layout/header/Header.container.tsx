@@ -11,15 +11,20 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const { language, setLanguage } = useContext(GlobalContext)
   const [menu, setMenu] = useState('')
   const [detailMenu, setDetailMenu] = useState(null)
+  const [renderingCount, setRenderingCount] = useState(0)
   const data = require(`../../../pages/api/${language}.json`)
   const { isOpen, setIsOpen } = useContext(GlobalContext)
   const router = useRouter()
   useEffect(() => {
+    if (renderingCount === 0 && router.pathname === '/') {
+      setMenu('Home')
+      setRenderingCount((prev) => prev + 1)
+    }
     if (isOpen === false) {
       setDetailMenu(null)
       // setMenu('')
     }
-  }, [router.pathname, isOpen, menu])
+  }, [router.pathname, isOpen, menu, renderingCount])
   const onClickLanguage = (event: any) => {
     setLanguage(event.target.id)
   }

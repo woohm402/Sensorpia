@@ -7,6 +7,7 @@ interface IProps {
   router?: any
   language?: any
   data?: any
+  selected?: any
 }
 
 export const HeaderBigWrapper = styled.div`
@@ -56,6 +57,12 @@ export const MenusWrapper = styled.div`
   font-size: 15px;
   font-weight: 700;
 `
+export const MenuItem = styled.span`
+  margin-right: 35px;
+  cursor: pointer;
+  color: ${(props: IProps) => (props.selected ? '#0070c0' : '#9c9d9e')};
+`
+
 export const MenuHome = styled.span`
   margin-right: 35px;
   cursor: pointer;
