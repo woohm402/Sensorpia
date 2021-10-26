@@ -14,7 +14,6 @@ interface IProps {
 const FooterUI = ({ data }: IProps) => {
   const router = useRouter()
   const selected = router.pathname
-  console.log(router.pathname)
   return (
     <>
       <FooterBigWrapper selected={selected === '/contactUs'}>
