@@ -54,9 +54,12 @@ import {
   MainOuterWrapper,
   MainProductsOuterWrapper,
   MainOuterImagesWrapper,
-  SpecificiationOuterSatelliteButtonsWrapper,
   NavBarOuterWrapper,
   SpecificationButtonHref,
+  SatelliteSubWrapper,
+  SatelliteImageWrapper,
+  DefenseSubWrapper,
+  DefenseImageWrapper,
 } from './Main.styles'
 interface IProps {
   data: any
@@ -138,67 +141,55 @@ const MainUI = ({
       <MainOuterImagesWrapper>
         <MainImagesWrapper>
           <SatelliteWrapper>
-            <SatelliteImageOne
-              //@ts-ignore
-              data={data.main.satellite[0]}
-            >
-              <SatelliteImageOneText>
-                {data.main.satelliteImageNames.SatelliteOne}
-              </SatelliteImageOneText>
-            </SatelliteImageOne>
-            <SatelliteImageTwo
-              //@ts-ignore
-              data={data.main.satellite[1]}
-            >
-              <SatelliteImageTwoText>
-                {data.main.satelliteImageNames.SatelliteTwo}
-              </SatelliteImageTwoText>
-            </SatelliteImageTwo>
+            {data.main.satellite.map((value: any) => (
+              <SatelliteSubWrapper key="">
+                <SatelliteImageWrapper>
+                  <SatelliteImageOne
+                    //@ts-ignore
+                    data={value.image}
+                  />
+                  <SatelliteImageOneText>{value.name}</SatelliteImageOneText>
+                </SatelliteImageWrapper>
+                <SpecificationButtonHref
+                  href={value.download}
+                  download={value.download}
+                  key=""
+                >
+                  <SpecificationButton
+                  //@ts-ignore
+                  >
+                    {data.main.specificationButton}
+                  </SpecificationButton>
+                </SpecificationButtonHref>
+              </SatelliteSubWrapper>
+            ))}
           </SatelliteWrapper>
           <DefenseWrapper>
-            <DefenseImageOne
-              //@ts-ignore
-              data={data.main.defense[0]}
-            >
-              <DefenseImageOneText>
-                {data.main.defenseImageNames.DefenseOne}
-              </DefenseImageOneText>
-            </DefenseImageOne>
-            <DefenseImageTwo
-              //@ts-ignore
-              data={data.main.defense[1]}
-            >
-              <DefenseImageTwoText>
-                {data.main.defenseImageNames.DefenseTwo}
-              </DefenseImageTwoText>
-            </DefenseImageTwo>
+            {data.main.defense.map((value: any) => (
+              <DefenseSubWrapper key="">
+                <DefenseImageWrapper>
+                  <DefenseImageOne
+                    //@ts-ignore
+                    data={value.image}
+                  />
+                  <DefenseImageOneText>{value.name}</DefenseImageOneText>
+                </DefenseImageWrapper>
+                <SpecificationButtonHref
+                  href={value.download}
+                  download={value.download}
+                  key=""
+                >
+                  <SpecificationButton
+                  //@ts-ignore
+                  >
+                    {data.main.specificationButton}
+                  </SpecificationButton>
+                </SpecificationButtonHref>
+              </DefenseSubWrapper>
+            ))}
           </DefenseWrapper>
         </MainImagesWrapper>
       </MainOuterImagesWrapper>
-      <SpecificationButtonsWrapper>
-        <SpecificiationOuterSatelliteButtonsWrapper>
-          <SpecificationSatelliteButtonsWrapper>
-            {data.main.satelliteImageNames.download.map((value: string) => (
-              <SpecificationButtonHref href={value} download={value} key="">
-                <SpecificationButton
-                //@ts-ignore
-                >
-                  {data.main.specificationButton}
-                </SpecificationButton>
-              </SpecificationButtonHref>
-            ))}
-          </SpecificationSatelliteButtonsWrapper>
-        </SpecificiationOuterSatelliteButtonsWrapper>
-        <SpecificationDefenseButtonsWrapper>
-          {data.main.defenseImageNames.download.map((value: any) => (
-            <SpecificationButtonHref href={value} download={value} key="">
-              <SpecificationButton type="submit">
-                {data.main.specificationButton}
-              </SpecificationButton>
-            </SpecificationButtonHref>
-          ))}
-        </SpecificationDefenseButtonsWrapper>
-      </SpecificationButtonsWrapper>
       <MainThirdLineDivider />
       <MainThirdProductWrapper>
         {data.main.mainProductThreeName}

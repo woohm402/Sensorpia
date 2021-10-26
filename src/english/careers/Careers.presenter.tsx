@@ -29,7 +29,6 @@ interface IProps {
 const CareersUI = ({ data, language }: IProps) => {
   const router = useRouter()
   const pageIndex = Number(router.query.item)
-  console.log('pageIndex', pageIndex)
   return (
     <>
       {language === 'kor' &&

@@ -21,8 +21,30 @@
       "Image4": "./mainSliderFinal4.png",
       "Previous": "./sliderPreviousFinal.png"
     },
-    "satellite": ["./satelliteOneFinal.png", "./satelliteTwoFinal.png"],
-    "defense": ["./defenseOneFinal.png", "./defenseTwoFinal.png"],
+    "satellite": [
+      {
+        "image": "./satelliteOneFinal.png",
+        "name": "MS-15",
+        "download": "./MS-15.pdf"
+      },
+      {
+        "image": "./satelliteTwoFinal.png",
+        "name": "MS-13",
+        "download": "./MS-22.pdf"
+      }
+    ],
+    "defense": [
+      {
+        "image": "./defenseOneFinal.png",
+        "name": "MS-13",
+        "download": "./MS-13.pdf"
+      },
+      {
+        "image": "./defenseTwoFinal.png",
+        "name": "MS-27",
+        "download": "./MS-27.pdf"
+      }
+    ],
     "magneticTorquer": ["./magneticTorquerFinal.png"],
     "title": "주요 제품 라인",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
