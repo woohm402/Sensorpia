@@ -47,6 +47,7 @@ interface IProps {
   onClickProductDetailMenu: any
   onClickAboutUsDetailMenu: any
   onClickCareersDetailMenu: any
+  onMouseLeaveMenu: any
 }
 
 const HeaderUI = ({
@@ -64,6 +65,7 @@ const HeaderUI = ({
   onClickProductDetailMenu,
   onClickAboutUsDetailMenu,
   onClickCareersDetailMenu,
+  onMouseLeaveMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   const router = useRouter()
@@ -150,7 +152,7 @@ const HeaderUI = ({
         </HeaderWrapper>
       </HeaderBigWrapper>
       {isOpen && (
-        <NavBarBigWrapper>
+        <NavBarBigWrapper onMouseLeave={onMouseLeaveMenu}>
           <NavBarWrapper>
             <NavBarMainMenusWrapper language={language}>
               {data.navBar?.list.map((data: any) => (

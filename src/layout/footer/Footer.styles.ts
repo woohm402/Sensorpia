@@ -1,13 +1,17 @@
 import styled from '@emotion/styled'
 
 interface IProps {
-  data: any
+  data?: any
+  selected?: boolean
 }
 
 export const FooterBigWrapper = styled.div`
   width: 100vw;
   background: #b9b9ba;
   height: 109px;
+  position: ${(props: IProps) => (props.selected ? 'absolute' : 'static')};
+  left: ${(props: IProps) => (props.selected ? '0' : null)};
+  bottom: ${(props: IProps) => (props.selected ? '0' : null)};
 `
 
 export const FooterWrapper = styled.div`

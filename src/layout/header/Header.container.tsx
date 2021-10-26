@@ -17,7 +17,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   useEffect(() => {
     if (isOpen === false) {
       setDetailMenu(null)
-      setMenu('')
+      // setMenu('')
     }
   }, [router.pathname, isOpen, menu])
   const onClickLanguage = (event: any) => {
@@ -37,6 +37,10 @@ const HeaderComponent = ({ sideBar }: IProps) => {
     } else {
       setIsOpen(false)
     }
+  }
+
+  const onMouseLeaveMenu = () => {
+    setMenu('')
   }
 
   const onClickMenu = (event: any) => {
@@ -149,6 +153,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       onClickProductDetailMenu={onClickProductDetailMenu}
       onClickAboutUsDetailMenu={onClickAboutUsDetailMenu}
       onClickCareersDetailMenu={onClickCareersDetailMenu}
+      onMouseLeaveMenu={onMouseLeaveMenu}
     ></HeaderUI>
   )
 }

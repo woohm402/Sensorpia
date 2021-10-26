@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router'
 import {
   FooterAddressDetailWrapper,
   FooterBigWrapper,
@@ -11,9 +12,12 @@ interface IProps {
   data: any
 }
 const FooterUI = ({ data }: IProps) => {
+  const router = useRouter()
+  const selected = router.pathname
+  console.log(router.pathname)
   return (
     <>
-      <FooterBigWrapper>
+      <FooterBigWrapper selected={selected === '/contactUs'}>
         <FooterWrapper>
           <FooterLogoWrapper
             //@ts-ignore
