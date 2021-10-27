@@ -18,7 +18,7 @@ const LayOut = ({ children }: ILayOutProps) => {
   const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)
   return (
-    <>
+    <div>
       <div
         style={{
           display: 'flex',
@@ -44,7 +44,7 @@ const LayOut = ({ children }: ILayOutProps) => {
         )}
         <FooterComponent></FooterComponent>
       </div>
-    </>
+    </div>
   )
 }
 

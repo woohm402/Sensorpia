@@ -30,6 +30,7 @@ import {
   SensorpiaLogoWrapper,
   NavBarBigWrapper,
   SensorpiaTempLogoWrapper,
+  MenuItem,
 } from './Header.styles'
 
 interface IProps {
@@ -47,6 +48,7 @@ interface IProps {
   onClickProductDetailMenu: any
   onClickAboutUsDetailMenu: any
   onClickCareersDetailMenu: any
+  onMouseLeaveMenu: any
 }
 
 const HeaderUI = ({
@@ -64,6 +66,7 @@ const HeaderUI = ({
   onClickProductDetailMenu,
   onClickAboutUsDetailMenu,
   onClickCareersDetailMenu,
+  onMouseLeaveMenu,
 }: IProps) => {
   const { isOpen } = useContext(GlobalContext)
   const router = useRouter()
@@ -75,75 +78,73 @@ const HeaderUI = ({
         router={router}
       >
         <HeaderWrapper>
-          <SensorpiaTempLogoWrapper
-            onClick={onClickLogo}
-          />
+          <SensorpiaTempLogoWrapper onClick={onClickLogo} />
           <SensorpiaLogoWrapper>
             <SensorPiaLogo src={data.main.logo} />
           </SensorpiaLogoWrapper>
           <MenusWrapper>
-            <MenuHome
+            <MenuItem
               id="Home"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'Home'}
               onClick={onClickMenu}
             >
               {data.main.Home}
-            </MenuHome>
-            <MenuProduct
+            </MenuItem>
+            <MenuItem
               id="Product"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'Product'}
               onClick={onClickMenu}
             >
               {data.main.Product}
-            </MenuProduct>
-            <MenuApplication
+            </MenuItem>
+            <MenuItem
               id="Application"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'Application'}
               onClick={onClickMenu}
             >
               {data.main.Applications}
-            </MenuApplication>
-            <MenuAboutUs
+            </MenuItem>
+            <MenuItem
               id="AboutUs"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'AboutUs'}
               onClick={onClickMenu}
             >
               {data.main.AboutUs}
-            </MenuAboutUs>
+            </MenuItem>
             {language === 'kor' && (
-              <MenuCareers
+              <MenuItem
                 id="Careers"
                 onMouseOver={onMouseOverMenu}
-                color={menu}
+                selected={menu === 'Careers'}
                 onClick={onClickMenu}
               >
                 {data.main.Careers}
-              </MenuCareers>
+              </MenuItem>
             )}
-            <MenuContactUs
+            <MenuItem
               id="ContactUs"
               onMouseOver={onMouseOverMenu}
-              color={menu}
+              selected={menu === 'ContactUs'}
               onClick={onClickMenu}
             >
               {data.main.ContactUs}
-            </MenuContactUs>
+            </MenuItem>
             <LanguageChangeWrapper>
               <LanguageEnglish
                 id="en"
                 onClick={onClickLanguage}
-                color={language}
+                language={language}
               >
                 {data.main.Eng}
               </LanguageEnglish>
               <LanguageKorean
                 id="kor"
                 onClick={onClickLanguage}
-                color={language}
+                language={language}
               >
                 {data.main.Kor}
               </LanguageKorean>
@@ -152,7 +153,7 @@ const HeaderUI = ({
         </HeaderWrapper>
       </HeaderBigWrapper>
       {isOpen && (
-        <NavBarBigWrapper>
+        <NavBarBigWrapper onMouseLeave={onMouseLeaveMenu}>
           <NavBarWrapper>
             <NavBarMainMenusWrapper language={language}>
               {data.navBar?.list.map((data: any) => (
