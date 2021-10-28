@@ -6,7 +6,8 @@ interface IProps {
 }
 
 export const FooterBigWrapper = styled.div`
-  width: 100vw;
+  min-width: 100vw;
+  margin: 0 auto;
   background: #b9b9ba;
   height: 109px;
   position: ${(props: IProps) => (props.selected ? 'absolute' : 'static')};

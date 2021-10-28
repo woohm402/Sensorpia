@@ -60,6 +60,8 @@ import {
   SatelliteImageWrapper,
   DefenseSubWrapper,
   DefenseImageWrapper,
+  SliderWrapper,
+  SliderSubDraggableWrapper,
 } from './Main.styles'
 interface IProps {
   data: any
@@ -90,34 +92,36 @@ const MainUI = ({
         <SliderSubTextWrapper>
           {data.SliderText.SliderSubText}
         </SliderSubTextWrapper>
-        <SliderDraggableWrapper>
-          <SliderMidWrapper>
-            <SliderInnerImageWrapper translate={translate}>
-              <SliderImageTwo
-                //@ts-ignore
-                data={data.main.Slider.Image2}
-              />
-              <SliderImageThree
-                //@ts-ignore
-                data={data.main.Slider.Image3}
-              />
-              <SliderImageFour
-                //@ts-ignore
-                data={data.main.Slider.Image4}
-              />
-            </SliderInnerImageWrapper>
-          </SliderMidWrapper>
-          <SliderPreviousButton
-            onClick={onClickSliderPrevious}
-            //@ts-ignore
-            data={data.main.Slider.Previous}
-          />
-          <SliderNextButton
-            onClick={onClickSliderNext}
-            //@ts-ignore
-            data={data.main.Slider.Previous}
-          />
-        </SliderDraggableWrapper>
+        <SliderSubDraggableWrapper>
+          <SliderDraggableWrapper>
+            <SliderMidWrapper>
+              <SliderInnerImageWrapper translate={translate}>
+                <SliderImageTwo
+                  //@ts-ignore
+                  data={data.main.Slider.Image2}
+                />
+                <SliderImageThree
+                  //@ts-ignore
+                  data={data.main.Slider.Image3}
+                />
+                <SliderImageFour
+                  //@ts-ignore
+                  data={data.main.Slider.Image4}
+                />
+              </SliderInnerImageWrapper>
+            </SliderMidWrapper>
+            <SliderPreviousButton
+              onClick={onClickSliderPrevious}
+              //@ts-ignore
+              data={data.main.Slider.Previous}
+            />
+            <SliderNextButton
+              onClick={onClickSliderNext}
+              //@ts-ignore
+              data={data.main.Slider.Previous}
+            />
+          </SliderDraggableWrapper>
+        </SliderSubDraggableWrapper>
       </SliderMainWrapper>
       <MainTitleWrapper>
         <MainTitle>{data.main.title}</MainTitle>

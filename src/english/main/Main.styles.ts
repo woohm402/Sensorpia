@@ -4,6 +4,10 @@ interface IProps {
   language?: any
   data?: any
 }
+export const SliderWrapper = styled.div`
+  width: 100vw;
+  display: flex;
+`
 
 export const SliderMainWrapper = styled.div`
   position: relative;
@@ -11,7 +15,6 @@ export const SliderMainWrapper = styled.div`
   height: 441px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
   margin: 0 auto;
 `
 export const SliderTextWrapper = styled.div`
@@ -38,11 +41,16 @@ export const SliderSubTextWrapper = styled.div`
   line-height: 22px;
   color: #ffffff;
 `
+export const SliderSubDraggableWrapper = styled.div`
+  width: auto;
+  height: 100%;
+`
+
 export const SliderDraggableWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 1100px;
-  height: 770px;
+  height: 100%;
   overflow: hidden;
   position: relative;
 `
@@ -372,7 +380,7 @@ export const TorquerButtonWrapper = styled.div`
   margin-top: 15px;
 `
 export const NavBarOuterWrapper = styled.div`
-  width: 100vw;
+  min-width: 100vw;
   height: 340px;
   background: #f9f9f9;
   margin-top: 95px;
