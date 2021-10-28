@@ -11,7 +11,7 @@ interface IProps {
 }
 
 export const HeaderBigWrapper = styled.div`
-  width: 100vw;
+  min-width: 100vw;
   height: 87px;
   display: flex;
   box-shadow: ${(props: IProps) =>
@@ -19,18 +19,26 @@ export const HeaderBigWrapper = styled.div`
     '0px 2px 15px rgba(0,0,0, 0.15)'};
   z-index: 1;
   position: relative;
+  margin: 0 auto;
 `
 
 export const HeaderWrapper = styled.div`
   width: 1100px;
+  margin: 0 auto;
+  height: 87px;
+  position: relative;
+`
+export const HeaderSubWrapper = styled.div`
+  width: auto;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin: 0 auto;
   padding: 0 70px;
 `
+
 export const SensorpiaTempLogoWrapper = styled.div`
   position: absolute;
   width: 139px;
@@ -42,6 +50,7 @@ export const SensorpiaTempLogoWrapper = styled.div`
 export const SensorpiaLogoWrapper = styled.div`
   width: 156px;
   height: 31px;
+  margin-right: 35px;
 `
 export const SensorPiaLogo = styled.img`
   width: 156px;
@@ -50,6 +59,7 @@ export const SensorPiaLogo = styled.img`
 `
 
 export const MenusWrapper = styled.div`
+  width: auto;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -33,14 +33,19 @@ const LayOut = ({ children }: ILayOutProps) => {
               width: '1100px',
               display: 'flex',
               flexDirection: 'row',
+              margin: '0 auto',
             }}
             onMouseOver={onMouseOverBody}
           >
             <SideBarComponent />
-            <div onMouseOver={onMouseOverBody}>{children}</div>
+            <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
+              {children}
+            </div>
           </div>
         ) : (
-          <div onMouseOver={onMouseOverBody}>{children}</div>
+          <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
+            {children}
+          </div>
         )}
         <FooterComponent></FooterComponent>
       </div>

@@ -31,6 +31,7 @@ import {
   NavBarBigWrapper,
   SensorpiaTempLogoWrapper,
   MenuItem,
+  HeaderSubWrapper,
 } from './Header.styles'
 
 interface IProps {
@@ -78,78 +79,80 @@ const HeaderUI = ({
         router={router}
       >
         <HeaderWrapper>
-          <SensorpiaTempLogoWrapper onClick={onClickLogo} />
-          <SensorpiaLogoWrapper>
-            <SensorPiaLogo src={data.main.logo} />
-          </SensorpiaLogoWrapper>
-          <MenusWrapper>
-            <MenuItem
-              id="Home"
-              onMouseOver={onMouseOverMenu}
-              selected={menu === 'Home'}
-              onClick={onClickMenu}
-            >
-              {data.main.Home}
-            </MenuItem>
-            <MenuItem
-              id="Product"
-              onMouseOver={onMouseOverMenu}
-              selected={menu === 'Product'}
-              onClick={onClickMenu}
-            >
-              {data.main.Product}
-            </MenuItem>
-            <MenuItem
-              id="Application"
-              onMouseOver={onMouseOverMenu}
-              selected={menu === 'Application'}
-              onClick={onClickMenu}
-            >
-              {data.main.Applications}
-            </MenuItem>
-            <MenuItem
-              id="AboutUs"
-              onMouseOver={onMouseOverMenu}
-              selected={menu === 'AboutUs'}
-              onClick={onClickMenu}
-            >
-              {data.main.AboutUs}
-            </MenuItem>
-            {language === 'kor' && (
+          <HeaderSubWrapper>
+            <SensorpiaTempLogoWrapper onClick={onClickLogo} />
+            <SensorpiaLogoWrapper>
+              <SensorPiaLogo src={data.main.logo} />
+            </SensorpiaLogoWrapper>
+            <MenusWrapper>
               <MenuItem
-                id="Careers"
+                id="Home"
                 onMouseOver={onMouseOverMenu}
-                selected={menu === 'Careers'}
+                selected={menu === 'Home'}
                 onClick={onClickMenu}
               >
-                {data.main.Careers}
+                {data.main.Home}
               </MenuItem>
-            )}
-            <MenuItem
-              id="ContactUs"
-              onMouseOver={onMouseOverMenu}
-              selected={menu === 'ContactUs'}
-              onClick={onClickMenu}
-            >
-              {data.main.ContactUs}
-            </MenuItem>
-            <LanguageChangeWrapper>
-              <LanguageEnglish
-                id="en"
-                onClick={onClickLanguage}
-                language={language}
+              <MenuItem
+                id="Product"
+                onMouseOver={onMouseOverMenu}
+                selected={menu === 'Product'}
+                onClick={onClickMenu}
               >
-                {data.main.Eng}
-              </LanguageEnglish>
-              <LanguageKorean
-                id="kor"
-                onClick={onClickLanguage}
-                language={language}
+                {data.main.Product}
+              </MenuItem>
+              <MenuItem
+                id="Application"
+                onMouseOver={onMouseOverMenu}
+                selected={menu === 'Application'}
+                onClick={onClickMenu}
               >
-                {data.main.Kor}
-              </LanguageKorean>
-            </LanguageChangeWrapper>
-          </MenusWrapper>
+                {data.main.Applications}
+              </MenuItem>
+              <MenuItem
+                id="AboutUs"
+                onMouseOver={onMouseOverMenu}
+                selected={menu === 'AboutUs'}
+                onClick={onClickMenu}
+              >
+                {data.main.AboutUs}
+              </MenuItem>
+              {language === 'kor' && (
+                <MenuItem
+                  id="Careers"
+                  onMouseOver={onMouseOverMenu}
+                  selected={menu === 'Careers'}
+                  onClick={onClickMenu}
+                >
+                  {data.main.Careers}
+                </MenuItem>
+              )}
+              <MenuItem
+                id="ContactUs"
+                onMouseOver={onMouseOverMenu}
+                selected={menu === 'ContactUs'}
+                onClick={onClickMenu}
+              >
+                {data.main.ContactUs}
+              </MenuItem>
+              <LanguageChangeWrapper>
+                <LanguageEnglish
+                  id="en"
+                  onClick={onClickLanguage}
+                  language={language}
+                >
+                  {data.main.Eng}
+                </LanguageEnglish>
+                <LanguageKorean
+                  id="kor"
+                  onClick={onClickLanguage}
+                  language={language}
+                >
+                  {data.main.Kor}
+                </LanguageKorean>
+              </LanguageChangeWrapper>
+            </MenusWrapper>
+          </HeaderSubWrapper>
         </HeaderWrapper>
       </HeaderBigWrapper>
       {isOpen && (
