@@ -140,6 +140,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   }
   const onClickLogo = () => {
     router.push('/')
+    setMenu('Home')
   }
 
   return (
