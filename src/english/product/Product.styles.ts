@@ -43,7 +43,6 @@ export const ExplanationWrapper = styled.div`
 export const SubImageOuterWrappers = styled.div``
 export const SubImageMidWrappers = styled.div`
   position: relative;
-  padding-left: 64px;
 `
 
 export const SubImageWrappers = styled.img`
@@ -126,8 +125,14 @@ export const MagneticInstrumentDetails = styled.li`
   color: #636363;
   width: 237px;
 `
-export const MagneticInstrumentDCBHImageWrapper = styled.div`
+export const MagneticInstrumentDCBHImageButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 181px;
+`
+
+export const MagneticInstrumentDCBHImageWrapper = styled.div`
   width: 284px;
   height: 188px;
   ${({ url }: IPropsTwo) => `background:url(${url})`};
@@ -160,8 +165,15 @@ export const MagneticInstrumentACMagneticDetails = styled.li`
   text-align: justify;
   color: #636363;
 `
-export const MagneticInstrumentACMagneticImageWrapper = styled.div`
+
+export const ACMagneticButtonImageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-left: 143px;
+  align-items: center;
+`
+
+export const MagneticInstrumentACMagneticImageWrapper = styled.div`
   width: 323px;
   height: 162px;
   ${({ url }: IPropsTwo) => `background:url(${url})`};
@@ -181,11 +193,11 @@ export const SpecificationButton = styled.button`
   cursor: pointer;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 64px;
 `
 export const SubImageMidTwoWrappers = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 64px;
 `
 export const SpecificationButtonWrapperHref = styled.a``

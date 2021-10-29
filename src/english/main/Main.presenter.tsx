@@ -16,7 +16,7 @@ import {
   MainSecondLineDivider,
   MainThirdLineDivider,
   MainThirdProductImageWrapper,
-  MainThirdProductWrapper,
+  MagneticTorquerProductWrapper,
   MainTitle,
   MainTitleWrapper,
   NavBarDetailsRepeatWrapper,
@@ -43,6 +43,7 @@ import {
   SliderTextWrapper,
   SpecificationButton,
   SpecificationButtonHref,
+  MagneticTorquerSubProductWrapper,
 } from './Main.styles'
 
 interface IProps {
@@ -100,12 +101,8 @@ const MainUI = ({
       </MainOuterWrapper>
       <MainProductsOuterWrapper>
         <MainProductsNameWrapper>
-          <MainProductText>
-            {data.main.mainProductOneName}
-          </MainProductText>
-          <MainProductText>
-            {data.main.mainProductTwoName}
-          </MainProductText>
+          <MainProductText>{data.main.mainProductOneName}</MainProductText>
+          <MainProductText>{data.main.mainProductTwoName}</MainProductText>
         </MainProductsNameWrapper>
       </MainProductsOuterWrapper>
       <MainOuterImagesWrapper>
@@ -149,13 +146,26 @@ const MainUI = ({
         </MainImagesWrapper>
       </MainOuterImagesWrapper>
       <MainThirdLineDivider />
-      <MainThirdProductWrapper>
+      <MagneticTorquerProductWrapper>
         {data.main.mainProductThreeName}
-      </MainThirdProductWrapper>
-      <MainThirdProductImageWrapper
-        //@ts-expect-error
-        data={data.main.magneticTorquer}
-      />
+      </MagneticTorquerProductWrapper>
+      {data.main.magneticTorquer.map((value: any, index: any) => (
+        <MagneticTorquerSubProductWrapper key={index}>
+          <MainThirdProductImageWrapper
+            //@ts-expect-error
+            data={value.image}
+          />
+          <SpecificationButtonHref
+            href={value.download}
+            download={value.download}
+          >
+            <SpecificationButton>
+              {data.main.specificationButton}
+            </SpecificationButton>
+          </SpecificationButtonHref>
+        </MagneticTorquerSubProductWrapper>
+      ))}
+
       <NavBarOuterWrapper>
         <NavBarDetailsRepeatWrapper>
           <NavBarMainMenusWrapper>
@@ -178,7 +188,7 @@ const MainUI = ({
             <ApplicationsDetailsWrapper language={language}>
               {data.navBar.applications.map((data: any, index: any) => (
                 <ApplicationsDetails
-                  key=''
+                  key=""
                   id={index}
                   onClick={onClickApplicationDetails}
                 >
@@ -189,7 +199,7 @@ const MainUI = ({
             <AboutUsDetailsWrapper language={language}>
               {data.navBar.aboutUs.map((data: any, index: any) => (
                 <AboutUsDetails
-                  key=''
+                  key=""
                   id={index}
                   onClick={onClickAboutUsDetails}
                 >
@@ -201,7 +211,7 @@ const MainUI = ({
               <CareersDetailsWrapper>
                 {data.navBar.careers.map((data: any, index: any) => (
                   <CareersDetails
-                    key=''
+                    key=""
                     id={index}
                     onClick={onClickCareersDetails}
                   >
