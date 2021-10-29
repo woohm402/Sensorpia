@@ -2,7 +2,8 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import LayOut from '../src/layout'
 import Head from 'next/head'
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
+import getUserLocale from 'get-user-locale'
 
 export const GlobalContext = createContext({
   isOpen: false,
@@ -16,8 +17,16 @@ export const GlobalContext = createContext({
 function MyApp({ Component, pageProps }: AppProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [language, setLanguage] = useState('en')
+  const userLocale = getUserLocale()
   const [menu, setMenu] = useState('')
   const data = require(`../pages/api/${language}.json`)
+  useEffect(() => {
+    if (userLocale === 'ko-KR') {
+      setLanguage('kor')
+    } else {
+      setLanguage('en')
+    }
+  }, [])
   return (
     <>
       <Head>
