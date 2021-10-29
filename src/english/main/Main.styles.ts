@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
+
 interface IProps {
   translate?: any
   language?: any
   data?: any
 }
+
 export const SliderWrapper = styled.div`
   width: 100vw;
   display: flex;
@@ -59,35 +61,7 @@ export const SliderImage = styled.div`
   width: 1100px;
   height: 441px;
   object-fit: cover;
-  ${(props: any) => `background-image: url(${props.data})`}
-`
-
-export const SliderImageTwo = styled.div`
-  width: 1100px;
-  height: 441px;
-  object-fit: cover;
-  ${(
-    props: any
-  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${props.data}) `}
-`
-export const SliderImageThree = styled.div`
-  width: 1100px;
-  height: 441px;
-  object-fit: cover;
-  ${(
-    props: any
-  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${props.data}) `}
-`
-export const SliderImageFour = styled.div`
-  width: 1100px;
-  height: 441px;
-  object-fit: cover;
-  ${(
-    props: any
-  ) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${props.data}) `}
+  ${(props: { src: string }) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${props.src})`}
 `
 
 export const SliderPreviousButton = styled.div`
@@ -97,7 +71,7 @@ export const SliderPreviousButton = styled.div`
   width: 10px;
   height: 30px;
   position: absolute;
-  ${(props: any) => `background:url(${props.data})`};
+  background: url("./sliderPreviousFinal.png");
 `
 export const SliderNextButton = styled.div`
   top: 206px;
@@ -105,7 +79,7 @@ export const SliderNextButton = styled.div`
   cursor: pointer;
   width: 10px;
   height: 30px;
-  ${(props: any) => `background:url(${props.data})`};
+  background: url("./sliderPreviousFinal.png");
   position: absolute;
   transform: rotate(180deg);
 `
@@ -432,7 +406,7 @@ export const ProductDetails = styled.span`
 `
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '20px' : '60px'};
+          props.language === 'kor' ? '20px' : '60px'};
   min-width: 120px;
   display: flex;
   flex-direction: column;
@@ -449,9 +423,9 @@ export const ApplicationsDetails = styled.span`
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-    props.language === 'kor' ? '35px' : '70px'};
+          props.language === 'kor' ? '35px' : '70px'};
   max-width: ${(props: IProps) =>
-    props.language === 'kor' ? '76px' : '120px'};
+          props.language === 'kor' ? '76px' : '120px'};
   display: flex;
   flex-direction: column;
 `

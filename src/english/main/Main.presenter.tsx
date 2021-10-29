@@ -1,68 +1,56 @@
-import Link from 'next/link'
 import {
-  SliderDraggableWrapper,
-  SliderImage,
-  SliderImageFour,
-  SliderImageThree,
-  SliderImageTwo,
-  SliderInnerImageWrapper,
-  SliderMainWrapper,
-  SliderTextWrapper,
-  SliderNextButton,
-  SliderPreviousButton,
-  SliderMidWrapper,
-  SliderSubTextWrapper,
-  MainTitleWrapper,
-  MainLineWrapper,
-  MainFirstLineDivider,
-  MainSecondLineDivider,
-  MainProductsNameWrapper,
-  MainProductOneWrapper,
-  MainProductTwoWrapper,
-  MainImagesWrapper,
-  SatelliteWrapper,
-  SatelliteImageOne,
-  SatelliteImageTwo,
-  DefenseWrapper,
+  AboutUsDetails,
+  AboutUsDetailsWrapper,
+  ApplicationsDetails,
+  ApplicationsDetailsWrapper,
+  CareersDetails,
+  CareersDetailsWrapper,
   DefenseImageOne,
-  DefenseImageTwo,
-  SpecificationButton,
-  SpecificationButtonsWrapper,
-  SpecificationSatelliteButtonsWrapper,
-  SpecificationDefenseButtonsWrapper,
-  SatelliteImageOneText,
-  SatelliteImageTwoText,
   DefenseImageOneText,
-  DefenseImageTwoText,
+  DefenseImageWrapper,
+  DefenseSubWrapper,
+  DefenseWrapper,
+  MainFirstLineDivider,
+  MainImagesWrapper,
+  MainLineWrapper,
+  MainOuterImagesWrapper,
+  MainOuterWrapper,
+  MainProductOneWrapper,
+  MainProductsNameWrapper,
+  MainProductsOuterWrapper,
+  MainProductTwoWrapper,
+  MainSecondLineDivider,
   MainThirdLineDivider,
-  MainThirdProductWrapper,
   MainThirdProductImageWrapper,
-  TorquerButtonWrapper,
+  MainThirdProductWrapper,
+  MainTitle,
+  MainTitleWrapper,
   NavBarDetailsRepeatWrapper,
-  NavBarMainMenusWrapper,
   NavBarMainMenu,
   NavBarMainMenuDetailWrapper,
-  ProductDetailsWrapper,
-  ProductDetails,
-  ApplicationsDetailsWrapper,
-  ApplicationsDetails,
-  AboutUsDetailsWrapper,
-  AboutUsDetails,
-  CareersDetailsWrapper,
-  CareersDetails,
-  MainTitle,
-  MainOuterWrapper,
-  MainProductsOuterWrapper,
-  MainOuterImagesWrapper,
+  NavBarMainMenusWrapper,
   NavBarOuterWrapper,
-  SpecificationButtonHref,
-  SatelliteSubWrapper,
+  ProductDetails,
+  ProductDetailsWrapper,
+  SatelliteImageOne,
+  SatelliteImageOneText,
   SatelliteImageWrapper,
-  DefenseSubWrapper,
-  DefenseImageWrapper,
-  SliderWrapper,
+  SatelliteSubWrapper,
+  SatelliteWrapper,
+  SliderDraggableWrapper,
+  SliderImage,
+  SliderInnerImageWrapper,
+  SliderMainWrapper,
+  SliderMidWrapper,
+  SliderNextButton,
+  SliderPreviousButton,
   SliderSubDraggableWrapper,
+  SliderSubTextWrapper,
+  SliderTextWrapper,
+  SpecificationButton,
+  SpecificationButtonHref,
 } from './Main.styles'
+
 interface IProps {
   data: any
   onClickSliderNext: any
@@ -96,30 +84,13 @@ const MainUI = ({
           <SliderDraggableWrapper>
             <SliderMidWrapper>
               <SliderInnerImageWrapper translate={translate}>
-                <SliderImageTwo
-                  //@ts-ignore
-                  data={data.main.Slider.Image2}
-                />
-                <SliderImageThree
-                  //@ts-ignore
-                  data={data.main.Slider.Image3}
-                />
-                <SliderImageFour
-                  //@ts-ignore
-                  data={data.main.Slider.Image4}
-                />
+                {data.main.slider.images.map((imageUrl: string) => (
+                  <SliderImage src={imageUrl} key={imageUrl} />
+                ))}
               </SliderInnerImageWrapper>
             </SliderMidWrapper>
-            <SliderPreviousButton
-              onClick={onClickSliderPrevious}
-              //@ts-ignore
-              data={data.main.Slider.Previous}
-            />
-            <SliderNextButton
-              onClick={onClickSliderNext}
-              //@ts-ignore
-              data={data.main.Slider.Previous}
-            />
+            <SliderPreviousButton onClick={onClickSliderPrevious} />
+            <SliderNextButton onClick={onClickSliderNext} />
           </SliderDraggableWrapper>
         </SliderSubDraggableWrapper>
       </SliderMainWrapper>

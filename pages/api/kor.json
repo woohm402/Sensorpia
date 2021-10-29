@@ -14,12 +14,12 @@
     "Careers": "Careers",
     "Eng": "Eng",
     "Kor": "Kor",
-    "Slider": {
-      "Image1": "./mainSliderFinal1.png",
-      "Image2": "./mainSliderFinal2.png",
-      "Image3": "./mainSliderFinal3.png",
-      "Image4": "./mainSliderFinal4.png",
-      "Previous": "./sliderPreviousFinal.png"
+    "slider": {
+      "images": [
+        "./mainSliderFinal4.png",
+        "./mainSliderFinal3.png",
+        "./mainSliderFinal2.png"
+      ]
     },
     "satellite": [
       {
@@ -348,9 +348,9 @@
   "contactUs": {
     "title": "Contact us",
     "details": [
-      { "content": "Mail   sensorpia@sensorpia@co.kr" },
-      { "content": "Tel   82-42-933-0877" },
-      { "content": "Fax   +82-42-933-0878" }
+      { "content": "Mail:   sensorpia@sensorpia.co.kr" },
+      { "content": "Tel:   042-933-0877" },
+      { "content": "Fax:   042-933-0878" }
     ]
   },
   "careers": [

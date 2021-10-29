@@ -2,7 +2,10 @@
   "title": "Sensorpia",
   "footer": {
     "Address": "Address : 34054 대전광역시 유성구 유성대로1596번길 64, 2층(전민동, (주)텔레옵틱스사옥2동) / Yuseong-daero 1596-64, Yuseong-Gu, Daejeon City 34054, Korea Tel : +82-42-933-0877 / Fax : +82-42-933-0878 / E-mail : sensorpia@sensorpia.co.kr",
-    "Others": ["이용약관", "개인정보 처리방침"]
+    "Others": [
+      "이용약관",
+      "개인정보 처리방침"
+    ]
   },
   "main": {
     "logo": "./sensorpiaLogoFinal.png",
@@ -13,12 +16,12 @@
     "ContactUs": "Contact Us",
     "Eng": "Eng",
     "Kor": "Kor",
-    "Slider": {
-      "Image1": "./mainSliderFinal1.png",
-      "Image2": "./mainSliderFinal2.png",
-      "Image3": "./mainSliderFinal3.png",
-      "Image4": "./mainSliderFinal4.png",
-      "Previous": "./sliderPreviousFinal.png"
+    "slider": {
+      "images": [
+        "./mainSliderFinal4.png",
+        "./mainSliderFinal3.png",
+        "./mainSliderFinal2.png"
+      ]
     },
     "satellite": [
       {
@@ -44,7 +47,9 @@
         "download": "./MS-27.pdf"
       }
     ],
-    "magneticTorquer": ["./magneticTorquerFinal.png"],
+    "magneticTorquer": [
+      "./magneticTorquerFinal.png"
+    ],
     "title": "Main Products line",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
@@ -53,12 +58,18 @@
     "satelliteImageNames": {
       "SatelliteOne": "MS-15",
       "SatelliteTwo": "MS-22",
-      "download": ["./MS-15.pdf", "./MS-22.pdf"]
+      "download": [
+        "./MS-15.pdf",
+        "./MS-22.pdf"
+      ]
     },
     "defenseImageNames": {
       "DefenseOne": "MS-13",
       "DefenseTwo": "MS-27",
-      "download": ["./MS-13.pdf", "./MS-27.pdf"]
+      "download": [
+        "./MS-13.pdf",
+        "./MS-27.pdf"
+      ]
     }
   },
   "products": [
@@ -168,8 +179,14 @@
             "name": null,
             "mainImage": "./magneticInstrumentsFinal.png",
             "subImagesAndTexts": [
-              { "image": "./magneticInstrumentsTwoFinal.png", "text": null },
-              { "image": "./magneticInstrumentsThreeFinal.png", "text": null }
+              {
+                "image": "./magneticInstrumentsTwoFinal.png",
+                "text": null
+              },
+              {
+                "image": "./magneticInstrumentsThreeFinal.png",
+                "text": null
+              }
             ],
             "textExplanationTitle": [
               "DC B-H LOOP TRACER (MI-36)",
@@ -193,7 +210,9 @@
       "name": "Defense",
       "layout": "applicationBasicPage",
       "data": {
-        "mainImage": ["./applicationDefenseRandomOne.png"],
+        "mainImage": [
+          "./applicationDefenseRandomOne.png"
+        ],
         "mainTexts": [
           "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
           "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
@@ -204,7 +223,9 @@
       "name": "Satellite",
       "layout": "applicationBasicPage",
       "data": {
-        "mainImage": ["./applicationSatelliteImageFinal.png"],
+        "mainImage": [
+          "./applicationSatelliteImageFinal.png"
+        ],
         "subImageAndDetails": [
           {
             "image": "./applicationSatelliteImageTwoFinal.png",
@@ -227,7 +248,9 @@
       "name": "Measurement",
       "layout": "applicationMeasurementPage",
       "data": {
-        "mainImage": ["./measurementImageFinal.png"],
+        "mainImage": [
+          "./measurementImageFinal.png"
+        ],
         "subImageAndDetails": [
           {
             "image": "./measurementImageFinalTwo.png",
@@ -300,7 +323,10 @@
           "Magnetic sensors and instruments production has high value added, and Low energy consumption, and no hazardous materials production."
         ],
         "subTitle": "History",
-        "mainImages": ["./visionImageOne.png", "visionImageTwo.png"],
+        "mainImages": [
+          "./visionImageOne.png",
+          "visionImageTwo.png"
+        ],
         "years": [
           {
             "year": "2020",
@@ -338,7 +364,10 @@
             "year": "2006 ~",
             "content": "Magnetic torquer and TAM for satellite (Satrac-I, KAIST)"
           },
-          { "year": "2006", "content": "Builded Company" }
+          {
+            "year": "2006",
+            "content": "Builded Company"
+          }
         ]
       }
     }
@@ -346,30 +375,59 @@
   "contactUs": {
     "title": "Contact us",
     "details": [
-      { "content": "Mail   sensorpia@sensorpia@co.kr" },
-      { "content": "Tel   82-42-933-0877" },
-      { "content": "Fax   +82-42-933-0878" }
+      {
+        "content": "Mail:   sensorpia@sensorpia.co.kr"
+      },
+      {
+        "content": "Tel:   +82-42-933-0877"
+      },
+      {
+        "content": "Fax:   +82-42-933-0878"
+      }
     ]
   },
   "sidebar": {
-    "name": ["Products", "Application", "About Us"],
+    "name": [
+      "Products",
+      "Application",
+      "About Us"
+    ],
     "Products": [
       "3-axis Flux-gate magnetometer",
       "Magnetic torquer",
       "Magnetic Instrument"
     ],
-    "Application": ["Defense", "Satellite", "Measurement"],
-    "AboutUs": ["Sensorpia intro.& our customers", "Vision & History"]
+    "Application": [
+      "Defense",
+      "Satellite",
+      "Measurement"
+    ],
+    "AboutUs": [
+      "Sensorpia intro.& our customers",
+      "Vision & History"
+    ]
   },
   "navBar": {
-    "list": ["Products", "Applications", "About Us", "Contact Us"],
+    "list": [
+      "Products",
+      "Applications",
+      "About Us",
+      "Contact Us"
+    ],
     "products": [
       "3-axis Flux-gate magnetometer",
       "Magnetic torquer",
       "Magnetic Instrument"
     ],
-    "applications": ["Defense", "Satellite", "Measurement"],
-    "aboutUs": ["Sensorpia intro.& OurCustomers", "Vision & History"]
+    "applications": [
+      "Defense",
+      "Satellite",
+      "Measurement"
+    ],
+    "aboutUs": [
+      "Sensorpia intro.& OurCustomers",
+      "Vision & History"
+    ]
   },
   "SliderText": {
     "SliderMainText": "Magnetic Sensors and Instruments",
