@@ -152,7 +152,7 @@ export const MainProductsNameWrapper = styled.div`
   justify-content: space-between;
 `
 
-export const MainProductOneWrapper = styled.div`
+export const MainProductText = styled.div`
   max-width: 211px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -162,15 +162,6 @@ export const MainProductOneWrapper = styled.div`
   color: #262626;
 `
 
-export const MainProductTwoWrapper = styled.div`
-  max-width: 211px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #262626;
-`
 export const MainOuterImagesWrapper = styled.div`
   margin: 0px auto 0px auto;
   width: 1100px;
@@ -185,38 +176,31 @@ export const MainImagesWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-export const SatelliteWrapper = styled.div`
+export const ProductWrapper = styled.div`
   width: 394px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
-export const SatelliteSubWrapper = styled.div`
+
+export const ProductSubWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
-export const DefenseSubWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
-export const SatelliteImageWrapper = styled.div`
+export const ProductImageWrapper = styled.div`
   position: relative;
 `
 
-export const DefenseImageWrapper = styled.div`
-  position: relative;
-`
-
-export const SatelliteImageOne = styled.div`
+export const ProductImage = styled.div`
   position: relative;
   width: 192px;
   height: 266px;
-  ${(props: any) => `background: url(${props.data})`}
+  ${(props: { src: string }) => `background: url(${props.src})`}
 `
-export const SatelliteImageOneText = styled.span`
+
+export const ProductImageText = styled.span`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -227,62 +211,6 @@ export const SatelliteImageOneText = styled.span`
   left: 142px;
 `
 
-export const SatelliteImageTwo = styled.div`
-  position: relative;
-  width: 192px;
-  height: 266px;
-  ${(props: any) => `background: url(${props.data})`}
-`
-export const SatelliteImageTwoText = styled.span`
-  position: absolute;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  color: #262626;
-  top: 237px;
-  left: 142px;
-`
-export const DefenseWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 394px;
-`
-
-export const DefenseImageOne = styled.div`
-  position: relative;
-  width: 192px;
-  height: 266px;
-  ${(props: any) => `background: url(${props.data})`};
-`
-export const DefenseImageOneText = styled.span`
-  position: absolute;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  color: #262626;
-  top: 237px;
-  left: 142px;
-`
-
-export const DefenseImageTwo = styled.div`
-  position: relative;
-  width: 192px;
-  height: 266px;
-  ${(props: any) => `background: url(${props.data})`};
-`
-export const DefenseImageTwoText = styled.span`
-  position: absolute;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  color: #262626;
-  top: 237px;
-  left: 142px;
-`
 export const SpecificationButtonsWrapper = styled.div`
   margin: 15px auto 0px auto;
   width: 1100px;

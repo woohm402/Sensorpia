@@ -5,20 +5,14 @@ import {
   ApplicationsDetailsWrapper,
   CareersDetails,
   CareersDetailsWrapper,
-  DefenseImageOne,
-  DefenseImageOneText,
-  DefenseImageWrapper,
-  DefenseSubWrapper,
-  DefenseWrapper,
   MainFirstLineDivider,
   MainImagesWrapper,
   MainLineWrapper,
   MainOuterImagesWrapper,
   MainOuterWrapper,
-  MainProductOneWrapper,
   MainProductsNameWrapper,
   MainProductsOuterWrapper,
-  MainProductTwoWrapper,
+  MainProductText,
   MainSecondLineDivider,
   MainThirdLineDivider,
   MainThirdProductImageWrapper,
@@ -32,11 +26,11 @@ import {
   NavBarOuterWrapper,
   ProductDetails,
   ProductDetailsWrapper,
-  SatelliteImageOne,
-  SatelliteImageOneText,
-  SatelliteImageWrapper,
-  SatelliteSubWrapper,
-  SatelliteWrapper,
+  ProductImage,
+  ProductImageText,
+  ProductImageWrapper,
+  ProductSubWrapper,
+  ProductWrapper,
   SliderDraggableWrapper,
   SliderImage,
   SliderInnerImageWrapper,
@@ -62,6 +56,7 @@ interface IProps {
   onClickAboutUsDetails: any
   onClickCareersDetails: any
 }
+
 const MainUI = ({
   data,
   onClickSliderNext,
@@ -105,64 +100,52 @@ const MainUI = ({
       </MainOuterWrapper>
       <MainProductsOuterWrapper>
         <MainProductsNameWrapper>
-          <MainProductOneWrapper>
+          <MainProductText>
             {data.main.mainProductOneName}
-          </MainProductOneWrapper>
-          <MainProductTwoWrapper>
+          </MainProductText>
+          <MainProductText>
             {data.main.mainProductTwoName}
-          </MainProductTwoWrapper>
+          </MainProductText>
         </MainProductsNameWrapper>
       </MainProductsOuterWrapper>
       <MainOuterImagesWrapper>
         <MainImagesWrapper>
-          <SatelliteWrapper>
-            {data.main.satellite.map((value: any) => (
-              <SatelliteSubWrapper key="">
-                <SatelliteImageWrapper>
-                  <SatelliteImageOne
-                    //@ts-ignore
-                    data={value.image}
-                  />
-                  <SatelliteImageOneText>{value.name}</SatelliteImageOneText>
-                </SatelliteImageWrapper>
+          <ProductWrapper>
+            {data.main.satellite.map((value: any, index: number) => (
+              <ProductSubWrapper key={index}>
+                <ProductImageWrapper>
+                  <ProductImage src={value.image} />
+                  <ProductImageText>{value.name}</ProductImageText>
+                </ProductImageWrapper>
                 <SpecificationButtonHref
                   href={value.download}
                   download={value.download}
-                  key=""
                 >
-                  <SpecificationButton
-                  //@ts-ignore
-                  >
+                  <SpecificationButton>
                     {data.main.specificationButton}
                   </SpecificationButton>
                 </SpecificationButtonHref>
-              </SatelliteSubWrapper>
+              </ProductSubWrapper>
             ))}
-          </SatelliteWrapper>
-          <DefenseWrapper>
-            {data.main.defense.map((value: any) => (
-              <DefenseSubWrapper key="">
-                <DefenseImageWrapper>
-                  <DefenseImageOne
-                    //@ts-ignore
-                    data={value.image}
-                  />
-                  <DefenseImageOneText>{value.name}</DefenseImageOneText>
-                </DefenseImageWrapper>
+          </ProductWrapper>
+          <ProductWrapper>
+            {data.main.defense.map((value: any, index: number) => (
+              <ProductSubWrapper key={index}>
+                <ProductImageWrapper>
+                  <ProductImage src={value.image} />
+                  <ProductImageText>{value.name}</ProductImageText>
+                </ProductImageWrapper>
                 <SpecificationButtonHref
                   href={value.download}
                   download={value.download}
-                  key=""
                 >
-                  <SpecificationButton
-                  //@ts-ignore
-                  >
+                  <SpecificationButton>
                     {data.main.specificationButton}
                   </SpecificationButton>
                 </SpecificationButtonHref>
-              </DefenseSubWrapper>
+              </ProductSubWrapper>
             ))}
-          </DefenseWrapper>
+          </ProductWrapper>
         </MainImagesWrapper>
       </MainOuterImagesWrapper>
       <MainThirdLineDivider />
@@ -176,15 +159,15 @@ const MainUI = ({
       <NavBarOuterWrapper>
         <NavBarDetailsRepeatWrapper>
           <NavBarMainMenusWrapper>
-            {data.navBar?.list.map((data: any) => (
-              <NavBarMainMenu key="">{data}</NavBarMainMenu>
+            {data.navBar.list.map((menu: string, index: number) => (
+              <NavBarMainMenu key={index}>{menu}</NavBarMainMenu>
             ))}
           </NavBarMainMenusWrapper>
           <NavBarMainMenuDetailWrapper>
             <ProductDetailsWrapper>
-              {data.navBar?.products.map((data: any, index: any) => (
+              {data.navBar.products.map((data: any, index: any) => (
                 <ProductDetails
-                  key=""
+                  key={index}
                   id={index}
                   onClick={onClickProductDetails}
                 >
@@ -193,9 +176,9 @@ const MainUI = ({
               ))}
             </ProductDetailsWrapper>
             <ApplicationsDetailsWrapper language={language}>
-              {data.navBar?.applications.map((data: any, index: any) => (
+              {data.navBar.applications.map((data: any, index: any) => (
                 <ApplicationsDetails
-                  key=""
+                  key=''
                   id={index}
                   onClick={onClickApplicationDetails}
                 >
@@ -204,9 +187,9 @@ const MainUI = ({
               ))}
             </ApplicationsDetailsWrapper>
             <AboutUsDetailsWrapper language={language}>
-              {data.navBar?.aboutUs.map((data: any, index: any) => (
+              {data.navBar.aboutUs.map((data: any, index: any) => (
                 <AboutUsDetails
-                  key=""
+                  key=''
                   id={index}
                   onClick={onClickAboutUsDetails}
                 >
@@ -216,9 +199,9 @@ const MainUI = ({
             </AboutUsDetailsWrapper>
             {language === 'kor' && (
               <CareersDetailsWrapper>
-                {data.navBar?.careers.map((data: any, index: any) => (
+                {data.navBar.careers.map((data: any, index: any) => (
                   <CareersDetails
-                    key=""
+                    key=''
                     id={index}
                     onClick={onClickCareersDetails}
                   >
