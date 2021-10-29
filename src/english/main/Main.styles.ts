@@ -61,7 +61,8 @@ export const SliderImage = styled.div`
   width: 1100px;
   height: 441px;
   object-fit: cover;
-  ${(props: { src: string }) => `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${props.src})`}
+  ${(props: { src: string }) =>
+    `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${props.src})`}
 `
 
 export const SliderPreviousButton = styled.div`
@@ -71,7 +72,7 @@ export const SliderPreviousButton = styled.div`
   width: 10px;
   height: 30px;
   position: absolute;
-  background: url("./sliderPreviousFinal.png");
+  background: url('./sliderPreviousFinal.png');
 `
 export const SliderNextButton = styled.div`
   top: 206px;
@@ -79,7 +80,7 @@ export const SliderNextButton = styled.div`
   cursor: pointer;
   width: 10px;
   height: 30px;
-  background: url("./sliderPreviousFinal.png");
+  background: url('./sliderPreviousFinal.png');
   position: absolute;
   transform: rotate(180deg);
 `
@@ -258,7 +259,7 @@ export const MainThirdLineDivider = styled.div`
   border: 2px solid #9c9d9e;
 `
 
-export const MainThirdProductWrapper = styled.div`
+export const MagneticTorquerProductWrapper = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -267,6 +268,11 @@ export const MainThirdProductWrapper = styled.div`
   color: #262626;
   min-width: 201px;
   margin: 15px auto 0px auto;
+`
+export const MagneticTorquerSubProductWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const MainThirdProductImageWrapper = styled.div`
@@ -334,7 +340,7 @@ export const ProductDetails = styled.span`
 `
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-          props.language === 'kor' ? '20px' : '60px'};
+    props.language === 'kor' ? '20px' : '60px'};
   min-width: 120px;
   display: flex;
   flex-direction: column;
@@ -351,9 +357,9 @@ export const ApplicationsDetails = styled.span`
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
-          props.language === 'kor' ? '35px' : '70px'};
+    props.language === 'kor' ? '35px' : '70px'};
   max-width: ${(props: IProps) =>
-          props.language === 'kor' ? '76px' : '120px'};
+    props.language === 'kor' ? '76px' : '120px'};
   display: flex;
   flex-direction: column;
 `

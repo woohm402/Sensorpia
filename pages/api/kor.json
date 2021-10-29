@@ -45,7 +45,13 @@
         "download": "./MS-27.pdf"
       }
     ],
-    "magneticTorquer": ["./magneticTorquerFinal.png"],
+    "magneticTorquer": [
+      {
+        "image": "./magneticTorquerFinal.png",
+        "name": null,
+        "download": "./MS-12,20,25.pdf"
+      }
+    ],
     "title": "주요 제품 라인",
     "mainProductOneName": "3-axis flux-gate magnetometer for satellite",
     "mainProductTwoName": "3-axis flux-gate magnetometer for defense",
@@ -147,7 +153,7 @@
               {
                 "image": "./satelliteTorquerImageTwoFinal.png",
                 "text": null,
-                "pdf": null
+                "pdf": "./MS-12,20,25.pdf"
               }
             ],
             "textExplanationTitle": "제품 설명",
@@ -168,8 +174,16 @@
             "name": null,
             "mainImage": "./magneticInstrumentsFinal.png",
             "subImagesAndTexts": [
-              { "image": "./magneticInstrumentsTwoFinal.png", "text": null },
-              { "image": "./magneticInstrumentsThreeFinal.png", "text": null }
+              {
+                "image": "./magneticInstrumentsTwoFinal.png",
+                "text": null,
+                "pdf": "./MI-36.pdf"
+              },
+              {
+                "image": "./magneticInstrumentsThreeFinal.png",
+                "text": null,
+                "pdf": "./MI-10.pdf"
+              }
             ],
             "textExplanationTitle": [
               "DC B-H LOOP TRACER (MI-36)",
