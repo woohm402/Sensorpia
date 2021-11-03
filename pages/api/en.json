@@ -28,7 +28,7 @@
       },
       {
         "image": "./satelliteTwoFinal.png",
-        "name": "MS-13",
+        "name": "MS-22",
         "download": "./MS-22.pdf"
       }
     ],
@@ -126,8 +126,8 @@
               },
               {
                 "image": "./defenseImageFourFinal.png",
-                "text": "MS-27",
-                "pdf": "./MS-27.pdf"
+                "text": "MS-07",
+                "pdf": "./MS-07.pdf"
               }
             ],
             "textExplanationTitle": "Explanation",
