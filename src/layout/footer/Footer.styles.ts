@@ -9,7 +9,6 @@ export const FooterBigWrapper = styled.div`
   min-width: 100vw;
   margin-left: auto;
   margin-right: auto;
-  margin-top: ${(props: IProps) => (props.selected ? '150px' : null)};
   background: #b9b9ba;
   height: 109px;
   position: ${(props: IProps) => (props.selected ? 'relative' : 'static')};

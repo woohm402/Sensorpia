@@ -25,5 +25,5 @@ export const ContactUsDetails = styled.div`
   color: #262626;
 `
 export const ContactUsMapWrapper = styled.div`
-  margin: 30px 0px 30px 0px;
+  margin: 30px 0px 200px 0px;
 `
