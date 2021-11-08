@@ -17,40 +17,70 @@ const LayOut = ({ children }: ILayOutProps) => {
   const router = useRouter()
   const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)
-  return (
-    <div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <HeaderComponent sideBar={sideBar}></HeaderComponent>
-        {sideBar ? (
+  if (router.pathname === '/contactUs') {
+    return (
+      <div>
+        <div
+          style={{
+            display: 'flex',
+            minHeight: '100vh',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
           <div
             style={{
-              width: '1100px',
               display: 'flex',
-              flexDirection: 'row',
-              margin: '0 auto',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
-            onMouseOver={onMouseOverBody}
           >
-            <SideBarComponent />
+            <HeaderComponent sideBar={sideBar} />
             <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
               {children}
             </div>
           </div>
-        ) : (
-          <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
-            {children}
-          </div>
-        )}
-        <FooterComponent></FooterComponent>
+          <FooterComponent />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <HeaderComponent sideBar={sideBar} />
+          {sideBar ? (
+            <div
+              style={{
+                width: '1100px',
+                display: 'flex',
+                flexDirection: 'row',
+                margin: '0 auto',
+              }}
+              onMouseOver={onMouseOverBody}
+            >
+              <SideBarComponent />
+              <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
+                {children}
+              </div>
+            </div>
+          ) : (
+            <div style={{ margin: '0 auto' }} onMouseOver={onMouseOverBody}>
+              {children}
+            </div>
+          )}
+          <FooterComponent />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default LayOut
