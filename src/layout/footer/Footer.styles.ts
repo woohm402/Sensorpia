@@ -10,7 +10,7 @@ export const FooterBigWrapper = styled.div`
   margin: 0 auto;
   background: #b9b9ba;
   height: 109px;
-  position: ${(props: IProps) => (props.selected ? 'absolute' : 'static')};
+  position: ${(props: IProps) => (props.selected ? 'fixed' : 'static')};
   left: ${(props: IProps) => (props.selected ? '0' : null)};
   bottom: ${(props: IProps) => (props.selected ? '0' : null)};
 `
