@@ -203,8 +203,9 @@
       "data": {
         "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
-          "Using a high-precision in the underwater, and for detection to the targets are sensing parts.",
-          "We are used of magnetic sensors of high precision to found accurate targets in underground and midair."
+          "Magnetometers are highly sensitive even under water. Since the change in magnetic filed is not affected by seawater, there are mainly used for defense.",
+          "Sensoria Co. manufactures magnetometers with low power and low noise.",
+          "Technologies of accurate orthogonality correction have made measurement of total field accurate."
         ]
       }
     },
@@ -311,8 +312,8 @@
         "mainImages": ["./visionImageOne.png", "visionImageTwo.png"],
         "years": [
           {
-            "year": "2020",
-            "content": "Production of magnetic proximity sensor for heavy torpedo (LIGnex1)"
+            "year": "2020 ~",
+            "content": "Production of magnetic proximity sensor for defense (LIGnex1)"
           },
           {
             "year": "2018 ~ 2019",
@@ -324,32 +325,29 @@
           },
           {
             "year": "2017 ~ 2018",
-            "content": "3-axis Flux-gate Magnetometer for Harbor surveillance (LIGnex1)"
+            "content": "3-axis Flux-gate Magnetometer for defense (LIGnex1)"
           },
           {
             "year": "2015 ~ 2019",
-            "content": "Magnetic Sensor for ABM (Hanhwa)"
+            "content": "Magnetic Sensor for Air Burst Munition (Hanhwa)"
           },
           {
-            "year": "2014",
-            "content": "Development of 3-axis Flux-gate Magnetometer for SLMM (LIGnex1)"
+            "year": "2014 ~",
+            "content": "Development of 3-axis Flux-gate Magnetometer for defense(LIGnex1)"
           },
           {
             "year": "2011 ~ 2013",
-            "content": "3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
+            "content": " 3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
           },
           {
             "year": "2008~",
-            "content": "Magnetic instruments made for many customer (Posco and KDT)"
+            "content": "Magnetic instruments made for many customers (Posco and KDT)"
           },
           {
             "year": "2006 ~",
-            "content": "Magnetic torquer and TAM for satellite (Satrac-I, KAIST)"
+            "content": "Magnetic torquers and TAM for satellite (Satrac-I, KAIST)"
           },
-          {
-            "year": "2006",
-            "content": "Builded Company"
-          }
+          { "year": "2006", "content": "Company establishment" }
         ]
       }
     }

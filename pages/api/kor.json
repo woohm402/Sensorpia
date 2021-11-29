@@ -203,8 +203,9 @@
       "data": {
         "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
-          "수중에서 고 분해능의 자기센서를 이용하여, 표적을 찾아내는 역할을 합니다.",
-          "공중, 지상 및 해수에 표적의 위치를 비정상적인 자기장 분포로부터 찾아 내기 위해서 고감도의 자력계를 사용합니다."
+          "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
+          "센서피아는 기본 모델과  다른  저전력과 낮은 노이즈 값을 가지는 magnetomter 를 제작 하고 있습니다.",
+          "정확한 직각도 보정 기술을 통해, total field 를 측정하기 때문에 높은 정확도를 가지고 있습니다."
         ]
       }
     },
@@ -313,8 +314,8 @@
         "mainImages": ["./visionImageOne.png", "visionImageTwo.png"],
         "years": [
           {
-            "year": "2020",
-            "content": "Production of magnetic proximity sensor for heavy torpedo (LIGnex1)"
+            "year": "2020 ~",
+            "content": "Production of magnetic proximity sensor for defense (LIGnex1)"
           },
           {
             "year": "2018 ~ 2019",
@@ -326,29 +327,29 @@
           },
           {
             "year": "2017 ~ 2018",
-            "content": "3-axis Flux-gate Magnetometer for Harbor surveillance (LIGnex1)"
+            "content": "3-axis Flux-gate Magnetometer for defense (LIGnex1)"
           },
           {
             "year": "2015 ~ 2019",
-            "content": "Magnetic Sensor for ABM (Hanhwa)"
+            "content": "Magnetic Sensor for Air Burst Munition (Hanhwa)"
           },
           {
-            "year": "2014",
-            "content": "Development of 3-axis Flux-gate Magnetometer for SLMM (LIGnex1)"
+            "year": "2014 ~",
+            "content": "Development of 3-axis Flux-gate Magnetometer for defense(LIGnex1)"
           },
           {
             "year": "2011 ~ 2013",
-            "content": "3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
+            "content": " 3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
           },
           {
             "year": "2008~",
-            "content": "Magnetic instruments made for many customer (Posco and KDT)"
+            "content": "Magnetic instruments made for many customers (Posco and KDT)"
           },
           {
             "year": "2006 ~",
-            "content": "Magnetic torquer and TAM for satellite (Satrac-I, KAIST)"
+            "content": "Magnetic torquers and TAM for satellite (Satrac-I, KAIST)"
           },
-          { "year": "2006", "content": "Builded Company" }
+          { "year": "2006", "content": "Company establishment" }
         ]
       }
     }
