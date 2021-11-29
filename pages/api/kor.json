@@ -36,13 +36,11 @@
     "defense": [
       {
         "image": "./defenseOneFinal.png",
-        "name": "MS-13",
-        "download": "./MS-13.pdf"
+        "name": "MS-13"
       },
       {
         "image": "./defenseTwoFinal.png",
-        "name": "MS-27",
-        "download": "./MS-27.pdf"
+        "name": "MS-27"
       }
     ],
     "magneticTorquer": [
@@ -64,8 +62,7 @@
     },
     "defenseImageNames": {
       "DefenseOne": "MS-13",
-      "DefenseTwo": "MS-27",
-      "download": ["./MS-13.pdf", "./MS-27"]
+      "DefenseTwo": "MS-27"
     }
   },
   "products": [
@@ -117,18 +114,15 @@
             "subImagesAndTexts": [
               {
                 "image": "./defenseImageTwoFinal.png",
-                "text": "MS-27",
-                "pdf": "./MS-27.pdf"
+                "text": "MS-27"
               },
               {
                 "image": "./defenseImageThreeFinal.png",
-                "text": "MS-13",
-                "pdf": "./MS-13.pdf"
+                "text": "MS-13"
               },
               {
                 "image": "./defenseImageFourFinal.png",
-                "text": "MS-07",
-                "pdf": "./MS-07.pdf"
+                "text": "MS-07"
               }
             ],
             "textExplanationTitle": "제품 설명",
