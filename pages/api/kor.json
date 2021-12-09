@@ -25,29 +25,31 @@
       {
         "image": "./satelliteOneFinal.png",
         "name": "MS-15",
-        "download": "./MS-15.pdf"
+        "download": "./211209_MS-15_TAM_Specification.pdf"
       },
       {
         "image": "./satelliteTwoFinal.png",
         "name": "MS-22",
-        "download": "./MS-22.pdf"
+        "download": "./211209_MS-22_TAM_Specification.pdf"
       }
     ],
     "defense": [
       {
         "image": "./defenseOneFinal.png",
-        "name": "MS-13"
+        "name": "MS-13",
+        "download": "./211209_MS-13_LD3FM_Specification.pdf"
       },
       {
         "image": "./defenseTwoFinal.png",
-        "name": "MS-27"
+        "name": "MS-27",
+        "download": "./211209_MS-27_LNLDM_Specification.pdf"
       }
     ],
     "magneticTorquer": [
       {
         "image": "./magneticTorquerFinal.png",
         "name": null,
-        "download": "./MS-12,20,25.pdf"
+        "download": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
       }
     ],
     "title": "주요 제품 라인",
@@ -58,7 +60,7 @@
     "satelliteImageNames": {
       "SatelliteOne": "MS-15",
       "SatelliteTwo": "MS-22",
-      "download": ["./MS-15.pdf", "./MS-22.pdf"]
+      "download": ["./211209_MS-15_TAM_Specification.pdf", "./211209_MS-22_TAM_Specification.pdf"]
     },
     "defenseImageNames": {
       "DefenseOne": "MS-13",
@@ -78,7 +80,7 @@
               {
                 "image": "./normalImageTwoFinal.png",
                 "text": "MS-17",
-                "pdf": "./MS-17.pdf"
+                "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
               }
             ],
             "textExplanationTitle": "제품 설명",
@@ -93,12 +95,12 @@
               {
                 "image": "./satelliteImageTwoFinal.png",
                 "text": "MS-15",
-                "pdf": "./MS-15.pdf"
+                "pdf": "./211209_MS-15_TAM_Specification.pdf"
               },
               {
                 "image": "./satelliteImageThreeFinal.png",
                 "text": "MS-22",
-                "pdf": "./MS-22.pdf"
+                "pdf": "./211209_MS-22_TAM_Specification.pdf"
               }
             ],
             "textExplanationTitle": "제품 설명",
@@ -114,15 +116,18 @@
             "subImagesAndTexts": [
               {
                 "image": "./defenseImageTwoFinal.png",
-                "text": "MS-27"
+                "text": "MS-27",
+                "pdf": "./211209_MS-27_LNLDM_Specification.pdf"
               },
               {
                 "image": "./defenseImageThreeFinal.png",
-                "text": "MS-13"
+                "text": "MS-13",
+                "pdf": "./211209_MS-13_LD3FM_Specification.pdf"
               },
               {
                 "image": "./defenseImageFourFinal.png",
-                "text": "MS-07"
+                "text": "MS-07",
+                "pdf": "./211209_MS-07_FGM_Specification.pdf"
               }
             ],
             "textExplanationTitle": "제품 설명",
@@ -147,7 +152,7 @@
               {
                 "image": "./satelliteTorquerImageTwoFinal.png",
                 "text": null,
-                "pdf": "./MS-12,20,25.pdf"
+                "pdf": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
               }
             ],
             "textExplanationTitle": "제품 설명",
