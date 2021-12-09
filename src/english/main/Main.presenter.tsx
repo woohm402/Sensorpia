@@ -116,7 +116,6 @@ const MainUI = ({
                 </ProductImageWrapper>
                 <SpecificationButtonHref
                   href={value.download}
-                  download={value.download}
                 >
                   <SpecificationButton>
                     {data.main.specificationButton}
@@ -134,7 +133,6 @@ const MainUI = ({
                 </ProductImageWrapper>
                 <SpecificationButtonHref
                   href={value.download}
-                  download={value.download}
                 >
                   <SpecificationButton>
                     {data.main.specificationButton}
@@ -157,7 +155,6 @@ const MainUI = ({
           />
           <SpecificationButtonHref
             href={value.download}
-            download={value.download}
           >
             <SpecificationButton>
               {data.main.specificationButton}

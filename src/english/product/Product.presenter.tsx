@@ -70,7 +70,6 @@ const ProductUI = () => {
                   </SubImageMidWrappers>
                   <SpecificationButtonWrapperHref
                     href={value.pdf}
-                    download={value.pdf}
                   >
                     <SpecificationButton>
                       {data.main.specificationButton}

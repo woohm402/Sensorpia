@@ -70,10 +70,6 @@ const MagneticInstrumentsPage = () => {
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[0].pdf
             }
-            download={
-              data.products[pageIndex]?.data.subSections[0]
-                ?.subImagesAndTexts[0].pdf
-            }
           >
             <SpecificationButton>
               {data.main.specificationButton}
@@ -117,10 +113,6 @@ const MagneticInstrumentsPage = () => {
           />
           <SpecificationButtonWrapperHref
             href={
-              data.products[pageIndex]?.data.subSections[0]
-                ?.subImagesAndTexts[1].pdf
-            }
-            download={
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[1].pdf
             }
