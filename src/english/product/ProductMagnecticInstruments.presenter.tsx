@@ -42,21 +42,15 @@ const MagneticInstrumentsPage = () => {
           <MagneticInstrumentDCBHTitle>
             {
               data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationTitle[0]
+                ?.subImagesAndTexts[0]?.title
             }
           </MagneticInstrumentDCBHTitle>
-          <MagneticInstrumentDetails>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[1]
-            }
-          </MagneticInstrumentDetails>
-          <MagneticInstrumentDetails>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[2]
-            }
-          </MagneticInstrumentDetails>
+          {
+            data.products[pageIndex]?.data.subSections[0]
+              ?.subImagesAndTexts[0].details.map((detail: string, index: number) => (
+              <MagneticInstrumentACMagneticDetails key={index}>{detail}</MagneticInstrumentACMagneticDetails>
+            ))
+          }
         </MagneticInstumentDCBHExplanationWrapper>
         <MagneticInstrumentDCBHImageButtonWrapper>
           <MagneticInstrumentDCBHImageWrapper
@@ -64,7 +58,7 @@ const MagneticInstrumentsPage = () => {
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[0].image
             }
-          ></MagneticInstrumentDCBHImageWrapper>
+          />
           <SpecificationButtonWrapperHref
             href={
               data.products[pageIndex]?.data.subSections[0]
@@ -82,27 +76,15 @@ const MagneticInstrumentsPage = () => {
           <MagneticInstrumentACMagneticTitle>
             {
               data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationTitle[1]
+                ?.subImagesAndTexts[1]?.title
             }
           </MagneticInstrumentACMagneticTitle>
-          <MagneticInstrumentACMagneticDetails>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[3]
-            }
-          </MagneticInstrumentACMagneticDetails>
-          <MagneticInstrumentACMagneticDetails>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[4]
-            }
-          </MagneticInstrumentACMagneticDetails>
-          <MagneticInstrumentACMagneticDetails>
-            {
-              data.products[pageIndex]?.data.subSections[0]
-                ?.textExplanationDetails[5]
-            }
-          </MagneticInstrumentACMagneticDetails>
+          {
+            data.products[pageIndex]?.data.subSections[0]
+              ?.subImagesAndTexts[1].details.map((detail: string, index: number) => (
+              <MagneticInstrumentACMagneticDetails key={index}>{detail}</MagneticInstrumentACMagneticDetails>
+            ))
+          }
         </MagneticInstrumentACMagneticExplanationWrapper>
         <ACMagneticButtonImageWrapper>
           <MagneticInstrumentACMagneticImageWrapper

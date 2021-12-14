@@ -84,7 +84,10 @@
             ],
             "textExplanationTitle": "Explanation",
             "textExplanationDetails": [
-              "Magnetic field measuring technology is widely used because of earth magnetic field and ferromagnetic properties of steel used as construction material. Typical application areas are geoscience, exploration of mineral resources and buried materials, and satellite and military areas."
+              "Magnetometer measure environmental magnetic field and changes of magnetic fields of magnetic objects.",
+              "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
+              "Total field can be measured with accurate orthogonality correction between 3-axis values.",
+              "Sensorpia Co. has accurate orthogonality correction technologies."
             ]
           },
           {
@@ -104,9 +107,11 @@
             ],
             "textExplanationTitle": "Explanation",
             "textExplanationDetails": [
-              "Measurement of earth magnetic field",
-              "Light mass and low power consumption designed for satellite.",
-              "Attitude sensing using 3-axis components of earth magnetic field"
+              "3-axis magnetometer measure values of the x, y and z axes field, and total magnetic field.",
+              "Total field can be measured exactly by accurate orthogonality correction between 3-axis values.",
+              "Sensorpia Co. has accurate orthogonality correction technologies.",
+              "Magnetometer was developed for scientific satellite and has heritage.",
+              "Attitude control is important for satellites, and the attitude can be controlled using the earth's magnetic field."
             ]
           },
           {
@@ -131,9 +136,11 @@
             ],
             "textExplanationTitle": "Explanation",
             "textExplanationDetails": [
-              "Products are specially useful under seawater to measure magnetic fields",
-              "3-axis have high orthogonality each other and high linearity",
-              "Total field measurement overcome magnetometer attitude change."
+              "Magnetometer measure changes of magnetic fields of magnetic objects.",
+              "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
+              "Total field can be measured with accurate orthogonality correction between 3-axis values.",
+              "Sensorpia Co. has accurate orthogonality correction technologies.",
+              "Magnetometers manufactured by sensorpia Co. are highly sensitive even underwater. Since the magnetic field is not affected by seawater."
             ]
           }
         ]
@@ -156,9 +163,9 @@
             ],
             "textExplanationTitle": "Explanation",
             "textExplanationDetails": [
-              "Measurement of earth magnetic field",
-              "Light mass and low power consumption designed for satellite.",
-              "Attitude sensing using 3-axis components of earth magnetic field"
+              "It’s used to control the attitude of satellites.(It generates a magnetic dipole moment)",
+              "Sizes and characteristics of magnetic torquers can be adjusted according to requests of customers.",
+              "It’s designed with a light mass for application in satellites.Sensorpia Co. has accurate orthogonality correction technologies."
             ]
           }
         ]
@@ -176,25 +183,29 @@
               {
                 "image": "./magneticInstrumentsTwoFinal.png",
                 "pdf": "./MI-36.pdf",
-                "text": null
+                "title": "DC B-H LOOP TRACER (MI-36)",
+                "details": [
+                  "Measuring function",
+                  "DC B-H loop",
+                  "(Saturation)",
+                  "(Remanence)",
+                  "(Coercivity)"
+                ]
               },
               {
                 "image": "./magneticInstrumentsThreeFinal.png",
                 "pdf": "./MI-10.pdf",
-                "text": null
+                "title": "AC magnetic Tester (MI-10)",
+                "details": [
+                  "Measuring function",
+                  "AC B-H loop",
+                  "Core loss",
+                  "Magnetostriction"
+                ]
               }
             ],
-            "textExplanationTitle": [
-              "DC B-H LOOP TRACER (MI-36)",
-              "AC magnetic Tester (MI-10)"
-            ],
             "textExplanationDetails": [
-              "Magnetic materials testing equipment to measure AC and DC hysteresis loop, core loss, and magnetostriction.",
-              "Measure dc hysteresis loop of soft magnetic material",
-              "Toroidal and single strip specimen are possible",
-              "Measure ac hysteresis loop of soft magnetic material",
-              "Core loss and magnetostriction measurement",
-              "Epstein and single strip specimen are possible"
+              "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services."
             ]
           }
         ]
@@ -208,9 +219,12 @@
       "data": {
         "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
-          "Magnetometers are highly sensitive even under water. Since the change in magnetic filed is not affected by seawater, there are mainly used for defense.",
-          "Sensoria Co. manufactures magnetometers with low power and low noise.",
-          "Technologies of accurate orthogonality correction have made measurement of total field accurate."
+          "Magnetometers measure changes of magnetic fields of magnetic objects.",
+          "3-axis magnetometers measure values for the x, y and z axis field, and total field of magnetic objects.",
+          "Total field can be measured exactly by accurate orthogonality correction between 3-axis values.",
+          "Sensorpia Co. has technologies of accurate orthogonality correction.",
+          "Magnetometers manufactured by sensorpia Co. are highly sensitive even under water. Since the change in magnetic filed is not affected by seawater, they are mainly used for defense.",
+          "Sensoria Co. manufactures magnetometers with very low power and low noise."
         ]
       }
     },
@@ -231,38 +245,20 @@
           }
         ],
         "mainTexts": [
-          "Sensorpia produces magnetic torquer and 3-axis magnetometer, which are used to control the location and pose of satellites",
-          "Magnetic dipole moment of magnetic torquer depends on the size of satellite. Sensorpia company can produce various size depends on the requirement of customers",
-          "Analog and digital output of the 3-axis magnetometer are possible."
+          "Attitude control is important for satellites, and the attitude can be controlled using the earth's magnetic field.",
+          "Magnetic torquers and 3-axis magnetometers are used to control the attitude of satellites.",
+          "Sizes and characteristics of magnetic torquers can be adjusted according to requests of customers."
         ]
       }
     },
     {
       "name": "Measurement",
-      "layout": "applicationMeasurementPage",
+      "layout": "applicationBasicPage",
       "data": {
         "mainImage": ["./measurementImageFinal.png"],
-        "subImageAndDetails": [
-          {
-            "image": "./measurementImageFinalTwo.png",
-            "title": "DC B-H LOOP TRACER (MI-36)",
-            "details": [
-              "Measure dc hysteresis loop of soft magnetic material",
-              "Torodial and single strip specimen are possible"
-            ]
-          },
-          {
-            "image": "./measurementImageFinalThree.png",
-            "title": "AC magnetic Tester (MI-10)",
-            "details": [
-              "Measure ac hysteresis loop of soft magnetic material",
-              "Core loss and magnetostriction measurement",
-              "Epstein and single strip specimen are possible"
-            ]
-          }
-        ],
         "mainTexts": [
-          "Sensorpia produces measurement system of DC B-H loop and core loss. Also, we analyze the characteristics using the measuring equipment we have."
+          "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services.",
+          "Equipment that can be manufactured and used for analysis services are a DC B-H tracer and an AC magnetic tester. The DC B-H tracer is a device to measure hysteresis curve of magnetic materials, and the AC magnetic tester is used to measure magnetostriction and magnetic hysteresis loss."
         ]
       }
     }
@@ -276,11 +272,11 @@
       "data": {
         "mainImage": "./aboutUsImageOne.png",
         "circleAboveTexts": [
-          "SENSORPIA company was established in 2006. The company produce magnetic sensors and magnetic instruments which were developed through the technology accumulated more than 30 years experiences. Main products are 3-axis flux-gate magnetometer and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also possible. Testing service is also possible using magnetic testing equipment in Sensorpia co.."
+          "SENSORPIA company was established in 2006. The company produces magnetic sensors and magnetic instruments which have been developed through technologies accumulated for more than 30 years. Main products are 3-axis flux-gate magnetometers and magnetic dipole moment sources for defense and satellite. In addition, other custom designed products such as precision magnetic measuring instruments and magnetic sensors are also available. Testing services are also available using magnetic testing equipments in Sensorpia.n"
         ],
         "circleBelowTexts": [
-          "Magnetic sensors have been used for defense and satellites. Sensorpia Co. has been produced high-precision magnetic sensors for the various domestic customers since 2006.",
-          "Magnetic measuring instruments are necessary to produce high performance of magnetic sensors. Sensorpia Co. has many kinds of self-developed measuring equipment and also possible to manufacturing the equipment for the request of customers."
+          "Magnetic sensors have been used for defense and satellites. Sensorpia Co. has produced high-precision magnetic sensors for various domestic customers since 2006.",
+          "Magnetic measuring instruments are necessary to produce magnetic sensors of high performance. Sensorpia Co. has many kinds of self-developed measuring equipment and can manufacture equipment according to requests of customers."
         ],
         "circleTexts": [
           "Defense",
@@ -326,7 +322,7 @@
           },
           {
             "year": "2018 ~",
-            "content": "TAM and MTA CAS500-1, 2, 4 for satellite (KARI and KAI)"
+            "content": "TAM and MTA CAS500-1, 2, 3, 4, 5 for satellite (KARI and KAI)"
           },
           {
             "year": "2017 ~ 2018",
@@ -346,7 +342,7 @@
           },
           {
             "year": "2008~",
-            "content": "Magnetic instruments made for many customers (Posco and KDT)"
+            "content": "Magnetic instruments made for many customers (posco and KDT)"
           },
           {
             "year": "2006 ~",

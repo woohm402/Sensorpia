@@ -85,7 +85,10 @@
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
-              "지구가 큰 자석이고, 많은 구조물이 강철로 제작되어 있기 때문에 자기장을 측정하는 기술은 매우 광범위하게 사용되고 있습니다. 그 예로 지질자원탐사 및 지하 매설 물 탐사로 사용되며, 인공위성 및 국방분야에도 중요하게 활용되고 있습니다."
+              "Magnetometer는 환경 자기장 및 자성체의 자기장 변화를 측정합니다.",
+              "3축 magnetometer는 x, y, z축 자기장 값과 자기장 크기 값을 측정합니다.",
+              "3축 간의 정확한 직교성 보정으로 자기장 크기를 측정할 수 있습니다.",
+              "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다."
             ]
           },
           {
@@ -105,9 +108,11 @@
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
-              "지구자기장을 측정하는 제품입니다.",
-              "경량화 및 저전력으로 구동되는 제품이며, 인공위성에 사용.",
-              "지구자기장의 3축 성분을 측정하여 자세를 감지."
+              "3축 magnetometer는 x, y 및 z축 자기장과 자기장 크기 값을 측정합니다.",
+              "3축 간의 정확한 직교성 보정으로 자기장 크기를 정확하게 측정할 수 있습니다.",
+              "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다.",
+              "Magnetometer는 과학위성을 위해 개발되었으며, heritage를 가지고 있습니다.",
+              "자세 제어는 인공위성에서 중요하며, 지구 자기장을 감지하여 제어하게 됩니다."
             ]
           },
           {
@@ -132,9 +137,11 @@
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
-              "해저에서도 자기장 측정이 가능한 자력계",
-              "3축에 대한 직교성 및 정확도가 높은 제품입니다.",
-              "자기장의 크기를 측정할 수 있어서 자력계의 자세 변화에 관계없이 목표물의 자기장 측정이 가능."
+              "3축 magnetometer의 경우, 자기장의 변화를 측정하는 제품입니다.",
+              "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
+              "3축 magnetometer의 x, y, z 축 방향 대한 정확한 보정 값이 중요하며, 직각도 보정을 통해 자기장 크기 측정이 가능합니다.",
+              "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장의 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
+              "센서피아는 기본 모델과는 다른 저전력 및 낮은 노이즈 값을 가지는 magnetometer 를 제작 하고 있습니다."
             ]
           }
         ]
@@ -157,8 +164,9 @@
             ],
             "textExplanationTitle": "제품 설명",
             "textExplanationDetails": [
-              "인공위성의 자세를 지구자기장을 이용 회전시키는데 사용됨",
-              "경량화 및 저전력으로 구동되는 제품이며, 인공위성에 사용"
+              "Magnetic dipole moment 이용하여,  위성의 자세 변화를 시키는데 사용됩니다.",
+              "Magnetic torquer 의 경우, 크기와 특성에 따라 제품 개발이 가능합니다.",
+              "위성에 사용되기 위해서 제품 경량화가 되어 있습니다."
             ]
           }
         ]
@@ -175,26 +183,30 @@
             "subImagesAndTexts": [
               {
                 "image": "./magneticInstrumentsTwoFinal.png",
-                "text": null,
-                "pdf": "./MI-36.pdf"
+                "pdf": "./MI-36.pdf",
+                "title": "DC B-H LOOP TRACER (MI-36)",
+                "details": [
+                  "Measuring function",
+                  "DC B-H loop",
+                  "(Saturation)",
+                  "(Remanence)",
+                  "(Coercivity)"
+                ]
               },
               {
                 "image": "./magneticInstrumentsThreeFinal.png",
-                "text": null,
-                "pdf": "./MI-10.pdf"
+                "pdf": "./MI-10.pdf",
+                "title": "AC magnetic Tester (MI-10)",
+                "details": [
+                  "Measuring function",
+                  "AC B-H loop",
+                  "Core loss",
+                  "Magnetostriction"
+                ]
               }
             ],
-            "textExplanationTitle": [
-              "DC B-H LOOP TRACER (MI-36)",
-              "AC magnetic Tester (MI-10)"
-            ],
             "textExplanationDetails": [
-              "AC 및 DC hysteresis 곡선, 철손 및 자기변형을 측정하는 자성재료 측정 장비",
-              "연자성 재료의 DC hysteresis 곡선 측정",
-              "원형 및 단일 strip 시편 측정 가능",
-              "연자성 재료의 AC hysteresis 곡선 측정",
-              "철손 및 자기 변형 측정 가능",
-              "Epstein 및 단일 시편 측정 가능"
+              "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다."
             ]
           }
         ]
@@ -208,9 +220,11 @@
       "data": {
         "mainImage": ["./applicationDefenseRandomOne.png"],
         "mainTexts": [
-          "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
-          "센서피아는 기본 모델과  다른  저전력과 낮은 노이즈 값을 가지는 magnetomter 를 제작 하고 있습니다.",
-          "정확한 직각도 보정 기술을 통해, total field 를 측정하기 때문에 높은 정확도를 가지고 있습니다."
+          "3축 magnetometer의 경우, 자기장(magnetic field)의  변화를 측정하는 제품입니다.",
+          "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
+          "3축 magnetometer의  x, y, z 축 방향 대한 정확한 보정 값이 중요하며, 직각도 보정을 통해 자기장 크기 측정이 가능합니다.",
+          "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장의 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
+          "센서피아는 기본 모델과는 다른 저전력 및 낮은 노이즈 값을 가지는 magnetomter 를 제작 하고 있습니다."
         ]
       }
     },
@@ -231,39 +245,20 @@
           }
         ],
         "mainTexts": [
-          "Sensorpia는 인공위성의 자세 제어에 사용되는magetic toquer 와 3-axis magnetometer를 생산하고 있습니다.",
-          "Magnetic torquer의 자기모멘트는 위성의 크기에 따라 다르기 때문에 다양한 크기로 제작이 가능하며, 고객의 요구사항에 맞는 크기의 제작이 가능합니다.",
-          "3-axis magnetometer 의 경우 아날로그 출력 및 digital serial 통신 모두 가능합니다."
+          "인공위성은 자세 제어가 중요하며, magnetometer로 지구자기장을 감지하여,  위성의 자세를 제어합니다.",
+          "인공위성의 자세 제어를 하기 위해서는 magnetic torquer 와 3축 magnetometer가 이용됩니다.",
+          "Magnetic torquer 의 경우, 크기와 특성에 따라 제품 개발이 가능합니다."
         ]
       }
     },
     {
       "name": "측정 장비",
-      "layout": "applicationMeasurementPage",
+      "layout": "applicationBasicPage",
       "data": {
         "mainImage": ["./measurementImageFinal.png"],
-        "subImageAndDetails": [
-          {
-            "image": "./measurementImageFinalTwo.png",
-            "title": "DC B-H LOOP TRACER (MI-36)",
-            "details": [
-              "연성자성물질의 직류이력 루프 측정",
-              "토로이드 및 단일 스트립 시료 사용 가능"
-            ]
-          },
-          {
-            "image": "./measurementImageFinalThree.png",
-            "title": "AC magnetic Tester (MI-10)",
-            "details": [
-              "음성듣기번역하기언어전환한국어",
-              "연성자성물질의 이력루프 측정",
-              "노심 손실 및 자기 제한 측정",
-              "엡스타인 및 단일 스트립 시료가 가능"
-            ]
-          }
-        ],
         "mainTexts": [
-          "센서피아는 DC B-H loop 측정 장비와 core loss 측정 장비를 제작하여 판매하고 있습니다. 또한, 가지고 있는 자기 측정 장비를 이용해서 자기 특성 분석을 해주고 있습니다."
+          "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다.",
+          "제작 및 분석 가능 장비는 DC B-H tracer  및  AC magnetic tester 입니다. DC B-H tracer의 경우 자성 재료의 자기이력곡선 측정 장비이며, AC magnetic tester의 경우 자기 변형 및 자기이력손실 측정 장비입니다."
         ]
       }
     }
@@ -277,12 +272,11 @@
       "data": {
         "mainImage": "./aboutUsImageOne.png",
         "circleAboveTexts": [
-          "(주)센서피아는 2006년에 설립된 벤처 회사이며, 자기 센서 및 자성측정 장치를 제작하고 있습니다. 30년 이상의 축적된 이론 및 기술을 바탕으로 제작을 하고 있습니다. 주요 제품의 경우 국방과 인공위성에 들어가는 자기 센서를 만들고 있으며, 3축 flux-gate magnetometer, magnetic torquer를 생산하고 있습니다. 또한 고객의 요구 사항에 따라 주문 제작이 가능합니다.",
-          "자성 측정 장치의 경우 DC B-H loop 및 core loss 측정 장치를 만들고 있고, 자사에 자성 측정 장치가 있기 때문에 분석 의뢰 또한 가능합니다."
+          "(주)센서피아는 2006년에 설립되었으며, 자기센서 및 장비를 제작하는  업체입니다.  자성 분야에 30년 이상 축적된 기술을 바탕으로 제품 개발 및 생산을 하고 있습니다. 주요 생산 제품은 인공위성과 국방분야에 들어가는 3축 magnetometer , magnetic torquer, 변압기 등을 제작하고 있습니다. 또한 자기 센서의 제품 개발과 함께  자성재료 특성 측정 분석도 진행하고 있습니다."
         ],
         "circleBelowTexts": [
-          "국방과 인공위성에 자기센서가 이용되고 있으며, Sensorpia는 고정밀 자기센서를 2006년부터 시작해 현재 국내 여러 고객사에게 납품을 하고 있습니다.",
-          "자기센서의 개발 제작을 위해 Sensorpia는 자기 측정 장비를 다수 보유 하고 있으며, 고객 요청에 따라 장비의 제작도 가능합니다."
+          "위성과 국방 분야에 자기센서는 중요하게 사용되고 있습니다. 센서피아는 2006년 설립 이후, 국내의 다양한 기업에게 높은 정확도와 신뢰성을 가지고 있는 magnetometer를 납품하고 있습니다.",
+          "높은 정확도의 자기센서를 생산하기 위해서는 자기 측정 장비가 필요합니다. 센서피아는 다양한 자기 측정 장비를 보유하고 있으며, 특성 분석 및 장비 제작도 하고 있습니다. "
         ],
         "circleTexts": [
           "Defense",
@@ -320,41 +314,41 @@
         "years": [
           {
             "year": "2020 ~",
-            "content": "Production of magnetic proximity sensor for defense (LIGnex1)"
+            "content": "국방분야에  사용되는 자기 근접 센서 개발 및 양산 (LIGnex1)"
           },
           {
             "year": "2018 ~ 2019",
-            "content": "TAM for Moon and SNIPE satellite (KARI and KASI)"
+            "content": "SNIPE 및 달 탐사 위성용 TAM 개발 (KARI and KAI)"
           },
           {
             "year": "2018 ~",
-            "content": "TAM and MTA CAS500-1, 2, 4 for satellite (KARI and KAI)"
+            "content": "인공 위성 (CAS500-1, 2, 3, 4, 5)에 사용되는 TAM and MTA 개발 및 양산 (KARI and KAI)"
           },
           {
             "year": "2017 ~ 2018",
-            "content": "3-axis Flux-gate Magnetometer for defense (LIGnex1)"
+            "content": "국방분야에 사용되는 3축 magnetometer 개발 및 양산 (LIGnex1)"
           },
           {
             "year": "2015 ~ 2019",
-            "content": "Magnetic Sensor for Air Burst Munition (Hanhwa)"
+            "content": "Air Burst Munition (ABM)  자기 센서 개발 (Hanhwa)"
           },
           {
             "year": "2014 ~",
-            "content": "Development of 3-axis Flux-gate Magnetometer for defense(LIGnex1)"
+            "content": "국방분야에 사용되는 3축 magnetometer 개발 및 양산 (LIGnex1)"
           },
           {
             "year": "2011 ~ 2013",
-            "content": " 3-axis Flux-gate Magnetometer for Navy Deperming System (LIGnex1)"
+            "content": "해군 deperming 시스템에 들어가는 3축 magnetometer 개발 (LIGnex1)"
           },
           {
             "year": "2008~",
-            "content": "Magnetic instruments made for many customers (Posco and KDT)"
+            "content": "자기 분석  및 측정 장비 개발 (posco and KDT)"
           },
           {
             "year": "2006 ~",
-            "content": "Magnetic torquers and TAM for satellite (Satrac-I, KAIST)"
+            "content": "위성용 magnetic torquer 및 3축 magnetometer  개발 (Satrac-I, KAIST)"
           },
-          { "year": "2006", "content": "Company establishment" }
+          { "year": "2006", "content": "회사 설립" }
         ]
       }
     }
