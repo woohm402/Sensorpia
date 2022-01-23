@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IProps {
   data: any
@@ -14,11 +15,11 @@ export const TalentsWrapper = styled.div`
   line-height: 22px;
   color: #0070c0;
 `
-export const TalentTitle = styled.span``
+export const TalentTitle = styled(TextBox)``
 
 export const TalentLineDivider = styled.div`
   width: 701px;
-  height: 0px;
+  height: 0;
   border: 1px solid #c9c9c9;
   margin-top: 10px;
 `
@@ -39,28 +40,28 @@ export const Circle = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const CircleText = styled.div`
+export const CircleText = styled(TextBox)`
   font-size: 18px;
   line-height: 27px;
   text-align: center;
 `
-export const CircleDetailText = styled.div`
+export const CircleDetailText = styled(TextBox)`
   margin-left: 50px;
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
   color: #262626;
 `
-export const HrTitle = styled.span``
+export const HrTitle = styled(TextBox)``
 
 export const HrLineDivider = styled.div`
   width: 701px;
-  height: 0px;
+  height: 0;
   border: 1px solid #c9c9c9;
   margin-top: 11px;
 `
 
-export const SubTitleWrapper = styled.div`
+export const SubTitleWrapper = styled(TextBox)`
   margin: 60px auto 0 auto;
   border: 2px solid #0070c0;
   box-sizing: border-box;
@@ -79,7 +80,7 @@ export const HrCirclesWrapper = styled.div`
   align-items: center;
 `
 
-export const HrCircleFirst = styled.div`
+export const HrCircle = styled(TextBox)`
   width: 166px;
   height: 166px;
   border-radius: 50%;
@@ -89,6 +90,10 @@ export const HrCircleFirst = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:not(:first-of-type) {
+    margin-left: 22px;
+  }
 `
 export const CareersArrow = styled.div`
   margin-left: 30px;
@@ -96,38 +101,14 @@ export const CareersArrow = styled.div`
   height: 12px;
   ${(props: IProps) => `background:url(${props.data})`}
 `
-export const HrCircleSecond = styled.div`
-  margin-left: 22px;
-  width: 166px;
-  height: 166px;
-  border-radius: 50%;
-  background: rgba(0, 112, 192, 0.1);
-  font-size: 18px;
-  line-height: 27px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-export const HrCircleThird = styled.div`
-  margin-left: 22px;
-  width: 166px;
-  height: 166px;
-  border-radius: 50%;
-  background: rgba(0, 112, 192, 0.1);
-  font-size: 18px;
-  line-height: 27px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-export const HrPrincipleTitle = styled.div`
+export const HrPrincipleTitle = styled(TextBox)`
   margin-top: 102px;
 `
 export const HrPrincipleDetailsBigWrapper = styled.div`
   margin-top: 30px;
 `
 
-export const HrPrincipleDetailsWrapper = styled.li`
+export const HrPrincipleDetailsWrapper = styled(TextBox)`
   max-width: 247px;
   font-weight: 500;
   font-size: 13px;

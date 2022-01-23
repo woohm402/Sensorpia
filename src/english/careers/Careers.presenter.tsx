@@ -1,15 +1,12 @@
 import { useRouter } from 'next/dist/client/router'
-import { CircleWrapper } from '../aboutus/AboutUs.styles'
 import {
   BigCircleWrapper,
   CareersArrow,
   Circle,
   CircleDetailText,
   CircleText,
-  HrCircleFirst,
-  HrCircleSecond,
+  HrCircle,
   HrCirclesWrapper,
-  HrCircleThird,
   HrLineDivider,
   HrPrincipleDetailsBigWrapper,
   HrPrincipleDetailsWrapper,
@@ -34,14 +31,24 @@ const CareersUI = ({ data, language }: IProps) => {
       {language === 'kor' &&
         data.careers[pageIndex]?.layout === '인재상페이지' && (
           <TalentsWrapper>
-            <TalentTitle>{data.careers[pageIndex]?.name}</TalentTitle>
+            <TalentTitle
+              as={'span'}
+              value={data.careers[pageIndex]?.name}
+              name={`careers[${pageIndex}].name`}
+            />
             <TalentLineDivider />
             {data.careers[pageIndex]?.circles.map((data: any, i: number) => (
               <BigCircleWrapper key={i}>
                 <Circle>
-                  <CircleText>{data.title}</CircleText>
+                  <CircleText
+                    value={data.title}
+                    name={`careers[${pageIndex}].circles[${i}].title`}
+                  />
                 </Circle>
-                <CircleDetailText>{data.content}</CircleDetailText>
+                <CircleDetailText
+                  value={data.content}
+                  name={`careers[${pageIndex}].circles[${i}].content`}
+                />
               </BigCircleWrapper>
             ))}
           </TalentsWrapper>
@@ -49,33 +56,45 @@ const CareersUI = ({ data, language }: IProps) => {
       {language === 'kor' &&
         data.careers[pageIndex]?.layout === '인사제도페이지' && (
           <TalentsWrapper>
-            <HrTitle>{data.careers[pageIndex].name}</HrTitle>
+            <HrTitle
+              as={'span'}
+              value={data.careers[pageIndex].name}
+              name={`careers[${pageIndex}].name`}
+            />
             <HrLineDivider />
-            <SubTitleWrapper>
-              {data.careers[pageIndex].subTitle}
-            </SubTitleWrapper>
+            <SubTitleWrapper
+              value={data.careers[pageIndex].subTitle}
+              name={`careers[${pageIndex}].subTitle`}
+            />
             <HrCirclesWrapper>
-              <HrCircleFirst>
-                {data.careers[pageIndex].circles[0]}
-              </HrCircleFirst>
-              <CareersArrow data={data.careers[pageIndex].images[0]} />
-              <HrCircleSecond>
-                {data.careers[pageIndex].circles[1]}
-              </HrCircleSecond>
-              <CareersArrow data={data.careers[pageIndex].images[0]} />
-              <HrCircleThird>
-                {data.careers[pageIndex].circles[2]}
-              </HrCircleThird>
+              {[0, null, 1, null, 2].map((i, index) =>
+                typeof i === 'number' ? (
+                  <HrCircle
+                    key={index}
+                    value={data.careers[pageIndex].circles[i]}
+                    name={`data.careers[${pageIndex}].circles[${i}]`}
+                  />
+                ) : (
+                  <CareersArrow
+                    key={index}
+                    data={data.careers[pageIndex].images[0]}
+                  />
+                )
+              )}
             </HrCirclesWrapper>
-            <HrPrincipleTitle>
-              {data.careers[pageIndex].secondTitle}
-            </HrPrincipleTitle>
+            <HrPrincipleTitle
+              value={data.careers[pageIndex].secondTitle}
+              name={`data.careers[${pageIndex}].secondTitle`}
+            />
             <HrLineDivider />
             <HrPrincipleDetailsBigWrapper>
-              {data.careers[pageIndex].principle.map((data: any, i: number) => (
-                <HrPrincipleDetailsWrapper key={i}>
-                  {data}
-                </HrPrincipleDetailsWrapper>
+              {data.careers[pageIndex].principle.map((v: any, i: number) => (
+                <HrPrincipleDetailsWrapper
+                  as={'li'}
+                  key={i}
+                  value={v}
+                  name={`data.careers[${pageIndex}].principle[${i}]`}
+                />
               ))}
             </HrPrincipleDetailsBigWrapper>
           </TalentsWrapper>
