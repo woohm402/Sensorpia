@@ -7,8 +7,8 @@ import React, {
 
 import { Language } from './language.model'
 
-import korLanguage from '../../../pages/api/kor.json'
-import enLanguage from '../../../pages/api/en.json'
+import korLanguage from './kor.json'
+import enLanguage from './en.json'
 
 const initialLanguage: Language = {
   language: 'en',
