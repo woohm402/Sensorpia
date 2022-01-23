@@ -2,8 +2,11 @@ import { FormEventHandler } from 'react'
 import { Form } from './login.style'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/dist/client/router'
 
 const Login = () => {
+  const router = useRouter()
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()
 
@@ -14,6 +17,8 @@ const Login = () => {
         password: (e.target as unknown as { password: HTMLInputElement })
           .password.value,
       })
+
+      await router.push('/')
     } catch (err) {
       if ('message' in (err as any)?.response?.data) {
         toast.error((err as any).response.data.message)

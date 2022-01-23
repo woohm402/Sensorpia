@@ -6,6 +6,7 @@ import { HeaderProvider } from '../src/context/header/header'
 import { useRouter } from 'next/dist/client/router'
 import { Toaster } from 'react-hot-toast'
 import { AdminProvider } from '../src/context/admin/admin'
+import AdminIndicator from '../src/common/AdminIndicator/AdminIndicator'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <LayOut>
             <Component {...pageProps} />
             <Toaster />
+            <AdminIndicator />
           </LayOut>
         </LanguageProvider>
       </HeaderProvider>
