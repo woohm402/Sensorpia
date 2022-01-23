@@ -29,7 +29,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   }
 
   return (
-    <SideBarWrapper routerPath={router.pathname}>
+    <SideBarWrapper>
       <SideBarTitleWrapper>
         {router.pathname === '/products'
           ? data.sidebar.name[0]
