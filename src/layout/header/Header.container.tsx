@@ -160,7 +160,7 @@ const HeaderComponent = ({ sideBar }: IProps) => {
       onClickAboutUsDetailMenu={onClickAboutUsDetailMenu}
       onClickCareersDetailMenu={onClickCareersDetailMenu}
       onMouseLeaveMenu={onMouseLeaveMenu}
-    ></HeaderUI>
+    />
   )
 }
 

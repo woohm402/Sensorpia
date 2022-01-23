@@ -25,7 +25,6 @@ import {
   MenuItem,
   HeaderSubWrapper,
 } from './Header.styles'
-import { useGoogleMap } from '@react-google-maps/api'
 import { useHeaderContext } from '../../context/header/header'
 
 interface IProps {
@@ -161,7 +160,7 @@ const HeaderUI = ({
               <ProductDetailsWrapper>
                 {data.navBar.products.map((data: any, index: any) => (
                   <ProductDetails
-                    key=""
+                    key={index}
                     id={data}
                     onClick={onClickProductDetailMenu}
                     onMouseOver={onMouseOverDetailMenu}
