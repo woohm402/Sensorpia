@@ -1,7 +1,7 @@
-import ApplicationComponet from '../../src/english/application/Application.container'
+import ApplicationComponent from '../../src/english/application/Application.container'
 
 const Application = () => {
-  return <ApplicationComponet />
+  return <ApplicationComponent />
 }
 
 export default Application
