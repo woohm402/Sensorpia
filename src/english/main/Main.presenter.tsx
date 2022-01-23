@@ -114,9 +114,7 @@ const MainUI = ({
                   <ProductImage src={value.image} />
                   <ProductImageText>{value.name}</ProductImageText>
                 </ProductImageWrapper>
-                <SpecificationButtonHref
-                  href={value.download}
-                >
+                <SpecificationButtonHref href={value.download}>
                   <SpecificationButton>
                     {data.main.specificationButton}
                   </SpecificationButton>
@@ -131,9 +129,7 @@ const MainUI = ({
                   <ProductImage src={value.image} />
                   <ProductImageText>{value.name}</ProductImageText>
                 </ProductImageWrapper>
-                <SpecificationButtonHref
-                  href={value.download}
-                >
+                <SpecificationButtonHref href={value.download}>
                   <SpecificationButton>
                     {data.main.specificationButton}
                   </SpecificationButton>
@@ -153,9 +149,7 @@ const MainUI = ({
             //@ts-expect-error
             data={value.image}
           />
-          <SpecificationButtonHref
-            href={value.download}
-          >
+          <SpecificationButtonHref href={value.download}>
             <SpecificationButton>
               {data.main.specificationButton}
             </SpecificationButton>
@@ -183,10 +177,10 @@ const MainUI = ({
               ))}
             </ProductDetailsWrapper>
             <ApplicationsDetailsWrapper language={language}>
-              {data.navBar.applications.map((data: any, index: any) => (
+              {data.navBar.applications.map((data: any, i: number) => (
                 <ApplicationsDetails
-                  key=""
-                  id={index}
+                  key={i}
+                  id={i + ''}
                   onClick={onClickApplicationDetails}
                 >
                   {data}
@@ -194,10 +188,10 @@ const MainUI = ({
               ))}
             </ApplicationsDetailsWrapper>
             <AboutUsDetailsWrapper language={language}>
-              {data.navBar.aboutUs.map((data: any, index: any) => (
+              {data.navBar.aboutUs.map((data: any, i: number) => (
                 <AboutUsDetails
-                  key=""
-                  id={index}
+                  key={i}
+                  id={i + ''}
                   onClick={onClickAboutUsDetails}
                 >
                   {data}
@@ -206,10 +200,10 @@ const MainUI = ({
             </AboutUsDetailsWrapper>
             {language === 'kor' && (
               <CareersDetailsWrapper>
-                {data.navBar.careers.map((data: any, index: any) => (
+                {data.navBar.careers.map((data: any, i: number) => (
                   <CareersDetails
-                    key=""
-                    id={index}
+                    key={i}
+                    id={i + ''}
                     onClick={onClickCareersDetails}
                   >
                     {data}

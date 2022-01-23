@@ -52,15 +52,15 @@ const ProductUI = () => {
               </ExplanationTitle>
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
-              ]?.textExplanationDetails.map((data: any) => (
-                <ExplanationDetail key="">{data}</ExplanationDetail>
+              ]?.textExplanationDetails.map((data: any, i: number) => (
+                <ExplanationDetail key={i}>{data}</ExplanationDetail>
               ))}
             </ExplanationWrapper>
             <SubImageOuterWrappers>
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
-              ]?.subImagesAndTexts.map((value: any) => (
-                <SubImageMidTwoWrappers key="">
+              ]?.subImagesAndTexts.map((value: any, i: number) => (
+                <SubImageMidTwoWrappers key={i}>
                   <SubImageMidWrappers>
                     <SubImageWrappers src={value.image} />
                     <SubImageTexts>{value.text}</SubImageTexts>

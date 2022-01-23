@@ -36,8 +36,8 @@ const CareersUI = ({ data, language }: IProps) => {
           <TalentsWrapper>
             <TalentTitle>{data.careers[pageIndex]?.name}</TalentTitle>
             <TalentLineDivider />
-            {data.careers[pageIndex]?.circles.map((data: any) => (
-              <BigCircleWrapper key="">
+            {data.careers[pageIndex]?.circles.map((data: any, i: number) => (
+              <BigCircleWrapper key={i}>
                 <Circle>
                   <CircleText>{data.title}</CircleText>
                 </Circle>
@@ -72,8 +72,8 @@ const CareersUI = ({ data, language }: IProps) => {
             </HrPrincipleTitle>
             <HrLineDivider />
             <HrPrincipleDetailsBigWrapper>
-              {data.careers[pageIndex].principle.map((data: any) => (
-                <HrPrincipleDetailsWrapper key="">
+              {data.careers[pageIndex].principle.map((data: any, i: number) => (
+                <HrPrincipleDetailsWrapper key={i}>
                   {data}
                 </HrPrincipleDetailsWrapper>
               ))}

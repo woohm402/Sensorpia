@@ -14,8 +14,8 @@ const ContactUsUI = ({ data }: IProps) => {
     <>
       <ContactUsBigWrapper>
         <ContactUsTitle>{data.contactUs.title}</ContactUsTitle>
-        {data.contactUs.details.map((data: any) => (
-          <ContactUsDetails key="">{data.content}</ContactUsDetails>
+        {data.contactUs.details.map((data: any, i: number) => (
+          <ContactUsDetails key={i}>{data.content}</ContactUsDetails>
         ))}
         <ContactUsMapWrapper>
           <GoogleMapsComponent />

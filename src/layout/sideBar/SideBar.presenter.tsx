@@ -1,5 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { useEffect } from 'react'
 
 import {
   ScrollArrowImageWrapper,
@@ -14,6 +13,7 @@ import {
   SideBarWrapper,
 } from './SideBar.styles'
 import { useLanguageContext } from '../../context/language/language'
+import { Fragment } from 'react'
 
 interface IProps {
   onClickMenu: any
@@ -23,20 +23,11 @@ interface IProps {
 const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const router = useRouter()
   const pageIndex = Number(router.query.item)
-  const path = router.pathname
   const { language, languageData: data } = useLanguageContext()
   const onClickScrollArrow = () => {
     window.scrollTo(0, 0)
   }
-  const onClickProductDetailsTwo = (event: any) => {
-    router.push({
-      pathname: path,
-      query: { item: router.query.item, keyword: event.target.id },
-    })
-  }
-  useEffect(() => {
-    console.log('a')
-  }, [router.pathname, buttonName, pageIndex, router.query.item])
+
   return (
     <SideBarWrapper routerPath={router.pathname}>
       <SideBarTitleWrapper>
@@ -50,21 +41,20 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
       </SideBarTitleWrapper>
       <SideBarMenusWrapper>
         {router.pathname === '/products'
-          ? data.products.map((value: any, index: any) => (
-              <>
+          ? data.products.map((value: any, i: number) => (
+              <Fragment key={i}>
                 <SideBarMenusInnerWrapper
-                  key=""
-                  id={index}
+                  id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex == index}
+                  color={pageIndex == i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
                 {value.name === '3-axis flux-gate magnetometer' && (
                   <SideBarProductsSubMenusWrapper>
-                    {value.data.subSections.map((data: any) => (
-                      <SideBarProductsIndividualWrapper key="">
+                    {value.data.subSections.map((data: any, i: number) => (
+                      <SideBarProductsIndividualWrapper key={i}>
                         <SideBarProductsIndividualIcon>
                           -
                         </SideBarProductsIndividualIcon>
@@ -80,60 +70,51 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                     ))}
                   </SideBarProductsSubMenusWrapper>
                 )}
-                {data.products.length - 1 !== index && (
-                  <SideBarMenusLineDivider />
-                )}
-              </>
+                {data.products.length - 1 !== i && <SideBarMenusLineDivider />}
+              </Fragment>
             ))
           : router.pathname === '/application'
-          ? data.applications.map((value: any, index: any) => (
-              <>
+          ? data.applications.map((value: any, i: number) => (
+              <Fragment key={i}>
                 <SideBarMenusInnerWrapper
-                  key=""
-                  id={index}
+                  id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === index}
+                  color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.applications.length - 1 !== index && (
+                {data.applications.length - 1 !== i && (
                   <SideBarMenusLineDivider />
                 )}
-              </>
+              </Fragment>
             ))
           : router.pathname === '/careers' && language === 'kor'
-          ? data.careers?.map((value: any, index: any) => (
-              <>
+          ? data.careers?.map((value: any, i: number) => (
+              <Fragment key={i}>
                 <SideBarMenusInnerWrapper
-                  key=""
-                  id={index}
+                  id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === index}
+                  color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.careers.length - 1 !== index && (
-                  <SideBarMenusLineDivider />
-                )}
-              </>
+                {data.careers.length - 1 !== i && <SideBarMenusLineDivider />}
+              </Fragment>
             ))
-          : data.aboutUs.map((value: any, index: any) => (
-              <>
+          : data.aboutUs.map((value: any, i: number) => (
+              <Fragment key={i}>
                 <SideBarMenusInnerWrapper
-                  key=""
-                  id={index}
+                  id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === index}
+                  color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.aboutUs.length - 1 !== index && (
-                  <SideBarMenusLineDivider />
-                )}
-              </>
+                {data.aboutUs.length - 1 !== i && <SideBarMenusLineDivider />}
+              </Fragment>
             ))}
       </SideBarMenusWrapper>
       {router.pathname === '/aboutUs' && (
@@ -141,7 +122,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
           onClick={onClickScrollArrow}
           //@ts-ignore
           data={data.aboutUs[pageIndex]?.commonArrow}
-        ></ScrollArrowImageWrapper>
+        />
       )}
     </SideBarWrapper>
   )

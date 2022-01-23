@@ -151,8 +151,8 @@ const HeaderUI = ({
         <NavBarBigWrapper onMouseLeave={onMouseLeaveMenu}>
           <NavBarWrapper>
             <NavBarMainMenusWrapper language={language}>
-              {data.navBar?.list.map((data: any) => (
-                <NavBarMainMenu key="">{data}</NavBarMainMenu>
+              {data.navBar?.list.map((data: any, i: number) => (
+                <NavBarMainMenu key={i}>{data}</NavBarMainMenu>
               ))}
             </NavBarMainMenusWrapper>
             <NavBarMainMenuDetailWrapper language={language}>
@@ -170,9 +170,9 @@ const HeaderUI = ({
                 ))}
               </ProductDetailsWrapper>
               <ApplicationsDetailsWrapper language={language}>
-                {data.navBar.applications.map((data: any) => (
+                {data.navBar.applications.map((data: any, i: number) => (
                   <ApplicationsDetails
-                    key=""
+                    key={i}
                     id={data}
                     onMouseOver={onMouseOverDetailMenu}
                     onClick={onClickApplicationDetailMenu}
@@ -183,9 +183,9 @@ const HeaderUI = ({
                 ))}
               </ApplicationsDetailsWrapper>
               <AboutUsDetailsWrapper language={language}>
-                {data.navBar.aboutUs.map((data: any) => (
+                {data.navBar.aboutUs.map((data: any, i: number) => (
                   <AboutUsDetails
-                    key=""
+                    key={i}
                     id={data}
                     onClick={onClickAboutUsDetailMenu}
                     onMouseOver={onMouseOverDetailMenu}
@@ -197,9 +197,9 @@ const HeaderUI = ({
               </AboutUsDetailsWrapper>
               {language === 'kor' && (
                 <CareersDetailsWrapper>
-                  {data.navBar.careers.map((data: any) => (
+                  {data.navBar.careers.map((data: any, i: number) => (
                     <CareersDetails
-                      key=""
+                      key={i}
                       id={data}
                       onMouseOver={onMouseOverDetailMenu}
                       menuColor={detailMenu === data}

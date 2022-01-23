@@ -56,8 +56,8 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
             url={data.aboutUs[pageIndex]?.data.mainImage}
           />
           <AboutUsFirstTextWrapper>
-            {data.aboutUs[pageIndex].data.circleAboveTexts.map((data: any) => (
-              <AboutUsFirstText key="">{data}</AboutUsFirstText>
+            {data.aboutUs[pageIndex].data.circleAboveTexts.map((data: any, i: number) => (
+              <AboutUsFirstText key={i}>{data}</AboutUsFirstText>
             ))}
           </AboutUsFirstTextWrapper>
           <CircleWrapper>
@@ -152,8 +152,8 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
               url={data.aboutUs[pageIndex]?.arrow}
             />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {data.aboutUs[pageIndex].data.years?.map((value: any) => (
-                <VisionAndHistoryYearExplanation key="">
+              {data.aboutUs[pageIndex].data.years?.map((value: any, i: number) => (
+                <VisionAndHistoryYearExplanation key={i}>
                   {`${value.year} ${value.content}`}
                 </VisionAndHistoryYearExplanation>
               ))}
