@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IProps {
   url: any
@@ -19,7 +20,7 @@ export const AboutUsFirstTextWrapper = styled.div`
   text-align: justify;
 `
 
-export const AboutUsFirstText = styled.span`
+export const AboutUsFirstText = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -58,26 +59,26 @@ export const BlueCirlce = styled.div`
   height: 216px;
   border-radius: 50%;
 `
-export const DefenseText = styled.div`
+export const DefenseText = styled(TextBox)`
   position: absolute;
   top: 137px;
   left: 95px;
 `
-export const MagneticSensorsText = styled.div`
+export const MagneticSensorsText = styled(TextBox)`
   position: absolute;
   top: 126px;
   left: 179px;
   max-width: 109px;
   word-break: normal;
 `
-export const SatelliteText = styled.div`
+export const SatelliteText = styled(TextBox)`
   position: absolute;
   top: 137px;
   left: 304px;
   max-width: 111px;
   word-break: normal;
 `
-export const MeasurementAndTestText = styled.div`
+export const MeasurementAndTestText = styled(TextBox)`
   position: absolute;
   top: 103px;
   left: 423px;
@@ -104,13 +105,13 @@ export const GreenCircle = styled.div`
   height: 216px;
   border-radius: 50%;
 `
-export const MagneticInstrumentsText = styled.div`
+export const MagneticInstrumentsText = styled(TextBox)`
   position: absolute;
   max-width: 144px;
   top: 126px;
   left: 629px;
 `
-export const SecondTextWrapper = styled.div`
+export const SecondTextWrapper = styled(TextBox)`
   margin-top: 40px;
   margin-left: 70px;
   max-width: 702px;
@@ -121,18 +122,7 @@ export const SecondTextWrapper = styled.div`
   text-align: justify;
   color: #262626;
 `
-export const ThirdTextWrapper = styled.div`
-  margin-top: 40px;
-  margin-left: 70px;
-  max-width: 702px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  text-align: justify;
-  color: #262626;
-`
-export const OurCustomersTitleWrapper = styled.div`
+export const OurCustomersTitleWrapper = styled(TextBox)`
   margin-top: 65px;
   margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -214,7 +204,7 @@ export const SatracImageWrapper = styled.div`
   margin-left: 52px;
   ${(props: IProps) => `background:url(${props.url})`};
 `
-export const VisionAndHistoryTitleWrapper = styled.div`
+export const VisionAndHistoryTitleWrapper = styled(TextBox)`
   margin-top: 35px;
   margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -255,7 +245,7 @@ export const VisionAndHistoryExplanationsWrapper = styled.div`
   margin-top: 40px;
   margin-left: 70px;
 `
-export const VisionAndHistoryFirstExplanation = styled.div`
+export const VisionAndHistoryExplanation = styled(TextBox)`
   max-width: 325px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -263,16 +253,10 @@ export const VisionAndHistoryFirstExplanation = styled.div`
   line-height: 19px;
   text-align: justify;
   color: #262626;
-`
-export const VisionAndHistorySecondExplanation = styled.div`
-  margin-left: 49px;
-  max-width: 325px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  text-align: justify;
-  color: #262626;
+  
+  &:last-of-type {
+    margin-left: 49px;
+  }
 `
 export const VisionAndHistorySecondTitleWrapper = styled.div`
   margin-top: 100px;
@@ -295,7 +279,7 @@ export const VisionAndHistoryArrowWrapper = styled.div`
   ${(props: IProps) => `background:url(${props.url})`};
   background-repeat: no-repeat;
 `
-export const VisionAndHistoryYearExplanation = styled.div`
+export const VisionAndHistoryYearExplanation = styled(TextBox)`
   margin-left: 42px;
   margin-bottom: 30px;
   font-family: 'Noto Sans KR', sans-serif;

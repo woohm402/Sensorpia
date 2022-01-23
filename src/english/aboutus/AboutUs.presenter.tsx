@@ -26,15 +26,13 @@ import {
   SatracImageWrapper,
   SecondTextWrapper,
   SiImageWrapper,
-  ThirdTextWrapper,
   VisionAndHistoryArrowWrapper,
   VisionAndHistoryExplanationsWrapper,
-  VisionAndHistoryFirstExplanation,
   VisionAndHistoryImageOne,
   VisionAndHistoryImagesWrapper,
   VisionAndHistoryImageTwo,
   VisionAndHistoryLineDivider,
-  VisionAndHistorySecondExplanation,
+  VisionAndHistoryExplanation,
   VisionAndHistorySecondTitleWrapper,
   VisionAndHistoryTitleWrapper,
   VisionAndHistoryYearExplanation,
@@ -56,40 +54,55 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
             url={data.aboutUs[pageIndex]?.data.mainImage}
           />
           <AboutUsFirstTextWrapper>
-            {data.aboutUs[pageIndex].data.circleAboveTexts.map((data: any, i: number) => (
-              <AboutUsFirstText key={i}>{data}</AboutUsFirstText>
-            ))}
+            {data.aboutUs[pageIndex].data.circleAboveTexts.map(
+              (v: any, i: number) => (
+                <AboutUsFirstText
+                  as={'span'}
+                  value={v}
+                  key={i}
+                  name={`aboutUs[${pageIndex}].data.circleAboveTexts[${i}]`}
+                />
+              )
+            )}
           </AboutUsFirstTextWrapper>
           <CircleWrapper>
             <OrangeCircle />
             <BlueCirlce />
-            <DefenseText>
-              {data.aboutUs[pageIndex].data.circleTexts[0]}
-            </DefenseText>
-            <MagneticSensorsText>
-              {data.aboutUs[pageIndex].data.circleTexts[1]}
-            </MagneticSensorsText>
-            <SatelliteText>
-              {data.aboutUs[pageIndex].data.circleTexts[2]}
-            </SatelliteText>
-            <MeasurementAndTestText>
-              {data.aboutUs[pageIndex].data.circleTexts[3]}
-            </MeasurementAndTestText>
+            <DefenseText
+              value={data.aboutUs[pageIndex].data.circleTexts[0]}
+              name={`aboutUs[${pageIndex}].data.circleTexts[0]`}
+            />
+            <MagneticSensorsText
+              value={data.aboutUs[pageIndex].data.circleTexts[1]}
+              name={`aboutUs[${pageIndex}].data.circleTexts[1]`}
+            />
+            <SatelliteText
+              value={data.aboutUs[pageIndex].data.circleTexts[2]}
+              name={`aboutUs[${pageIndex}].data.circleTexts[2]`}
+            />
+            <MeasurementAndTestText
+              value={data.aboutUs[pageIndex].data.circleTexts[3]}
+              name={`aboutUs[${pageIndex}].data.circleTexts[3]`}
+            />
             <AboutUsArrowImageWrapper url={data.aboutUs[pageIndex].arrow} />
             <GreenCircle />
-            <MagneticInstrumentsText>
-              {data.aboutUs[pageIndex].data.circleTexts[4]}
-            </MagneticInstrumentsText>
+            <MagneticInstrumentsText
+              value={data.aboutUs[pageIndex].data.circleTexts[4]}
+              name={`aboutUs[${pageIndex}].data.circleTexts[4]`}
+            />
           </CircleWrapper>
-          <SecondTextWrapper>
-            {data.aboutUs[pageIndex].data.circleBelowTexts[0]}
-          </SecondTextWrapper>
-          <ThirdTextWrapper>
-            {data.aboutUs[pageIndex].data.circleBelowTexts[1]}
-          </ThirdTextWrapper>
-          <OurCustomersTitleWrapper>
-            {data.aboutUs[pageIndex].data.subTitle}
-          </OurCustomersTitleWrapper>
+          <SecondTextWrapper
+            value={data.aboutUs[pageIndex].data.circleBelowTexts[0]}
+            name={`aboutUs[${pageIndex}].data.circleBelowTexts[0]`}
+          />
+          <SecondTextWrapper
+            value={data.aboutUs[pageIndex].data.circleBelowTexts[1]}
+            name={`aboutUs[${pageIndex}].data.circleBelowTexts[1]`}
+          />
+          <OurCustomersTitleWrapper
+            value={data.aboutUs[pageIndex].data.subTitle}
+            name={`aboutUs[${pageIndex}].data.subTitle`}
+          />
           <OurCustomersDivider />
           <OurCustomersImageFirstLineWrapper>
             <LIGImageWrapper
@@ -123,9 +136,10 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
       )}
       {data.aboutUs[pageIndex]?.layout === visionPage && (
         <>
-          <VisionAndHistoryTitleWrapper>
-            {data.aboutUs[pageIndex].data.mainTitle}
-          </VisionAndHistoryTitleWrapper>
+          <VisionAndHistoryTitleWrapper
+            value={data.aboutUs[pageIndex].data.mainTitle}
+            name={`aboutUs[${pageIndex}].data.mainTitle`}
+          />
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryImagesWrapper>
             <VisionAndHistoryImageOne
@@ -136,12 +150,13 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
             />
           </VisionAndHistoryImagesWrapper>
           <VisionAndHistoryExplanationsWrapper>
-            <VisionAndHistoryFirstExplanation>
-              {data.aboutUs[pageIndex].data.explanations[0]}
-            </VisionAndHistoryFirstExplanation>
-            <VisionAndHistorySecondExplanation>
-              {data.aboutUs[pageIndex].data.explanations[1]}
-            </VisionAndHistorySecondExplanation>
+            {[0, 1].map((item) => (
+              <VisionAndHistoryExplanation
+                key={item}
+                value={data.aboutUs[pageIndex].data.explanations[item]}
+                name={`aboutUs[${pageIndex}].data.explanations[${item}]`}
+              />
+            ))}
           </VisionAndHistoryExplanationsWrapper>
           <VisionAndHistorySecondTitleWrapper>
             {data.aboutUs[pageIndex].data.subTitle}
@@ -152,11 +167,15 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
               url={data.aboutUs[pageIndex]?.arrow}
             />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {data.aboutUs[pageIndex].data.years?.map((value: any, i: number) => (
-                <VisionAndHistoryYearExplanation key={i}>
-                  {`${value.year} ${value.content}`}
-                </VisionAndHistoryYearExplanation>
-              ))}
+              {data.aboutUs[pageIndex].data.years?.map(
+                (value: any, i: number) => (
+                  <VisionAndHistoryYearExplanation
+                    key={i}
+                    value={value}
+                    name={`aboutUs[${pageIndex}].data.years${i}`}
+                  />
+                )
+              )}
             </div>
           </VisionAndHistoryYearsWrapper>
         </>
