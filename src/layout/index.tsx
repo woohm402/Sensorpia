@@ -19,6 +19,9 @@ const LayOut = ({ children }: ILayOutProps) => {
   const router = useRouter()
   const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)
+
+  if (!data) return null
+
   if (router.pathname === '/contactUs') {
     return (
       <div>
