@@ -22,9 +22,10 @@ const FooterUI = ({ data }: IProps) => {
             //@ts-ignore
             src={data.main.logo}
           />
-          <FooterAddressDetailWrapper>
-            {data.footer.Address}
-          </FooterAddressDetailWrapper>
+          <FooterAddressDetailWrapper
+            value={data.footer.Address}
+            name={'footer.Address'}
+          />
           <FooterOthersOne>{data.footer.Others[0]}</FooterOthersOne>
           <FooterDivider />
           <FooterOtherTwo>{data.footer.Others[1]}</FooterOtherTwo>

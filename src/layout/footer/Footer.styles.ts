@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IProps {
   data?: any
@@ -28,7 +29,7 @@ export const FooterLogoWrapper = styled.img`
   top: 41px;
   left: 70px;
 `
-export const FooterAddressDetailWrapper = styled.div`
+export const FooterAddressDetailWrapper = styled(TextBox)`
   position: absolute;
   top: 28px;
   left: 228px;
