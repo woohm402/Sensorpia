@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 export const ContactUsBigWrapper = styled.div`
   width: 1100px;
@@ -7,7 +8,7 @@ export const ContactUsBigWrapper = styled.div`
   padding-left: 70px;
 `
 
-export const ContactUsTitle = styled.div`
+export const ContactUsTitle = styled(TextBox)`
   width: 1100px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -16,7 +17,7 @@ export const ContactUsTitle = styled.div`
   color: #262626;
   margin-bottom: 35px;
 `
-export const ContactUsDetails = styled.div`
+export const ContactUsDetails = styled(TextBox)`
   margin-bottom: 20px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
