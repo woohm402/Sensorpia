@@ -5,6 +5,7 @@ import { LanguageProvider } from '../src/context/language/language'
 import { HeaderProvider } from '../src/context/header/header'
 import { useRouter } from 'next/dist/client/router'
 import { Toaster } from 'react-hot-toast'
+import { AdminProvider } from '../src/context/admin/admin'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -18,14 +19,16 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 
   return (
-    <HeaderProvider>
-      <LanguageProvider>
-        <LayOut>
-          <Component {...pageProps} />
-          <Toaster />
-        </LayOut>
-      </LanguageProvider>
-    </HeaderProvider>
+    <AdminProvider>
+      <HeaderProvider>
+        <LanguageProvider>
+          <LayOut>
+            <Component {...pageProps} />
+            <Toaster />
+          </LayOut>
+        </LanguageProvider>
+      </HeaderProvider>
+    </AdminProvider>
   )
 }
 export default MyApp

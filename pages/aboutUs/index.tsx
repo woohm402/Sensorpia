@@ -1,11 +1,19 @@
 import AboutUsComponent from '../../src/english/aboutus/AboutUs.container'
 import { withSessionSsr } from '../../src/lib/withSession'
+import { useAdminContext } from '../../src/context/admin/admin'
+import { useEffect } from 'react'
 
-const aboutUs = ({ isAdmin }: { isAdmin: boolean }) => {
+const AboutUs = ({ isAdmin }: { isAdmin: boolean }) => {
+  const { setIsAdmin } = useAdminContext()
+
+  useEffect(() => {
+    setIsAdmin(isAdmin)
+  }, [isAdmin, setIsAdmin])
+
   return <AboutUsComponent />
 }
 
-export default aboutUs
+export default AboutUs
 
 export const getServerSideProps = withSessionSsr(async ({ req }) => {
   // @ts-ignore

@@ -1,11 +1,19 @@
 import ContactUsComponent from '../../src/english/contactus/ContactUs.container'
 import { withSessionSsr } from '../../src/lib/withSession'
+import { useAdminContext } from '../../src/context/admin/admin'
+import { useEffect } from 'react'
 
-const contactUs = ({ isAdmin }: { isAdmin: boolean }) => {
+const ContactUs = ({ isAdmin }: { isAdmin: boolean }) => {
+  const { setIsAdmin } = useAdminContext()
+
+  useEffect(() => {
+    setIsAdmin(isAdmin)
+  }, [isAdmin, setIsAdmin])
+
   return <ContactUsComponent />
 }
 
-export default contactUs
+export default ContactUs
 
 export const getServerSideProps = withSessionSsr(async ({ req }) => {
   // @ts-ignore
