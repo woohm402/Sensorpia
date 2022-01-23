@@ -1,10 +1,9 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import SideBarUI from './SideBar.presenter'
 
 const SideBarComponent = () => {
-  const { setMenu } = useContext(GlobalContext)
   const router = useRouter()
   const path = router.pathname
   const buttonName = router.query.keyword
