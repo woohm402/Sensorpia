@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IProps {
   finalRandomImage?: any
@@ -12,7 +13,7 @@ export const DefenseImageRandomWrapper = styled.div`
   height: 434px;
   background: ${(props: IProps) => `url(${props.finalRandomImage})`};
 `
-export const DefenseExplanationDetails = styled.li`
+export const DefenseExplanationDetails = styled(TextBox)`
   margin-top: 30px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -36,7 +37,7 @@ export const ApplicationMagnetometerContentWrapper = styled.div`
   flex-direction: column;
   margin-left: 30px;
 `
-export const ApplicationMagnetometerTitle = styled.div`
+export const ApplicationMagnetometerTitle = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   margin-bottom: 20px;
   font-weight: 700;
@@ -44,7 +45,7 @@ export const ApplicationMagnetometerTitle = styled.div`
   line-height: 22px;
   color: #262626;
 `
-export const ApplicationMagnetometerDetails = styled.li`
+export const ApplicationMagnetometerDetails = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 13px;

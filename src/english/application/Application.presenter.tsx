@@ -30,25 +30,32 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
         <ul style={{ margin: '0 0 50px 70px', padding: '0 0 0 20px' }}>
           {data.applications[pageIndex]?.data.mainTexts.map(
             (data: any, i: number) => (
-              <DefenseExplanationDetails key={i}>
-                {data}
-              </DefenseExplanationDetails>
+              <DefenseExplanationDetails
+                as={'li'}
+                key={i}
+                value={data}
+                name={`applications[${pageIndex}].data.mainTexts[${i}]`}
+              />
             )
           )}
         </ul>
       )}
       {data.applications[pageIndex]?.data.subImageAndDetails?.map(
-        (data: any, i: number) => (
-          <ApplicationMagnetometerWrapper key={i}>
+        (data: any, index: number) => (
+          <ApplicationMagnetometerWrapper key={index}>
             <ApplicationMagnetometerImageWrapper src={data.image} />
             <ApplicationMagnetometerContentWrapper>
-              <ApplicationMagnetometerTitle>
-                {data.title}
-              </ApplicationMagnetometerTitle>
+              <ApplicationMagnetometerTitle
+                value={data.title}
+                name={`applications[${pageIndex}].data.subImageAndDetails[${index}].title`}
+              />
               {data.details.map((value: any, i: number) => (
-                <ApplicationMagnetometerDetails key={i}>
-                  {value}
-                </ApplicationMagnetometerDetails>
+                <ApplicationMagnetometerDetails
+                  as={'li'}
+                  key={i}
+                  value={value}
+                  name={`applications[${pageIndex}].data.subImageAndDetails[${index}].details[${i}]`}
+                />
               ))}
             </ApplicationMagnetometerContentWrapper>
           </ApplicationMagnetometerWrapper>
