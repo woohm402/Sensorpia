@@ -1,6 +1,6 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect } from 'react'
-import { GlobalContext } from '../../../pages/_app'
+import { useEffect } from 'react'
+
 import {
   ScrollArrowImageWrapper,
   SideBarMenusInnerWrapper,
@@ -13,6 +13,7 @@ import {
   SideBarTitleWrapper,
   SideBarWrapper,
 } from './SideBar.styles'
+import { useLanguageContext } from '../../context/language/language'
 
 interface IProps {
   onClickMenu: any
@@ -23,8 +24,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const router = useRouter()
   const pageIndex = Number(router.query.item)
   const path = router.pathname
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { language, languageData: data } = useLanguageContext()
   const onClickScrollArrow = () => {
     window.scrollTo(0, 0)
   }

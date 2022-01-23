@@ -4,6 +4,8 @@ import { GlobalContext } from '../../pages/_app'
 import FooterComponent from './footer/Footer.container'
 import HeaderComponent from './header/Header.container'
 import SideBarComponent from './sideBar/SideBar.container'
+import Head from 'next/head'
+import { useLanguageContext } from '../context/language/language'
 
 interface ILayOutProps {
   children: any
@@ -14,12 +16,16 @@ const LayOut = ({ children }: ILayOutProps) => {
   const onMouseOverBody = () => {
     setIsOpen(false)
   }
+  const { language, languageData: data } = useLanguageContext()
   const router = useRouter()
   const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)
   if (router.pathname === '/contactUs') {
     return (
       <div>
+        <Head>
+          <title>{data.title}</title>
+        </Head>
         <div
           style={{
             display: 'flex',
@@ -48,6 +54,9 @@ const LayOut = ({ children }: ILayOutProps) => {
   } else {
     return (
       <div>
+        <Head>
+          <title>{data.title}</title>
+        </Head>
         <div
           style={{
             display: 'flex',

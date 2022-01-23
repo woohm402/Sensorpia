@@ -1,12 +1,12 @@
-import { Router, useRouter } from 'next/dist/client/router'
-import { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../../../pages/_app'
+import { useRouter } from 'next/dist/client/router'
+import { useEffect, useState } from 'react'
+
 import MainUI from './Main.presenter'
+import { useLanguageContext } from '../../context/language/language'
 const timer = {}
 
 const MainComponent = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { language, languageData: data } = useLanguageContext()
   const [translate, setTranslate] = useState(0)
   const [tempRouter, setTempRouter] = useState('')
   const router = useRouter()

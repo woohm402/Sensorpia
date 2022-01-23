@@ -1,11 +1,8 @@
-import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import CareersUI from './Careers.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 const CareersComponent = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { language, languageData: data } = useLanguageContext()
   return <CareersUI data={data} language={language} />
 }
 

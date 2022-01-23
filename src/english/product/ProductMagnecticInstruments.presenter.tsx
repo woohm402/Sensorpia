@@ -1,6 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import {
   ACMagneticButtonImageWrapper,
   MagneticInstrumentACMagneticDetails,
@@ -12,17 +10,16 @@ import {
   MagneticInstrumentDCBHImageWrapper,
   MagneticInstrumentDCBHTitle,
   MagneticInstrumentDCBHWrapper,
-  MagneticInstrumentDetails,
   MagneticInstrumentImageOneDetail,
   MagneticInstrumentImageOneWrapper,
   MagneticInstumentDCBHExplanationWrapper,
   SpecificationButton,
   SpecificationButtonWrapperHref,
 } from './Product.styles'
+import { useLanguageContext } from '../../context/language/language'
 
 const MagneticInstrumentsPage = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { languageData: data } = useLanguageContext()
   const router = useRouter()
   const pageIndex = Number(router.query.item)
 
@@ -45,12 +42,15 @@ const MagneticInstrumentsPage = () => {
                 ?.subImagesAndTexts[0]?.title
             }
           </MagneticInstrumentDCBHTitle>
-          {
-            data.products[pageIndex]?.data.subSections[0]
-              ?.subImagesAndTexts[0].details.map((detail: string, index: number) => (
-              <MagneticInstrumentACMagneticDetails key={index}>{detail}</MagneticInstrumentACMagneticDetails>
-            ))
-          }
+          {data.products[
+            pageIndex
+          ]?.data.subSections[0]?.subImagesAndTexts[0].details.map(
+            (detail: string, index: number) => (
+              <MagneticInstrumentACMagneticDetails key={index}>
+                {detail}
+              </MagneticInstrumentACMagneticDetails>
+            )
+          )}
         </MagneticInstumentDCBHExplanationWrapper>
         <MagneticInstrumentDCBHImageButtonWrapper>
           <MagneticInstrumentDCBHImageWrapper
@@ -79,12 +79,15 @@ const MagneticInstrumentsPage = () => {
                 ?.subImagesAndTexts[1]?.title
             }
           </MagneticInstrumentACMagneticTitle>
-          {
-            data.products[pageIndex]?.data.subSections[0]
-              ?.subImagesAndTexts[1].details.map((detail: string, index: number) => (
-              <MagneticInstrumentACMagneticDetails key={index}>{detail}</MagneticInstrumentACMagneticDetails>
-            ))
-          }
+          {data.products[
+            pageIndex
+          ]?.data.subSections[0]?.subImagesAndTexts[1].details.map(
+            (detail: string, index: number) => (
+              <MagneticInstrumentACMagneticDetails key={index}>
+                {detail}
+              </MagneticInstrumentACMagneticDetails>
+            )
+          )}
         </MagneticInstrumentACMagneticExplanationWrapper>
         <ACMagneticButtonImageWrapper>
           <MagneticInstrumentACMagneticImageWrapper

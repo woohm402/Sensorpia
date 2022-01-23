@@ -1,11 +1,8 @@
-import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import ContactUsUI from './ContactUs.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 const ContactUsComponent = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { languageData: data } = useLanguageContext()
   return <ContactUsUI data={data} />
 }
 

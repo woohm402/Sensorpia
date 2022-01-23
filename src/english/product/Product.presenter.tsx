@@ -1,12 +1,9 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import {
   ContentWrapper,
   ExplanationDetail,
   ExplanationTitle,
   ExplanationWrapper,
-  ThreeAxisButtons,
   ImageWrapper,
   SubImageWrappers,
   SubImageOuterWrappers,
@@ -17,10 +14,10 @@ import {
   SpecificationButtonWrapperHref,
 } from './Product.styles'
 import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 const ProductUI = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { language, languageData: data } = useLanguageContext()
   const router = useRouter()
   const basicPage = 'productBasicPage'
   const magneticPage = 'productMagneticInstrumentsPage'
@@ -68,9 +65,7 @@ const ProductUI = () => {
                     <SubImageWrappers src={value.image} />
                     <SubImageTexts>{value.text}</SubImageTexts>
                   </SubImageMidWrappers>
-                  <SpecificationButtonWrapperHref
-                    href={value.pdf}
-                  >
+                  <SpecificationButtonWrapperHref href={value.pdf}>
                     <SpecificationButton>
                       {data.main.specificationButton}
                     </SpecificationButton>

@@ -1,10 +1,8 @@
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import FooterUI from './Footer.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 const FooterComponent = () => {
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { languageData: data } = useLanguageContext()
   return <FooterUI data={data} />
 }
 

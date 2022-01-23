@@ -1,15 +1,13 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import SideBarUI from './SideBar.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 const SideBarComponent = () => {
   const router = useRouter()
   const path = router.pathname
   const buttonName = router.query.keyword
 
-  const { language } = useContext(GlobalContext)
-  const data = require(`../../../pages/api/${language}.json`)
+  const { languageData: data } = useLanguageContext()
   const onClickMenu = (event: any) => {
     if (router.pathname === '/products') {
       if (

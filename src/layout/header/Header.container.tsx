@@ -2,17 +2,17 @@ import { useRouter } from 'next/dist/client/router'
 import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../pages/_app'
 import HeaderUI from './Header.presenter'
+import { useLanguageContext } from '../../context/language/language'
 
 interface IProps {
   sideBar: any
 }
 
 const HeaderComponent = ({ sideBar }: IProps) => {
-  const { language, setLanguage } = useContext(GlobalContext)
+  const { language, languageData: data, setLanguage } = useLanguageContext()
   const [menu, setMenu] = useState('')
   const [detailMenu, setDetailMenu] = useState(null)
   const [renderingCount, setRenderingCount] = useState(0)
-  const data = require(`../../../pages/api/${language}.json`)
   const { isOpen, setIsOpen } = useContext(GlobalContext)
   const router = useRouter()
   useEffect(() => {
