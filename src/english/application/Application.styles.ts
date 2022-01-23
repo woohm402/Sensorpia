@@ -20,23 +20,6 @@ export const DefenseExplanationDetails = styled.li`
   line-height: 19px;
   color: #262626;
 `
-
-export const SatelliteImageWrapperOne = styled.div`
-  margin-top: 35px;
-  margin-left: 70px;
-  width: 700px;
-  height: 434px;
-  background: ${(props: IProps) => `url(${props.url})`};
-`
-export const SatelliteExplanationDetails = styled.li`
-  margin-left: 70px;
-  margin-top: 30px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  color: #262626;
-`
 export const ApplicationMagnetometerWrapper = styled.div`
   display: flex;
   margin-top: 45px;
