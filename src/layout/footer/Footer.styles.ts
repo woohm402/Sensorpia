@@ -5,7 +5,7 @@ interface IProps {
   selected?: boolean
 }
 
-export const FooterBigWrapper = styled.div`
+export const FooterBigWrapper = styled.footer`
   min-width: 100vw;
   margin-left: auto;
   margin-right: auto;
