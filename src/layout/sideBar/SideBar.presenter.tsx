@@ -47,7 +47,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex == i}
+                  $color={pageIndex == i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
@@ -62,7 +62,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                           id={data.name}
                           onClick={onClickMenu}
                           //@ts-ignore
-                          color={data.name === buttonName}
+                          $color={data.name === buttonName}
                         >
                           {data.name}
                         </SideBarProductsIndividualText>
@@ -80,7 +80,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === i}
+                  $color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
@@ -96,7 +96,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === i}
+                  $color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
@@ -109,7 +109,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   id={`${i}`}
                   onClick={onClickMenu}
                   //@ts-ignore
-                  color={pageIndex === i}
+                  $color={pageIndex === i}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 interface IProps {
-  color?: any
+  $color?: any
 }
 interface IPropsTwo {
   routerPath: any
@@ -48,7 +48,7 @@ export const SideBarMenusInnerWrapper = styled.div`
   font-weight: 700;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
+  color: ${(props: IProps) => (props.$color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
 `
 
@@ -56,7 +56,7 @@ export const SideBarMenusLineDivider = styled.div`
   margin-top: 15px;
   margin-bottom: 15px;
   width: 155px;
-  height: 0px;
+  height: 0;
   border: 1px solid #c9c9c9;
 `
 
@@ -82,5 +82,5 @@ export const SideBarProductsIndividualText = styled.div`
   font-weight: 700;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
+  color: ${(props: IProps) => (props.$color ? '#0070c0' : '#9c9d9e')};
 `
