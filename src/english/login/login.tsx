@@ -1,6 +1,7 @@
 import { FormEventHandler } from 'react'
 import { Form } from './login.style'
 import axios from 'axios'
+import { toast } from 'react-hot-toast'
 
 const Login = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
@@ -15,7 +16,7 @@ const Login = () => {
       })
     } catch (err) {
       if ('message' in (err as any)?.response?.data) {
-        console.log((err as any).response.data.message)
+        toast.error((err as any).response.data.message)
       }
     }
   }
