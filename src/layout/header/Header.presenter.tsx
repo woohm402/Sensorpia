@@ -1,6 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import {
   AboutUsDetails,
   AboutUsDetailsWrapper,
@@ -13,12 +11,6 @@ import {
   LanguageChangeWrapper,
   LanguageEnglish,
   LanguageKorean,
-  MenuAboutUs,
-  MenuApplication,
-  MenuCareers,
-  MenuContactUs,
-  MenuHome,
-  MenuProduct,
   MenusWrapper,
   NavBarMainMenu,
   NavBarMainMenuDetailWrapper,
@@ -33,6 +25,8 @@ import {
   MenuItem,
   HeaderSubWrapper,
 } from './Header.styles'
+import { useGoogleMap } from '@react-google-maps/api'
+import { useHeaderContext } from '../../context/header/header'
 
 interface IProps {
   data: any
@@ -69,7 +63,7 @@ const HeaderUI = ({
   onClickCareersDetailMenu,
   onMouseLeaveMenu,
 }: IProps) => {
-  const { isOpen } = useContext(GlobalContext)
+  const { isOpen } = useHeaderContext()
   const router = useRouter()
   return (
     <>

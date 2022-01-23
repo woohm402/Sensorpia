@@ -1,6 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect } from 'react'
-import { GlobalContext } from '../../../pages/_app'
 import AboutUsUI from './AboutUs.presenter'
 import { useLanguageContext } from '../../context/language/language'
 

@@ -1,8 +1,8 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../../../pages/_app'
+import { useEffect, useState } from 'react'
 import HeaderUI from './Header.presenter'
 import { useLanguageContext } from '../../context/language/language'
+import { useHeaderContext } from '../../context/header/header'
 
 interface IProps {
   sideBar: any
@@ -13,14 +13,14 @@ const HeaderComponent = ({ sideBar }: IProps) => {
   const [menu, setMenu] = useState('')
   const [detailMenu, setDetailMenu] = useState(null)
   const [renderingCount, setRenderingCount] = useState(0)
-  const { isOpen, setIsOpen } = useContext(GlobalContext)
+  const { isOpen, setIsOpen } = useHeaderContext()
   const router = useRouter()
   useEffect(() => {
     if (renderingCount === 0 && router.pathname === '/') {
       setMenu('Home')
       setRenderingCount((prev) => prev + 1)
     }
-    if (isOpen === false) {
+    if (!isOpen) {
       setDetailMenu(null)
       // setMenu('')
     }

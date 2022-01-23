@@ -1,22 +1,21 @@
 import { useRouter } from 'next/dist/client/router'
-import { useContext } from 'react'
-import { GlobalContext } from '../../pages/_app'
 import FooterComponent from './footer/Footer.container'
 import HeaderComponent from './header/Header.container'
 import SideBarComponent from './sideBar/SideBar.container'
 import Head from 'next/head'
 import { useLanguageContext } from '../context/language/language'
+import { useHeaderContext } from '../context/header/header'
 
 interface ILayOutProps {
   children: any
 }
 
 const LayOut = ({ children }: ILayOutProps) => {
-  const { setIsOpen } = useContext(GlobalContext)
+  const { setIsOpen } = useHeaderContext()
   const onMouseOverBody = () => {
     setIsOpen(false)
   }
-  const { language, languageData: data } = useLanguageContext()
+  const { languageData: data } = useLanguageContext()
   const router = useRouter()
   const link = ['/application', '/aboutUs', '/products', '/careers']
   const sideBar = link.includes(router.pathname)

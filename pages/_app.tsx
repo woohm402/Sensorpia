@@ -1,24 +1,18 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import LayOut from '../src/layout'
-import { createContext, useState } from 'react'
 import { LanguageProvider } from '../src/context/language/language'
-
-export const GlobalContext = createContext({
-  isOpen: false,
-  setIsOpen: (_: any) => {},
-})
+import { HeaderProvider } from '../src/context/header/header'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isOpen, setIsOpen] = useState(false)
   return (
-    <GlobalContext.Provider value={{ isOpen, setIsOpen }}>
+    <HeaderProvider>
       <LanguageProvider>
         <LayOut>
           <Component {...pageProps} />
         </LayOut>
       </LanguageProvider>
-    </GlobalContext.Provider>
+    </HeaderProvider>
   )
 }
 export default MyApp
