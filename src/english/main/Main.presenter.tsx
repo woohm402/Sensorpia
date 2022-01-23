@@ -72,10 +72,14 @@ const MainUI = ({
   return (
     <>
       <SliderMainWrapper>
-        <SliderTextWrapper>{data.SliderText.SliderMainText}</SliderTextWrapper>
-        <SliderSubTextWrapper>
-          {data.SliderText.SliderSubText}
-        </SliderSubTextWrapper>
+        <SliderTextWrapper
+          value={data.SliderText.SliderMainText}
+          name={'SliderText.SliderMainText'}
+        />
+        <SliderSubTextWrapper
+          value={data.SliderText.SliderSubText}
+          name={'SliderText.SliderSubText'}
+        />
         <SliderSubDraggableWrapper>
           <SliderDraggableWrapper>
             <SliderMidWrapper>
@@ -91,7 +95,7 @@ const MainUI = ({
         </SliderSubDraggableWrapper>
       </SliderMainWrapper>
       <MainTitleWrapper>
-        <MainTitle>{data.main.title}</MainTitle>
+        <MainTitle value={data.main.title} name={'main.title'} as={'span'} />
       </MainTitleWrapper>
       <MainOuterWrapper>
         <MainLineWrapper>
@@ -101,8 +105,14 @@ const MainUI = ({
       </MainOuterWrapper>
       <MainProductsOuterWrapper>
         <MainProductsNameWrapper>
-          <MainProductText>{data.main.mainProductOneName}</MainProductText>
-          <MainProductText>{data.main.mainProductTwoName}</MainProductText>
+          <MainProductText
+            value={data.main.mainProductOneName}
+            name={'main.mainProductOneName'}
+          />
+          <MainProductText
+            value={data.main.mainProductTwoName}
+            name={'main.mainProductTwoName'}
+          />
         </MainProductsNameWrapper>
       </MainProductsOuterWrapper>
       <MainOuterImagesWrapper>
@@ -140,9 +150,10 @@ const MainUI = ({
         </MainImagesWrapper>
       </MainOuterImagesWrapper>
       <MainThirdLineDivider />
-      <MagneticTorquerProductWrapper>
-        {data.main.mainProductThreeName}
-      </MagneticTorquerProductWrapper>
+      <MagneticTorquerProductWrapper
+        value={data.main.mainProductThreeName}
+        name={'main.mainProductThreeName'}
+      />
       {data.main.magneticTorquer.map((value: any, index: any) => (
         <MagneticTorquerSubProductWrapper key={index}>
           <MainThirdProductImageWrapper

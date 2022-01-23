@@ -92,7 +92,7 @@ const MainComponent = () => {
       onClickApplicationDetails={onClickApplicationsDetails}
       onClickAboutUsDetails={onClickAboutUsDetails}
       onClickCareersDetails={onClickCareersDetails}
-    ></MainUI>
+    />
   )
 }
 

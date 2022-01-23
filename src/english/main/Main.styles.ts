@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IProps {
   translate?: any
@@ -19,7 +20,7 @@ export const SliderMainWrapper = styled.div`
   display: flex;
   margin: 0 auto;
 `
-export const SliderTextWrapper = styled.div`
+export const SliderTextWrapper = styled(TextBox)`
   position: absolute;
   top: 30px;
   left: 70px;
@@ -31,7 +32,7 @@ export const SliderTextWrapper = styled.div`
   line-height: 35px;
   color: #ffffff;
 `
-export const SliderSubTextWrapper = styled.div`
+export const SliderSubTextWrapper = styled(TextBox)`
   position: absolute;
   top: 107px;
   left: 70px;
@@ -114,7 +115,7 @@ export const MainTitleWrapper = styled.div`
   text-align: center;
 `
 
-export const MainTitle = styled.span``
+export const MainTitle = styled(TextBox)``
 
 export const MainOuterWrapper = styled.div`
   display: flex;
@@ -153,7 +154,7 @@ export const MainProductsNameWrapper = styled.div`
   justify-content: space-between;
 `
 
-export const MainProductText = styled.div`
+export const MainProductText = styled(TextBox)`
   max-width: 211px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -259,7 +260,7 @@ export const MainThirdLineDivider = styled.div`
   border: 2px solid #9c9d9e;
 `
 
-export const MagneticTorquerProductWrapper = styled.div`
+export const MagneticTorquerProductWrapper = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 14px;
