@@ -13,7 +13,6 @@ export const DefenseImageRandomWrapper = styled.div`
   background: ${(props: IProps) => `url(${props.finalRandomImage})`};
 `
 export const DefenseExplanationDetails = styled.li`
-  margin-left: 70px;
   margin-top: 30px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -42,6 +41,7 @@ export const ApplicationMagnetometerWrapper = styled.div`
   display: flex;
   margin-top: 45px;
   margin-left: 70px;
+  margin-bottom: 50px;
   align-items: center;
 `
 export const ApplicationMagnetometerImageWrapper = styled.img`

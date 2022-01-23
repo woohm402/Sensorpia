@@ -3,16 +3,12 @@ import styled from '@emotion/styled'
 interface IProps {
   $color?: any
 }
-interface IPropsTwo {
-  routerPath: any
-}
 interface IPropsThree {
   data: any
 }
 export const SideBarWrapper = styled.div`
   min-width: 258px;
-  height: ${(props: IPropsTwo) =>
-    props.routerPath === '/aboutUs' ? '165vh' : '130vh'};
+  min-height: calc(100vh - 196px);
   background: #f9f9f9;
   z-index: 0;
   position: relative;
