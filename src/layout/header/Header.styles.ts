@@ -116,38 +116,22 @@ export const LanguageChangeWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-export const LanguageEnglish = styled.div`
+export const LanguageButton = styled.button<{ selected: boolean }>`
   width: 58px;
   height: 34px;
-  border: 2px solid #9c9d9e;
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 27px;
   text-align: center;
-  color: ${(props: IProps) =>
-    props.language === 'en' ? '#ffffff' : '#9c9d9e'};
   cursor: pointer;
-  background: ${(props: IProps) =>
-    props.language === 'en' ? '#0070c0' : '#ffffff'};
+
+  color: ${({ selected }) => (selected ? '#ffffff' : '#9c9d9e')};
+  background: ${({ selected }) => (selected ? '#0070c0' : '#ffffff')};
+  border: 2px solid ${({ selected }) => (selected ? '#0070c0' : '#9C9D9E')};
 `
-export const LanguageKorean = styled.div`
-  width: 58px;
-  height: 34px;
-  border: 2px solid #9c9d9e;
-  box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 27px;
-  text-align: center;
-  color: ${(props: IProps) =>
-    props.language === 'kor' ? '#ffffff' : '#9c9d9e'};
-  cursor: pointer;
-  background: ${(props: IProps) =>
-    props.language === 'kor' ? '#0070c0' : '#ffffff'};
-`
+
 export const NavBarBigWrapper = styled.div`
   width: 100vw;
   height: 231px;

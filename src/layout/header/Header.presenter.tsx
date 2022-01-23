@@ -9,8 +9,7 @@ import {
   HeaderBigWrapper,
   HeaderWrapper,
   LanguageChangeWrapper,
-  LanguageEnglish,
-  LanguageKorean,
+  LanguageButton,
   MenusWrapper,
   NavBarMainMenu,
   NavBarMainMenuDetailWrapper,
@@ -129,20 +128,20 @@ const HeaderUI = ({
                 {data.main.ContactUs}
               </MenuItem>
               <LanguageChangeWrapper>
-                <LanguageEnglish
+                <LanguageButton
                   id="en"
                   onClick={onClickLanguage}
-                  language={language}
+                  selected={language === 'en'}
                 >
                   {data.main.Eng}
-                </LanguageEnglish>
-                <LanguageKorean
+                </LanguageButton>
+                <LanguageButton
                   id="kor"
                   onClick={onClickLanguage}
-                  language={language}
+                  selected={language === 'kor'}
                 >
                   {data.main.Kor}
-                </LanguageKorean>
+                </LanguageButton>
               </LanguageChangeWrapper>
             </MenusWrapper>
           </HeaderSubWrapper>
