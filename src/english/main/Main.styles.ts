@@ -7,11 +7,6 @@ interface IProps {
   data?: any
 }
 
-export const SliderWrapper = styled.div`
-  width: 100vw;
-  display: flex;
-`
-
 export const SliderMainWrapper = styled.div`
   position: relative;
   width: 1100px;
@@ -213,22 +208,6 @@ export const ProductImageText = styled.span`
   left: 142px;
 `
 
-export const SpecificationButtonsWrapper = styled.div`
-  margin: 15px auto 0px auto;
-  width: 1100px;
-  display: flex;
-  flex-direction: row;
-`
-export const SpecificiationOuterSatelliteButtonsWrapper = styled.div`
-  margin-left: 145px;
-`
-export const SpecificationSatelliteButtonsWrapper = styled.div`
-  width: 354px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`
-
 export const SpecificationButtonHref = styled.a``
 
 export const SpecificationButton = styled.button`
@@ -246,13 +225,7 @@ export const SpecificationButton = styled.button`
   line-height: 19px;
   cursor: pointer;
 `
-export const SpecificationDefenseButtonsWrapper = styled.div`
-  width: 354px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 113px;
-`
+
 export const MainThirdLineDivider = styled.div`
   margin: 65px auto 0px auto;
   width: 394px;
