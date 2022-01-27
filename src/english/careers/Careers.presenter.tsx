@@ -72,7 +72,7 @@ const CareersUI = ({ data, language }: IProps) => {
                   <HrCircle
                     key={index}
                     value={data.careers[pageIndex].circles[i]}
-                    name={`data.careers[${pageIndex}].circles[${i}]`}
+                    name={`data.careers.${pageIndex}.circles.${i}`}
                   />
                 ) : (
                   <CareersArrow
@@ -93,7 +93,7 @@ const CareersUI = ({ data, language }: IProps) => {
                   as={'li'}
                   key={i}
                   value={v}
-                  name={`data.careers[${pageIndex}].principle[${i}]`}
+                  name={`data.careers.${pageIndex}.principle.${i}`}
                 />
               ))}
             </HrPrincipleDetailsBigWrapper>

@@ -14,7 +14,7 @@ const initialLanguage: Language = {
   language: 'en',
   setLanguage: () => null,
   languageData: null,
-  fetchLanguage: () => null,
+  fetchLanguage: () => Promise.resolve(),
 }
 
 const LanguageContext = createContext<Language>(initialLanguage)

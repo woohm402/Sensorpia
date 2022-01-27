@@ -60,7 +60,7 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
                   as={'span'}
                   value={v}
                   key={i}
-                  name={`aboutUs[${pageIndex}].data.circleAboveTexts[${i}]`}
+                  name={`aboutUs.${pageIndex}.data.circleAboveTexts.${i}`}
                 />
               )
             )}
@@ -70,38 +70,38 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
             <BlueCirlce />
             <DefenseText
               value={data.aboutUs[pageIndex].data.circleTexts[0]}
-              name={`aboutUs[${pageIndex}].data.circleTexts[0]`}
+              name={`aboutUs.${pageIndex}.data.circleTexts.0`}
             />
             <MagneticSensorsText
               value={data.aboutUs[pageIndex].data.circleTexts[1]}
-              name={`aboutUs[${pageIndex}].data.circleTexts[1]`}
+              name={`aboutUs.${pageIndex}.data.circleTexts.1`}
             />
             <SatelliteText
               value={data.aboutUs[pageIndex].data.circleTexts[2]}
-              name={`aboutUs[${pageIndex}].data.circleTexts[2]`}
+              name={`aboutUs.${pageIndex}.data.circleTexts.2`}
             />
             <MeasurementAndTestText
               value={data.aboutUs[pageIndex].data.circleTexts[3]}
-              name={`aboutUs[${pageIndex}].data.circleTexts[3]`}
+              name={`aboutUs.${pageIndex}.data.circleTexts.3`}
             />
             <AboutUsArrowImageWrapper url={data.aboutUs[pageIndex].arrow} />
             <GreenCircle />
             <MagneticInstrumentsText
               value={data.aboutUs[pageIndex].data.circleTexts[4]}
-              name={`aboutUs[${pageIndex}].data.circleTexts[4]`}
+              name={`aboutUs.${pageIndex}.data.circleTexts.4`}
             />
           </CircleWrapper>
           <SecondTextWrapper
             value={data.aboutUs[pageIndex].data.circleBelowTexts[0]}
-            name={`aboutUs[${pageIndex}].data.circleBelowTexts[0]`}
+            name={`aboutUs.${pageIndex}.data.circleBelowTexts.0`}
           />
           <SecondTextWrapper
             value={data.aboutUs[pageIndex].data.circleBelowTexts[1]}
-            name={`aboutUs[${pageIndex}].data.circleBelowTexts[1]`}
+            name={`aboutUs.${pageIndex}.data.circleBelowTexts.1`}
           />
           <OurCustomersTitleWrapper
             value={data.aboutUs[pageIndex].data.subTitle}
-            name={`aboutUs[${pageIndex}].data.subTitle`}
+            name={`aboutUs.${pageIndex}.data.subTitle`}
           />
           <OurCustomersDivider />
           <OurCustomersImageFirstLineWrapper>
@@ -154,7 +154,7 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
               <VisionAndHistoryExplanation
                 key={item}
                 value={data.aboutUs[pageIndex].data.explanations[item]}
-                name={`aboutUs[${pageIndex}].data.explanations[${item}]`}
+                name={`aboutUs.${pageIndex}.data.explanations.${item}`}
               />
             ))}
           </VisionAndHistoryExplanationsWrapper>

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import TextBox from '../../common/TextBox/TextBox'
+import ImageBox from '../../common/ImageBox/ImageBox'
 
 interface IProps {
   finalRandomImage?: any
@@ -28,10 +29,12 @@ export const ApplicationMagnetometerWrapper = styled.div`
   margin-bottom: 50px;
   align-items: center;
 `
-export const ApplicationMagnetometerImageWrapper = styled.img`
+
+export const ApplicationMagnetometerImageWrapper = styled(ImageBox)`
   width: 269px;
   object-fit: cover;
-`
+` as typeof ImageBox
+
 export const ApplicationMagnetometerContentWrapper = styled.div`
   display: flex;
   flex-direction: column;

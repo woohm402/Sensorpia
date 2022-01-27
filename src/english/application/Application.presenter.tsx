@@ -34,7 +34,7 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
                 as={'li'}
                 key={i}
                 value={data}
-                name={`applications[${pageIndex}].data.mainTexts[${i}]`}
+                name={`applications.${pageIndex}.data.mainTexts.${i}`}
               />
             )
           )}
@@ -43,18 +43,23 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
       {data.applications[pageIndex]?.data.subImageAndDetails?.map(
         (data: any, index: number) => (
           <ApplicationMagnetometerWrapper key={index}>
-            <ApplicationMagnetometerImageWrapper src={data.image} />
+            <ApplicationMagnetometerImageWrapper
+              src={data.image as string}
+              as={'img'}
+              alt={''}
+              name={`applications.${pageIndex}.data.subImageAndDetails.${index}.image`}
+            />
             <ApplicationMagnetometerContentWrapper>
               <ApplicationMagnetometerTitle
                 value={data.title}
-                name={`applications[${pageIndex}].data.subImageAndDetails[${index}].title`}
+                name={`applications.${pageIndex}.data.subImageAndDetails.${index}.title`}
               />
               {data.details.map((value: any, i: number) => (
                 <ApplicationMagnetometerDetails
                   as={'li'}
                   key={i}
                   value={value}
-                  name={`applications[${pageIndex}].data.subImageAndDetails[${index}].details[${i}]`}
+                  name={`applications.${pageIndex}.data.subImageAndDetails.${index}.details.${i}`}
                 />
               ))}
             </ApplicationMagnetometerContentWrapper>
