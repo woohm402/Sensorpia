@@ -34,7 +34,7 @@ const CareersUI = ({ data, language }: IProps) => {
             <TalentTitle
               as={'span'}
               value={data.careers[pageIndex]?.name}
-              name={`careers[${pageIndex}].name`}
+              name={`careers.${pageIndex}.name`}
             />
             <TalentLineDivider />
             {data.careers[pageIndex]?.circles.map((data: any, i: number) => (
@@ -42,12 +42,12 @@ const CareersUI = ({ data, language }: IProps) => {
                 <Circle>
                   <CircleText
                     value={data.title}
-                    name={`careers[${pageIndex}].circles[${i}].title`}
+                    name={`careers.${pageIndex}.circles.${i}.title`}
                   />
                 </Circle>
                 <CircleDetailText
                   value={data.content}
-                  name={`careers[${pageIndex}].circles[${i}].content`}
+                  name={`careers.${pageIndex}.circles.${i}.content`}
                 />
               </BigCircleWrapper>
             ))}
@@ -59,12 +59,12 @@ const CareersUI = ({ data, language }: IProps) => {
             <HrTitle
               as={'span'}
               value={data.careers[pageIndex].name}
-              name={`careers[${pageIndex}].name`}
+              name={`careers.${pageIndex}.name`}
             />
             <HrLineDivider />
             <SubTitleWrapper
               value={data.careers[pageIndex].subTitle}
-              name={`careers[${pageIndex}].subTitle`}
+              name={`careers.${pageIndex}.subTitle`}
             />
             <HrCirclesWrapper>
               {[0, null, 1, null, 2].map((i, index) =>
@@ -84,7 +84,7 @@ const CareersUI = ({ data, language }: IProps) => {
             </HrCirclesWrapper>
             <HrPrincipleTitle
               value={data.careers[pageIndex].secondTitle}
-              name={`data.careers[${pageIndex}].secondTitle`}
+              name={`data.careers.${pageIndex}.secondTitle`}
             />
             <HrLineDivider />
             <HrPrincipleDetailsBigWrapper>

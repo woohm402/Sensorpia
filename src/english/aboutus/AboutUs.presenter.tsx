@@ -147,7 +147,7 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
         <>
           <VisionAndHistoryTitleWrapper
             value={data.aboutUs[pageIndex].data.mainTitle}
-            name={`aboutUs[${pageIndex}].data.mainTitle`}
+            name={`aboutUs.${pageIndex}.data.mainTitle`}
           />
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryImagesWrapper>
@@ -183,7 +183,7 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
                   <VisionAndHistoryYearExplanation
                     key={i}
                     value={value}
-                    name={`aboutUs[${pageIndex}].data.years${i}`}
+                    name={`aboutUs.${pageIndex}.data.years.${i}`}
                   />
                 )
               )}

@@ -17,7 +17,7 @@ const ContactUsUI = ({ data }: IProps) => {
         <ContactUsDetails
           key={i}
           value={data.content}
-          name={`contactUs.details[${i}].content`}
+          name={`contactUs.details.${i}.content`}
         />
       ))}
       <ContactUsMapWrapper>
