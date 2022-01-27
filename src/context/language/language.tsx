@@ -14,6 +14,7 @@ const initialLanguage: Language = {
   language: 'en',
   setLanguage: () => null,
   languageData: null,
+  fetchLanguage: () => null,
 }
 
 const LanguageContext = createContext<Language>(initialLanguage)
@@ -34,9 +35,8 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
     [enLanguage, korLanguage]
   )
 
-  useEffect(() => {
-    // TODO 서버에서 credentials 이용해서 발급
-    Promise.allSettled([
+  const fetchLanguage = useCallback(() => {
+    return Promise.allSettled([
       axios.get(
         'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/en.json'
       ),
@@ -55,9 +55,13 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
     })
   }, [])
 
+  useEffect(() => {
+    fetchLanguage()
+  }, [])
+
   return (
     <LanguageContext.Provider
-      value={{ language, setLanguage: onChangeLanguage, languageData }}
+      value={{ language, setLanguage: onChangeLanguage, languageData, fetchLanguage }}
     >
       {children}
     </LanguageContext.Provider>

@@ -8,6 +8,7 @@ import React, {
 import { TextArea, Button } from './TextBox.style'
 import { useAdminContext } from '../../context/admin/admin'
 import { useLanguageContext } from '../../context/language/language'
+import axios from 'axios'
 
 type Props = {
   as?: ElementType
@@ -19,7 +20,7 @@ type Props = {
 const TextBox = ({ value, as: Tag = 'div', className, name }: Props) => {
   const [editingValue, setEditingValue] = useState<string>('')
   const [isEditing, setIsEditing] = useState<boolean>(false)
-  const { language } = useLanguageContext()
+  const { language, languageData, fetchLanguage } = useLanguageContext()
   const { isAdmin } = useAdminContext()
 
   const handleClick = () => {
@@ -44,12 +45,25 @@ const TextBox = ({ value, as: Tag = 'div', className, name }: Props) => {
         return
       }
 
-      // TODO implement
-      console.log(
-        `TODO:\n ${language} 의\n ${name} 필드를\n ${value} 에서\n ${editingValue} 로 변경 후 refetch`
-      )
+      const newData = JSON.parse(JSON.stringify(languageData))
+
+      let cursor = newData
+      const keys = name.split('.')
+      keys.slice(0, keys.length - 1).forEach((key) => {
+        cursor = cursor[key]
+      })
+
+      // @ts-ignore
+      cursor[keys[keys.length - 1]] = editingValue
+
+      axios
+        .put(`/api/admin/content/${language}`, {
+          body: JSON.stringify(newData),
+        })
+        .then(() => fetchLanguage())
+        .then(handleCancelEdit)
     },
-    [editingValue, value, name, language]
+    [editingValue, value, name, language, languageData]
   )
 
   const tagProps = {

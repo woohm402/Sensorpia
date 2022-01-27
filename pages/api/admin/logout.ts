@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { withSessionRoute } from '../../../src/lib/withSession'
-import bcrypt from 'bcrypt'
 
 export default withSessionRoute(async function handler(
   req: NextApiRequest,
