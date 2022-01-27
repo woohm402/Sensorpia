@@ -22,7 +22,7 @@ const AdminIndicator = () => {
 
   return (
     <Wrapper>
-      관리자 모드{' '}
+      관리자 모드
       <button style={{ width: 80, height: 40, cursor: 'pointer' }} onClick={handleLogout}>
         로그아웃
       </button>
