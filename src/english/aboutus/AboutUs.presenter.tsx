@@ -51,7 +51,8 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
       {data.aboutUs[pageIndex]?.layout === introPage && (
         <AboutUsBigWrapper>
           <AboutUsImageOneWrapper
-            url={data.aboutUs[pageIndex]?.data.mainImage}
+            src={data.aboutUs[pageIndex]?.data.mainImage}
+            name={`aboutUs.${pageIndex}.data.mainImage`}
           />
           <AboutUsFirstTextWrapper>
             {data.aboutUs[pageIndex].data.circleAboveTexts.map(
@@ -106,30 +107,38 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
           <OurCustomersDivider />
           <OurCustomersImageFirstLineWrapper>
             <LIGImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[0]}
+              src={data.aboutUs[pageIndex].data.subClientImages[0]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.0`}
             />
             <HanhwaImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[1]}
+              src={data.aboutUs[pageIndex].data.subClientImages[1]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.1`}
             />
             <KaiImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[2]}
+              src={data.aboutUs[pageIndex].data.subClientImages[2]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.2`}
             />
             <KariImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[3]}
+              src={data.aboutUs[pageIndex].data.subClientImages[3]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.3`}
             />
           </OurCustomersImageFirstLineWrapper>
           <OurCustomersImageSecondLineWrapper>
             <KasiImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[4]}
+              src={data.aboutUs[pageIndex].data.subClientImages[4]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.4`}
             />
             <SiImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[5]}
+              src={data.aboutUs[pageIndex].data.subClientImages[5]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.5`}
             />
             <PoscoImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[6]}
+              src={data.aboutUs[pageIndex].data.subClientImages[6]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.6`}
             />
             <SatracImageWrapper
-              url={data.aboutUs[pageIndex].data.subClientImages[7]}
+              src={data.aboutUs[pageIndex].data.subClientImages[7]}
+              name={`aboutUs.${pageIndex}.data.subClientImages.7`}
             />
           </OurCustomersImageSecondLineWrapper>
         </AboutUsBigWrapper>
@@ -143,10 +152,12 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
           <VisionAndHistoryLineDivider />
           <VisionAndHistoryImagesWrapper>
             <VisionAndHistoryImageOne
-              url={data.aboutUs[pageIndex].data.mainImages[0]}
+              src={data.aboutUs[pageIndex].data.mainImages[0]}
+              name={`aboutUs.${pageIndex}.data.mainImages.0`}
             />
             <VisionAndHistoryImageTwo
-              url={data.aboutUs[pageIndex].data.mainImages[1]}
+              src={data.aboutUs[pageIndex].data.mainImages[1]}
+              name={`aboutUs.${pageIndex}.data.mainImages.1`}
             />
           </VisionAndHistoryImagesWrapper>
           <VisionAndHistoryExplanationsWrapper>

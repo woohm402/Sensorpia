@@ -28,7 +28,7 @@ export const ApplicationMagnetometerWrapper = styled.div`
 export const ApplicationMagnetometerImageWrapper = styled(ImageBox)`
   width: 269px;
   object-fit: cover;
-` as typeof ImageBox
+`
 
 export const ApplicationMagnetometerContentWrapper = styled.div`
   display: flex;

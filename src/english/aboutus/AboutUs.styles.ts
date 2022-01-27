@@ -1,22 +1,27 @@
 import styled from '@emotion/styled'
 import TextBox from '../../common/TextBox/TextBox'
+import ImageBox from '../../common/ImageBox/ImageBox'
 
 interface IProps {
   url: any
+}
+
+interface Props {
+  src: string
 }
 
 export const AboutUsBigWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const AboutUsImageOneWrapper = styled.div`
+export const AboutUsImageOneWrapper = styled(ImageBox)`
   width: 842px;
   height: 449px;
-  ${(props: IProps) => `background:url(${props.url})`}
+  ${(props: Props) => `background:url(${props.src})`}
 `
 export const AboutUsFirstTextWrapper = styled.div`
   max-width: 702px;
-  margin: 30px 70px 0px 70px;
+  margin: 30px 70px 0 70px;
   text-align: justify;
 `
 
@@ -133,8 +138,8 @@ export const OurCustomersTitleWrapper = styled(TextBox)`
 `
 export const OurCustomersDivider = styled.div`
   width: 701px;
-  height: 0px;
-  margin: 10px 71px 0px 70px;
+  height: 0;
+  margin: 10px 71px 0 70px;
   border: 1px solid #c9c9c9;
 `
 export const OurCustomersImageFirstLineWrapper = styled.div`
@@ -145,29 +150,29 @@ export const OurCustomersImageFirstLineWrapper = styled.div`
   width: 100%;
   align-items: center;
 `
-export const LIGImageWrapper = styled.div`
+export const LIGImageWrapper = styled(ImageBox)`
   width: 107px;
   height: 51px;
   margin-left: 101px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const HanhwaImageWrapper = styled.div`
+export const HanhwaImageWrapper = styled(ImageBox)`
   width: 143px;
   height: 39px;
   margin-left: 63px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const KaiImageWrapper = styled.div`
+export const KaiImageWrapper = styled(ImageBox)`
   width: 179px;
   height: 36px;
   margin-left: 49px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const KariImageWrapper = styled.div`
+export const KariImageWrapper = styled(ImageBox)`
   width: 77px;
   height: 77px;
   margin-left: 53px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
 export const OurCustomersImageSecondLineWrapper = styled.div`
   margin-top: 30px;
@@ -179,30 +184,30 @@ export const OurCustomersImageSecondLineWrapper = styled.div`
   align-items: center;
 `
 
-export const KasiImageWrapper = styled.div`
+export const KasiImageWrapper = styled(ImageBox)`
   width: 177px;
   height: 52px;
   margin-left: 70px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const SiImageWrapper = styled.div`
+export const SiImageWrapper = styled(ImageBox)`
   width: 95px;
   height: 75px;
   margin-left: 32px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const PoscoImageWrapper = styled.div`
+export const PoscoImageWrapper = styled(ImageBox)`
   width: 117px;
   height: 31px;
   margin-left: 43px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
 
-export const SatracImageWrapper = styled.div`
+export const SatracImageWrapper = styled(ImageBox)`
   width: 186px;
   height: 75px;
   margin-left: 52px;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
 export const VisionAndHistoryTitleWrapper = styled(TextBox)`
   margin-top: 35px;
@@ -215,7 +220,7 @@ export const VisionAndHistoryTitleWrapper = styled(TextBox)`
 `
 export const VisionAndHistoryLineDivider = styled.div`
   width: 701px;
-  height: 0px;
+  height: 0;
   margin-top: 11px;
   border: 1px solid #c9c9c9;
   margin-left: 70px;
@@ -226,18 +231,18 @@ export const VisionAndHistoryImagesWrapper = styled.div`
   margin-left: 70px;
 `
 
-export const VisionAndHistoryImageOne = styled.div`
+export const VisionAndHistoryImageOne = styled(ImageBox)`
   width: 325px;
   height: 329px;
   border-radius: 50%;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
-export const VisionAndHistoryImageTwo = styled.div`
+export const VisionAndHistoryImageTwo = styled(ImageBox)`
   width: 325px;
   height: 329px;
   margin-left: 48px;
   border-radius: 50%;
-  ${(props: IProps) => `background:url(${props.url})`};
+  ${(props: Props) => `background:url(${props.src})`};
 `
 
 export const VisionAndHistoryExplanationsWrapper = styled.div`
