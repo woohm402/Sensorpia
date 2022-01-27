@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import TextBox from '../../common/TextBox/TextBox'
+import ImageBox from '../../common/ImageBox/ImageBox'
 
 interface IProps {
   translate?: any
@@ -53,7 +54,7 @@ export const SliderDraggableWrapper = styled.div`
   position: relative;
 `
 
-export const SliderImage = styled.div`
+export const SliderImage = styled(ImageBox)`
   width: 1100px;
   height: 441px;
   object-fit: cover;
@@ -190,14 +191,14 @@ export const ProductImageWrapper = styled.div`
   position: relative;
 `
 
-export const ProductImage = styled.div`
+export const ProductImage = styled(ImageBox)`
   position: relative;
   width: 192px;
   height: 266px;
   ${(props: { src: string }) => `background: url(${props.src})`}
 `
 
-export const ProductImageText = styled.span`
+export const ProductImageText = styled(TextBox)`
   position: absolute;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -249,18 +250,13 @@ export const MagneticTorquerSubProductWrapper = styled.div`
   align-items: center;
 `
 
-export const MainThirdProductImageWrapper = styled.div`
+export const MainThirdProductImageWrapper = styled(ImageBox)`
   margin: 20px auto 0px auto;
   width: 393px;
   height: 318px;
-  ${(props: any) => `background:url(${props.data})`};
+  ${(props: any) => `background:url(${props.src})`};
 `
-export const TorquerButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 15px;
-`
+
 export const NavBarOuterWrapper = styled.div`
   min-width: 100vw;
   height: 340px;

@@ -84,9 +84,16 @@ const MainUI = ({
           <SliderDraggableWrapper>
             <SliderMidWrapper>
               <SliderInnerImageWrapper translate={translate}>
-                {data.main.slider.images.map((imageUrl: string) => (
-                  <SliderImage src={imageUrl} key={imageUrl} />
-                ))}
+                {data.main.slider.images.map(
+                  (imageUrl: string, index: number) => (
+                    <SliderImage
+                      as={'div'}
+                      name={`main.slider.images.${index}`}
+                      src={imageUrl}
+                      key={imageUrl}
+                    />
+                  )
+                )}
               </SliderInnerImageWrapper>
             </SliderMidWrapper>
             <SliderPreviousButton onClick={onClickSliderPrevious} />
@@ -121,8 +128,15 @@ const MainUI = ({
             {data.main.satellite.map((value: any, index: number) => (
               <ProductSubWrapper key={index}>
                 <ProductImageWrapper>
-                  <ProductImage src={value.image} />
-                  <ProductImageText>{value.name}</ProductImageText>
+                  <ProductImage
+                    name={`main.satellite.${index}.image`}
+                    src={value.image}
+                  />
+                  <ProductImageText
+                    as={'span'}
+                    name={`main.satellite.${index}.name`}
+                    value={value.name}
+                  />
                 </ProductImageWrapper>
                 <SpecificationButtonHref href={value.download}>
                   <SpecificationButton>
@@ -136,8 +150,15 @@ const MainUI = ({
             {data.main.defense.map((value: any, index: number) => (
               <ProductSubWrapper key={index}>
                 <ProductImageWrapper>
-                  <ProductImage src={value.image} />
-                  <ProductImageText>{value.name}</ProductImageText>
+                  <ProductImage
+                    src={value.image}
+                    name={`main.defense.${index}.image`}
+                  />
+                  <ProductImageText
+                    as={'span'}
+                    name={`main.defense.${index}.name`}
+                    value={value.name}
+                  />
                 </ProductImageWrapper>
                 <SpecificationButtonHref href={value.download}>
                   <SpecificationButton>
@@ -157,8 +178,8 @@ const MainUI = ({
       {data.main.magneticTorquer.map((value: any, index: any) => (
         <MagneticTorquerSubProductWrapper key={index}>
           <MainThirdProductImageWrapper
-            //@ts-expect-error
-            data={value.image}
+            src={value.image}
+            name={`main.magneticTorquer.${index}.image`}
           />
           <SpecificationButtonHref href={value.download}>
             <SpecificationButton>

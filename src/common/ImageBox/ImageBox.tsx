@@ -10,7 +10,7 @@ type Props = {
   src?: string
   alt?: string
   name: string
-  as: 'img' | 'div'
+  as?: 'img' | 'div'
 }
 
 const ImageBox = ({
@@ -18,7 +18,7 @@ const ImageBox = ({
   className,
   name,
   alt = '',
-  as,
+  as = 'div',
 }: Props): JSX.Element => {
   const { isAdmin } = useAdminContext()
   const { languageData, fetchLanguage } = useLanguageContext()
