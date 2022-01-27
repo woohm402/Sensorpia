@@ -1,14 +1,16 @@
 import styled from '@emotion/styled'
+import ImageBox from '../../common/ImageBox/ImageBox'
+import TextBox from '../../common/TextBox/TextBox'
 
 interface IPropsTwo {
-  url: any
+  src: string
 }
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(ImageBox)`
   width: 702px;
   height: 369px;
   margin-top: 35px;
-  ${({ url }: IPropsTwo) => `background:url(${url})`};
+  ${({ src }: IPropsTwo) => `background:url(${src})`};
 `
 export const ContentWrapper = styled.div`
   display: flex;
@@ -26,12 +28,12 @@ export const SubImageMidWrappers = styled.div`
   position: relative;
 `
 
-export const SubImageWrappers = styled.img`
+export const SubImageWrappers = styled(ImageBox)`
   width: 268px;
   object-fit: cover;
 `
 
-export const SubImageTexts = styled.div`
+export const SubImageTexts = styled(TextBox)`
   top: 89%;
   left: 82%;
   font-family: 'Noto Sans KR', sans-serif;
@@ -41,7 +43,7 @@ export const SubImageTexts = styled.div`
   position: absolute;
 `
 
-export const ExplanationTitle = styled.div`
+export const ExplanationTitle = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -49,7 +51,7 @@ export const ExplanationTitle = styled.div`
   color: #262626;
   margin-bottom: 20px;
 `
-export const ExplanationDetail = styled.li`
+export const ExplanationDetail = styled(TextBox)`
   width: 370px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -62,15 +64,15 @@ export const ExplanationDetail = styled.li`
   text-indent: -1.5em;
   padding-left: 1.5em;
 `
-export const MagneticInstrumentImageOneWrapper = styled.div`
+export const MagneticInstrumentImageOneWrapper = styled(ImageBox)`
   width: 702px;
   height: 370px;
   margin-top: 35px;
   margin-left: 70px;
-  ${({ url }: IPropsTwo) => `background:url(${url})`};
+  ${({ src }: IPropsTwo) => `background:url(${src})`};
 `
 
-export const MagneticInstrumentImageOneDetail = styled.li`
+export const MagneticInstrumentImageOneDetail = styled(TextBox)`
   margin-top: 30px;
   margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -88,12 +90,12 @@ export const MagneticInstrumentDCBHWrapper = styled.div`
   align-items: center;
 `
 
-export const MagneticInstumentDCBHExplanationWrapper = styled.div`
+export const MagneticInstrumentDCBHExplanationWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const MagneticInstrumentDCBHTitle = styled.div`
+export const MagneticInstrumentDCBHTitle = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -109,10 +111,10 @@ export const MagneticInstrumentDCBHImageButtonWrapper = styled.div`
   margin-left: 181px;
 `
 
-export const MagneticInstrumentDCBHImageWrapper = styled.div`
+export const MagneticInstrumentDCBHImageWrapper = styled(ImageBox)`
   width: 284px;
   height: 188px;
-  ${({ url }: IPropsTwo) => `background:url(${url})`};
+  ${({ src }: IPropsTwo) => `background:url(${src})`};
 `
 
 export const MagneticInstrumentACMagneticWrapper = styled.div`
@@ -125,7 +127,7 @@ export const MagneticInstrumentACMagneticExplanationWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const MagneticInstrumentACMagneticTitle = styled.div`
+export const MagneticInstrumentACMagneticTitle = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -133,7 +135,7 @@ export const MagneticInstrumentACMagneticTitle = styled.div`
   color: #262626;
   margin-bottom: 20px;
 `
-export const MagneticInstrumentACMagneticDetails = styled.li`
+export const MagneticInstrumentACMagneticDetails = styled(TextBox)`
   width: 236px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
@@ -150,10 +152,10 @@ export const ACMagneticButtonImageWrapper = styled.div`
   align-items: center;
 `
 
-export const MagneticInstrumentACMagneticImageWrapper = styled.div`
+export const MagneticInstrumentACMagneticImageWrapper = styled(ImageBox)`
   width: 323px;
   height: 162px;
-  ${({ url }: IPropsTwo) => `background:url(${url})`};
+  ${({ src }: IPropsTwo) => `background:url(${src})`};
 `
 export const SpecificationButton = styled.button`
   width: 152px;

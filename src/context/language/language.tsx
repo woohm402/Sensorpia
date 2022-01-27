@@ -15,6 +15,8 @@ const initialLanguage: Language = {
   setLanguage: () => null,
   languageData: null,
   fetchLanguage: () => Promise.resolve(),
+  korLanguage: null,
+  enLanguage: null,
 }
 
 const LanguageContext = createContext<Language>(initialLanguage)
@@ -44,16 +46,13 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
         'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/kor.json'
       ),
     ]).then(([en, ko]) => {
-      if ('value' in en) {
+      if ('value' in en && 'value' in ko) {
         setEnLanguage(en.value.data)
-        setLanguageData(en.value.data)
-      }
-
-      if ('value' in ko) {
         setKorLanguage(ko.value.data)
+        setLanguageData(language === 'en' ? en.value.data : ko.value.data)
       }
     })
-  }, [])
+  }, [language])
 
   useEffect(() => {
     fetchLanguage()
@@ -61,7 +60,14 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
 
   return (
     <LanguageContext.Provider
-      value={{ language, setLanguage: onChangeLanguage, languageData, fetchLanguage }}
+      value={{
+        language,
+        setLanguage: onChangeLanguage,
+        languageData,
+        fetchLanguage,
+        korLanguage,
+        enLanguage,
+      }}
     >
       {children}
     </LanguageContext.Provider>

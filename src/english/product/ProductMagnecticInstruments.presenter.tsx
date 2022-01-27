@@ -12,7 +12,7 @@ import {
   MagneticInstrumentDCBHWrapper,
   MagneticInstrumentImageOneDetail,
   MagneticInstrumentImageOneWrapper,
-  MagneticInstumentDCBHExplanationWrapper,
+  MagneticInstrumentDCBHExplanationWrapper,
   SpecificationButton,
   SpecificationButtonWrapperHref,
 } from './Product.styles'
@@ -26,38 +26,47 @@ const MagneticInstrumentsPage = () => {
   return (
     <>
       <MagneticInstrumentImageOneWrapper
-        url={data.products[pageIndex]?.data.subSections[0]?.mainImage}
+        src={data.products[pageIndex]?.data.subSections[0]?.mainImage}
+        name={`products.${pageIndex}.data.subSections.0.mainImage`}
       />
-      <MagneticInstrumentImageOneDetail>
-        {
+      <MagneticInstrumentImageOneDetail
+        as={'li'}
+        value={
           data.products[pageIndex]?.data.subSections[0]
             ?.textExplanationDetails[0]
         }
-      </MagneticInstrumentImageOneDetail>
+        name={`products.${pageIndex}.data.subSections.0.textExplanationDetails.0`}
+      />
       <MagneticInstrumentDCBHWrapper>
-        <MagneticInstumentDCBHExplanationWrapper>
-          <MagneticInstrumentDCBHTitle>
-            {
+        <MagneticInstrumentDCBHExplanationWrapper>
+          <MagneticInstrumentDCBHTitle
+            value={
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[0]?.title
             }
-          </MagneticInstrumentDCBHTitle>
+            name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.title`}
+          />
+
           {data.products[
             pageIndex
           ]?.data.subSections[0]?.subImagesAndTexts[0].details.map(
             (detail: string, index: number) => (
-              <MagneticInstrumentACMagneticDetails key={index}>
-                {detail}
-              </MagneticInstrumentACMagneticDetails>
+              <MagneticInstrumentACMagneticDetails
+                as={'li'}
+                key={index}
+                value={detail}
+                name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.details.${index}`}
+              />
             )
           )}
-        </MagneticInstumentDCBHExplanationWrapper>
+        </MagneticInstrumentDCBHExplanationWrapper>
         <MagneticInstrumentDCBHImageButtonWrapper>
           <MagneticInstrumentDCBHImageWrapper
-            url={
+            src={
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[0].image
             }
+            name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.image`}
           />
           <SpecificationButtonWrapperHref
             href={
@@ -73,28 +82,32 @@ const MagneticInstrumentsPage = () => {
       </MagneticInstrumentDCBHWrapper>
       <MagneticInstrumentACMagneticWrapper>
         <MagneticInstrumentACMagneticExplanationWrapper>
-          <MagneticInstrumentACMagneticTitle>
-            {
+          <MagneticInstrumentACMagneticTitle
+            value={
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[1]?.title
             }
-          </MagneticInstrumentACMagneticTitle>
+            name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.title`}
+          />
           {data.products[
             pageIndex
           ]?.data.subSections[0]?.subImagesAndTexts[1].details.map(
             (detail: string, index: number) => (
-              <MagneticInstrumentACMagneticDetails key={index}>
-                {detail}
-              </MagneticInstrumentACMagneticDetails>
+              <MagneticInstrumentACMagneticDetails
+                value={detail}
+                key={index}
+                name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.details.${index}`}
+              />
             )
           )}
         </MagneticInstrumentACMagneticExplanationWrapper>
         <ACMagneticButtonImageWrapper>
           <MagneticInstrumentACMagneticImageWrapper
-            url={
+            src={
               data.products[pageIndex]?.data.subSections[0]
                 ?.subImagesAndTexts[1].image
             }
+            name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.image`}
           />
           <SpecificationButtonWrapperHref
             href={

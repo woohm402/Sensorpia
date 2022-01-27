@@ -3,4 +3,6 @@ export interface Language {
   setLanguage: (lng: Language['language']) => void
   languageData: any
   fetchLanguage: () => Promise<void>
+  enLanguage: any
+  korLanguage: any
 }

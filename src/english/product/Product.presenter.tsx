@@ -31,22 +31,29 @@ const ProductUI = () => {
       {data.products[pageIndex]?.layout === basicPage && (
         <>
           <ImageWrapper
-            url={
+            src={
               data.products[pageIndex]?.data.subSections[buttonIndex]?.mainImage
             }
+            name={`products.${pageIndex}.data.subSections.${buttonIndex}.mainImage`}
           />
           <ContentWrapper>
             <ExplanationWrapper>
-              <ExplanationTitle>
-                {
+              <ExplanationTitle
+                value={
                   data.products[pageIndex]?.data.subSections[buttonIndex]
                     ?.textExplanationTitle
                 }
-              </ExplanationTitle>
+                name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationTitle`}
+              />
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
               ]?.textExplanationDetails.map((data: any, i: number) => (
-                <ExplanationDetail key={i}>{data}</ExplanationDetail>
+                <ExplanationDetail
+                  as={'li'}
+                  value={data}
+                  key={i}
+                  name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails.${i}`}
+                />
               ))}
             </ExplanationWrapper>
             <SubImageOuterWrappers>
@@ -55,8 +62,15 @@ const ProductUI = () => {
               ]?.subImagesAndTexts.map((value: any, i: number) => (
                 <SubImageMidTwoWrappers key={i}>
                   <SubImageMidWrappers>
-                    <SubImageWrappers src={value.image} />
-                    <SubImageTexts>{value.text}</SubImageTexts>
+                    <SubImageWrappers
+                      as={'img'}
+                      src={value.image}
+                      name={`products.${pageIndex}.data.subSections.${buttonIndex}.subImagesAndTexts.${i}.image`}
+                    />
+                    <SubImageTexts
+                      value={value.text}
+                      name={`products.${pageIndex}.data.subSections.${buttonIndex}.subImagesAndTexts.${i}.text`}
+                    />
                   </SubImageMidWrappers>
                   <SpecificationButtonWrapperHref href={value.pdf}>
                     <SpecificationButton>

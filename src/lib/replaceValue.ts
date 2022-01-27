@@ -7,7 +7,6 @@ export const replaceValue = (obj: Object, key: string, to: string) => {
     cursor = cursor[key]
   })
 
-  // @ts-ignore
   cursor[keys[keys.length - 1]] = to
 
   return newData;
