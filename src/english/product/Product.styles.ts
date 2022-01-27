@@ -1,27 +1,8 @@
 import styled from '@emotion/styled'
-interface IProps {
-  color?: any
-}
+
 interface IPropsTwo {
   url: any
 }
-
-export const ThreeAxisButtons = styled.button`
-  width: 200px;
-  height: 30px;
-  background: ${(props: IProps) => (props.color ? '#f4f7ff' : '#f9f9f9')};
-  border: 1px solid #9c9d9e;
-  box-sizing: border-box;
-  border-radius: 30px;
-  margin-top: 35px;
-  margin-right: 51px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  color: ${(props: IProps) => (props.color ? '#0070c0' : '#9c9d9e')};
-  cursor: pointer;
-`
 
 export const ImageWrapper = styled.div`
   width: 702px;
@@ -88,6 +69,7 @@ export const MagneticInstrumentImageOneWrapper = styled.div`
   margin-left: 70px;
   ${({ url }: IPropsTwo) => `background:url(${url})`};
 `
+
 export const MagneticInstrumentImageOneDetail = styled.li`
   margin-top: 30px;
   margin-left: 70px;
@@ -98,16 +80,19 @@ export const MagneticInstrumentImageOneDetail = styled.li`
   text-align: justify;
   color: #636363;
 `
+
 export const MagneticInstrumentDCBHWrapper = styled.div`
   margin-top: 27px;
   margin-left: 70px;
   display: flex;
   align-items: center;
 `
+
 export const MagneticInstumentDCBHExplanationWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
 export const MagneticInstrumentDCBHTitle = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
@@ -116,15 +101,7 @@ export const MagneticInstrumentDCBHTitle = styled.div`
   color: #262626;
   margin-bottom: 15px;
 `
-export const MagneticInstrumentDetails = styled.li`
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  text-align: justify;
-  color: #636363;
-  width: 237px;
-`
+
 export const MagneticInstrumentDCBHImageButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;

@@ -17,22 +17,15 @@ import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter'
 import { useLanguageContext } from '../../context/language/language'
 
 const ProductUI = () => {
-  const { language, languageData: data } = useLanguageContext()
+  const { languageData: data } = useLanguageContext()
   const router = useRouter()
   const basicPage = 'productBasicPage'
   const magneticPage = 'productMagneticInstrumentsPage'
-  const path = router.pathname
   const pageIndex = Number(router.query.item)
   const buttonName = router.query.keyword
   const buttonIndex = data.products[pageIndex]?.data.subSections.findIndex(
     (data: any) => data.name === buttonName
   )
-  const onClickProductDetails = (event: any) => {
-    router.push({
-      pathname: path,
-      query: { item: router.query.item, keyword: event.target.id },
-    })
-  }
   return (
     <div style={{ position: 'relative', marginLeft: '70px' }}>
       {data.products[pageIndex]?.layout === basicPage && (
@@ -77,9 +70,7 @@ const ProductUI = () => {
         </>
       )}
       {data.products[pageIndex]?.layout === magneticPage && (
-        <>
-          <MagneticInstrumentsPage />
-        </>
+        <MagneticInstrumentsPage />
       )}
     </div>
   )
