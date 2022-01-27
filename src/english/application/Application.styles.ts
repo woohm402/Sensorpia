@@ -2,18 +2,13 @@ import styled from '@emotion/styled'
 import TextBox from '../../common/TextBox/TextBox'
 import ImageBox from '../../common/ImageBox/ImageBox'
 
-interface IProps {
-  finalRandomImage?: any
-  url?: any
-}
-
-export const DefenseImageRandomWrapper = styled.div`
+export const DefenseImageRandomWrapper = styled(ImageBox)`
   margin-top: 35px;
   margin-left: 70px;
   width: 702px;
   height: 434px;
-  background: ${(props: IProps) => `url(${props.finalRandomImage})`};
-`
+  background: ${({ src }: { src: string }) => `url(${src})`};
+` as typeof ImageBox
 export const DefenseExplanationDetails = styled(TextBox)`
   margin-top: 30px;
   font-family: 'Noto Sans KR', sans-serif;

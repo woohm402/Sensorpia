@@ -17,12 +17,17 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
     <>
       {pageIndex === 0 ? (
         <DefenseImageRandomWrapper
-          finalRandomImage={data.applications[pageIndex]?.data.mainImage[0]}
+          src={data.applications[pageIndex]?.data.mainImage[0]}
+          name={`applications.${pageIndex}.data.mainImage.0`}
         />
       ) : (
         data.applications[pageIndex]?.data.mainImage.map(
           (data: any, i: number) => (
-            <DefenseImageRandomWrapper key={i} finalRandomImage={data} />
+            <DefenseImageRandomWrapper
+              key={i}
+              src={data}
+              name={`applications.${pageIndex}.data.mainImage.${i}`}
+            />
           )
         )
       )}
