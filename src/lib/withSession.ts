@@ -1,5 +1,5 @@
-import { withIronSessionApiRoute, withIronSessionSsr } from 'iron-session/next'
-import { GetServerSideProps, NextApiHandler } from 'next'
+import { withIronSessionApiRoute, withIronSessionSsr } from 'iron-session/next';
+import { GetServerSideProps, NextApiHandler } from 'next';
 
 const sessionOptions = {
   password: 'complex_password_at_least_32_characters_long',
@@ -8,12 +8,12 @@ const sessionOptions = {
   cookieOptions: {
     secure: process.env.NODE_ENV === 'production',
   },
-}
+};
 
 export function withSessionRoute(handler: NextApiHandler) {
-  return withIronSessionApiRoute(handler, sessionOptions)
+  return withIronSessionApiRoute(handler, sessionOptions);
 }
 
 export function withSessionSsr(handler: GetServerSideProps) {
-  return withIronSessionSsr(handler, sessionOptions)
+  return withIronSessionSsr(handler, sessionOptions);
 }

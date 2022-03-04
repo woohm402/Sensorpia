@@ -1,26 +1,26 @@
-import { useRouter } from 'next/dist/client/router'
-import FooterComponent from './footer/Footer.container'
-import HeaderComponent from './header/Header.container'
-import SideBarComponent from './sideBar/SideBar.container'
-import Head from 'next/head'
-import { useLanguageContext } from '../context/language/language'
-import { useHeaderContext } from '../context/header/header'
+import { useRouter } from 'next/dist/client/router';
+import FooterComponent from './footer/Footer.container';
+import HeaderComponent from './header/Header.container';
+import SideBarComponent from './sideBar/SideBar.container';
+import Head from 'next/head';
+import { useLanguageContext } from '../context/language/language';
+import { useHeaderContext } from '../context/header/header';
 
 interface ILayOutProps {
-  children: any
+  children: any;
 }
 
 const LayOut = ({ children }: ILayOutProps) => {
-  const { setIsOpen } = useHeaderContext()
+  const { setIsOpen } = useHeaderContext();
   const onMouseOverBody = () => {
-    setIsOpen(false)
-  }
-  const { languageData: data } = useLanguageContext()
-  const router = useRouter()
-  const link = ['/application', '/aboutUs', '/products', '/careers']
-  const sideBar = link.includes(router.pathname)
+    setIsOpen(false);
+  };
+  const { languageData: data } = useLanguageContext();
+  const router = useRouter();
+  const link = ['/application', '/aboutUs', '/products', '/careers'];
+  const sideBar = link.includes(router.pathname);
 
-  if (!data) return null
+  if (!data) return null;
 
   if (router.pathname === '/contactUs') {
     return (
@@ -52,7 +52,7 @@ const LayOut = ({ children }: ILayOutProps) => {
           <FooterComponent />
         </div>
       </div>
-    )
+    );
   } else {
     return (
       <div>
@@ -90,8 +90,8 @@ const LayOut = ({ children }: ILayOutProps) => {
           <FooterComponent />
         </div>
       </div>
-    )
+    );
   }
-}
+};
 
-export default LayOut
+export default LayOut;

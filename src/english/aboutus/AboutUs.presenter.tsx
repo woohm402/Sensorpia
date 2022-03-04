@@ -37,13 +37,13 @@ import {
   VisionAndHistoryTitleWrapper,
   VisionAndHistoryYearExplanation,
   VisionAndHistoryYearsWrapper,
-} from './AboutUs.styles'
+} from './AboutUs.styles';
 
 interface IProps {
-  data: any
-  pageIndex: any
-  introPage: any
-  visionPage: any
+  data: any;
+  pageIndex: any;
+  introPage: any;
+  visionPage: any;
 }
 const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
   return (
@@ -192,7 +192,7 @@ const AboutUsUI = ({ pageIndex, data, introPage, visionPage }: IProps) => {
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default AboutUsUI
+export default AboutUsUI;

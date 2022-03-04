@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 import {
   BigCircleWrapper,
   CareersArrow,
@@ -16,16 +16,16 @@ import {
   TalentLineDivider,
   TalentsWrapper,
   TalentTitle,
-} from './Careers.styles'
+} from './Careers.styles';
 
 interface IProps {
-  data: any
-  language: any
+  data: any;
+  language: any;
 }
 
 const CareersUI = ({ data, language }: IProps) => {
-  const router = useRouter()
-  const pageIndex = Number(router.query.item)
+  const router = useRouter();
+  const pageIndex = Number(router.query.item);
   return (
     <>
       {language === 'kor' &&
@@ -100,7 +100,7 @@ const CareersUI = ({ data, language }: IProps) => {
           </TalentsWrapper>
         )}
     </>
-  )
-}
+  );
+};
 
-export default CareersUI
+export default CareersUI;

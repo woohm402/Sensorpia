@@ -1,11 +1,11 @@
-import styled from '@emotion/styled'
-import TextBox from '../../common/TextBox/TextBox'
-import ImageBox from '../../common/ImageBox/ImageBox'
+import styled from '@emotion/styled';
+import TextBox from '../../common/TextBox/TextBox';
+import ImageBox from '../../common/ImageBox/ImageBox';
 
 interface IProps {
-  translate?: any
-  language?: any
-  data?: any
+  translate?: any;
+  language?: any;
+  data?: any;
 }
 
 export const SliderMainWrapper = styled.div`
@@ -15,7 +15,7 @@ export const SliderMainWrapper = styled.div`
   overflow: hidden;
   display: flex;
   margin: 0 auto;
-`
+`;
 export const SliderTextWrapper = styled(TextBox)`
   position: absolute;
   top: 30px;
@@ -27,7 +27,7 @@ export const SliderTextWrapper = styled(TextBox)`
   font-size: 26px;
   line-height: 35px;
   color: #ffffff;
-`
+`;
 export const SliderSubTextWrapper = styled(TextBox)`
   position: absolute;
   top: 107px;
@@ -39,11 +39,11 @@ export const SliderSubTextWrapper = styled(TextBox)`
   font-size: 15px;
   line-height: 22px;
   color: #ffffff;
-`
+`;
 export const SliderSubDraggableWrapper = styled.div`
   width: auto;
   height: 100%;
-`
+`;
 
 export const SliderDraggableWrapper = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ export const SliderDraggableWrapper = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
-`
+`;
 
 export const SliderImage = styled(ImageBox)`
   width: 1100px;
@@ -60,7 +60,7 @@ export const SliderImage = styled(ImageBox)`
   object-fit: cover;
   ${(props: { src: string }) =>
     `background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${props.src})`}
-`
+`;
 
 export const SliderPreviousButton = styled.div`
   cursor: pointer;
@@ -70,7 +70,7 @@ export const SliderPreviousButton = styled.div`
   height: 30px;
   position: absolute;
   background: url('./sliderPreviousFinal.png');
-`
+`;
 export const SliderNextButton = styled.div`
   top: 206px;
   left: 1060px;
@@ -80,7 +80,7 @@ export const SliderNextButton = styled.div`
   background: url('./sliderPreviousFinal.png');
   position: absolute;
   transform: rotate(180deg);
-`
+`;
 export const SliderInnerImageWrapper = styled.div`
   opacity: 1;
   display: flex;
@@ -91,7 +91,7 @@ export const SliderInnerImageWrapper = styled.div`
   position: relative;
   ${(props: IProps) => `transform: translateX(${props.translate}px);`};
   transition: transform 500ms ease 0s;
-`
+`;
 export const SliderMidWrapper = styled.div`
   position: absolute;
   display: block;
@@ -99,7 +99,7 @@ export const SliderMidWrapper = styled.div`
   margin: 0;
   padding: 0;
   user-select: none;
-`
+`;
 export const MainTitleWrapper = styled.div`
   max-width: 1100px;
   margin: 35px auto 0px auto;
@@ -109,46 +109,46 @@ export const MainTitleWrapper = styled.div`
   line-height: 22px;
   color: #262626;
   text-align: center;
-`
+`;
 
-export const MainTitle = styled(TextBox)``
+export const MainTitle = styled(TextBox)``;
 
 export const MainOuterWrapper = styled.div`
   display: flex;
   margin: 35px auto 0px auto;
   justify-content: center;
   width: 1100px;
-`
+`;
 
 export const MainLineWrapper = styled.div`
   width: 850px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 export const MainFirstLineDivider = styled.div`
   width: 394px;
   height: 0px;
   border: 2px solid #9c9d9e;
-`
+`;
 export const MainSecondLineDivider = styled.div`
   width: 394px;
   height: 0px;
   border: 2px solid #9c9d9e;
-`
+`;
 export const MainProductsOuterWrapper = styled.div`
   margin: 15px auto 0px auto;
   width: 1100px;
   display: flex;
   justify-content: center;
-`
+`;
 
 export const MainProductsNameWrapper = styled.div`
   width: 667px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 
 export const MainProductText = styled(TextBox)`
   max-width: 211px;
@@ -158,14 +158,14 @@ export const MainProductText = styled(TextBox)`
   line-height: 21px;
   text-align: center;
   color: #262626;
-`
+`;
 
 export const MainOuterImagesWrapper = styled.div`
   margin: 0px auto 0px auto;
   width: 1100px;
   display: flex;
   justify-content: center;
-`
+`;
 export const MainImagesWrapper = styled.div`
   margin-top: 20px;
   width: 850px;
@@ -173,30 +173,30 @@ export const MainImagesWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 export const ProductWrapper = styled.div`
   width: 394px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
+`;
 
 export const ProductSubWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const ProductImageWrapper = styled.div`
   position: relative;
-`
+`;
 
 export const ProductImage = styled(ImageBox)`
   position: relative;
   width: 192px;
   height: 266px;
   ${(props: { src: string }) => `background: url(${props.src})`}
-`
+`;
 
 export const ProductImageText = styled(TextBox)`
   position: absolute;
@@ -207,9 +207,9 @@ export const ProductImageText = styled(TextBox)`
   color: #262626;
   top: 237px;
   left: 142px;
-`
+`;
 
-export const SpecificationButtonHref = styled.a``
+export const SpecificationButtonHref = styled.a``;
 
 export const SpecificationButton = styled.button`
   margin-top: 15px;
@@ -225,14 +225,14 @@ export const SpecificationButton = styled.button`
   font-size: 13px;
   line-height: 19px;
   cursor: pointer;
-`
+`;
 
 export const MainThirdLineDivider = styled.div`
   margin: 65px auto 0px auto;
   width: 394px;
   height: 0px;
   border: 2px solid #9c9d9e;
-`
+`;
 
 export const MagneticTorquerProductWrapper = styled(TextBox)`
   font-family: 'Noto Sans KR', sans-serif;
@@ -243,32 +243,32 @@ export const MagneticTorquerProductWrapper = styled(TextBox)`
   color: #262626;
   min-width: 201px;
   margin: 15px auto 0px auto;
-`
+`;
 export const MagneticTorquerSubProductWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const MainThirdProductImageWrapper = styled(ImageBox)`
   margin: 20px auto 0px auto;
   width: 393px;
   height: 318px;
   ${(props: any) => `background:url(${props.src})`};
-`
+`;
 
 export const NavBarOuterWrapper = styled.div`
   min-width: 100vw;
   height: 340px;
   background: #f9f9f9;
   margin-top: 95px;
-`
+`;
 
 export const NavBarDetailsRepeatWrapper = styled.div`
   width: 1100px;
   height: 340px;
   margin: 0 auto;
-`
+`;
 
 export const NavBarMainMenusWrapper = styled.div`
   top: 47px;
@@ -278,14 +278,14 @@ export const NavBarMainMenusWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-`
+`;
 export const NavBarMainMenu = styled.span`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
   color: #262626;
-`
+`;
 export const NavBarMainMenuDetailWrapper = styled.div`
   position: relative;
   width: 595px;
@@ -293,12 +293,12 @@ export const NavBarMainMenuDetailWrapper = styled.div`
   top: 80px;
   display: flex;
   flex-direction: row;
-`
+`;
 export const ProductDetailsWrapper = styled.div`
   max-width: 101px;
   display: flex;
   flex-direction: column;
-`
+`;
 export const ProductDetails = styled.span`
   margin-bottom: 15px;
   cursor: pointer;
@@ -307,14 +307,14 @@ export const ProductDetails = styled.span`
   font-size: 13px;
   line-height: 19px;
   color: #6d6d6d;
-`
+`;
 export const ApplicationsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
     props.language === 'kor' ? '20px' : '60px'};
   min-width: 120px;
   display: flex;
   flex-direction: column;
-`
+`;
 export const ApplicationsDetails = styled.span`
   margin-bottom: 15px;
   cursor: pointer;
@@ -323,7 +323,7 @@ export const ApplicationsDetails = styled.span`
   font-size: 13px;
   line-height: 19px;
   color: #6d6d6d;
-`
+`;
 
 export const AboutUsDetailsWrapper = styled.div`
   margin-left: ${(props: IProps) =>
@@ -332,7 +332,7 @@ export const AboutUsDetailsWrapper = styled.div`
     props.language === 'kor' ? '76px' : '120px'};
   display: flex;
   flex-direction: column;
-`
+`;
 export const AboutUsDetails = styled.span`
   margin-bottom: 15px;
   cursor: pointer;
@@ -341,13 +341,13 @@ export const AboutUsDetails = styled.span`
   font-size: 13px;
   line-height: 19px;
   color: #6d6d6d;
-`
+`;
 export const CareersDetailsWrapper = styled.div`
   margin-left: 49px;
   max-width: 71px;
   display: flex;
   flex-direction: column;
-`
+`;
 export const CareersDetails = styled.span`
   margin-bottom: 25px;
   cursor: pointer;
@@ -356,4 +356,4 @@ export const CareersDetails = styled.span`
   font-size: 14px;
   line-height: 24px;
   color: #6d6d6d;
-`
+`;

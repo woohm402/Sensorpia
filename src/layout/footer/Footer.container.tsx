@@ -1,9 +1,9 @@
-import FooterUI from './Footer.presenter'
-import { useLanguageContext } from '../../context/language/language'
+import FooterUI from './Footer.presenter';
+import { useLanguageContext } from '../../context/language/language';
 
 const FooterComponent = () => {
-  const { languageData: data } = useLanguageContext()
-  return <FooterUI data={data} />
-}
+  const { languageData: data } = useLanguageContext();
+  return <FooterUI data={data} />;
+};
 
-export default FooterComponent
+export default FooterComponent;

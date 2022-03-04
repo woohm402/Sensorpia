@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -19,4 +19,4 @@ export const Wrapper = styled.div`
   &:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
-`
+`;

@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 
 import {
   ScrollArrowImageWrapper,
@@ -11,22 +11,22 @@ import {
   SideBarProductsSubMenusWrapper,
   SideBarTitleWrapper,
   SideBarWrapper,
-} from './SideBar.styles'
-import { useLanguageContext } from '../../context/language/language'
-import { Fragment } from 'react'
+} from './SideBar.styles';
+import { useLanguageContext } from '../../context/language/language';
+import { Fragment } from 'react';
 
 interface IProps {
-  onClickMenu: any
-  buttonName: any
+  onClickMenu: any;
+  buttonName: any;
 }
 
 const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
-  const router = useRouter()
-  const pageIndex = Number(router.query.item)
-  const { language, languageData: data } = useLanguageContext()
+  const router = useRouter();
+  const pageIndex = Number(router.query.item);
+  const { language, languageData: data } = useLanguageContext();
   const onClickScrollArrow = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
 
   return (
     <SideBarWrapper>
@@ -125,7 +125,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
         />
       )}
     </SideBarWrapper>
-  )
-}
+  );
+};
 
-export default SideBarUI
+export default SideBarUI;

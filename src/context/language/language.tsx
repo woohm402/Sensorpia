@@ -5,10 +5,10 @@ import React, {
   useContext,
   useEffect,
   useState,
-} from 'react'
+} from 'react';
 
-import { Language } from './language.model'
-import axios from 'axios'
+import { Language } from './language.model';
+import axios from 'axios';
 
 const initialLanguage: Language = {
   language: 'en',
@@ -17,25 +17,25 @@ const initialLanguage: Language = {
   fetchLanguage: () => Promise.resolve(),
   korLanguage: null,
   enLanguage: null,
-}
+};
 
-const LanguageContext = createContext<Language>(initialLanguage)
+const LanguageContext = createContext<Language>(initialLanguage);
 
 export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
   const [language, setLanguage] = useState<Language['language']>(
     initialLanguage.language
-  )
-  const [languageData, setLanguageData] = useState<any>(null)
-  const [enLanguage, setEnLanguage] = useState<any>(null)
-  const [korLanguage, setKorLanguage] = useState<any>(null)
+  );
+  const [languageData, setLanguageData] = useState<any>(null);
+  const [enLanguage, setEnLanguage] = useState<any>(null);
+  const [korLanguage, setKorLanguage] = useState<any>(null);
 
   const onChangeLanguage = useCallback(
     (lng: Language['language']) => {
-      setLanguage(lng)
-      setLanguageData({ en: enLanguage, kor: korLanguage }[lng])
+      setLanguage(lng);
+      setLanguageData({ en: enLanguage, kor: korLanguage }[lng]);
     },
     [enLanguage, korLanguage]
-  )
+  );
 
   const fetchLanguage = useCallback(() => {
     return Promise.allSettled([
@@ -47,16 +47,16 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
       ),
     ]).then(([en, ko]) => {
       if ('value' in en && 'value' in ko) {
-        setEnLanguage(en.value.data)
-        setKorLanguage(ko.value.data)
-        setLanguageData(language === 'en' ? en.value.data : ko.value.data)
+        setEnLanguage(en.value.data);
+        setKorLanguage(ko.value.data);
+        setLanguageData(language === 'en' ? en.value.data : ko.value.data);
       }
-    })
-  }, [language])
+    });
+  }, [language]);
 
   useEffect(() => {
-    fetchLanguage()
-  }, [])
+    fetchLanguage();
+  }, []);
 
   return (
     <LanguageContext.Provider
@@ -71,7 +71,7 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
     >
       {children}
     </LanguageContext.Provider>
-  )
-}
+  );
+};
 
-export const useLanguageContext = () => useContext(LanguageContext) as Language
+export const useLanguageContext = () => useContext(LanguageContext) as Language;

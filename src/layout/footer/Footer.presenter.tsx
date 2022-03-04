@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 import {
   FooterAddressDetailWrapper,
   FooterBigWrapper,
@@ -7,13 +7,13 @@ import {
   FooterOthersOne,
   FooterOtherTwo,
   FooterWrapper,
-} from './Footer.styles'
+} from './Footer.styles';
 interface IProps {
-  data: any
+  data: any;
 }
 const FooterUI = ({ data }: IProps) => {
-  const router = useRouter()
-  const selected = router.pathname
+  const router = useRouter();
+  const selected = router.pathname;
   return (
     <>
       <FooterBigWrapper selected={selected === '/contactUs'}>
@@ -32,7 +32,7 @@ const FooterUI = ({ data }: IProps) => {
         </FooterWrapper>
       </FooterBigWrapper>
     </>
-  )
-}
+  );
+};
 
-export default FooterUI
+export default FooterUI;

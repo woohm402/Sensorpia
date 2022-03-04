@@ -1,13 +1,13 @@
-import { useRouter } from 'next/dist/client/router'
-import SideBarUI from './SideBar.presenter'
-import { useLanguageContext } from '../../context/language/language'
+import { useRouter } from 'next/dist/client/router';
+import SideBarUI from './SideBar.presenter';
+import { useLanguageContext } from '../../context/language/language';
 
 const SideBarComponent = () => {
-  const router = useRouter()
-  const path = router.pathname
-  const buttonName = router.query.keyword
+  const router = useRouter();
+  const path = router.pathname;
+  const buttonName = router.query.keyword;
 
-  const { languageData: data } = useLanguageContext()
+  const { languageData: data } = useLanguageContext();
   const onClickMenu = (event: any) => {
     if (router.pathname === '/products') {
       if (
@@ -18,7 +18,7 @@ const SideBarComponent = () => {
         router.push({
           pathname: path,
           query: { item: '0', keyword: event.target.id },
-        })
+        });
       } else {
         router.push({
           pathname: path,
@@ -27,18 +27,18 @@ const SideBarComponent = () => {
             keyword:
               data.products[Number(event.target.id)].data.subSections[0].name,
           },
-        })
+        });
       }
     }
     if (router.pathname === '/application') {
-      router.push({ pathname: path, query: { item: Number(event.target.id) } })
+      router.push({ pathname: path, query: { item: Number(event.target.id) } });
     } else if (router.pathname === '/aboutUs') {
-      router.push({ pathname: path, query: { item: Number(event.target.id) } })
+      router.push({ pathname: path, query: { item: Number(event.target.id) } });
     } else if (router.pathname === '/careers') {
-      router.push({ pathname: path, query: { item: Number(event.target.id) } })
+      router.push({ pathname: path, query: { item: Number(event.target.id) } });
     }
-  }
-  return <SideBarUI onClickMenu={onClickMenu} buttonName={buttonName} />
-}
+  };
+  return <SideBarUI onClickMenu={onClickMenu} buttonName={buttonName} />;
+};
 
-export default SideBarComponent
+export default SideBarComponent;

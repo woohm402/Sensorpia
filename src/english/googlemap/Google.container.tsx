@@ -1,6 +1,6 @@
-import GoogleUI from './Google.presenter'
+import GoogleUI from './Google.presenter';
 const GoogleMapsComponent = () => {
-  return <GoogleUI />
-}
+  return <GoogleUI />;
+};
 
-export default GoogleMapsComponent
+export default GoogleMapsComponent;

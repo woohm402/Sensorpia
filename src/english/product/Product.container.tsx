@@ -1,7 +1,7 @@
-import ProductUI from './Product.presenter'
+import ProductUI from './Product.presenter';
 
 const ProductComponent = () => {
-  return <ProductUI />
-}
+  return <ProductUI />;
+};
 
-export default ProductComponent
+export default ProductComponent;

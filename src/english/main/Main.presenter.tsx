@@ -44,18 +44,18 @@ import {
   SpecificationButton,
   SpecificationButtonHref,
   MagneticTorquerSubProductWrapper,
-} from './Main.styles'
+} from './Main.styles';
 
 interface IProps {
-  data: any
-  onClickSliderNext: any
-  translate: any
-  onClickSliderPrevious: any
-  language: any
-  onClickProductDetails: any
-  onClickApplicationDetails: any
-  onClickAboutUsDetails: any
-  onClickCareersDetails: any
+  data: any;
+  onClickSliderNext: any;
+  translate: any;
+  onClickSliderPrevious: any;
+  language: any;
+  onClickProductDetails: any;
+  onClickApplicationDetails: any;
+  onClickAboutUsDetails: any;
+  onClickCareersDetails: any;
 }
 
 const MainUI = ({
@@ -247,7 +247,7 @@ const MainUI = ({
         </NavBarDetailsRepeatWrapper>
       </NavBarOuterWrapper>
     </>
-  )
-}
+  );
+};
 
-export default MainUI
+export default MainUI;

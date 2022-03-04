@@ -1,12 +1,12 @@
-import GoogleMapsComponent from '../googlemap/Google.container'
+import GoogleMapsComponent from '../googlemap/Google.container';
 import {
   ContactUsTitle,
   ContactUsBigWrapper,
   ContactUsDetails,
   ContactUsMapWrapper,
-} from './ContactUs.styles'
+} from './ContactUs.styles';
 interface IProps {
-  data: any
+  data: any;
 }
 
 const ContactUsUI = ({ data }: IProps) => {
@@ -24,7 +24,7 @@ const ContactUsUI = ({ data }: IProps) => {
         <GoogleMapsComponent />
       </ContactUsMapWrapper>
     </ContactUsBigWrapper>
-  )
-}
+  );
+};
 
-export default ContactUsUI
+export default ContactUsUI;

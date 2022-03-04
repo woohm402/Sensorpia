@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 import {
   ACMagneticButtonImageWrapper,
   MagneticInstrumentACMagneticDetails,
@@ -15,13 +15,13 @@ import {
   MagneticInstrumentDCBHExplanationWrapper,
   SpecificationButton,
   SpecificationButtonWrapperHref,
-} from './Product.styles'
-import { useLanguageContext } from '../../context/language/language'
+} from './Product.styles';
+import { useLanguageContext } from '../../context/language/language';
 
 const MagneticInstrumentsPage = () => {
-  const { languageData: data } = useLanguageContext()
-  const router = useRouter()
-  const pageIndex = Number(router.query.item)
+  const { languageData: data } = useLanguageContext();
+  const router = useRouter();
+  const pageIndex = Number(router.query.item);
 
   return (
     <>
@@ -122,7 +122,7 @@ const MagneticInstrumentsPage = () => {
         </ACMagneticButtonImageWrapper>
       </MagneticInstrumentACMagneticWrapper>
     </>
-  )
-}
+  );
+};
 
-export default MagneticInstrumentsPage
+export default MagneticInstrumentsPage;

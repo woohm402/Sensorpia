@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Form = styled.form`
   position: fixed;
@@ -6,7 +6,7 @@ export const Form = styled.form`
   height: 96px;
   left: calc(50vw - 100px);
   top: calc(50vh - 48px);
-  
+
   input {
     width: 100%;
     height: 32px;
@@ -14,9 +14,9 @@ export const Form = styled.form`
     letter-spacing: 4px;
     margin-bottom: 4px;
   }
-  
+
   button {
     width: 100%;
     height: 24px;
   }
-`
+`;

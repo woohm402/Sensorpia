@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
-import TextBox from '../../common/TextBox/TextBox'
+import styled from '@emotion/styled';
+import TextBox from '../../common/TextBox/TextBox';
 
 interface IProps {
-  data: any
+  data: any;
 }
 
 export const TalentsWrapper = styled.div`
@@ -14,21 +14,21 @@ export const TalentsWrapper = styled.div`
   font-size: 15px;
   line-height: 22px;
   color: #0070c0;
-`
-export const TalentTitle = styled(TextBox)``
+`;
+export const TalentTitle = styled(TextBox)``;
 
 export const TalentLineDivider = styled.div`
   width: 701px;
   height: 0;
   border: 1px solid #c9c9c9;
   margin-top: 10px;
-`
+`;
 export const BigCircleWrapper = styled.div`
   margin-top: 29px;
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 export const Circle = styled.div`
   width: 151px;
   height: 151px;
@@ -39,27 +39,27 @@ export const Circle = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`
+`;
 export const CircleText = styled(TextBox)`
   font-size: 18px;
   line-height: 27px;
   text-align: center;
-`
+`;
 export const CircleDetailText = styled(TextBox)`
   margin-left: 50px;
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
   color: #262626;
-`
-export const HrTitle = styled(TextBox)``
+`;
+export const HrTitle = styled(TextBox)``;
 
 export const HrLineDivider = styled.div`
   width: 701px;
   height: 0;
   border: 1px solid #c9c9c9;
   margin-top: 11px;
-`
+`;
 
 export const SubTitleWrapper = styled(TextBox)`
   margin: 60px auto 0 auto;
@@ -73,12 +73,12 @@ export const SubTitleWrapper = styled(TextBox)`
   align-items: center;
   font-size: 15px;
   line-height: 22px;
-`
+`;
 export const HrCirclesWrapper = styled.div`
   display: flex;
   margin-top: 40px;
   align-items: center;
-`
+`;
 
 export const HrCircle = styled(TextBox)`
   width: 166px;
@@ -94,19 +94,19 @@ export const HrCircle = styled(TextBox)`
   &:not(:first-of-type) {
     margin-left: 22px;
   }
-`
+`;
 export const CareersArrow = styled.div`
   margin-left: 30px;
   width: 60px;
   height: 12px;
   ${(props: IProps) => `background:url(${props.data})`}
-`
+`;
 export const HrPrincipleTitle = styled(TextBox)`
   margin-top: 102px;
-`
+`;
 export const HrPrincipleDetailsBigWrapper = styled.div`
   margin-top: 30px;
-`
+`;
 
 export const HrPrincipleDetailsWrapper = styled(TextBox)`
   max-width: 247px;
@@ -114,4 +114,4 @@ export const HrPrincipleDetailsWrapper = styled(TextBox)`
   font-size: 13px;
   line-height: 19px;
   color: #262626;
-`
+`;

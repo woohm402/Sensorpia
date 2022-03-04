@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 import {
   ContentWrapper,
   ExplanationDetail,
@@ -12,20 +12,20 @@ import {
   SpecificationButton,
   SubImageMidTwoWrappers,
   SpecificationButtonWrapperHref,
-} from './Product.styles'
-import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter'
-import { useLanguageContext } from '../../context/language/language'
+} from './Product.styles';
+import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter';
+import { useLanguageContext } from '../../context/language/language';
 
 const ProductUI = () => {
-  const { languageData: data } = useLanguageContext()
-  const router = useRouter()
-  const basicPage = 'productBasicPage'
-  const magneticPage = 'productMagneticInstrumentsPage'
-  const pageIndex = Number(router.query.item)
-  const buttonName = router.query.keyword
+  const { languageData: data } = useLanguageContext();
+  const router = useRouter();
+  const basicPage = 'productBasicPage';
+  const magneticPage = 'productMagneticInstrumentsPage';
+  const pageIndex = Number(router.query.item);
+  const buttonName = router.query.keyword;
   const buttonIndex = data.products[pageIndex]?.data.subSections.findIndex(
     (data: any) => data.name === buttonName
-  )
+  );
   return (
     <div style={{ position: 'relative', marginLeft: '70px' }}>
       {data.products[pageIndex]?.layout === basicPage && (
@@ -87,7 +87,7 @@ const ProductUI = () => {
         <MagneticInstrumentsPage />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ProductUI
+export default ProductUI;

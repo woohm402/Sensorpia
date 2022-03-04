@@ -6,11 +6,11 @@ import {
   ApplicationMagnetometerWrapper,
   DefenseExplanationDetails,
   DefenseImageRandomWrapper,
-} from './Application.styles'
+} from './Application.styles';
 
 interface IProps {
-  pageIndex: any
-  data: any
+  pageIndex: any;
+  data: any;
 }
 const ApplicationUI = ({ pageIndex, data }: IProps) => {
   return (
@@ -72,6 +72,6 @@ const ApplicationUI = ({ pageIndex, data }: IProps) => {
         )
       )}
     </>
-  )
-}
-export default ApplicationUI
+  );
+};
+export default ApplicationUI;

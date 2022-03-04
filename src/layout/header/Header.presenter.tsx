@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/dist/client/router';
 import {
   AboutUsDetails,
   AboutUsDetailsWrapper,
@@ -23,25 +23,25 @@ import {
   SensorpiaTempLogoWrapper,
   MenuItem,
   HeaderSubWrapper,
-} from './Header.styles'
-import { useHeaderContext } from '../../context/header/header'
+} from './Header.styles';
+import { useHeaderContext } from '../../context/header/header';
 
 interface IProps {
-  data: any
-  language: any
-  onClickLanguage: any
-  menu: any
-  onMouseOverMenu: any
-  onMouseOverDetailMenu: any
-  detailMenu: any
-  onClickLogo: any
-  sideBar: any
-  onClickMenu: any
-  onClickApplicationDetailMenu: any
-  onClickProductDetailMenu: any
-  onClickAboutUsDetailMenu: any
-  onClickCareersDetailMenu: any
-  onMouseLeaveMenu: any
+  data: any;
+  language: any;
+  onClickLanguage: any;
+  menu: any;
+  onMouseOverMenu: any;
+  onMouseOverDetailMenu: any;
+  detailMenu: any;
+  onClickLogo: any;
+  sideBar: any;
+  onClickMenu: any;
+  onClickApplicationDetailMenu: any;
+  onClickProductDetailMenu: any;
+  onClickAboutUsDetailMenu: any;
+  onClickCareersDetailMenu: any;
+  onMouseLeaveMenu: any;
 }
 
 const HeaderUI = ({
@@ -61,8 +61,8 @@ const HeaderUI = ({
   onClickCareersDetailMenu,
   onMouseLeaveMenu,
 }: IProps) => {
-  const { isOpen } = useHeaderContext()
-  const router = useRouter()
+  const { isOpen } = useHeaderContext();
+  const router = useRouter();
   return (
     <>
       <HeaderBigWrapper
@@ -215,7 +215,7 @@ const HeaderUI = ({
         </NavBarBigWrapper>
       )}
     </>
-  )
-}
+  );
+};
 
-export default HeaderUI
+export default HeaderUI;
