@@ -94,7 +94,7 @@ const ImageBox = ({
   return as === 'img' ? (
     <img src={src} alt={alt} {...props} />
   ) : (
-    <div {...props} />
+    <div {...props} style={{ backgroundSize: 'cover' }} />
   );
 };
 
