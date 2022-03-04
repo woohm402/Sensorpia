@@ -72,11 +72,31 @@ const ProductUI = () => {
                           body: JSON.stringify(newData),
                         })
                         .then(() => fetchLanguage())
-                        .then(() => toast.success('값이 변경되었습니다.'));
+                        .then(() => toast.success('값이 제거되었습니다.'));
                     }}
                   />
                 )
               )}
+              <button
+                style={{ marginTop: 16 }}
+                onClick={() => {
+                  const newData = replaceValue(
+                    data,
+                    `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
+                    data.products[pageIndex]?.data.subSections[
+                      buttonIndex
+                    ]?.textExplanationDetails.concat('content')
+                  );
+                  axios
+                    .put(`/api/admin/content/${language}`, {
+                      body: JSON.stringify(newData),
+                    })
+                    .then(() => fetchLanguage())
+                    .then(() => toast.success('값이 추가되었습니다.'));
+                }}
+              >
+                추가
+              </button>
             </ExplanationWrapper>
             <SubImageOuterWrappers>
               {data.products[pageIndex]?.data.subSections[
