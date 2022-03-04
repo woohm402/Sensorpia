@@ -1,4 +1,4 @@
-export const replaceValue = (obj: Object, key: string, to: string) => {
+export const replaceValue = (obj: Object, key: string, to: any) => {
   const newData = JSON.parse(JSON.stringify(obj));
 
   let cursor = newData;

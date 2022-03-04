@@ -15,9 +15,12 @@ import {
 } from './Product.styles';
 import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter';
 import { useLanguageContext } from '../../context/language/language';
+import { replaceValue } from '../../lib/replaceValue';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const ProductUI = () => {
-  const { languageData: data } = useLanguageContext();
+  const { languageData: data, language, fetchLanguage } = useLanguageContext();
   const router = useRouter();
   const basicPage = 'productBasicPage';
   const magneticPage = 'productMagneticInstrumentsPage';
@@ -47,14 +50,33 @@ const ProductUI = () => {
               />
               {data.products[pageIndex]?.data.subSections[
                 buttonIndex
-              ]?.textExplanationDetails.map((data: any, i: number) => (
-                <ExplanationDetail
-                  as={'li'}
-                  value={data}
-                  key={i}
-                  name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails.${i}`}
-                />
-              ))}
+              ]?.textExplanationDetails.map(
+                (explanation: string, i: number) => (
+                  <ExplanationDetail
+                    as={'li'}
+                    value={explanation}
+                    key={i}
+                    name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails.${i}`}
+                    onDelete={() => {
+                      const newData = replaceValue(
+                        data,
+                        `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
+                        data.products[pageIndex]?.data.subSections[
+                          buttonIndex
+                        ]?.textExplanationDetails.filter(
+                          (_: string, index: number) => i !== index
+                        )
+                      );
+                      axios
+                        .put(`/api/admin/content/${language}`, {
+                          body: JSON.stringify(newData),
+                        })
+                        .then(() => fetchLanguage())
+                        .then(() => toast.success('값이 변경되었습니다.'));
+                    }}
+                  />
+                )
+              )}
             </ExplanationWrapper>
             <SubImageOuterWrappers>
               {data.products[pageIndex]?.data.subSections[
