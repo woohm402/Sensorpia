@@ -7,7 +7,7 @@ import React, {
   useState,
 } from 'react';
 
-import { Language } from './language.model';
+import { Language, LanguageData } from './language.model';
 import axios from 'axios';
 
 const initialLanguage: Language = {
@@ -28,6 +28,8 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
   const [languageData, setLanguageData] = useState<any>(null);
   const [enLanguage, setEnLanguage] = useState<any>(null);
   const [korLanguage, setKorLanguage] = useState<any>(null);
+
+  console.log(enLanguage);
 
   const onChangeLanguage = useCallback(
     (lng: Language['language']) => {
@@ -74,4 +76,8 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
   );
 };
 
-export const useLanguageContext = () => useContext(LanguageContext) as Language;
+interface ExportLanguage extends Language {
+  languageData: LanguageData;
+}
+
+export const useLanguageContext = () => useContext(LanguageContext) as ExportLanguage;

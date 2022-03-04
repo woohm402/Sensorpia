@@ -90,7 +90,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
               </Fragment>
             ))
           : router.pathname === '/careers' && language === 'kor'
-          ? data.careers?.map((value: any, i: number) => (
+          ? data.careers?.map((value, i, arr) => (
               <Fragment key={i}>
                 <SideBarMenusInnerWrapper
                   id={`${i}`}
@@ -100,10 +100,10 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
-                {data.careers.length - 1 !== i && <SideBarMenusLineDivider />}
+                {arr.length - 1 !== i && <SideBarMenusLineDivider />}
               </Fragment>
             ))
-          : data.aboutUs.map((value: any, i: number) => (
+          : data.aboutUs.map((value, i) => (
               <Fragment key={i}>
                 <SideBarMenusInnerWrapper
                   id={`${i}`}
