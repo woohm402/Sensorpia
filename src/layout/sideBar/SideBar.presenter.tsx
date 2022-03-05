@@ -90,14 +90,23 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   style={{ margin: '8px 0' }}
                   onClick={() => {
                     const subSections = data.products[index].data.subSections;
+                    if (subSections.find((s) => s.name === 'new page')) return;
                     setCurrentLanguageData(
                       replaceValue(
                         data,
                         `products.${index}.data.subSections`,
-                        subSections.concat(subSections[subSections.length - 1])
+                        subSections.concat({
+                          ...subSections[subSections.length - 1],
+                          name: 'new page',
+                        })
                       )
                     );
                   }}
+                  disabled={
+                    !!data.products[index].data.subSections.find(
+                      (s) => s.name === 'new page'
+                    )
+                  }
                 >
                   하위 페이지 추가
                 </button>
@@ -109,16 +118,19 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
             <button
               style={{ width: '100%', marginTop: 16 }}
               onClick={() => {
+                if (data.products.find((p) => p.name === 'new page')) return;
                 setCurrentLanguageData(
                   replaceValue(
                     data,
                     'products',
-                    data?.products.concat(
-                      data.products[data.products.length - 1]
-                    )
+                    data?.products.concat({
+                      ...data.products[data.products.length - 1],
+                      name: 'new page',
+                    })
                   )
                 );
               }}
+              disabled={!!data.products.find((p) => p.name === 'new page')}
             >
               페이지 추가
             </button>

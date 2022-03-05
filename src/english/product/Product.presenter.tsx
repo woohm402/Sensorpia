@@ -25,6 +25,29 @@ const ProductUI = () => {
   const buttonIndex = data.products[pageIndex]?.data.subSections.findIndex(
     (data) => data.name === buttonName
   );
+
+  if (pageIndex < 0 || pageIndex >= data.products.length || isNaN(pageIndex)) {
+    router.push({
+      query: {
+        item: 0,
+        keyword: data.products[0]?.data.subSections[0].name,
+      },
+    });
+
+    return null;
+  }
+
+  if (buttonIndex === -1 || buttonIndex === undefined) {
+    router.push({
+      query: {
+        item: router.query.item,
+        keyword: data.products[pageIndex]?.data.subSections[0].name,
+      },
+    });
+
+    return null;
+  }
+
   return (
     <div style={{ position: 'relative', marginLeft: '70px' }}>
       <>
@@ -45,7 +68,7 @@ const ProductUI = () => {
           )
         )}
 
-        {data.products[pageIndex]?.data.subSections[buttonIndex].contents.map(
+        {data.products[pageIndex]?.data.subSections[buttonIndex]?.contents.map(
           (content, i) => {
             const contentBaseName = `products.${pageIndex}.data.subSections.${buttonIndex}.contents.${i}`;
             return (
