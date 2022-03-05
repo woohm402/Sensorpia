@@ -3,8 +3,12 @@ export interface Language {
   setLanguage: (lng: Language['language']) => void;
   languageData: LanguageData | null;
   fetchLanguage: () => Promise<void>;
-  enLanguage: LanguageData | null;
-  korLanguage: LanguageData | null;
+  handleSave: () => Promise<void>;
+  enLanguageData: LanguageData | null;
+  korLanguageData: LanguageData | null;
+  setEnLanguageData: (e: LanguageData) => void;
+  setKorLanguageData: (e: LanguageData) => void;
+  setCurrentLanguageData: (e: LanguageData) => void;
 }
 
 export interface LanguageData {

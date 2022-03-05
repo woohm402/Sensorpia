@@ -1,24 +1,8 @@
-import React, {
-  ElementType,
-  FormEventHandler,
-  memo,
-  useCallback,
-  useState,
-} from 'react';
+import { ElementType, FormEventHandler, memo, useState } from 'react';
 import { TextArea, Button } from './TextBox.style';
 import { useAdminContext } from '../../context/admin/admin';
 import { useLanguageContext } from '../../context/language/language';
-import axios from 'axios';
 import { replaceValue } from '../../lib/replaceValue';
-import { toast } from 'react-hot-toast';
-
-type Props = {
-  as?: ElementType;
-  className?: string;
-  value: string;
-  name: string;
-  onDelete?: () => void;
-};
 
 const TextBox = ({
   onDelete,
@@ -26,10 +10,22 @@ const TextBox = ({
   as: Tag = 'div',
   className,
   name,
-}: Props) => {
+}: {
+  as?: ElementType;
+  className?: string;
+  value: string;
+  name: string;
+  onDelete?: () => void;
+}) => {
   const [editingValue, setEditingValue] = useState<string>('');
   const [isEditing, setIsEditing] = useState<boolean>(false);
-  const { language, languageData, fetchLanguage } = useLanguageContext();
+  const {
+    language,
+    languageData,
+    fetchLanguage,
+    setEnLanguageData,
+    setKorLanguageData,
+  } = useLanguageContext();
   const { isAdmin } = useAdminContext();
 
   const deletable = !!onDelete;
@@ -47,27 +43,20 @@ const TextBox = ({
     setEditingValue('');
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
-    (e) => {
-      e.preventDefault();
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
 
-      if (editingValue === value) {
-        handleCancelEdit();
-        return;
-      }
+    if (editingValue === value) {
+      handleCancelEdit();
+      return;
+    }
 
-      const newData = replaceValue(languageData, name, editingValue);
+    const newData = replaceValue(languageData, name, editingValue);
 
-      axios
-        .put(`/api/admin/content/${language}`, {
-          body: JSON.stringify(newData),
-        })
-        .then(() => fetchLanguage())
-        .then(() => toast.success('값이 변경되었습니다.'))
-        .then(handleCancelEdit);
-    },
-    [editingValue, value, name, language, languageData]
-  );
+    language === 'en'
+      ? setEnLanguageData(newData)
+      : setKorLanguageData(newData);
+  };
 
   const tagProps = {
     className,

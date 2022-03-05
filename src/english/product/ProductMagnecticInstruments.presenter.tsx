@@ -17,9 +17,10 @@ import {
   SpecificationButtonWrapperHref,
 } from './Product.styles';
 import { useLanguageContext } from '../../context/language/language';
+import { replaceValue } from '../../lib/replaceValue';
 
 const MagneticInstrumentsPage = () => {
-  const { languageData: data } = useLanguageContext();
+  const { languageData: data, setCurrentLanguageData } = useLanguageContext();
   const router = useRouter();
   const pageIndex = Number(router.query.item);
 
@@ -53,12 +54,42 @@ const MagneticInstrumentsPage = () => {
             (detail: string, index: number) => (
               <MagneticInstrumentACMagneticDetails
                 as={'li'}
-                key={index}
+                key={detail + index}
                 value={detail}
                 name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.details.${index}`}
+                onDelete={() =>
+                  setCurrentLanguageData(
+                    replaceValue(
+                      data,
+                      `products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.details`,
+                      data.products[
+                        pageIndex
+                      ]?.data.subSections[0]?.subImagesAndTexts[0].details.filter(
+                        (_: string, i: number) => i !== index
+                      )
+                    )
+                  )
+                }
               />
             )
           )}
+          <button
+            style={{ marginTop: 16 }}
+            onClick={() => {
+              const newData = replaceValue(
+                data,
+                `products.${pageIndex}.data.subSections.0.subImagesAndTexts.0.details`,
+                data.products[
+                  pageIndex
+                ]?.data.subSections[0]?.subImagesAndTexts[0].details.concat(
+                  'content'
+                )
+              );
+              setCurrentLanguageData(newData);
+            }}
+          >
+            추가
+          </button>
         </MagneticInstrumentDCBHExplanationWrapper>
         <MagneticInstrumentDCBHImageButtonWrapper>
           <MagneticInstrumentDCBHImageWrapper
@@ -95,11 +126,41 @@ const MagneticInstrumentsPage = () => {
             (detail: string, index: number) => (
               <MagneticInstrumentACMagneticDetails
                 value={detail}
-                key={index}
+                key={detail + index}
                 name={`products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.details.${index}`}
+                onDelete={() =>
+                  setCurrentLanguageData(
+                    replaceValue(
+                      data,
+                      `products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.details`,
+                      data.products[
+                        pageIndex
+                      ]?.data.subSections[0]?.subImagesAndTexts[1].details.filter(
+                        (_: string, i: number) => i !== index
+                      )
+                    )
+                  )
+                }
               />
             )
           )}
+          <button
+            style={{ marginTop: 16 }}
+            onClick={() => {
+              const newData = replaceValue(
+                data,
+                `products.${pageIndex}.data.subSections.0.subImagesAndTexts.1.details`,
+                data.products[
+                  pageIndex
+                ]?.data.subSections[0]?.subImagesAndTexts[1].details.concat(
+                  'content'
+                )
+              );
+              setCurrentLanguageData(newData);
+            }}
+          >
+            추가
+          </button>
         </MagneticInstrumentACMagneticExplanationWrapper>
         <ACMagneticButtonImageWrapper>
           <MagneticInstrumentACMagneticImageWrapper

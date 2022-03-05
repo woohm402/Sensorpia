@@ -16,11 +16,9 @@ import {
 import MagneticInstrumentsPage from './ProductMagnecticInstruments.presenter';
 import { useLanguageContext } from '../../context/language/language';
 import { replaceValue } from '../../lib/replaceValue';
-import axios from 'axios';
-import toast from 'react-hot-toast';
 
 const ProductUI = () => {
-  const { languageData: data, language, fetchLanguage } = useLanguageContext();
+  const { languageData: data, setCurrentLanguageData } = useLanguageContext();
   const router = useRouter();
   const basicPage = 'productBasicPage';
   const magneticPage = 'productMagneticInstrumentsPage';
@@ -55,25 +53,21 @@ const ProductUI = () => {
                   <ExplanationDetail
                     as={'li'}
                     value={explanation}
-                    key={i}
+                    key={`${explanation}_${i}`}
                     name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails.${i}`}
-                    onDelete={() => {
-                      const newData = replaceValue(
-                        data,
-                        `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
-                        data.products[pageIndex]?.data.subSections[
-                          buttonIndex
-                        ]?.textExplanationDetails.filter(
-                          (_: string, index: number) => i !== index
+                    onDelete={() =>
+                      setCurrentLanguageData(
+                        replaceValue(
+                          data,
+                          `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
+                          data.products[pageIndex]?.data.subSections[
+                            buttonIndex
+                          ]?.textExplanationDetails.filter(
+                            (_: string, index: number) => i !== index
+                          )
                         )
-                      );
-                      axios
-                        .put(`/api/admin/content/${language}`, {
-                          body: JSON.stringify(newData),
-                        })
-                        .then(() => fetchLanguage())
-                        .then(() => toast.success('값이 제거되었습니다.'));
-                    }}
+                      )
+                    }
                   />
                 )
               )}
@@ -87,12 +81,7 @@ const ProductUI = () => {
                       buttonIndex
                     ]?.textExplanationDetails.concat('content')
                   );
-                  axios
-                    .put(`/api/admin/content/${language}`, {
-                      body: JSON.stringify(newData),
-                    })
-                    .then(() => fetchLanguage())
-                    .then(() => toast.success('값이 추가되었습니다.'));
+                  setCurrentLanguageData(newData);
                 }}
               >
                 추가

@@ -2,10 +2,12 @@ import { useAdminContext } from '../../context/admin/admin';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/dist/client/router';
-import { Wrapper } from './AdminIndicator.style';
+import { Wrapper, LogoutButton, SaveButton } from './AdminIndicator.style';
+import { useLanguageContext } from '../../context/language/language';
 
 const AdminIndicator = () => {
   const { isAdmin } = useAdminContext();
+  const { handleSave, fetchLanguage } = useLanguageContext();
   const router = useRouter();
 
   if (!isAdmin) return null;
@@ -23,12 +25,15 @@ const AdminIndicator = () => {
   return (
     <Wrapper>
       관리자 모드
-      <button
-        style={{ width: 80, height: 40, cursor: 'pointer' }}
-        onClick={handleLogout}
-      >
-        로그아웃
-      </button>
+      <br />
+      <br />
+      <LogoutButton onClick={handleLogout}>로그아웃</LogoutButton>
+      <br />
+      <br />
+      <SaveButton onClick={handleSave}>적용</SaveButton>
+      <br />
+      <br />
+      <SaveButton onClick={fetchLanguage}>초기화</SaveButton>
     </Wrapper>
   );
 };
