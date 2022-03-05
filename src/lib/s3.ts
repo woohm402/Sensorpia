@@ -21,6 +21,5 @@ export const getPresignedURL = async (key: string) => {
     new PutObjectCommand({ Bucket: 'sensorpia', Key: key }),
     { expiresIn: 3600 }
   );
-  console.log(signedURL);
   return signedURL;
 };

@@ -70,81 +70,92 @@
   "products": [
     {
       "name": "3-axis flux-gate magnetometer",
-      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
             "name": "Normal",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/uke15xmfgf706m6qx0ve4.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/l4jk7g250artabaa32m7l.png",
-                "text": "MS-17",
-                "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "제품 설명",
             "captions": [],
-            "textExplanationDetails": [
-              "Magnetometer는 환경 자기장 및 자성체의 자기장 변화를 측정합니다.\n",
-              "3축 magnetometer는 x, y, z축 자기장 값과 자기장 크기 값을 측정합니다.",
-              "3축 간의 정확한 직교성 보정으로 자기장 크기를 측정할 수 있습니다.",
-              "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다."
+            "contents": [
+              {
+                "title": "제품 설명",
+                "descriptions": [
+                  "Magnetometer는 환경 자기장 및 자성체의 자기장 변화를 측정합니다.",
+                  "3축 magnetometer는 x, y, z축 자기장 값과 자기장 크기 값을 측정합니다.",
+                  "3축 간의 정확한 직교성 보정으로 자기장 크기를 측정할 수 있습니다.",
+                  "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/l4jk7g250artabaa32m7l.png",
+                    "text": "MS-17",
+                    "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           },
           {
             "name": "Satellite",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/128qyt57o8geyx62hfra0jg.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jnf358kyvpug50lb5azvr.png",
-                "text": "MS-15",
-                "pdf": "./211209_MS-15_TAM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/adeh17bvu2qwbkuxirsk.png",
-                "text": "MS-22",
-                "pdf": "./211209_MS-22_TAM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "제품 설명",
             "captions": [],
-            "textExplanationDetails": [
-              "3축 magnetometer는 x, y 및 z축 자기장과 자기장 크기 값을 측정합니다.",
-              "3축 간의 정확한 직교성 보정으로 자기장 크기를 정확하게 측정할 수 있습니다.",
-              "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다.",
-              "Magnetometer는 과학위성을 위해 개발되었으며, heritage를 가지고 있습니다.",
-              "자세 제어는 인공위성에서 중요하며, 지구 자기장을 감지하여 제어하게 됩니다."
+            "contents": [
+              {
+                "title": "제품 설명",
+                "descriptions": [
+                  "3축 magnetometer는 x, y 및 z축 자기장과 자기장 크기 값을 측정합니다.",
+                  "3축 간의 정확한 직교성 보정으로 자기장 크기를 정확하게 측정할 수 있습니다.",
+                  "(주)센서피아는 정확한 직교성 보정 기술을 보유하고 있습니다.",
+                  "Magnetometer는 과학위성을 위해 개발되었으며, heritage를 가지고 있습니다.",
+                  "자세 제어는 인공위성에서 중요하며, 지구 자기장을 감지하여 제어하게 됩니다."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jnf358kyvpug50lb5azvr.png",
+                    "text": "MS-15",
+                    "pdf": "./211209_MS-15_TAM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/adeh17bvu2qwbkuxirsk.png",
+                    "text": "MS-22",
+                    "pdf": "./211209_MS-22_TAM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           },
           {
             "name": "Defense",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/1ra8xs7w3wjlow7jj0wn29.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/efgri74iie5qmcswnb6s9f.png",
-                "text": "MS-27",
-                "pdf": "./211209_MS-27_LNLDM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/vx9b86hod6szf8b1pg0m.png",
-                "text": "MS-13",
-                "pdf": "./211209_MS-13_LD3FM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nnmjd7tca0bbmhp0riepim.png",
-                "text": "MS-07",
-                "pdf": "./211209_MS-07_FGM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "제품 설명",
             "captions": [],
-            "textExplanationDetails": [
-              "3축 magnetometer의 경우, 자기장의 변화를 측정하는 제품입니다.",
-              "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
-              "3축 magnetometer의 x, y, z 축 방향 대한 정확한 보정 값이 중요하며, 직각도 보정을 통해 자기장 크기 측정이 가능합니다.",
-              "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장의 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
-              "센서피아는 기본 모델과는 다른 저전력 및 낮은 노이즈 값을 가지는 magnetometer 를 제작 하고 있습니다."
+            "contents": [
+              {
+                "title": "제품 설명",
+                "descriptions": [
+                  "3축 magnetometer의 경우, 자기장의 변화를 측정하는 제품입니다.",
+                  "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
+                  "3축 magnetometer의 x, y, z 축 방향 대한 정확한 보정 값이 중요하며, 직각도 보정을 통해 자기장 크기 측정이 가능합니다.",
+                  "Magnetometer 는 물속에서도 정확한 자기장 변화를 감지합니다. 자기장의 변화는 해수에 크게 영향을 받지 않기 때문입니다.",
+                  "센서피아는 기본 모델과는 다른 저전력 및 낮은 노이즈 값을 가지는 magnetometer 를 제작 하고 있습니다."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/efgri74iie5qmcswnb6s9f.png",
+                    "text": "MS-27",
+                    "pdf": "./211209_MS-27_LNLDM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/vx9b86hod6szf8b1pg0m.png",
+                    "text": "MS-13",
+                    "pdf": "./211209_MS-13_LD3FM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nnmjd7tca0bbmhp0riepim.png",
+                    "text": "MS-07",
+                    "pdf": "./211209_MS-07_FGM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -152,25 +163,28 @@
     },
     {
       "name": "Magnetic Torquer",
-      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
             "name": "torquer",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jyek7ef21suewag3vzu2.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/taw3o43aep43m6e2w1bnm.png",
-                "text": null,
-                "pdf": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "제품 설명",
             "captions": [],
-            "textExplanationDetails": [
-              "Magnetic dipole moment 이용하여,  위성의 자세 변화를 시키는데 사용됩니다.",
-              "Magnetic torquer 의 경우, 크기와 특성에 따라 제품 개발이 가능합니다.",
-              "위성에 사용되기 위해서 제품 경량화가 되어 있습니다."
+            "contents": [
+              {
+                "title": "제품 설명",
+                "descriptions": [
+                  "Magnetic dipole moment 이용하여,  위성의 자세 변화를 시키는데 사용됩니다.",
+                  "Magnetic torquer 의 경우, 크기와 특성에 따라 제품 개발이 가능합니다.",
+                  "위성에 사용되기 위해서 제품 경량화가 되어 있습니다."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/taw3o43aep43m6e2w1bnm.png",
+                    "text": "",
+                    "pdf": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -178,40 +192,48 @@
     },
     {
       "name": "Magnetic instruments",
-      "layout": "productMagneticInstrumentsPage",
       "data": {
         "subSections": [
           {
             "name": "instruments",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/i2elrykajqjyvzuej627gm.png",
-            "subImagesAndTexts": [
+            "captions": [
+              "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다."
+            ],
+            "contents": [
               {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/h0i8pvrnmpkbthc0059e.png",
-                "pdf": "./MI-36.pdf",
                 "title": "DC B-H LOOP TRACER (MI-36)d",
-                "details": [
+                "descriptions": [
                   "Measuring function",
                   "DC B-H loop",
                   "(Saturation)",
                   "(Remanence)",
                   "(Coercivity)"
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/h0i8pvrnmpkbthc0059e.png",
+                    "pdf": "./MI-36.pdf",
+                    "text": ""
+                  }
                 ]
               },
               {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/v2do7ic07jagi4h3cmx3vi.png",
-                "pdf": "./MI-10.pdf",
                 "title": "AC magnetic Tester (MI-10)",
-                "details": [
+                "descriptions": [
                   "Measuring functioddn",
                   "AC B-H loop",
                   "Core loss",
                   "Magnetostriction"
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/v2do7ic07jagi4h3cmx3vi.png",
+                    "pdf": "./MI-10.pdf",
+                    "text": ""
+                  }
                 ]
               }
-            ],
-            "textExplanationDetails": [],
-            "captions": [
-              "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다."
             ]
           }
         ]

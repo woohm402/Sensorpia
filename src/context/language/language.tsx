@@ -59,9 +59,7 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
       import('./en.json').then((res) => res),
       import('./kor.json').then((res) => res),
     ]).then(([en, ko]) => {
-      // @ts-ignore
       setEnLanguageData(en.default);
-      // @ts-ignore
       setKorLanguageData(ko.default);
     });
   };
@@ -99,8 +97,10 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
         enLanguageData,
         setKorLanguageData,
         setEnLanguageData,
-        setCurrentLanguageData:
-          language === 'kor' ? setKorLanguageData : setEnLanguageData,
+        setCurrentLanguageData: {
+          en: setEnLanguageData,
+          kor: setKorLanguageData,
+        }[language],
       }}
     >
       {children}

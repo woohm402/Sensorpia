@@ -45,79 +45,77 @@ const ProductUI = () => {
           )
         )}
 
-        <ContentWrapper>
-          <ExplanationWrapper>
-            <ExplanationTitle
-              value={
-                data.products[pageIndex]?.data.subSections[buttonIndex]
-                  ?.textExplanationTitle
-              }
-              name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationTitle`}
-            />
-            {data.products[pageIndex]?.data.subSections[
-              buttonIndex
-            ]?.textExplanationDetails.map((explanation: string, i: number) => (
-              <ExplanationDetail
-                as={'li'}
-                value={explanation}
-                key={`${explanation}_${i}`}
-                name={`products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails.${i}`}
-                onDelete={() =>
-                  setCurrentLanguageData(
-                    replaceValue(
-                      data,
-                      `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
-                      data.products[pageIndex]?.data.subSections[
-                        buttonIndex
-                      ]?.textExplanationDetails.filter(
-                        (_: string, index: number) => i !== index
-                      )
+        {data.products[pageIndex]?.data.subSections[buttonIndex].contents.map(
+          (content, i) => {
+            const contentBaseName = `products.${pageIndex}.data.subSections.${buttonIndex}.contents.${i}`;
+            return (
+              <ContentWrapper key={i}>
+                <ExplanationWrapper>
+                  <ExplanationTitle
+                    value={content.title}
+                    name={`${contentBaseName}.title`}
+                  />
+                  {content.descriptions.map(
+                    (explanation: string, i: number) => (
+                      <ExplanationDetail
+                        as={'li'}
+                        value={explanation}
+                        key={`${explanation}_${i}`}
+                        name={`${contentBaseName}.descriptions.${i}`}
+                        onDelete={() =>
+                          setCurrentLanguageData(
+                            replaceValue(
+                              data,
+                              `${contentBaseName}.descriptions`,
+                              content.descriptions.filter(
+                                (_: string, index: number) => i !== index
+                              )
+                            )
+                          )
+                        }
+                      />
                     )
-                  )
-                }
-              />
-            ))}
-            <button
-              style={{ marginTop: 16 }}
-              onClick={() => {
-                const newData = replaceValue(
-                  data,
-                  `products.${pageIndex}.data.subSections.${buttonIndex}.textExplanationDetails`,
-                  data.products[pageIndex]?.data.subSections[
-                    buttonIndex
-                  ]?.textExplanationDetails.concat('content')
-                );
-                setCurrentLanguageData(newData);
-              }}
-            >
-              추가
-            </button>
-          </ExplanationWrapper>
-          <SubImageOuterWrappers>
-            {data.products[pageIndex]?.data.subSections[
-              buttonIndex
-            ]?.subImagesAndTexts.map((value: any, i: number) => (
-              <SubImageMidTwoWrappers key={i}>
-                <SubImageMidWrappers>
-                  <SubImageWrappers
-                    as={'img'}
-                    src={value.image}
-                    name={`products.${pageIndex}.data.subSections.${buttonIndex}.subImagesAndTexts.${i}.image`}
-                  />
-                  <SubImageTexts
-                    value={value.text}
-                    name={`products.${pageIndex}.data.subSections.${buttonIndex}.subImagesAndTexts.${i}.text`}
-                  />
-                </SubImageMidWrappers>
-                <SpecificationButtonWrapperHref href={value.pdf}>
-                  <SpecificationButton>
-                    {data.main.specificationButton}
-                  </SpecificationButton>
-                </SpecificationButtonWrapperHref>
-              </SubImageMidTwoWrappers>
-            ))}
-          </SubImageOuterWrappers>
-        </ContentWrapper>
+                  )}
+                  <button
+                    style={{ margin: '16px 0' }}
+                    onClick={() => {
+                      const newData = replaceValue(
+                        data,
+                        `${contentBaseName}.descriptions`,
+                        content.descriptions.concat('content')
+                      );
+                      setCurrentLanguageData(newData);
+                    }}
+                  >
+                    추가
+                  </button>
+                </ExplanationWrapper>
+                <SubImageOuterWrappers>
+                  {content.images?.map((value, i) => (
+                    <SubImageMidTwoWrappers key={i}>
+                      <SubImageMidWrappers>
+                        <SubImageWrappers
+                          as={'img'}
+                          src={value.src}
+                          name={`${contentBaseName}.images.${i}.src`}
+                        />
+                        <SubImageTexts
+                          value={value.text}
+                          name={`${contentBaseName}.images.${i}.text`}
+                        />
+                      </SubImageMidWrappers>
+                      <SpecificationButtonWrapperHref href={value.pdf}>
+                        <SpecificationButton>
+                          {data.main.specificationButton}
+                        </SpecificationButton>
+                      </SpecificationButtonWrapperHref>
+                    </SubImageMidTwoWrappers>
+                  ))}
+                </SubImageOuterWrappers>
+              </ContentWrapper>
+            );
+          }
+        )}
       </>
     </div>
   );

@@ -74,75 +74,87 @@
           {
             "name": "Normal",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/uke15xmfgf706m6qx0ve4.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/l4jk7g250artabaa32m7l.png",
-                "text": "MS-17",
-                "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "Explanation",
             "captions": [],
-            "textExplanationDetails": [
-              "Magnetometer measure environmental magnetic field and changes of magnetic fields of magnetic objects.",
-              "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
-              "Total field can be measured with accurate orthogonality correction between 3-axis values.",
-              "Sensorpia Co. has accurate orthogonality correction technologies."
+            "contents": [
+              {
+                "title": "Explanation",
+                "descriptions": [
+                  "Magnetometer measure environmental magnetic field and changes of magnetic fields of magnetic objects.",
+                  "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
+                  "Total field can be measured with accurate orthogonality correction between 3-axis values.",
+                  "Sensorpia Co. has accurate orthogonality correction technologies."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/l4jk7g250artabaa32m7l.png",
+                    "text": "MS-17",
+                    "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           },
           {
             "name": "Satellite",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/128qyt57o8geyx62hfra0jg.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jnf358kyvpug50lb5azvr.png",
-                "text": "MS-15",
-                "pdf": "./211209_MS-15_TAM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/adeh17bvu2qwbkuxirsk.png",
-                "text": "MS-22",
-                "pdf": "./211209_MS-22_TAM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "Explanation",
             "captions": [],
-            "textExplanationDetails": [
-              "3-axis magnetometer measure values of the x, y and z axes field, and total magnetic field.",
-              "Total field can be measured exactly by accurate orthogonality correction between 3-axis values.",
-              "Sensorpia Co. has accurate orthogonality correction technologies.",
-              "Magnetometer was developed for scientific satellite and has heritage.",
-              "Attitude control is important for satellites, and the attitude can be controlled using the earth's magnetic field."
+            "contents": [
+              {
+                "title": "Explanation",
+                "descriptions": [
+                  "3-axis magnetometer measure values of the x, y and z axes field, and total magnetic field.",
+                  "Total field can be measured exactly by accurate orthogonality correction between 3-axis values.",
+                  "Sensorpia Co. has accurate orthogonality correction technologies.",
+                  "Magnetometer was developed for scientific satellite and has heritage.",
+                  "Attitude control is important for satellites, and the attitude can be controlled using the earth's magnetic field."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jnf358kyvpug50lb5azvr.png",
+                    "text": "MS-15",
+                    "pdf": "./211209_MS-15_TAM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/adeh17bvu2qwbkuxirsk.png",
+                    "text": "MS-22",
+                    "pdf": "./211209_MS-22_TAM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           },
           {
             "name": "Defense",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/1ra8xs7w3wjlow7jj0wn29.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/efgri74iie5qmcswnb6s9f.png",
-                "text": "MS-27",
-                "pdf": "./211209_MS-27_LNLDM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/vx9b86hod6szf8b1pg0m.png",
-                "text": "MS-13",
-                "pdf": "./211209_MS-13_LD3FM_Specification.pdf"
-              },
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nnmjd7tca0bbmhp0riepim.png",
-                "text": "MS-07",
-                "pdf": "./211209_MS-07_FGM_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "Explanation",
             "captions": [],
-            "textExplanationDetails": [
-              "Magnetometer measure changes of magnetic fields of magnetic objects.",
-              "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
-              "Total field can be measured with accurate orthogonality correction between 3-axis values.",
-              "Sensorpia Co. has accurate orthogonality correction technologies.",
-              "Magnetometers manufactured by sensorpia Co. are highly sensitive even underwater. Since the magnetic field is not affected by seawater."
+            "contents": [
+              {
+                "title": "Explanation",
+                "descriptions": [
+                  "Magnetometer measure changes of magnetic fields of magnetic objects.",
+                  "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
+                  "Total field can be measured with accurate orthogonality correction between 3-axis values.",
+                  "Sensorpia Co. has accurate orthogonality correction technologies.",
+                  "Magnetometers manufactured by sensorpia Co. are highly sensitive even underwater. Since the magnetic field is not affected by seawater."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/efgri74iie5qmcswnb6s9f.png",
+                    "text": "MS-27",
+                    "pdf": "./211209_MS-27_LNLDM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/vx9b86hod6szf8b1pg0m.png",
+                    "text": "MS-13",
+                    "pdf": "./211209_MS-13_LD3FM_Specification.pdf"
+                  },
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nnmjd7tca0bbmhp0riepim.png",
+                    "text": "MS-07",
+                    "pdf": "./211209_MS-07_FGM_Specification.pdf"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -155,19 +167,23 @@
           {
             "name": "torquer",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/jyek7ef21suewag3vzu2.png",
-            "subImagesAndTexts": [
-              {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/taw3o43aep43m6e2w1bnm.png",
-                "text": null,
-                "pdf": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
-              }
-            ],
-            "textExplanationTitle": "Explanation",
             "captions": [],
-            "textExplanationDetails": [
-              "It’s used to control the attitude of satellites.(It generates a magnetic dipole moment)",
-              "Sizes and characteristics of magnetic torquers can be adjusted according to requests of customers.",
-              "It’s designed with a light mass for application in satellites.Sensorpia Co. has accurate orthogonality correction technologies."
+            "contents": [
+              {
+                "title": "Explanation",
+                "descriptions": [
+                  "It’s used to control the attitude of satellites.(It generates a magnetic dipole moment)",
+                  "Sizes and characteristics of magnetic torquers can be adjusted according to requests of customers.",
+                  "It’s designed with a light mass for application in satellites.Sensorpia Co. has accurate orthogonality correction technologies."
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/taw3o43aep43m6e2w1bnm.png",
+                    "text": "",
+                    "pdf": "./211209_MS-12,20,25_magnetic toquer_Specification.pdf"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -180,35 +196,44 @@
           {
             "name": "instruments",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/i2elrykajqjyvzuej627gm.png",
-            "subImagesAndTexts": [
+            "captions": [
+              "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services."
+            ],
+            "contents": [
               {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/h0i8pvrnmpkbthc0059e.png",
-                "pdf": "./MI-36.pdf",
                 "title": "DC B-H LOOP TRACER (MI-36)",
-                "details": [
+                "descriptions": [
                   "Measuring function",
                   "DC B-H loop",
                   "(Saturation)",
                   "(Remanence)",
                   "(Coercivity)"
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/h0i8pvrnmpkbthc0059e.png",
+                    "pdf": "./MI-36.pdf",
+                    "text": ""
+                  }
                 ]
               },
               {
-                "image": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/v2do7ic07jagi4h3cmx3vi.png",
-                "pdf": "./MI-10.pdf",
                 "title": "AC magnetic Tester (MI-10)",
-                "details": [
+                "descriptions": [
                   "Measuring function",
                   "AC B-H loop",
                   "Core loss",
                   "Magnetostriction"
+                ],
+                "images": [
+                  {
+                    "src": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/v2do7ic07jagi4h3cmx3vi.png",
+                    "pdf": "./MI-10.pdf",
+                    "text": ""
+                  }
                 ]
               }
-            ],
-            "captions": [
-              "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services."
-            ],
-            "textExplanationDetails": []
+            ]
           }
         ]
       }
