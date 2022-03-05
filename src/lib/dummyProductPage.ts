@@ -1,4 +1,7 @@
-export const DUMMY_PRODUCT_PAGE = {
+import { LanguageData } from './../context/language/language.model';
+import { ArrayElement } from './arrayElement';
+
+export const DUMMY_PRODUCT_PAGE: ArrayElement<LanguageData['products']> = {
   name: '[FIXME] Title',
   data: {
     subSections: [
