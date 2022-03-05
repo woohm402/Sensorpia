@@ -247,6 +247,7 @@
         "mainImage": [
           "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nlwjl6to616qs6pe76gs9.png"
         ],
+        "subImageAndDetails": [],
         "mainTexts": [
           "Magnetometers measure changes of magnetic fields of magnetic objects.",
           "3-axis magnetometers measure values for the x, y and z axis field, and total field of magnetic objects.",
@@ -289,6 +290,7 @@
         "mainImage": [
           "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/ljqjydbqybr7xytsmex4jf.png"
         ],
+        "subImageAndDetails": [],
         "mainTexts": [
           "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services.",
           "Equipment that can be manufactured and used for analysis services are a DC B-H tracer and an AC magnetic tester. The DC B-H tracer is a device to measure hysteresis curve of magnetic materials, and the AC magnetic tester is used to measure magnetostriction and magnetic hysteresis loss."

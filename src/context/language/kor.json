@@ -248,6 +248,7 @@
         "mainImage": [
           "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/nlwjl6to616qs6pe76gs9.png"
         ],
+        "subImageAndDetails": [],
         "mainTexts": [
           "3축 magnetometer의 경우, 자기장(magnetic field)의  변화를 측정하는 제품입니다.",
           "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
@@ -289,6 +290,7 @@
         "mainImage": [
           "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/ljqjydbqybr7xytsmex4jf.png"
         ],
+        "subImageAndDetails": [],
         "mainTexts": [
           "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다.",
           "제작 및 분석 가능 장비는 DC B-H tracer  및  AC magnetic tester 입니다. DC B-H tracer의 경우 자성 재료의 자기이력곡선 측정 장비이며, AC magnetic tester의 경우 자기 변형 및 자기이력손실 측정 장비입니다."

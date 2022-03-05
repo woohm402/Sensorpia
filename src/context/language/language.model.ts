@@ -120,16 +120,16 @@ interface AboutUsEntity {
   data: Data2;
 }
 interface Data2 {
-  mainImage: string;
-  circleAboveTexts: string[];
-  circleBelowTexts: string[];
-  circleTexts: string[];
+  mainImage?: string;
+  circleAboveTexts?: string[];
+  circleBelowTexts?: string[];
+  circleTexts?: string[];
   subTitle: string;
-  subClientImages: string[];
-  mainTitle: string;
-  explanations: string[];
-  mainImages: string[];
-  years: string[];
+  subClientImages?: string[];
+  mainTitle?: string;
+  explanations?: string[];
+  mainImages?: string[];
+  years?: string[];
 }
 interface ContactUs {
   title: string;
@@ -139,13 +139,13 @@ interface DetailsEntity {
   content: string;
 }
 interface CareersEntity {
-  name: string;
-  images: string[];
-  layout: string;
-  circles: (CirclesEntity | string)[];
-  subTitle: string;
-  secondTitle: string;
-  principle: string[];
+  name?: string;
+  images?: string[];
+  layout?: string;
+  circles?: (CirclesEntity | string)[];
+  subTitle?: string;
+  secondTitle?: string;
+  principle?: string[];
 }
 interface CirclesEntity {
   title: string;
