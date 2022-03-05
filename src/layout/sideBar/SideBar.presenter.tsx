@@ -15,6 +15,10 @@ import {
 import { useLanguageContext } from '../../context/language/language';
 import { Fragment } from 'react';
 import { replaceValue } from '../../lib/replaceValue';
+import {
+  DUMMY_PRODUCT_PAGE,
+  DUMMY_PRODUCT_SECTION,
+} from '../../lib/dummyProductPage';
 
 interface IProps {
   onClickMenu: any;
@@ -90,21 +94,23 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   style={{ margin: '8px 0' }}
                   onClick={() => {
                     const subSections = data.products[index].data.subSections;
-                    if (subSections.find((s) => s.name === 'new page')) return;
+                    if (
+                      subSections.find(
+                        (s) => s.name === DUMMY_PRODUCT_SECTION.name
+                      )
+                    )
+                      return;
                     setCurrentLanguageData(
                       replaceValue(
                         data,
                         `products.${index}.data.subSections`,
-                        subSections.concat({
-                          ...subSections[subSections.length - 1],
-                          name: 'new page',
-                        })
+                        subSections.concat(DUMMY_PRODUCT_SECTION)
                       )
                     );
                   }}
                   disabled={
                     !!data.products[index].data.subSections.find(
-                      (s) => s.name === 'new page'
+                      (s) => s.name === DUMMY_PRODUCT_SECTION.name
                     )
                   }
                 >
@@ -118,19 +124,21 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
             <button
               style={{ width: '100%', marginTop: 16 }}
               onClick={() => {
-                if (data.products.find((p) => p.name === 'new page')) return;
+                if (
+                  data.products.find((p) => p.name === DUMMY_PRODUCT_PAGE.name)
+                )
+                  return;
                 setCurrentLanguageData(
                   replaceValue(
                     data,
                     'products',
-                    data?.products.concat({
-                      ...data.products[data.products.length - 1],
-                      name: 'new page',
-                    })
+                    data?.products.concat(DUMMY_PRODUCT_PAGE)
                   )
                 );
               }}
-              disabled={!!data.products.find((p) => p.name === 'new page')}
+              disabled={
+                !!data.products.find((p) => p.name === DUMMY_PRODUCT_PAGE.name)
+              }
             >
               페이지 추가
             </button>
