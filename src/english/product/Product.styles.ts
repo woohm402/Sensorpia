@@ -64,78 +64,9 @@ export const ExplanationDetail = styled(TextBox)`
   text-indent: -1.5em;
   padding-left: 1.5em;
 `;
-export const MagneticInstrumentImageOneWrapper = styled(ImageBox)`
-  width: 702px;
-  height: 370px;
-  margin-top: 35px;
-  margin-left: 70px;
-  ${({ src }: IPropsTwo) => `background:url(${src})`};
-`;
 
 export const ProductImageCaption = styled(TextBox)`
   margin-top: 30px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  text-align: justify;
-  color: #636363;
-`;
-
-export const MagneticInstrumentDCBHWrapper = styled.div`
-  margin-top: 27px;
-  margin-left: 70px;
-  display: flex;
-  align-items: center;
-`;
-
-export const MagneticInstrumentDCBHExplanationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const MagneticInstrumentDCBHTitle = styled(TextBox)`
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 22px;
-  color: #262626;
-  margin-bottom: 15px;
-`;
-
-export const MagneticInstrumentDCBHImageButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 181px;
-`;
-
-export const MagneticInstrumentDCBHImageWrapper = styled(ImageBox)`
-  width: 284px;
-  height: 188px;
-  ${({ src }: IPropsTwo) => `background:url(${src})`};
-`;
-
-export const MagneticInstrumentACMagneticWrapper = styled.div`
-  display: flex;
-  margin-top: 70px;
-  margin-left: 70px;
-  align-items: center;
-`;
-export const MagneticInstrumentACMagneticExplanationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-export const MagneticInstrumentACMagneticTitle = styled(TextBox)`
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 22px;
-  color: #262626;
-  margin-bottom: 20px;
-`;
-export const MagneticInstrumentACMagneticDetails = styled(TextBox)`
-  width: 236px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -151,11 +82,6 @@ export const ACMagneticButtonImageWrapper = styled.div`
   align-items: center;
 `;
 
-export const MagneticInstrumentACMagneticImageWrapper = styled(ImageBox)`
-  width: 323px;
-  height: 162px;
-  ${({ src }: IPropsTwo) => `background:url(${src})`};
-`;
 export const SpecificationButton = styled.button`
   width: 152px;
   height: 30px;
