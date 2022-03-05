@@ -74,7 +74,6 @@ export interface DefenseImageNames {
 }
 export interface ProductsEntity {
   name: string;
-  layout: string;
   data: Data;
 }
 export interface Data {
@@ -86,6 +85,7 @@ export interface SubSectionsEntity {
   subImagesAndTexts: SubImagesAndTextsEntity[];
   textExplanationTitle: string;
   textExplanationDetails: string[];
+  captions: string[];
 }
 export interface SubImagesAndTextsEntity {
   image: string;

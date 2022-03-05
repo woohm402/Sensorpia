@@ -10,7 +10,7 @@ import {
   MagneticInstrumentDCBHImageWrapper,
   MagneticInstrumentDCBHTitle,
   MagneticInstrumentDCBHWrapper,
-  MagneticInstrumentImageOneDetail,
+  ProductImageCaption,
   MagneticInstrumentImageOneWrapper,
   MagneticInstrumentDCBHExplanationWrapper,
   SpecificationButton,
@@ -30,7 +30,7 @@ const MagneticInstrumentsPage = () => {
         src={data.products[pageIndex]?.data.subSections[0]?.mainImage}
         name={`products.${pageIndex}.data.subSections.0.mainImage`}
       />
-      <MagneticInstrumentImageOneDetail
+      <ProductImageCaption
         as={'li'}
         value={
           data.products[pageIndex]?.data.subSections[0]

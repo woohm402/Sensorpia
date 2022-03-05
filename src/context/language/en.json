@@ -69,7 +69,6 @@
   "products": [
     {
       "name": "3-axis flux-gate magnetometer",
-      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
@@ -83,6 +82,7 @@
               }
             ],
             "textExplanationTitle": "Explanation",
+            "captions": [],
             "textExplanationDetails": [
               "Magnetometer measure environmental magnetic field and changes of magnetic fields of magnetic objects.",
               "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
@@ -106,6 +106,7 @@
               }
             ],
             "textExplanationTitle": "Explanation",
+            "captions": [],
             "textExplanationDetails": [
               "3-axis magnetometer measure values of the x, y and z axes field, and total magnetic field.",
               "Total field can be measured exactly by accurate orthogonality correction between 3-axis values.",
@@ -135,6 +136,7 @@
               }
             ],
             "textExplanationTitle": "Explanation",
+            "captions": [],
             "textExplanationDetails": [
               "Magnetometer measure changes of magnetic fields of magnetic objects.",
               "3-axis magnetometer measure values of the x, y and z axes field, and total field of magnetic objects.",
@@ -148,7 +150,6 @@
     },
     {
       "name": "Magnetic Torquer",
-      "layout": "productBasicPage",
       "data": {
         "subSections": [
           {
@@ -162,6 +163,7 @@
               }
             ],
             "textExplanationTitle": "Explanation",
+            "captions": [],
             "textExplanationDetails": [
               "It’s used to control the attitude of satellites.(It generates a magnetic dipole moment)",
               "Sizes and characteristics of magnetic torquers can be adjusted according to requests of customers.",
@@ -173,11 +175,10 @@
     },
     {
       "name": "Magnetic instruments",
-      "layout": "productMagneticInstrumentsPage",
       "data": {
         "subSections": [
           {
-            "name": null,
+            "name": "instruments",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/i2elrykajqjyvzuej627gm.png",
             "subImagesAndTexts": [
               {
@@ -204,9 +205,10 @@
                 ]
               }
             ],
-            "textExplanationDetails": [
+            "captions": [
               "Sensorpia Co. manufactures magnetic equipments. It provides measurement and analysis services."
-            ]
+            ],
+            "textExplanationDetails": []
           }
         ]
       }

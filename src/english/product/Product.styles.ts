@@ -72,9 +72,8 @@ export const MagneticInstrumentImageOneWrapper = styled(ImageBox)`
   ${({ src }: IPropsTwo) => `background:url(${src})`};
 `;
 
-export const MagneticInstrumentImageOneDetail = styled(TextBox)`
+export const ProductImageCaption = styled(TextBox)`
   margin-top: 30px;
-  margin-left: 70px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 13px;

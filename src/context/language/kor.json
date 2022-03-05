@@ -83,7 +83,8 @@
                 "pdf": "./211209_MS-17_LPGFM_Specification.pdf"
               }
             ],
-            "textExplanationTitle": "제품 설명g",
+            "textExplanationTitle": "제품 설명",
+            "captions": [],
             "textExplanationDetails": [
               "Magnetometer는 환경 자기장 및 자성체의 자기장 변화를 측정합니다.\n",
               "3축 magnetometer는 x, y, z축 자기장 값과 자기장 크기 값을 측정합니다.",
@@ -107,6 +108,7 @@
               }
             ],
             "textExplanationTitle": "제품 설명",
+            "captions": [],
             "textExplanationDetails": [
               "3축 magnetometer는 x, y 및 z축 자기장과 자기장 크기 값을 측정합니다.",
               "3축 간의 정확한 직교성 보정으로 자기장 크기를 정확하게 측정할 수 있습니다.",
@@ -136,6 +138,7 @@
               }
             ],
             "textExplanationTitle": "제품 설명",
+            "captions": [],
             "textExplanationDetails": [
               "3축 magnetometer의 경우, 자기장의 변화를 측정하는 제품입니다.",
               "자기적 성질을 가지고 있는 물질에 대한 움직임의 변화를 감지 할 수 있습니다.",
@@ -163,6 +166,7 @@
               }
             ],
             "textExplanationTitle": "제품 설명",
+            "captions": [],
             "textExplanationDetails": [
               "Magnetic dipole moment 이용하여,  위성의 자세 변화를 시키는데 사용됩니다.",
               "Magnetic torquer 의 경우, 크기와 특성에 따라 제품 개발이 가능합니다.",
@@ -178,7 +182,7 @@
       "data": {
         "subSections": [
           {
-            "name": null,
+            "name": "instruments",
             "mainImage": "https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/i2elrykajqjyvzuej627gm.png",
             "subImagesAndTexts": [
               {
@@ -205,7 +209,8 @@
                 ]
               }
             ],
-            "textExplanationDetails": [
+            "textExplanationDetails": [],
+            "captions": [
               "자기적 특성을 분석 하기 위해서는 측정 장비가 필요합니다. 센서피아는 자기 분석 장비를 보유 하고 있으며, 분석 의뢰 진행도 가능합니다."
             ]
           }
