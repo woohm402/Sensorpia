@@ -41,26 +41,18 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
   };
 
   const fetchLanguage = () => {
-    // Promise.allSettled([
-    //   axios.get(
-    //     'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/en.json'
-    //   ),
-    //   axios.get(
-    //     'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/kor.json'
-    //   ),
-    // ]).then(([en, ko]) => {
-    //   if ('value' in en && 'value' in ko) {
-    //     setEnLanguageData(en.value.data);
-    //     setKorLanguageData(ko.value.data);
-    //   }
-    // });
-
-    return Promise.all([
-      import('./en.json').then((res) => res),
-      import('./kor.json').then((res) => res),
+    return Promise.allSettled([
+      axios.get(
+        'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/en.json'
+      ),
+      axios.get(
+        'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/kor.json'
+      ),
     ]).then(([en, ko]) => {
-      setEnLanguageData(en.default);
-      setKorLanguageData(ko.default);
+      if ('value' in en && 'value' in ko) {
+        setEnLanguageData(en.value.data);
+        setKorLanguageData(ko.value.data);
+      }
     });
   };
 
