@@ -47,25 +47,37 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
       <SideBarMenusWrapper>
         {router.pathname === '/products' ? (
           <>
-            {data.products.map((value, i) => (
-              <Fragment key={i}>
+            {data.products.map((value, index) => (
+              <Fragment key={index}>
                 <SideBarMenusInnerWrapper
-                  id={`${i}`}
-                  onClick={onClickMenu}
-                  $color={pageIndex == i}
+                  onClick={() => {
+                    router.push({
+                      query: {
+                        item: index,
+                        keyword: value.data.subSections[0].name,
+                      },
+                    });
+                  }}
+                  $color={pageIndex == index}
                 >
                   {value.name}
                 </SideBarMenusInnerWrapper>
                 {value.data.subSections.length > 1 && (
                   <SideBarProductsSubMenusWrapper>
-                    {value.data.subSections.map((data: any, i: number) => (
+                    {value.data.subSections.map((data, i) => (
                       <SideBarProductsIndividualWrapper key={i}>
                         <SideBarProductsIndividualIcon>
                           -
                         </SideBarProductsIndividualIcon>
                         <SideBarProductsIndividualText
-                          id={data.name}
-                          onClick={onClickMenu}
+                          onClick={() => {
+                            router.push({
+                              query: {
+                                item: index,
+                                keyword: data.name,
+                              },
+                            });
+                          }}
                           $color={data.name === buttonName}
                         >
                           {data.name}
@@ -74,10 +86,24 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                     ))}
                   </SideBarProductsSubMenusWrapper>
                 )}
-                <button style={{ margin: '8px 0' }} onClick={() => {}}>
+                <button
+                  style={{ margin: '8px 0' }}
+                  onClick={() => {
+                    const subSections = data.products[index].data.subSections;
+                    setCurrentLanguageData(
+                      replaceValue(
+                        data,
+                        `products.${index}.data.subSections`,
+                        subSections.concat(subSections[subSections.length - 1])
+                      )
+                    );
+                  }}
+                >
                   하위 페이지 추가
                 </button>
-                {data.products.length - 1 !== i && <SideBarMenusLineDivider />}
+                {data.products.length - 1 !== index && (
+                  <SideBarMenusLineDivider />
+                )}
               </Fragment>
             ))}
             <button
