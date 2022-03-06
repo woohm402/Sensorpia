@@ -1,6 +1,7 @@
 export interface Language {
   language: 'en' | 'kor';
   setLanguage: (lng: Language['language']) => void;
+  isEdited: boolean;
   languageData: LanguageData | null;
   fetchLanguage: () => Promise<void>;
   handleSave: () => Promise<void>;

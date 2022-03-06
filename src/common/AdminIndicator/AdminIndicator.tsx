@@ -7,7 +7,7 @@ import { useLanguageContext } from '../../context/language/language';
 
 const AdminIndicator = () => {
   const { isAdmin } = useAdminContext();
-  const { handleSave, fetchLanguage } = useLanguageContext();
+  const { handleSave, fetchLanguage, isEdited } = useLanguageContext();
   const router = useRouter();
 
   if (!isAdmin) return null;
@@ -30,10 +30,14 @@ const AdminIndicator = () => {
       <LogoutButton onClick={handleLogout}>로그아웃</LogoutButton>
       <br />
       <br />
-      <SaveButton onClick={handleSave}>적용</SaveButton>
+      <SaveButton onClick={handleSave} disabled={!isEdited}>
+        적용
+      </SaveButton>
       <br />
       <br />
-      <SaveButton onClick={fetchLanguage}>초기화</SaveButton>
+      <SaveButton onClick={fetchLanguage} disabled={!isEdited}>
+        초기화
+      </SaveButton>
     </Wrapper>
   );
 };

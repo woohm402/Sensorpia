@@ -35,12 +35,19 @@ export const LogoutButton = styled.button`
 export const SaveButton = styled.button`
   width: 80px;
   height: 40px;
-  cursor: pointer;
   border: none;
   border-radius: 8px;
   transition: 0.2s all;
 
-  &:hover {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
     box-shadow: 0 2px 4px black;
   }
 `;

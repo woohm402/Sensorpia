@@ -13,6 +13,7 @@ import toast from 'react-hot-toast';
 const initialLanguage: Language = {
   language: 'en',
   setLanguage: () => null,
+  isEdited: false,
   languageData: null,
   fetchLanguage: () => Promise.resolve(),
   handleSave: () => Promise.resolve(),
@@ -35,6 +36,7 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
   const [korLanguageData, setKorLanguageData] = useState<LanguageData | null>(
     null
   );
+  const [isEdited, setIsEdited] = useState(false);
 
   const onChangeLanguage = (lng: Language['language']) => {
     setLanguage(lng);
@@ -49,6 +51,7 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
         'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/kor.json'
       ),
     ]).then(([en, ko]) => {
+      setIsEdited(false);
       if ('value' in en && 'value' in ko) {
         setEnLanguageData(en.value.data);
         setKorLanguageData(ko.value.data);
@@ -82,17 +85,27 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
       value={{
         language,
         setLanguage: onChangeLanguage,
+        isEdited,
         languageData: { en: enLanguageData, kor: korLanguageData }[language],
         fetchLanguage,
         handleSave,
         korLanguageData,
         enLanguageData,
-        setKorLanguageData,
-        setEnLanguageData,
-        setCurrentLanguageData: {
-          en: setEnLanguageData,
-          kor: setKorLanguageData,
-        }[language],
+        setKorLanguageData: (e) => {
+          setIsEdited(true);
+          setKorLanguageData(e);
+        },
+        setEnLanguageData: (e) => {
+          setIsEdited(true);
+          setEnLanguageData(e);
+        },
+        setCurrentLanguageData: (e) => {
+          setIsEdited(true);
+          ({
+            en: setEnLanguageData,
+            kor: setKorLanguageData,
+          }[language](e));
+        },
       }}
     >
       {children}
