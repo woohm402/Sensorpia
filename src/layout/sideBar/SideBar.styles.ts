@@ -1,3 +1,4 @@
+import { ContentTooltip } from './../../common/ContentTooltip/ContentTooltip';
 import styled from '@emotion/styled';
 
 interface IProps {
@@ -48,21 +49,17 @@ export const SideBarMenusInnerWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-  button {
-    display: none;
+  & > button {
+    display: block;
     position: absolute;
     width: 40px;
 
-    &:first-of-type {
+    &:nth-of-type(1) {
       right: -36px;
     }
-    &:last-of-type {
+    &:nth-of-type(2) {
       right: 4px;
     }
-  }
-
-  &:hover > button {
-    display: block;
   }
 `;
 
@@ -85,21 +82,17 @@ export const SideBarProductsIndividualWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-  button {
-    display: none;
+  & > button {
+    display: block;
     position: absolute;
     width: 40px;
 
-    &:first-of-type {
+    &:nth-of-type(1) {
       right: -36px;
     }
-    &:last-of-type {
+    &:nth-of-type(2) {
       right: 4px;
     }
-  }
-
-  &:hover > button {
-    display: block;
   }
 `;
 export const SideBarProductsIndividualIcon = styled.div`

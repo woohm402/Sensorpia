@@ -20,6 +20,7 @@ import {
   DUMMY_PRODUCT_SECTION,
 } from '../../lib/dummyProductPage';
 import { useAdminContext } from '../../context/admin/admin';
+import { ContentTooltip } from '../../common/ContentTooltip/ContentTooltip';
 
 interface IProps {
   onClickMenu: any;
@@ -85,7 +86,18 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                       >
                         삭제
                       </button>
-                      <button>수정</button>
+                      <ContentTooltip
+                        onModify={(e) => {
+                          setCurrentLanguageData(
+                            replaceValue(data, `products.${index}`, {
+                              ...value,
+                              name: e,
+                            })
+                          );
+                        }}
+                      >
+                        <button>수정</button>
+                      </ContentTooltip>
                     </>
                   )}
                   {value.name}
@@ -112,7 +124,19 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                             >
                               삭제
                             </button>
-                            <button>수정</button>
+                            <ContentTooltip
+                              onModify={(name) => {
+                                setCurrentLanguageData(
+                                  replaceValue(
+                                    data,
+                                    `products.${index}.data.subSections.${i}`,
+                                    { ...section, name }
+                                  )
+                                );
+                              }}
+                            >
+                              <button>수정</button>
+                            </ContentTooltip>
                           </>
                         )}
                         <SideBarProductsIndividualIcon>
