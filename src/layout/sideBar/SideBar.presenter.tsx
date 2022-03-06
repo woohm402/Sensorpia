@@ -18,7 +18,7 @@ import { replaceValue } from '../../lib/replaceValue';
 import {
   DUMMY_PRODUCT_PAGE,
   DUMMY_PRODUCT_SECTION,
-} from '../../lib/dummyProductPage';
+} from '../../lib/dummy/dummyProductPage';
 import { useAdminContext } from '../../context/admin/admin';
 import { ContentTooltip } from '../../common/ContentTooltip/ContentTooltip';
 

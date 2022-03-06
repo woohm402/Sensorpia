@@ -16,6 +16,7 @@ import {
 } from './Product.styles';
 import { useLanguageContext } from '../../context/language/language';
 import { replaceValue } from '../../lib/replaceValue';
+import { DUMMY_DESCRIPTION } from '../../lib/dummy/dummyDescription';
 
 const ProductUI = () => {
   const { languageData: data, setCurrentLanguageData } = useLanguageContext();
@@ -105,7 +106,7 @@ const ProductUI = () => {
                       const newData = replaceValue(
                         data,
                         `${contentBaseName}.descriptions`,
-                        content.descriptions.concat('content')
+                        content.descriptions.concat(DUMMY_DESCRIPTION)
                       );
                       setCurrentLanguageData(newData);
                     }}
