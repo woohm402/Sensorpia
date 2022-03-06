@@ -30,6 +30,7 @@ interface IProps {
 const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const router = useRouter();
   const pageIndex = Number(router.query.item);
+  const keyword = router.query.keyword;
   const { isAdmin } = useAdminContext();
   const {
     language,
@@ -39,7 +40,6 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const onClickScrollArrow = () => {
     window.scrollTo(0, 0);
   };
-  const item = Number(router.query.item);
 
   return (
     <SideBarWrapper>
@@ -68,7 +68,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   }}
                   $color={pageIndex == index}
                 >
-                  {isAdmin && (
+                  {isAdmin && pageIndex === index && (
                     <>
                       <button
                         onClick={(e) => {
@@ -106,7 +106,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   <SideBarProductsSubMenusWrapper>
                     {value.data.subSections.map((section, i) => (
                       <SideBarProductsIndividualWrapper key={section.name + i}>
-                        {isAdmin && (
+                        {isAdmin && keyword === section.name && (
                           <>
                             <button
                               onClick={(e) => {
@@ -151,7 +151,9 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                               },
                             });
                           }}
-                          $color={section.name === buttonName && index === item}
+                          $color={
+                            section.name === buttonName && index === pageIndex
+                          }
                         >
                           {section.name}
                         </SideBarProductsIndividualText>
@@ -159,32 +161,23 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                     ))}
                   </SideBarProductsSubMenusWrapper>
                 )}
-                <button
-                  style={{ margin: '8px 0' }}
-                  onClick={() => {
-                    const subSections = data.products[index].data.subSections;
-                    if (
-                      subSections.find(
-                        (s) => s.name === DUMMY_PRODUCT_SECTION.name
-                      )
-                    )
-                      return;
-                    setCurrentLanguageData(
-                      replaceValue(
-                        data,
-                        `products.${index}.data.subSections`,
-                        subSections.concat(DUMMY_PRODUCT_SECTION)
-                      )
-                    );
-                  }}
-                  disabled={
-                    !!data.products[index].data.subSections.find(
-                      (s) => s.name === DUMMY_PRODUCT_SECTION.name
-                    )
-                  }
-                >
-                  하위 페이지 추가
-                </button>
+                {isAdmin && index === pageIndex && (
+                  <button
+                    style={{ margin: '8px 0' }}
+                    onClick={() => {
+                      const subSections = data.products[index].data.subSections;
+                      setCurrentLanguageData(
+                        replaceValue(
+                          data,
+                          `products.${index}.data.subSections`,
+                          subSections.concat(DUMMY_PRODUCT_SECTION)
+                        )
+                      );
+                    }}
+                  >
+                    하위 페이지 추가
+                  </button>
+                )}
                 {data.products.length - 1 !== index && (
                   <SideBarMenusLineDivider />
                 )}
@@ -192,21 +185,14 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
             ))}
             <button
               style={{ width: '100%', marginTop: 16 }}
-              onClick={() => {
-                if (
-                  data.products.find((p) => p.name === DUMMY_PRODUCT_PAGE.name)
-                )
-                  return;
+              onClick={() =>
                 setCurrentLanguageData(
                   replaceValue(
                     data,
                     'products',
                     data?.products.concat(DUMMY_PRODUCT_PAGE)
                   )
-                );
-              }}
-              disabled={
-                !!data.products.find((p) => p.name === DUMMY_PRODUCT_PAGE.name)
+                )
               }
             >
               페이지 추가

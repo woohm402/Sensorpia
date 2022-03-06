@@ -1,1 +1,1 @@
-export const DUMMY_DESCRIPTION = '[FIXME] content';
+export const DUMMY_DESCRIPTION = 'content';
