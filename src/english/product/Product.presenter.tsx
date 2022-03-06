@@ -134,8 +134,19 @@ const ProductUI = () => {
                         />
                       </SubImageMidWrappers>
                       <PdfBox
-                        name={`${contentBaseName}.pdf`}
+                        name={`${contentBaseName}.images.${i}.pdf`}
                         href={value.pdf}
+                        onDelete={() =>
+                          setCurrentLanguageData(
+                            replaceValue(
+                              data,
+                              `${contentBaseName}.images`,
+                              content.images.filter(
+                                (_, imageIndex) => i !== imageIndex
+                              )
+                            )
+                          )
+                        }
                       />
                     </SubImageMidTwoWrappers>
                   ))}

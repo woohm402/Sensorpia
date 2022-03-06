@@ -13,10 +13,12 @@ const PdfBox = ({
   className,
   name,
   href,
+  onDelete,
 }: {
   className?: string;
   name: string;
   href: string;
+  onDelete?: () => void;
 }) => {
   const { isAdmin } = useAdminContext();
   const { languageData, setCurrentLanguageData } = useLanguageContext();
@@ -80,7 +82,7 @@ const PdfBox = ({
               />
             </label>
           </button>
-          <button>항목 제거</button>
+          {onDelete && <button onClick={onDelete}>항목 제거</button>}
         </div>
       )}
     </>
