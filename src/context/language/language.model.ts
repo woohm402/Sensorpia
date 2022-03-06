@@ -43,7 +43,6 @@ interface Main {
   mainProductOneName: string;
   mainProductTwoName: string;
   mainProductThreeName: string;
-  specificationButton: string;
   satelliteImageNames: SatelliteImageNames;
   defenseImageNames: DefenseImageNames;
 }

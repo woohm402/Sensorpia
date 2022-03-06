@@ -51,6 +51,7 @@ export const ExplanationTitle = styled(TextBox)`
   color: #262626;
   margin-bottom: 20px;
 `;
+
 export const ExplanationDetail = styled(TextBox)`
   width: 370px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -83,26 +84,9 @@ export const ACMagneticButtonImageWrapper = styled.div`
   align-items: center;
 `;
 
-export const SpecificationButton = styled.button`
-  width: 152px;
-  height: 30px;
-  background: #f4f7ff;
-  border: 1px solid #0070c0;
-  box-sizing: border-box;
-  border-radius: 30px;
-  color: #0070c0;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 15px;
-`;
 export const SubImageMidTwoWrappers = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 64px;
 `;
-export const SpecificationButtonWrapperHref = styled.a``;

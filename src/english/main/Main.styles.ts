@@ -209,24 +209,6 @@ export const ProductImageText = styled(TextBox)`
   left: 142px;
 `;
 
-export const SpecificationButtonHref = styled.a``;
-
-export const SpecificationButton = styled.button`
-  margin-top: 15px;
-  width: 152px;
-  height: 30px;
-  background: #f4f7ff;
-  border: 1px solid #0070c0;
-  box-sizing: border-box;
-  border-radius: 30px;
-  color: #0070c0;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
-  cursor: pointer;
-`;
-
 export const MainThirdLineDivider = styled.div`
   margin: 65px auto 0px auto;
   width: 394px;

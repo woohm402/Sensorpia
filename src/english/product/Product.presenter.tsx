@@ -9,9 +9,7 @@ import {
   SubImageOuterWrappers,
   SubImageTexts,
   SubImageMidWrappers,
-  SpecificationButton,
   SubImageMidTwoWrappers,
-  SpecificationButtonWrapperHref,
   ProductImageCaption,
 } from './Product.styles';
 import { useLanguageContext } from '../../context/language/language';
@@ -19,6 +17,7 @@ import { replaceValue } from '../../lib/replaceValue';
 import { DUMMY_DESCRIPTION } from '../../lib/dummy/dummyDescription';
 import { useAdminContext } from '../../context/admin/admin';
 import { DUMMY_PRODUCT } from '../../lib/dummy/dummyProduct';
+import PdfBox from '../../common/PdfBox.tsx/PdfBox';
 
 const ProductUI = () => {
   const { languageData: data, setCurrentLanguageData } = useLanguageContext();
@@ -134,11 +133,10 @@ const ProductUI = () => {
                           name={`${contentBaseName}.images.${i}.text`}
                         />
                       </SubImageMidWrappers>
-                      <SpecificationButtonWrapperHref href={value.pdf}>
-                        <SpecificationButton>
-                          {data.main.specificationButton}
-                        </SpecificationButton>
-                      </SpecificationButtonWrapperHref>
+                      <PdfBox
+                        name={`${contentBaseName}.pdf`}
+                        href={value.pdf}
+                      />
                     </SubImageMidTwoWrappers>
                   ))}
                   {isAdmin && (

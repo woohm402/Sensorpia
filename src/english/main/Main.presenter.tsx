@@ -1,3 +1,5 @@
+import PdfBox from '../../common/PdfBox.tsx/PdfBox';
+import { LanguageData } from '../../context/language/language.model';
 import {
   AboutUsDetails,
   AboutUsDetailsWrapper,
@@ -41,13 +43,11 @@ import {
   SliderSubDraggableWrapper,
   SliderSubTextWrapper,
   SliderTextWrapper,
-  SpecificationButton,
-  SpecificationButtonHref,
   MagneticTorquerSubProductWrapper,
 } from './Main.styles';
 
-interface IProps {
-  data: any;
+interface Props {
+  data: LanguageData;
   onClickSliderNext: any;
   translate: any;
   onClickSliderPrevious: any;
@@ -68,7 +68,7 @@ const MainUI = ({
   onClickApplicationDetails,
   onClickAboutUsDetails,
   onClickCareersDetails,
-}: IProps) => {
+}: Props) => {
   return (
     <>
       <SliderMainWrapper>
@@ -125,7 +125,7 @@ const MainUI = ({
       <MainOuterImagesWrapper>
         <MainImagesWrapper>
           <ProductWrapper>
-            {data.main.satellite.map((value: any, index: number) => (
+            {data.main.satellite.map((value, index) => (
               <ProductSubWrapper key={index}>
                 <ProductImageWrapper>
                   <ProductImage
@@ -138,16 +138,15 @@ const MainUI = ({
                     value={value.name}
                   />
                 </ProductImageWrapper>
-                <SpecificationButtonHref href={value.download}>
-                  <SpecificationButton>
-                    {data.main.specificationButton}
-                  </SpecificationButton>
-                </SpecificationButtonHref>
+                <PdfBox
+                  name={`main.satellite.${index}.download`}
+                  href={value.download}
+                />
               </ProductSubWrapper>
             ))}
           </ProductWrapper>
           <ProductWrapper>
-            {data.main.defense.map((value: any, index: number) => (
+            {data.main.defense.map((value, index) => (
               <ProductSubWrapper key={index}>
                 <ProductImageWrapper>
                   <ProductImage
@@ -160,11 +159,10 @@ const MainUI = ({
                     value={value.name}
                   />
                 </ProductImageWrapper>
-                <SpecificationButtonHref href={value.download}>
-                  <SpecificationButton>
-                    {data.main.specificationButton}
-                  </SpecificationButton>
-                </SpecificationButtonHref>
+                <PdfBox
+                  name={`main.defense.${index}.download`}
+                  href={value.download}
+                />
               </ProductSubWrapper>
             ))}
           </ProductWrapper>
@@ -175,17 +173,16 @@ const MainUI = ({
         value={data.main.mainProductThreeName}
         name={'main.mainProductThreeName'}
       />
-      {data.main.magneticTorquer.map((value: any, index: any) => (
+      {data.main.magneticTorquer.map((value, index) => (
         <MagneticTorquerSubProductWrapper key={index}>
           <MainThirdProductImageWrapper
             src={value.image}
             name={`main.magneticTorquer.${index}.image`}
           />
-          <SpecificationButtonHref href={value.download}>
-            <SpecificationButton>
-              {data.main.specificationButton}
-            </SpecificationButton>
-          </SpecificationButtonHref>
+          <PdfBox
+            name={`main.magneticTorquer.${index}.download`}
+            href={value.download}
+          />
         </MagneticTorquerSubProductWrapper>
       ))}
 
@@ -232,7 +229,7 @@ const MainUI = ({
             </AboutUsDetailsWrapper>
             {language === 'kor' && (
               <CareersDetailsWrapper>
-                {data.navBar.careers.map((data: any, i: number) => (
+                {data.navBar.careers?.map((data: any, i: number) => (
                   <CareersDetails
                     key={i}
                     id={i + ''}
