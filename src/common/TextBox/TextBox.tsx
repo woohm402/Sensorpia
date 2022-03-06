@@ -19,13 +19,7 @@ const TextBox = ({
 }) => {
   const [editingValue, setEditingValue] = useState<string>('');
   const [isEditing, setIsEditing] = useState<boolean>(false);
-  const {
-    language,
-    languageData,
-    fetchLanguage,
-    setEnLanguageData,
-    setKorLanguageData,
-  } = useLanguageContext();
+  const { languageData, setCurrentLanguageData } = useLanguageContext();
   const { isAdmin } = useAdminContext();
 
   const deletable = !!onDelete;
@@ -51,11 +45,7 @@ const TextBox = ({
       return;
     }
 
-    const newData = replaceValue(languageData, name, editingValue);
-
-    language === 'en'
-      ? setEnLanguageData(newData)
-      : setKorLanguageData(newData);
+    setCurrentLanguageData(replaceValue(languageData, name, editingValue));
   };
 
   const tagProps = {

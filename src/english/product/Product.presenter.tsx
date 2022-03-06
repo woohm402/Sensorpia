@@ -17,6 +17,8 @@ import {
 import { useLanguageContext } from '../../context/language/language';
 import { replaceValue } from '../../lib/replaceValue';
 import { DUMMY_DESCRIPTION } from '../../lib/dummy/dummyDescription';
+import { useAdminContext } from '../../context/admin/admin';
+import { DUMMY_PRODUCT } from '../../lib/dummy/dummyProduct';
 
 const ProductUI = () => {
   const { languageData: data, setCurrentLanguageData } = useLanguageContext();
@@ -26,6 +28,8 @@ const ProductUI = () => {
   const buttonIndex = data.products[pageIndex]?.data.subSections.findIndex(
     (data) => data.name === buttonName
   );
+
+  const { isAdmin } = useAdminContext();
 
   if (pageIndex < 0 || pageIndex >= data.products.length || isNaN(pageIndex)) {
     router.push({
@@ -116,7 +120,7 @@ const ProductUI = () => {
                 </ExplanationWrapper>
                 <SubImageOuterWrappers>
                   {content.images?.map((value, i) => (
-                    <SubImageMidTwoWrappers key={i}>
+                    <SubImageMidTwoWrappers key={value.src + value.text + i}>
                       <SubImageMidWrappers>
                         <SubImageWrappers
                           as={'img'}
@@ -135,6 +139,25 @@ const ProductUI = () => {
                       </SpecificationButtonWrapperHref>
                     </SubImageMidTwoWrappers>
                   ))}
+                  {isAdmin && (
+                    <button
+                      style={{
+                        margin: '16px 0 16px 64px',
+                        width: 'calc(100% - 64px)',
+                      }}
+                      onClick={() => {
+                        setCurrentLanguageData(
+                          replaceValue(
+                            data,
+                            `${contentBaseName}.images`,
+                            content.images.concat(DUMMY_PRODUCT)
+                          )
+                        );
+                      }}
+                    >
+                      추가
+                    </button>
+                  )}
                 </SubImageOuterWrappers>
               </ContentWrapper>
             );

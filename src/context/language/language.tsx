@@ -17,10 +17,6 @@ const initialLanguage: Language = {
   languageData: null,
   fetchLanguage: () => Promise.resolve(),
   handleSave: () => Promise.resolve(),
-  korLanguageData: null,
-  enLanguageData: null,
-  setEnLanguageData: () => null,
-  setKorLanguageData: () => null,
   setCurrentLanguageData: () => null,
 };
 
@@ -89,16 +85,6 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
         languageData: { en: enLanguageData, kor: korLanguageData }[language],
         fetchLanguage,
         handleSave,
-        korLanguageData,
-        enLanguageData,
-        setKorLanguageData: (e) => {
-          setIsEdited(true);
-          setKorLanguageData(e);
-        },
-        setEnLanguageData: (e) => {
-          setIsEdited(true);
-          setEnLanguageData(e);
-        },
         setCurrentLanguageData: (e) => {
           setIsEdited(true);
           ({

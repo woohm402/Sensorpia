@@ -5,10 +5,6 @@ export interface Language {
   languageData: LanguageData | null;
   fetchLanguage: () => Promise<void>;
   handleSave: () => Promise<void>;
-  enLanguageData: LanguageData | null;
-  korLanguageData: LanguageData | null;
-  setEnLanguageData: (e: LanguageData) => void;
-  setKorLanguageData: (e: LanguageData) => void;
   setCurrentLanguageData: (e: LanguageData) => void;
 }
 

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback } from 'react';
+import React, { ChangeEvent } from 'react';
 import { useAdminContext } from '../../context/admin/admin';
 import { toast } from 'react-hot-toast';
 import axios from 'axios';
@@ -19,12 +19,7 @@ const ImageBox = ({
   as?: 'img' | 'div';
 }) => {
   const { isAdmin } = useAdminContext();
-  const {
-    enLanguageData,
-    korLanguageData,
-    setEnLanguageData,
-    setKorLanguageData,
-  } = useLanguageContext();
+  const { languageData, setCurrentLanguageData } = useLanguageContext();
 
   const handleSubmit = async (e: ChangeEvent<HTMLInputElement>) => {
     // @ts-ignore
@@ -59,11 +54,9 @@ const ImageBox = ({
       const finalURL =
         'https://sensorpia.s3.ap-northeast-2.amazonaws.com/' + key;
 
-      const newEnData = replaceValue(enLanguageData, name, finalURL);
-      const newKorData = replaceValue(korLanguageData, name, finalURL);
+      const newData = replaceValue(languageData, name, finalURL);
 
-      setEnLanguageData(newEnData);
-      setKorLanguageData(newKorData);
+      setCurrentLanguageData(newData);
     } catch (err) {
       toast.error('오류가 발생했습니다.');
     }
