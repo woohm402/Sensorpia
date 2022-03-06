@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.div`
-  position: relative;
-`;
-
 export const Pop = styled.article`
   position: absolute;
   height: 80px;
@@ -25,4 +21,11 @@ export const Pop = styled.article`
   button {
     float: right;
   }
+`;
+
+export const Wrapper = styled.div`
+  display: block;
+  position: absolute;
+  width: 40px;
+  right: 4px;
 `;

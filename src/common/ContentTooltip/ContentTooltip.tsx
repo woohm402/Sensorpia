@@ -4,7 +4,9 @@ import { Pop, Wrapper } from './ContentTooltip.style';
 export const ContentTooltip = ({
   children,
   onModify,
-}: PropsWithChildren<{ onModify: (e: string) => void }>) => {
+}: PropsWithChildren<{
+  onModify: (e: string) => void;
+}>) => {
   const [isOpen, setIsOpen] = useState(false);
   const [content, setContent] = useState('');
 
@@ -29,12 +31,12 @@ export const ContentTooltip = ({
           <button onClick={close}>취소</button>
         </Pop>
       )}
-      <button
+      <Wrapper
         style={{ border: 'none', background: 'transparent', padding: 0 }}
         onClick={() => setIsOpen(true)}
       >
         {children}
-      </button>
+      </Wrapper>
     </>
   );
 };

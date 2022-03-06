@@ -53,13 +53,7 @@ export const SideBarMenusInnerWrapper = styled.div`
     display: block;
     position: absolute;
     width: 40px;
-
-    &:nth-of-type(1) {
-      right: -36px;
-    }
-    &:nth-of-type(2) {
-      right: 4px;
-    }
+    right: -36px;
   }
 `;
 
@@ -75,6 +69,7 @@ export const SideBarProductsSubMenusWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 export const SideBarProductsIndividualWrapper = styled.div`
   margin-top: 15px;
   margin-left: 11px;
@@ -86,15 +81,10 @@ export const SideBarProductsIndividualWrapper = styled.div`
     display: block;
     position: absolute;
     width: 40px;
-
-    &:nth-of-type(1) {
-      right: -36px;
-    }
-    &:nth-of-type(2) {
-      right: 4px;
-    }
+    right: -36px;
   }
 `;
+
 export const SideBarProductsIndividualIcon = styled.div`
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
