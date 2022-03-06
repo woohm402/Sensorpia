@@ -46,6 +46,24 @@ export const SideBarMenusInnerWrapper = styled.div`
   line-height: 19px;
   color: ${(props: IProps) => (props.$color ? '#0070c0' : '#9c9d9e')};
   cursor: pointer;
+  position: relative;
+
+  button {
+    display: none;
+    position: absolute;
+    width: 40px;
+
+    &:first-of-type {
+      right: -36px;
+    }
+    &:last-of-type {
+      right: 4px;
+    }
+  }
+
+  &:hover > button {
+    display: block;
+  }
 `;
 
 export const SideBarMenusLineDivider = styled.div`
@@ -65,6 +83,24 @@ export const SideBarProductsIndividualWrapper = styled.div`
   margin-left: 11px;
   display: flex;
   cursor: pointer;
+  position: relative;
+
+  button {
+    display: none;
+    position: absolute;
+    width: 40px;
+
+    &:first-of-type {
+      right: -36px;
+    }
+    &:last-of-type {
+      right: 4px;
+    }
+  }
+
+  &:hover > button {
+    display: block;
+  }
 `;
 export const SideBarProductsIndividualIcon = styled.div`
   font-family: 'Noto Sans KR', sans-serif;

@@ -19,6 +19,7 @@ import {
   DUMMY_PRODUCT_PAGE,
   DUMMY_PRODUCT_SECTION,
 } from '../../lib/dummyProductPage';
+import { useAdminContext } from '../../context/admin/admin';
 
 interface IProps {
   onClickMenu: any;
@@ -28,6 +29,7 @@ interface IProps {
 const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const router = useRouter();
   const pageIndex = Number(router.query.item);
+  const { isAdmin } = useAdminContext();
   const {
     language,
     languageData: data,
@@ -36,6 +38,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
   const onClickScrollArrow = () => {
     window.scrollTo(0, 0);
   };
+  const item = Number(router.query.item);
 
   return (
     <SideBarWrapper>
@@ -52,7 +55,7 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
         {router.pathname === '/products' ? (
           <>
             {data.products.map((value, index) => (
-              <Fragment key={index}>
+              <Fragment key={value.name + index}>
                 <SideBarMenusInnerWrapper
                   onClick={() => {
                     router.push({
@@ -64,12 +67,54 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                   }}
                   $color={pageIndex == index}
                 >
+                  {isAdmin && (
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentLanguageData(
+                            replaceValue(
+                              data,
+                              'products',
+                              data.products.filter(
+                                (item) => item.name !== value.name
+                              )
+                            )
+                          );
+                        }}
+                      >
+                        삭제
+                      </button>
+                      <button>수정</button>
+                    </>
+                  )}
                   {value.name}
                 </SideBarMenusInnerWrapper>
                 {value.data.subSections.length > 1 && (
                   <SideBarProductsSubMenusWrapper>
-                    {value.data.subSections.map((data, i) => (
-                      <SideBarProductsIndividualWrapper key={i}>
+                    {value.data.subSections.map((section, i) => (
+                      <SideBarProductsIndividualWrapper key={section.name + i}>
+                        {isAdmin && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCurrentLanguageData(
+                                  replaceValue(
+                                    data,
+                                    `products.${index}.data.subSections`,
+                                    value.data.subSections.filter(
+                                      (item) => item.name !== section.name
+                                    )
+                                  )
+                                );
+                              }}
+                            >
+                              삭제
+                            </button>
+                            <button>수정</button>
+                          </>
+                        )}
                         <SideBarProductsIndividualIcon>
                           -
                         </SideBarProductsIndividualIcon>
@@ -78,13 +123,13 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                             router.push({
                               query: {
                                 item: index,
-                                keyword: data.name,
+                                keyword: section.name,
                               },
                             });
                           }}
-                          $color={data.name === buttonName}
+                          $color={section.name === buttonName && index === item}
                         >
-                          {data.name}
+                          {section.name}
                         </SideBarProductsIndividualText>
                       </SideBarProductsIndividualWrapper>
                     ))}

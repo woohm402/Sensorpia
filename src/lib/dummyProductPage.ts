@@ -9,7 +9,7 @@ export const DUMMY_PRODUCT_PAGE: ArrayElement<LanguageData['products']> = {
         name: '[FIXME] Title',
         mainImage:
           'https://sensorpia.s3.ap-northeast-2.amazonaws.com/images/uke15xmfgf706m6qx0ve4.png',
-        captions: [],
+        captions: ['[FIXME] Caption'],
         contents: [
           {
             title: '[FIXME] Title',

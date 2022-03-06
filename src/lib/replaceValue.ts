@@ -6,6 +6,7 @@ export const replaceValue = (obj: Object | null, key: string, to: any) => {
   let cursor = newData;
   const keys = key.split('.');
   keys.slice(0, keys.length - 1).forEach((key) => {
+    console.log(cursor);
     cursor = cursor[key];
   });
 
