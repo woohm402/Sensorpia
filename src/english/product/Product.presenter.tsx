@@ -104,19 +104,21 @@ const ProductUI = () => {
                       />
                     )
                   )}
-                  <button
-                    style={{ margin: '16px 0' }}
-                    onClick={() => {
-                      const newData = replaceValue(
-                        data,
-                        `${contentBaseName}.descriptions`,
-                        content.descriptions.concat(DUMMY_DESCRIPTION)
-                      );
-                      setCurrentLanguageData(newData);
-                    }}
-                  >
-                    추가
-                  </button>
+                  {isAdmin && (
+                    <button
+                      style={{ margin: '16px 0' }}
+                      onClick={() => {
+                        const newData = replaceValue(
+                          data,
+                          `${contentBaseName}.descriptions`,
+                          content.descriptions.concat(DUMMY_DESCRIPTION)
+                        );
+                        setCurrentLanguageData(newData);
+                      }}
+                    >
+                      추가
+                    </button>
+                  )}
                 </ExplanationWrapper>
                 <SubImageOuterWrappers>
                   {content.images?.map((value, i) => (

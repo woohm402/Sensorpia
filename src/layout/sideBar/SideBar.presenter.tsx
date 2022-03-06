@@ -183,20 +183,22 @@ const SideBarUI = ({ onClickMenu, buttonName }: IProps) => {
                 )}
               </Fragment>
             ))}
-            <button
-              style={{ width: '100%', marginTop: 16 }}
-              onClick={() =>
-                setCurrentLanguageData(
-                  replaceValue(
-                    data,
-                    'products',
-                    data?.products.concat(DUMMY_PRODUCT_PAGE)
+            {isAdmin && (
+              <button
+                style={{ width: '100%', marginTop: 16 }}
+                onClick={() =>
+                  setCurrentLanguageData(
+                    replaceValue(
+                      data,
+                      'products',
+                      data?.products.concat(DUMMY_PRODUCT_PAGE)
+                    )
                   )
-                )
-              }
-            >
-              페이지 추가
-            </button>
+                }
+              >
+                페이지 추가
+              </button>
+            )}
           </>
         ) : router.pathname === '/application' ? (
           data.applications.map((value, i) => (
