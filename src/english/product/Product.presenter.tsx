@@ -18,6 +18,8 @@ import { DUMMY_DESCRIPTION } from '../../lib/dummy/dummyDescription';
 import { useAdminContext } from '../../context/admin/admin';
 import { DUMMY_PRODUCT } from '../../lib/dummy/dummyProduct';
 import PdfBox from '../../common/PdfBox.tsx/PdfBox';
+import { Fragment } from 'react';
+import { DUMMY_CONTENT } from '../../lib/dummy/dummyContent';
 
 const ProductUI = () => {
   const { languageData: data, setCurrentLanguageData } = useLanguageContext();
@@ -175,6 +177,24 @@ const ProductUI = () => {
           }
         )}
       </>
+      {isAdmin && (
+        <button
+          style={{ width: '100%' }}
+          onClick={() => {
+            setCurrentLanguageData(
+              replaceValue(
+                data,
+                `products.${pageIndex}.data.subSections.${buttonIndex}.contents`,
+                data.products[pageIndex]?.data.subSections[
+                  buttonIndex
+                ]?.contents.concat(DUMMY_CONTENT)
+              )
+            );
+          }}
+        >
+          추가
+        </button>
+      )}
     </div>
   );
 };

@@ -15,12 +15,10 @@ import {
 import { useLanguageContext } from '../../context/language/language';
 import { Fragment } from 'react';
 import { replaceValue } from '../../lib/replaceValue';
-import {
-  DUMMY_PRODUCT_PAGE,
-  DUMMY_PRODUCT_SECTION,
-} from '../../lib/dummy/dummyProductPage';
+import { DUMMY_PRODUCT_PAGE } from '../../lib/dummy/dummyProductPage';
 import { useAdminContext } from '../../context/admin/admin';
 import { ContentTooltip } from '../../common/ContentTooltip/ContentTooltip';
+import { DUMMY_PRODUCT_SECTION } from '../../lib/dummy/dummyProductSection';
 
 interface IProps {
   onClickMenu: any;
