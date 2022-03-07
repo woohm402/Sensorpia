@@ -169,7 +169,6 @@ export const MainOuterImagesWrapper = styled.div`
 export const MainImagesWrapper = styled.div`
   margin-top: 20px;
   width: 850px;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
