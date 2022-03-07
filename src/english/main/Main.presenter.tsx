@@ -195,13 +195,13 @@ const MainUI = ({
           </NavBarMainMenusWrapper>
           <NavBarMainMenuDetailWrapper>
             <ProductDetailsWrapper>
-              {data.navBar.products.map((data: any, index: any) => (
+              {data.products.map((data, index) => (
                 <ProductDetails
                   key={index}
-                  id={index}
+                  id={index + ''}
                   onClick={onClickProductDetails}
                 >
-                  {data}
+                  {data.name}
                 </ProductDetails>
               ))}
             </ProductDetailsWrapper>

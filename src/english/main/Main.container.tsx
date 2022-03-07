@@ -42,22 +42,10 @@ const MainComponent = () => {
     setTranslate((prev) => prev + sliderMovement);
   };
   const onClickProductDetails = (event: any) => {
-    if (Number(event.target.id) === 0) {
-      router.push({
-        pathname: '/products',
-        query: { item: Number(event.target.id), keyword: 'Normal' },
-      });
-    } else if (Number(event.target.id) === 1) {
-      router.push({
-        pathname: '/products',
-        query: { item: Number(event.target.id), keyword: 'torquer' },
-      });
-    } else if (Number(event.target.id) === 2) {
-      router.push({
-        pathname: '/products',
-        query: { item: Number(event.target.id), keyword: null },
-      });
-    }
+    router.push({
+      pathname: '/products',
+      query: { item: Number(event.target.id) },
+    });
   };
 
   const onClickApplicationsDetails = (event: any) => {
