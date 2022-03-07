@@ -78,12 +78,36 @@ const ProductUI = () => {
           (content, i) => {
             const contentBaseName = `products.${pageIndex}.data.subSections.${buttonIndex}.contents.${i}`;
             return (
-              <ContentWrapper key={i}>
+              <ContentWrapper
+                key={content.title + content.descriptions.join('') + i}
+              >
                 <ExplanationWrapper>
-                  <ExplanationTitle
-                    value={content.title}
-                    name={`${contentBaseName}.title`}
-                  />
+                  <div
+                    style={{ display: 'flex', gap: 16, alignItems: 'center' }}
+                  >
+                    <ExplanationTitle
+                      value={content.title}
+                      name={`${contentBaseName}.title`}
+                    />
+                    {isAdmin && (
+                      <button
+                        onClick={() => {
+                          setCurrentLanguageData(
+                            replaceValue(
+                              data,
+                              `products.${pageIndex}.data.subSections.${buttonIndex}.contents`,
+                              data.products[pageIndex]?.data.subSections[
+                                buttonIndex
+                              ]?.contents.filter((_, cI) => cI !== i)
+                            )
+                          );
+                        }}
+                      >
+                        섹션 제거
+                      </button>
+                    )}
+                  </div>
+
                   {content.descriptions.map(
                     (explanation: string, i: number) => (
                       <ExplanationDetail
