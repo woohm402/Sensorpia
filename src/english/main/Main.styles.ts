@@ -204,8 +204,8 @@ export const ProductImageText = styled(TextBox)`
   font-size: 13px;
   line-height: 19px;
   color: #262626;
-  top: 237px;
-  left: 142px;
+  right: 12px;
+  bottom: 10px;
 `;
 
 export const MainThirdLineDivider = styled.div`

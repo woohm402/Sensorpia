@@ -34,8 +34,8 @@ export const SubImageWrappers = styled(ImageBox)`
 `;
 
 export const SubImageTexts = styled(TextBox)`
-  top: 89%;
-  left: 82%;
+  right: 12px;
+  bottom: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
   font-size: 13px;
