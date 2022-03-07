@@ -28,7 +28,9 @@ const FooterUI = ({ data }: IProps) => {
           />
           <FooterOthersOne>{data.footer.Others[0]}</FooterOthersOne>
           <FooterDivider />
-          <FooterOtherTwo>{data.footer.Others[1]}</FooterOtherTwo>
+          <FooterOtherTwo href="/privacy_policy">
+            {data.footer.Others[1]}
+          </FooterOtherTwo>
         </FooterWrapper>
       </FooterBigWrapper>
     </>

@@ -58,7 +58,7 @@ export const FooterDivider = styled.div`
   left: 278.07px;
   border: 1px solid #0070c0;
 `;
-export const FooterOtherTwo = styled.div`
+export const FooterOtherTwo = styled.a`
   position: absolute;
   top: 65px;
   left: 288.18px;
