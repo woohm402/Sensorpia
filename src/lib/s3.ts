@@ -3,7 +3,6 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 const client = new S3Client({});
 
-// body
 export const putJSON = (key: string, body: string) => {
   return client.send(
     new PutObjectCommand({
