@@ -18,7 +18,6 @@ import { DUMMY_DESCRIPTION } from '../../lib/dummy/dummyDescription';
 import { useAdminContext } from '../../context/admin/admin';
 import { DUMMY_PRODUCT } from '../../lib/dummy/dummyProduct';
 import PdfBox from '../../common/PdfBox.tsx/PdfBox';
-import { Fragment } from 'react';
 import { DUMMY_CONTENT } from '../../lib/dummy/dummyContent';
 
 const ProductUI = () => {
