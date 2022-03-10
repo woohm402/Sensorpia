@@ -26,7 +26,9 @@ const FooterUI = ({ data }: IProps) => {
             value={data.footer.Address}
             name={'footer.Address'}
           />
-          <FooterOthersOne>{data.footer.Others[0]}</FooterOthersOne>
+          <FooterOthersOne href="/terms_of_service">
+            {data.footer.Others[0]}
+          </FooterOthersOne>
           <FooterDivider />
           <FooterOtherTwo href="/privacy_policy">
             {data.footer.Others[1]}

@@ -40,7 +40,7 @@ export const FooterAddressDetailWrapper = styled(TextBox)`
   line-height: 16px;
   color: #262626;
 `;
-export const FooterOthersOne = styled.div`
+export const FooterOthersOne = styled.a`
   position: absolute;
   top: 65px;
   left: 227px;
