@@ -20,6 +20,8 @@ export interface LanguageData {
   sidebar: Sidebar;
   navBar: NavBar;
   SliderText: SliderText;
+  privacy_policy: string;
+  terms_of_service: string;
 }
 interface Footer {
   Address: string;
