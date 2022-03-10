@@ -22,8 +22,7 @@ const ImageBox = ({
   const { languageData, setCurrentLanguageData } = useLanguageContext();
 
   const handleSubmit = async (e: ChangeEvent<HTMLInputElement>) => {
-    // @ts-ignore
-    const file = e?.path[0]?.files?.[0];
+    const file = e.target.files[0];
     if (!file) {
       toast.error('오류가 발생했습니다.');
       return;
