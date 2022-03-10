@@ -37,9 +37,7 @@ const TextBox = ({
     setEditingValue('');
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
     if (editingValue === value) {
       handleCancelEdit();
       return;
@@ -57,16 +55,18 @@ const TextBox = ({
     <form
       style={{ display: 'flex', zIndex: 2 }}
       className={className}
-      onSubmit={handleSubmit}
+      onSubmit={(e) => e.preventDefault()}
     >
       <TextArea
         value={editingValue}
         onChange={(e) => setEditingValue(e.target.value)}
       />
-      <Button type={'button'} onClick={handleCancelEdit}>
+      <Button type="button" onClick={handleCancelEdit}>
         취소
       </Button>
-      <Button>수정</Button>
+      <Button type="button" onClick={handleSubmit}>
+        수정
+      </Button>
       {deletable && <Button onClick={onDelete}>삭제</Button>}
     </form>
   ) : (
