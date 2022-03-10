@@ -40,12 +40,8 @@ export const LanguageProvider = ({ children }: PropsWithChildren<{}>) => {
 
   const fetchLanguage = () => {
     return Promise.allSettled([
-      axios.get(
-        'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/en.json'
-      ),
-      axios.get(
-        'https://sensorpia.s3.ap-northeast-2.amazonaws.com/language/kor.json'
-      ),
+      axios.get('/api/content/en'),
+      axios.get('/api/content/kor'),
     ]).then(([en, ko]) => {
       setIsEdited(false);
       if ('value' in en && 'value' in ko) {
