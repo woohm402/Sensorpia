@@ -64,7 +64,11 @@ const PdfBox = ({
 
   return (
     <>
-      <SpecificationButtonWrapperHref className={className} href={href} target="_blank">
+      <SpecificationButtonWrapperHref
+        className={className}
+        href={href}
+        target="_blank"
+      >
         <SpecificationButton>Specification</SpecificationButton>
       </SpecificationButtonWrapperHref>
       {isAdmin && (
